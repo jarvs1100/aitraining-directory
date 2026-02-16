@@ -208,3 +208,37 @@ export function getLocalizedSupportBlocks(key, locale) {
     intentCopy: `Localized in ${localeName} for search intent, while keeping implementation pathways consistent with core solution pages.`
   };
 }
+
+export function getLocalizedFaq(locale) {
+  const localized = {
+    pl: [
+      { q: 'Czy ta strona jest lokalizowana pod realny intent?', a: 'Tak. Treść jest dopasowana do rynku i workflow zespołów L&D, a nie masowo tłumaczona bez kontekstu.' },
+      { q: 'Dla kogo jest ta strona?', a: 'Dla zespołów Learning & Development, enablement oraz osób odpowiedzialnych za operacje szkoleniowe.' }
+    ],
+    cs: [
+      { q: 'Je stránka lokalizovaná podle reálného vyhledávacího záměru?', a: 'Ano. Obsah je upravený pro lokální kontext a potřeby L&D týmů, ne jako hromadný strojový překlad.' },
+      { q: 'Pro koho je tato stránka určena?', a: 'Pro L&D týmy, enablement leadery a manažery školících operací.' }
+    ],
+    sk: [
+      { q: 'Je stránka lokalizovaná podľa reálneho intentu?', a: 'Áno. Obsah je prispôsobený lokálnemu kontextu a potrebám L&D tímov.' },
+      { q: 'Pre koho je táto stránka určená?', a: 'Pre tímy Learning & Development, enablement a manažérov školení.' }
+    ],
+    hu: [
+      { q: 'Ez az oldal valós keresési szándékra van lokalizálva?', a: 'Igen. A tartalom a helyi L&D működéshez igazodik, nem tömeges, kontextus nélküli fordítás.' },
+      { q: 'Kinek szól ez az oldal?', a: 'L&D csapatoknak, enablement vezetőknek és képzési operációs menedzsereknek.' }
+    ],
+    de: [
+      { q: 'Ist diese Seite nach tatsächlicher Suchintention lokalisiert?', a: 'Ja. Die Inhalte sind auf den DACH-Kontext und L&D-Workflows ausgerichtet.' },
+      { q: 'Für wen ist diese Seite gedacht?', a: 'Für Learning-&-Development-Teams, Enablement-Leads und Training-Operations-Verantwortliche.' }
+    ],
+    es: [
+      { q: '¿Esta página está localizada para intención real de búsqueda?', a: 'Sí. El contenido está adaptado al contexto local y a flujos de trabajo reales de L&D.' },
+      { q: '¿Quién es la audiencia principal?', a: 'Equipos de Learning & Development, responsables de enablement y operaciones de formación.' }
+    ]
+  };
+
+  return localized[locale] || [
+    { q: 'Is this page manually localized for market intent?', a: 'Yes. Localization is curated for intent and context. Pages are not bulk machine-translated spam.' },
+    { q: 'Who is the primary target audience?', a: 'Learning & Development teams, enablement leads, and training operations managers.' }
+  ];
+}

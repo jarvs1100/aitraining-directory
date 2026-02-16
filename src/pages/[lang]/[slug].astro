@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import LocalizedLanding from '../../components/LocalizedLanding.astro';
-import { localizedLandingPages, getAlternatesForKey, getSiblingLocalizedPages } from '../../lib/i18n.js';
+import { localizedLandingPages, getAlternatesForKey, getSiblingLocalizedPages, getLocalizedFaq } from '../../lib/i18n.js';
 
 export async function getStaticPaths() {
   return localizedLandingPages.map((page) => ({
@@ -14,16 +14,7 @@ const { page } = Astro.props;
 const canonical = `https://aitraining.directory/${page.locale}/${page.slug}/`;
 const alternates = getAlternatesForKey(page.key, page.locale);
 const siblingPages = getSiblingLocalizedPages(page.key, page.locale);
-const faq = [
-  {
-    q: 'Is this page manually localized for market intent?',
-    a: 'Yes. Localization is curated for intent and context. Pages are not bulk machine-translated spam.'
-  },
-  {
-    q: 'Who is the primary target audience?',
-    a: 'Learning & Development teams, enablement leads, and training operations managers.'
-  }
-];
+const faq = getLocalizedFaq(page.locale);
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
