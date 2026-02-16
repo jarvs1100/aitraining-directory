@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "lecture-guru",
+    "name": "Lecture Guru",
+    "website": "https://lecture-guru.com",
+    "category": "AI Video Training",
+    "pricing": "Paid",
+    "summary": "Turns SOPs and documents into AI-generated training videos. Auto-updates when policies change.",
+    "features": ["SOP to video", "Auto-sync updates", "Compliance tracking", "Multi-language"]
+  },
+  {
+    "slug": "chatgpt",
+    "name": "ChatGPT",
+    "website": "https://chatgpt.com",
+    "category": "AI Chat",
+    "pricing": "Freemium",
+    "summary": "OpenAI's conversational AI for content, coding, analysis, and general assistance.",
+    "features": ["GPT-4o", "Code interpreter", "Custom GPTs", "Web browsing"]
+  },
+  {
+    "slug": "claude",
+    "name": "Claude",
+    "website": "https://claude.ai",
+    "category": "AI Chat",
+    "pricing": "Freemium",
+    "summary": "Anthropic's AI assistant with long context window and strong reasoning capabilities.",
+    "features": ["100K context", "Document analysis", "Code generation", "Safety focus"]
+  },
+  {
+    "slug": "midjourney",
+    "name": "Midjourney",
+    "website": "https://www.midjourney.com",
+    "category": "AI Image",
+    "pricing": "Paid",
+    "summary": "AI image generation via Discord with artistic, high-quality outputs.",
+    "features": ["Text-to-image", "Style blending", "Upscaling", "V6 engine"]
+  },
+  {
+    "slug": "synthesia",
+    "name": "Synthesia",
+    "website": "https://www.synthesia.io",
+    "category": "AI Video",
+    "pricing": "Paid",
+    "summary": "AI avatar videos for corporate training and communications.",
+    "features": ["AI avatars", "120+ languages", "Templates", "SCORM export"]
+  },
+  {
+    "slug": "notion-ai",
+    "name": "Notion AI",
+    "website": "https://www.notion.so/product/ai",
+    "category": "AI Productivity",
+    "pricing": "Paid",
+    "summary": "AI writing assistant embedded in Notion workspace.",
+    "features": ["Draft generation", "Summarization", "Q&A on docs", "Translation"]
+  },
+  {
+    "slug": "jasper",
+    "name": "Jasper",
+    "website": "https://www.jasper.ai",
+    "category": "AI Writing",
+    "pricing": "Paid",
+    "summary": "AI content platform for marketing copy, blogs, and brand voice.",
+    "features": ["Brand voice", "SEO mode", "Campaigns", "Integrations"]
+  },
+  {
+    "slug": "copy-ai",
+    "name": "Copy.ai",
+    "website": "https://www.copy.ai",
+    "category": "AI Writing",
+    "pricing": "Freemium",
+    "summary": "AI copywriting tool for marketing, sales, and social content.",
+    "features": ["Chat interface", "Workflows", "Brand voice", "95+ templates"]
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "website": "https://runwayml.com",
+    "category": "AI Video",
+    "pricing": "Freemium",
+    "summary": "AI video generation and editing platform with motion brush and Gen-3.",
+    "features": ["Text-to-video", "Image-to-video", "Motion brush", "Gen-3 Alpha"]
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "website": "https://elevenlabs.io",
+    "category": "AI Voice",
+    "pricing": "Freemium",
+    "summary": "AI voice synthesis with realistic, emotive text-to-speech.",
+    "features": ["Voice cloning", "29 languages", "Projects", "API"]
+  },
+  {
+    "slug": "perplexity",
+    "name": "Perplexity",
+    "website": "https://www.perplexity.ai",
+    "category": "AI Search",
+    "pricing": "Freemium",
+    "summary": "AI-powered search engine with cited answers and real-time info.",
+    "features": ["Conversational search", "Citations", "Pro search", "Focus modes"]
+  },
+  {
+    "slug": "gong",
+    "name": "Gong",
+    "website": "https://www.gong.io",
+    "category": "AI Sales",
+    "pricing": "Paid",
+    "summary": "AI revenue intelligence platform for sales call analysis.",
+    "features": ["Call transcription", "Deal intelligence", "Coaching", "Forecasting"]
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "website": "https://otter.ai",
+    "category": "AI Productivity",
+    "pricing": "Freemium",
+    "summary": "AI meeting assistant for transcription and note-taking.",
+    "features": ["Live transcription", "Auto summaries", "Action items", "Collaboration"]
+  },
+  {
+    "slug": "descript",
+    "name": "Descript",
+    "website": "https://www.descript.com",
+    "category": "AI Video",
+    "pricing": "Freemium",
+    "summary": "Edit video and audio by editing text. AI transcription and voice cloning.",
+    "features": ["Text-based editing", "Overdub", "Studio sound", "Screen recording"]
+  },
+  {
+    "slug": "gamma",
+    "name": "Gamma",
+    "website": "https://gamma.app",
+    "category": "AI Presentations",
+    "pricing": "Freemium",
+    "summary": "AI-powered presentation and document creation.",
+    "features": ["One-click themes", "AI content", "Live presentations", "Analytics"]
+  },
+  {
+    "slug": "tome",
+    "name": "Tome",
+    "website": "https://tome.app",
+    "category": "AI Presentations",
+    "pricing": "Freemium",
+    "summary": "AI storytelling and presentation platform with narrative generation.",
+    "features": ["AI narratives", "Interactive embeds", "Themes", "Analytics"]
+  },
+  {
+    "slug": "murf-ai",
+    "name": "Murf.ai",
+    "website": "https://murf.ai",
+    "category": "AI Voice",
+    "pricing": "Freemium",
+    "summary": "AI voice generator for videos, presentations, and professional content.",
+    "features": ["120+ voices", "Voice changer", "Google Slides add-on", "API"]
+  },
+  {
+    "slug": "beautiful-ai",
+    "name": "Beautiful.ai",
+    "website": "https://www.beautiful.ai",
+    "category": "AI Presentations",
+    "pricing": "Paid",
+    "summary": "AI-powered presentation software with smart templates.",
+    "features": ["Designer bot", "Smart templates", "Brand controls", "Analytics"]
+  },
+  {
+    "slug": "fireflies",
+    "name": "Fireflies.ai",
+    "website": "https://fireflies.ai",
+    "category": "AI Productivity",
+    "pricing": "Freemium",
+    "summary": "AI meeting assistant for transcription, search, and collaboration.",
+    "features": ["Auto-join", "Conversation intelligence", "Search", "Integrations"]
+  },
+  {
+    "slug": "character-ai",
+    "name": "Character.AI",
+    "website": "https://character.ai",
+    "category": "AI Chat",
+    "pricing": "Freemium",
+    "summary": "Create and chat with AI characters. Entertainment and creative use.",
+    "features": ["Custom characters", "Group chats", "Voice", "Community"]
+  }
+]
