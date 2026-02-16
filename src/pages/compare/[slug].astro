@@ -2,19 +2,64 @@
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { comparisonPages, getComparisonBySlug, pickTools } from '../../lib/programmatic.js';
+
 export async function getStaticPaths() { return comparisonPages.map((p) => ({ params: { slug: p.slug } })); }
 const { slug } = Astro.params;
 const page = getComparisonBySlug(slug);
 if (!page) throw new Error(`Comparison page not found: ${slug}`);
 const canonical = `https://aitraining.directory/compare/${slug}/`;
 const candidates = pickTools((slug.length + 3) % 8, 4);
-const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: page.title, description: page.meta, mainEntityOfPage: canonical };
+const faq = [
+  { q: 'What should L&D teams optimize for first?', a: 'Prioritize cycle-time reduction on one high-friction workflow, then expand only after measurable gains in production speed and adoption.' },
+  { q: 'How long should a pilot run?', a: 'Two to four weeks is typically enough to validate operational fit, update speed, and stakeholder confidence.' }
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    { '@type': 'Article', headline: page.title, description: page.meta, mainEntityOfPage: canonical },
+    { '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) }
+  ]
+};
 ---
 <Base title={page.title} description={page.meta} canonical={canonical} jsonLd={jsonLd}>
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Compare', href: '/compare/' }, { label: page.title, href: `/compare/${slug}/` }]} />
-  <h1>{page.title}</h1><p class="muted">{page.intro}</p>
-  <h2>Quick comparison lens for L&D teams</h2><ul><li>Implementation speed for internal enablement programs</li><li>Ease of update when training material changes</li><li>Localization and role-based distribution support</li><li>Total workflow fit across authoring, review, and delivery</li></ul>
+  <h1>{page.title}</h1>
+  <p class="muted">{page.intro}</p>
+
+  <h2>Quick comparison lens for L&D teams</h2>
+  <ul>
+    <li>Implementation speed for internal enablement programs</li>
+    <li>Ease of update when training material changes</li>
+    <li>Localization and role-based distribution support</li>
+    <li>Total workflow fit across authoring, review, and delivery</li>
+  </ul>
+
   <h2>Related tools in this directory</h2>
-  <div class="grid">{candidates.map((tool)=><article class="card"><h3><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h3><p>{tool.summary}</p></article>)}</div>
-  <p><a href="/solutions/">Browse solution pages</a> for use-case and role-specific recommendations.</p>
+  <div class="grid">
+    {candidates.map((tool) => (
+      <article class="card">
+        <h3><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h3>
+        <p>{tool.summary}</p>
+      </article>
+    ))}
+  </div>
+
+  <section class="section" aria-labelledby="next-steps-heading">
+    <h2 id="next-steps-heading">Next steps</h2>
+    <div class="chips">
+      <a class="chip" href="/solutions/">Browse solution pages</a>
+      <a class="chip" href="/categories/">Explore categories</a>
+      <a class="chip" href="/advertise/">Join founding partner waitlist</a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">FAQ</h2>
+    {faq.map((item) => (
+      <>
+        <h3>{item.q}</h3>
+        <p>{item.a}</p>
+      </>
+    ))}
+  </section>
 </Base>

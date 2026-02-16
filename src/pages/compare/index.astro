@@ -3,10 +3,33 @@ import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { comparisonPages } from '../../lib/programmatic.js';
 const canonical = 'https://aitraining.directory/compare/';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'AI training tool comparisons',
+  description: 'Head-to-head and alternatives pages for L&D buying committees.',
+  url: canonical
+};
 ---
-<Base title="AI Training Tool Comparisons and Alternatives" description="Compare AI tools for training operations, onboarding, and L&D content production with practical implementation context." canonical={canonical}>
+<Base title="AI Training Tool Comparisons and Alternatives" description="Compare AI tools for training operations, onboarding, and L&D content production with practical implementation context." canonical={canonical} jsonLd={jsonLd}>
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Compare', href: '/compare/' }]} />
-  <h1>Compare AI training tools</h1>
-  <p class="muted">Alternatives and head-to-head pages designed for L&D buying committees.</p>
-  <div class="grid">{comparisonPages.map((page)=><a class="card" href={`/compare/${page.slug}/`}><h2 style="margin:0 0 8px 0;font-size:20px;">{page.title}</h2><p class="muted" style="margin:0;">{page.meta}</p></a>)}</div>
+
+  <section class="hero" style="margin-bottom:1.25rem;">
+    <span class="eyebrow">Decision support pages</span>
+    <h1 style="margin-top:.7rem;">Compare AI training tools</h1>
+    <p class="muted" style="max-width:70ch;">Alternatives and head-to-head pages built for L&D buying committees evaluating workflow fit, localization, and update velocity.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/solutions/">See solution routes</a>
+      <a class="btn btn-secondary" href="/categories/">Return to categories</a>
+    </div>
+  </section>
+
+  <div class="grid">
+    {comparisonPages.map((page) => (
+      <a class="card" href={`/compare/${page.slug}/`}>
+        <h2 style="margin:0 0 8px 0;font-size:20px;">{page.title}</h2>
+        <p class="muted" style="margin:0;">{page.meta}</p>
+      </a>
+    ))}
+  </div>
 </Base>
