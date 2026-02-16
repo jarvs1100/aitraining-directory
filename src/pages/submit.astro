@@ -1,11 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 ---
 <Base
   title="Submit AI Training Tool | AI Training Directory"
   description="Submit your AI training product for review and inclusion in the AI Training Directory."
   canonical="https://aitraining.directory/submit/"
 >
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Submit Tool', href: '/submit/' }]} />
   <h1>Submit your AI training tool</h1>
   <p class="muted">We review every submission for relevance and quality.</p>
 
@@ -18,7 +20,6 @@ import Base from '../layouts/Base.astro';
     <li>3–5 core features</li>
   </ul>
 
-  <p>
-    Email: <a href="mailto:submit@aitraining.directory?subject=Submit%20AI%20Training%20Tool">submit@aitraining.directory</a>
-  </p>
+  <p>Email: <a href="mailto:submit@aitraining.directory?subject=Submit%20AI%20Training%20Tool">submit@aitraining.directory</a></p>
+  <p><a href="/advertise/">Interested in founding partner visibility?</a></p>
 </Base>
