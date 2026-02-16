@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "rm -rf docs && astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "qa:i18n": "node scripts/qa_i18n.mjs"
   },
   "dependencies": {
     "astro": "^5.13.5",
