@@ -29,9 +29,10 @@ npm run build
 - Internal linking between homepage, categories, and tools
 
 ## Content workflow
-1. Update `data/listings.json`
-2. Run `npm run build`
-3. Commit + push to `main`
+1. Update `data/listings.json` and source pages
+2. **Localization sync (required):** when adding/changing core content blocks, mirror updates to all active language variants (`/pl`, `/cs`, `/sk`, `/hu`, `/de`, `/es`) before build
+3. Run `npm run build`
+4. Commit + push to `main`
 
 ## Growth operations assets
 - `ops/traffic-acquisition-sop.md` — weekly distribution + SEO execution loop
