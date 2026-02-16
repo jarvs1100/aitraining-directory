@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import { allListings, getCategories, getCategorySlug } from '../lib/data.js';
+
+const categories = getCategories();
+const featured = allListings.slice(0, 12);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'AI Training Directory',
+  description: 'Curated AI tools for employee training and learning & development teams.',
+  url: 'https://aitraining.directory/',
+  hasPart: featured.map((tool, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://aitraining.directory/tool/${tool.slug}/`,
+    name: tool.name
+  }))
+};
+---
+<Base
+  title="AI Training Directory | Best AI Tools for L&D and Employee Training"
+  description="Discover top AI tools for employee training, SOP-to-video workflows, onboarding, and corporate learning operations."
+  canonical="https://aitraining.directory/"
+  jsonLd={jsonLd}
+>
+  <h1>AI Training Directory</h1>
+  <p class="muted">Find and compare AI tools for training, onboarding, SOP documentation, and corporate L&D operations.</p>
+
+  <h2>Browse categories</h2>
+  <p>
+    {categories.map((c) => <a class="badge" href={`/category/${c.slug}/`}>{c.name} ({c.count})</a>)}
+  </p>
+
+  <h2>Featured tools</h2>
+  <div class="grid">
+    {featured.map((tool) => (
+      <article class="card">
+        <div>
+          <span class="badge">{tool.category}</span>
+          <span class="badge">{tool.pricing}</span>
+        </div>
+        <h3><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h3>
+        <p>{tool.summary}</p>
+        <p><a href={tool.website} rel="nofollow noopener" target="_blank">Visit website ↗</a></p>
+      </article>
+    ))}
+  </div>
+
+  <h2>Why this directory exists</h2>
+  <p>
+    Most AI tool lists are noisy. This directory focuses on practical tools for training teams: creating SOP content,
+    onboarding new hires, and shipping compliance training faster.
+  </p>
+
+  <h2>FAQs</h2>
+  <h3>Is this free to use?</h3>
+  <p>Yes. You can browse all tool listings for free.</p>
+  <h3>How do I submit a tool?</h3>
+  <p>Use the <a href="/submit/">submit page</a> and include your core features and pricing model.</p>
+</Base>

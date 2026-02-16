@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCategories } from '../lib/data.js';
+
+const categories = getCategories();
+---
+<Base
+  title="AI Training Tool Categories | AI Training Directory"
+  description="Explore AI training tools by category, including AI video, AI chat, AI voice, AI productivity, and more."
+  canonical="https://aitraining.directory/categories/"
+>
+  <h1>All categories</h1>
+  <div class="grid">
+    {categories.map((c) => (
+      <a class="card" href={`/category/${c.slug}/`}>
+        <h2 style="margin:0 0 6px 0;font-size:20px;">{c.name}</h2>
+        <p class="muted" style="margin:0;">{c.count} tools</p>
+      </a>
+    ))}
+  </div>
+</Base>

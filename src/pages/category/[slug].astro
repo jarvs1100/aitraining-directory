@@ -1,0 +1,51 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCategories, getCategoryBySlug, getListingsByCategorySlug } from '../../lib/data.js';
+
+export async function getStaticPaths() {
+  return getCategories().map((c) => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params;
+const category = getCategoryBySlug(slug);
+const tools = getListingsByCategorySlug(slug);
+
+if (!category) {
+  throw new Error(`Category not found: ${slug}`);
+}
+
+const canonical = `https://aitraining.directory/category/${slug}/`;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `${category.name} tools`,
+  url: canonical,
+  mainEntity: tools.map((tool) => ({
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    applicationCategory: category.name,
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }
+  }))
+};
+---
+<Base
+  title={`${category.name} Tools | AI Training Directory`}
+  description={`Compare ${category.name} tools for training, onboarding, and L&D use cases.`}
+  canonical={canonical}
+  jsonLd={jsonLd}
+>
+  <p><a href="/categories/">← All categories</a></p>
+  <h1>{category.name} tools</h1>
+  <p class="muted">{tools.length} tools in this category.</p>
+
+  <div class="grid">
+    {tools.map((tool) => (
+      <article class="card">
+        <div><span class="badge">{tool.pricing}</span></div>
+        <h2 style="margin:10px 0;"><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h2>
+        <p>{tool.summary}</p>
+      </article>
+    ))}
+  </div>
+</Base>

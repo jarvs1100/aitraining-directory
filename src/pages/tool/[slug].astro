@@ -1,0 +1,58 @@
+---
+import Base from '../../layouts/Base.astro';
+import { allListings } from '../../lib/data.js';
+
+export async function getStaticPaths() {
+  return allListings.map((tool) => ({ params: { slug: tool.slug } }));
+}
+
+const { slug } = Astro.params;
+const tool = allListings.find((t) => t.slug === slug);
+
+if (!tool) {
+  throw new Error(`Tool not found: ${slug}`);
+}
+
+const canonical = `https://aitraining.directory/tool/${tool.slug}/`;
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: tool.name,
+  description: tool.summary,
+  url: tool.website,
+  applicationCategory: tool.category,
+  offers: {
+    '@type': 'Offer',
+    price: tool.pricing === 'Paid' ? 'Paid plan' : '0',
+    priceCurrency: 'USD'
+  }
+};
+---
+<Base
+  title={`${tool.name} Review & Alternatives | AI Training Directory`}
+  description={`${tool.name}: features, pricing model, and fit for AI training workflows.`}
+  canonical={canonical}
+  jsonLd={faqJsonLd}
+>
+  <p><a href="/">← Back to directory</a></p>
+  <h1>{tool.name}</h1>
+  <p>
+    <span class="badge">{tool.category}</span>
+    <span class="badge">{tool.pricing}</span>
+  </p>
+  <p>{tool.summary}</p>
+
+  <h2>Key features</h2>
+  <ul>
+    {tool.features.map((feature) => <li>{feature}</li>)}
+  </ul>
+
+  <p>
+    <a href={tool.website} target="_blank" rel="nofollow noopener">Visit {tool.name} ↗</a>
+  </p>
+
+  <h2>Who this is for</h2>
+  <p>
+    Teams building repeatable onboarding, SOP, and internal training workflows that need faster content production.
+  </p>
+</Base>
