@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { allListings } from '../../lib/data.js';
 
 export async function getStaticPaths() {
@@ -14,27 +15,52 @@ if (!tool) {
 }
 
 const canonical = `https://aitraining.directory/tool/${tool.slug}/`;
-const faqJsonLd = {
+const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: tool.name,
-  description: tool.summary,
-  url: tool.website,
-  applicationCategory: tool.category,
-  offers: {
-    '@type': 'Offer',
-    price: tool.pricing === 'Paid' ? 'Paid plan' : '0',
-    priceCurrency: 'USD'
-  }
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      name: tool.name,
+      description: tool.summary,
+      url: tool.website,
+      applicationCategory: tool.category,
+      offers: {
+        '@type': 'Offer',
+        price: tool.pricing === 'Paid' ? 'Paid plan' : '0',
+        priceCurrency: 'USD'
+      }
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: `What is ${tool.name} best for in L&D?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `${tool.name} is generally used for training content workflows where teams need faster creation and consistent delivery.`
+          }
+        },
+        {
+          '@type': 'Question',
+          name: `How should teams evaluate ${tool.name}?`,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Pilot one high-friction workflow first (onboarding, SOP updates, or coaching content), then measure cycle-time and adoption before scaling.'
+          }
+        }
+      ]
+    }
+  ]
 };
 ---
 <Base
   title={`${tool.name} Review & Alternatives | AI Training Directory`}
   description={`${tool.name}: features, pricing model, and fit for AI training workflows.`}
   canonical={canonical}
-  jsonLd={faqJsonLd}
+  jsonLd={jsonLd}
 >
-  <p><a href="/">← Back to directory</a></p>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Tool', href: `/tool/${tool.slug}/` }]} />
   <h1>{tool.name}</h1>
   <p>
     <span class="badge">{tool.category}</span>
@@ -54,5 +80,9 @@ const faqJsonLd = {
   <h2>Who this is for</h2>
   <p>
     Teams building repeatable onboarding, SOP, and internal training workflows that need faster content production.
+  </p>
+
+  <p>
+    <a href="/compare/">Compare alternatives</a> · <a href="/solutions/">Find role/use-case pages</a>
   </p>
 </Base>

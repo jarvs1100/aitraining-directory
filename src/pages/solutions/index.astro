@@ -1,0 +1,14 @@
+---
+import Base from '../../layouts/Base.astro';
+import { useCases, roles, industries } from '../../lib/programmatic.js';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+const canonical = 'https://aitraining.directory/solutions/';
+---
+<Base title="AI Training Solutions by Use Case, Role, and Industry" description="Browse AI training software recommendations by use case, role, and industry context for L&D and enablement teams." canonical={canonical}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Solutions', href: '/solutions/' }]} />
+  <h1>AI training solutions hub</h1>
+  <p class="muted">Explore pages tailored to real L&D operating contexts.</p>
+  <h2>Use cases</h2><div class="grid">{useCases.map((p)=><a class="card" href={`/solutions/${p.slug}/`}><h3 style="margin:0 0 8px 0;">{p.label}</h3><p style="margin:0;" class="muted">{p.meta}</p></a>)}</div>
+  <h2>Roles</h2><div class="grid">{roles.map((p)=><a class="card" href={`/solutions/${p.slug}/`}><h3 style="margin:0 0 8px 0;">{p.label}</h3><p style="margin:0;" class="muted">Recommendations by role and workflow maturity.</p></a>)}</div>
+  <h2>Industries</h2><div class="grid">{industries.map((p)=><a class="card" href={`/solutions/${p.slug}/`}><h3 style="margin:0 0 8px 0;">{p.label}</h3><p style="margin:0;" class="muted">Filter tools for compliance and operational realities.</p></a>)}</div>
+</Base>

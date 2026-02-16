@@ -1,0 +1,25 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { solutionPages, getSolutionBySlug, pickTools } from '../../lib/programmatic.js';
+export async function getStaticPaths() { return solutionPages.map((p) => ({ params: { slug: p.slug } })); }
+const { slug } = Astro.params;
+const page = getSolutionBySlug(slug);
+if (!page) throw new Error(`Solution page not found: ${slug}`);
+const canonical = `https://aitraining.directory/solutions/${slug}/`;
+const tools = pickTools(slug.length % 8, 6);
+const faq = [
+  { q: `How should ${page.label.toLowerCase()} teams shortlist AI tools?`, a: 'Start with one workflow bottleneck, run a 2-week pilot, and measure cycle-time reduction before broader rollout.' },
+  { q: 'What matters most for L&D buyers?', a: 'Version control, collaboration, integration with existing systems, and ease of updating training assets over time.' }
+];
+const jsonLd = { '@context': 'https://schema.org', '@graph': [{ '@type': 'CollectionPage', name: page.title, description: page.meta, url: canonical }, { '@type': 'FAQPage', mainEntity: faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) }] };
+---
+<Base title={page.title} description={page.meta} canonical={canonical} jsonLd={jsonLd}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Solutions', href: '/solutions/' }, { label: page.label, href: `/solutions/${slug}/` }]} />
+  <h1>{page.title}</h1><p class="muted">{page.intro}</p>
+  <h2>Recommended tools to evaluate</h2>
+  <div class="grid">{tools.map((tool)=><article class="card"><div><span class="badge">{tool.category}</span><span class="badge">{tool.pricing}</span></div><h3><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h3><p>{tool.summary}</p></article>)}</div>
+  <h2>Evaluation checklist</h2><ul><li>Does the tool reduce content production cycle time for L&D?</li><li>Can training managers update assets without vendor dependency?</li><li>Is governance clear for compliance-sensitive workflows?</li><li>Can this integrate into current knowledge and LMS systems?</li></ul>
+  <h2>Related planning routes</h2><p>Continue to <a href="/compare/">comparison pages</a> for alternatives, or return to the <a href="/categories/">category explorer</a>.</p>
+  <h2>FAQ</h2>{faq.map((item)=><><h3>{item.q}</h3><p>{item.a}</p></>)}
+</Base>

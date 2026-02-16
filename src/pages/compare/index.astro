@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { comparisonPages } from '../../lib/programmatic.js';
+const canonical = 'https://aitraining.directory/compare/';
+---
+<Base title="AI Training Tool Comparisons and Alternatives" description="Compare AI tools for training operations, onboarding, and L&D content production with practical implementation context." canonical={canonical}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Compare', href: '/compare/' }]} />
+  <h1>Compare AI training tools</h1>
+  <p class="muted">Alternatives and head-to-head pages designed for L&D buying committees.</p>
+  <div class="grid">{comparisonPages.map((page)=><a class="card" href={`/compare/${page.slug}/`}><h2 style="margin:0 0 8px 0;font-size:20px;">{page.title}</h2><p class="muted" style="margin:0;">{page.meta}</p></a>)}</div>
+</Base>

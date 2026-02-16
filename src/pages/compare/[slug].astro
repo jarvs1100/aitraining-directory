@@ -1,0 +1,20 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { comparisonPages, getComparisonBySlug, pickTools } from '../../lib/programmatic.js';
+export async function getStaticPaths() { return comparisonPages.map((p) => ({ params: { slug: p.slug } })); }
+const { slug } = Astro.params;
+const page = getComparisonBySlug(slug);
+if (!page) throw new Error(`Comparison page not found: ${slug}`);
+const canonical = `https://aitraining.directory/compare/${slug}/`;
+const candidates = pickTools((slug.length + 3) % 8, 4);
+const jsonLd = { '@context': 'https://schema.org', '@type': 'Article', headline: page.title, description: page.meta, mainEntityOfPage: canonical };
+---
+<Base title={page.title} description={page.meta} canonical={canonical} jsonLd={jsonLd}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Compare', href: '/compare/' }, { label: page.title, href: `/compare/${slug}/` }]} />
+  <h1>{page.title}</h1><p class="muted">{page.intro}</p>
+  <h2>Quick comparison lens for L&D teams</h2><ul><li>Implementation speed for internal enablement programs</li><li>Ease of update when training material changes</li><li>Localization and role-based distribution support</li><li>Total workflow fit across authoring, review, and delivery</li></ul>
+  <h2>Related tools in this directory</h2>
+  <div class="grid">{candidates.map((tool)=><article class="card"><h3><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h3><p>{tool.summary}</p></article>)}</div>
+  <p><a href="/solutions/">Browse solution pages</a> for use-case and role-specific recommendations.</p>
+</Base>

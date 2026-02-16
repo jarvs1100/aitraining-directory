@@ -1,0 +1,22 @@
+---
+const { items = [] } = Astro.props;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: item.label,
+    item: `https://aitraining.directory${item.href}`
+  }))
+};
+---
+<nav aria-label="Breadcrumb" style="margin-bottom:14px; font-size:14px;">
+  {items.map((item, i) => (
+    <>
+      {i > 0 && <span class="muted"> / </span>}
+      {i < items.length - 1 ? <a href={item.href}>{item.label}</a> : <span class="muted">{item.label}</span>}
+    </>
+  ))}
+</nav>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

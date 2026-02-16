@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { allListings, getCategories, getCategorySlug } from '../lib/data.js';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { allListings, getCategories } from '../lib/data.js';
 
 const categories = getCategories();
 const featured = allListings.slice(0, 12);
@@ -25,8 +26,15 @@ const jsonLd = {
   canonical="https://aitraining.directory/"
   jsonLd={jsonLd}
 >
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
   <h1>AI Training Directory</h1>
   <p class="muted">Find and compare AI tools for training, onboarding, SOP documentation, and corporate L&D operations.</p>
+
+  <p>
+    <a class="badge" href="/solutions/">Browse by use case</a>
+    <a class="badge" href="/compare/">Compare alternatives</a>
+    <a class="badge" href="/advertise/">Join founding partner waitlist</a>
+  </p>
 
   <h2>Browse categories</h2>
   <p>
@@ -48,15 +56,8 @@ const jsonLd = {
     ))}
   </div>
 
-  <h2>Why this directory exists</h2>
+  <h2>For L&D teams first</h2>
   <p>
-    Most AI tool lists are noisy. This directory focuses on practical tools for training teams: creating SOP content,
-    onboarding new hires, and shipping compliance training faster.
+    This directory prioritizes learning and development operators who need repeatable training outcomes. Automation assistants like OpenClaw bots can support operations, but the primary lens here is practical L&D execution.
   </p>
-
-  <h2>FAQs</h2>
-  <h3>Is this free to use?</h3>
-  <p>Yes. You can browse all tool listings for free.</p>
-  <h3>How do I submit a tool?</h3>
-  <p>Use the <a href="/submit/">submit page</a> and include your core features and pricing model.</p>
 </Base>

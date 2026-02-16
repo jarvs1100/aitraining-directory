@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { getCategories, getCategoryBySlug, getListingsByCategorySlug } from '../../lib/data.js';
 
 export async function getStaticPaths() {
@@ -35,7 +36,7 @@ const jsonLd = {
   canonical={canonical}
   jsonLd={jsonLd}
 >
-  <p><a href="/categories/">← All categories</a></p>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Categories', href: '/categories/' }, { label: category.name, href: `/category/${slug}/` }]} />
   <h1>{category.name} tools</h1>
   <p class="muted">{tools.length} tools in this category.</p>
 
@@ -48,4 +49,6 @@ const jsonLd = {
       </article>
     ))}
   </div>
+
+  <p><a href="/solutions/">Need scenario-based picks? Browse the solutions hub.</a></p>
 </Base>

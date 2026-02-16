@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { getCategories } from '../lib/data.js';
 
 const categories = getCategories();
@@ -9,6 +10,7 @@ const categories = getCategories();
   description="Explore AI training tools by category, including AI video, AI chat, AI voice, AI productivity, and more."
   canonical="https://aitraining.directory/categories/"
 >
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Categories', href: '/categories/' }]} />
   <h1>All categories</h1>
   <div class="grid">
     {categories.map((c) => (
