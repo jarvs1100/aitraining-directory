@@ -33,6 +33,11 @@ npm run build
 2. Run `npm run build`
 3. Commit + push to `main`
 
+## Growth operations assets
+- `ops/traffic-acquisition-sop.md` — weekly distribution + SEO execution loop
+- `ops/outreach-distribution-checklist.md` — launch/promotion checklist
+- `ops/daily-kpi-tracker.csv` + `ops/daily-kpi-tracker-guide.md` — KPI logging and interpretation
+
 GitHub Pages serves `docs/` on `aitraining.directory`.
 
 ## UI refresh note (before/after)
