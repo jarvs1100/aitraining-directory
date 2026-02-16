@@ -1,3 +1,4 @@
 node_modules/
 .npm/
+.astro/
 .DS_Store

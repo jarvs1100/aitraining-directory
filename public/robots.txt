@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://aitraining.directory/sitemap-index.xml
+Host: https://aitraining.directory
