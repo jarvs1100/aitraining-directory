@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { allListings } from '../../lib/data.js';
+import { allListings, getCategorySlug } from '../../lib/data.js';
 
 export async function getStaticPaths() {
   return allListings.map((tool) => ({ params: { slug: tool.slug } }));
@@ -15,6 +15,8 @@ if (!tool) {
 }
 
 const canonical = `https://aitraining.directory/tool/${tool.slug}/`;
+const categorySlug = getCategorySlug(tool.category);
+const relatedTools = allListings.filter((item) => item.category === tool.category && item.slug !== tool.slug).slice(0, 3);
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -60,7 +62,7 @@ const jsonLd = {
   canonical={canonical}
   jsonLd={jsonLd}
 >
-  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Tool', href: `/tool/${tool.slug}/` }]} />
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: tool.category, href: `/category/${categorySlug}/` }, { label: tool.name, href: `/tool/${tool.slug}/` }]} />
 
   <article>
     <header class="hero" style="margin-bottom:1.25rem;">
@@ -72,6 +74,7 @@ const jsonLd = {
       <p class="muted" style="max-width:72ch;">{tool.summary}</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href={tool.website} target="_blank" rel="nofollow noopener">Visit {tool.name} ↗</a>
+        <a class="btn btn-secondary" href={`/category/${categorySlug}/`}>More {tool.category} tools</a>
         <a class="btn btn-secondary" href="/compare/">Compare alternatives</a>
       </div>
     </header>
@@ -88,6 +91,20 @@ const jsonLd = {
       <p class="muted" style="margin-bottom:0;">Teams building repeatable onboarding, SOP, and internal training workflows that need faster content production without sacrificing quality controls.</p>
     </section>
 
-    <p class="section"><a class="chip" href="/solutions/">Find role/use-case pages</a></p>
+    {Boolean(relatedTools.length) && (
+      <section class="section" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related tools in {tool.category}</h2>
+        <div class="grid">
+          {relatedTools.map((item) => (
+            <article class="card">
+              <h3><a href={`/tool/${item.slug}/`}>{item.name}</a></h3>
+              <p class="muted" style="margin:0;">{item.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <p class="section"><a class="chip" href="/solutions/">See scenario-based picks</a></p>
   </article>
 </Base>
