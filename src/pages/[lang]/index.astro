@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { localizedLandingPages, localeMeta } from '../../lib/i18n.js';
+
+export async function getStaticPaths() {
+  return Object.keys(localeMeta)
+    .filter((locale) => locale !== 'en')
+    .map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const locale = localeMeta[lang];
+if (!locale || lang === 'en') {
+  throw new Error(`Locale not found: ${lang}`);
+}
+
+const pages = localizedLandingPages.filter((page) => page.locale === lang);
+const canonical = `https://aitraining.directory/${lang}/`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  inLanguage: lang,
+  name: `${locale.name} AI training pages`,
+  url: canonical
+};
+---
+<Base title={`${locale.name} | AI Training Directory`} description={`Localized AI training and L&D pages for ${locale.name} market intent.`} canonical={canonical} jsonLd={jsonLd} lang={lang}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: locale.name, href: `/${lang}/` }]} />
+
+  <section class="hero" style="margin-bottom:1.25rem;">
+    <span class="eyebrow">{locale.name} edition</span>
+    <h1 style="margin-top:.7rem;">{locale.name}: AI training pages</h1>
+    <p class="muted" style="max-width:70ch;">Localized routes for L&D and enablement teams in {locale.name}. Start with a market-intent page below.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/categories/">Browse all categories</a>
+      <a class="btn btn-secondary" href="/solutions/">Open solution playbooks</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="localized-pages-heading">
+    <h2 id="localized-pages-heading">Available localized pages</h2>
+    <div class="grid">
+      {pages.map((page) => (
+        <a class="card" href={`/${page.locale}/${page.slug}/`}>
+          <h3 style="margin:0 0 .5rem 0;">{page.h1}</h3>
+          <p class="muted" style="margin:0;">{page.description}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

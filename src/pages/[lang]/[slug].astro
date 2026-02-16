@@ -14,16 +14,33 @@ const { page } = Astro.props;
 const canonical = `https://aitraining.directory/${page.locale}/${page.slug}/`;
 const alternates = getAlternatesForKey(page.key, page.locale);
 const siblingPages = getSiblingLocalizedPages(page.key, page.locale);
+const localeSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  inLanguage: page.locale,
+  name: page.h1,
+  url: canonical,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'AI Training Directory',
+    url: 'https://aitraining.directory/'
+  }
+};
 const faq = getLocalizedFaq(page.locale);
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  inLanguage: page.locale,
-  mainEntity: faq.map((item) => ({
-    '@type': 'Question',
-    name: item.q,
-    acceptedAnswer: { '@type': 'Answer', text: item.a }
-  }))
+  '@graph': [
+    localeSchema,
+    {
+      '@type': 'FAQPage',
+      inLanguage: page.locale,
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: { '@type': 'Answer', text: item.a }
+      }))
+    }
+  ]
 };
 ---
 <Base title={page.title} description={page.description} canonical={canonical} jsonLd={jsonLd} alternates={alternates} lang={page.locale}>
