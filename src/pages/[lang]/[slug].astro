@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import LocalizedLanding from '../../components/LocalizedLanding.astro';
-import { localizedLandingPages, getAlternatesForKey } from '../../lib/i18n.js';
+import { localizedLandingPages, getAlternatesForKey, getSiblingLocalizedPages } from '../../lib/i18n.js';
 
 export async function getStaticPaths() {
   return localizedLandingPages.map((page) => ({
@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 const canonical = `https://aitraining.directory/${page.locale}/${page.slug}/`;
 const alternates = getAlternatesForKey(page.key, page.locale);
+const siblingPages = getSiblingLocalizedPages(page.key, page.locale);
 const faq = [
   {
     q: 'Is this page manually localized for market intent?',
@@ -35,7 +36,7 @@ const jsonLd = {
 };
 ---
 <Base title={page.title} description={page.description} canonical={canonical} jsonLd={jsonLd} alternates={alternates} lang={page.locale}>
-  <LocalizedLanding page={page} alternates={alternates} />
+  <LocalizedLanding page={page} alternates={alternates} siblingPages={siblingPages} />
   <h2>FAQ</h2>
   {faq.map((item) => (
     <>

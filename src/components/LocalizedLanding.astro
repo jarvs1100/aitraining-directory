@@ -1,14 +1,53 @@
 ---
 import Breadcrumbs from './Breadcrumbs.astro';
-const { page, alternates = [] } = Astro.props;
+import { localeMeta, getLocalizedSupportBlocks } from '../lib/i18n.js';
+const { page, alternates = [], siblingPages = [] } = Astro.props;
+const currentLocaleName = localeMeta[page.locale]?.name || page.locale.toUpperCase();
+const supportBlocks = getLocalizedSupportBlocks(page.key, page.locale);
 ---
-<Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: page.locale.toUpperCase(), href: `/${page.locale}/` }, { label: page.h1, href: `/${page.locale}/${page.slug}/` }]} />
-<h1>{page.h1}</h1>
-<p class="muted">{page.intro}</p>
-<ul>
-  {page.points.map((point) => <li>{point}</li>)}
-</ul>
-<p>
-  <a href={page.enPath}>View English reference page</a> · <a href="/solutions/">Browse all solutions</a>
-</p>
-<p class="muted" style="font-size:14px;">Localized for {page.locale.toUpperCase()} market. Primary audience remains L&D and enablement teams.</p>
+<Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: currentLocaleName, href: `/${page.locale}/` }, { label: page.h1, href: `/${page.locale}/${page.slug}/` }]} />
+<section class="hero">
+  <span class="eyebrow">{currentLocaleName} edition</span>
+  <h1 style="margin-top:0.8rem;">{page.h1}</h1>
+  <p class="muted">{page.intro}</p>
+  <div class="grid" style="margin-top:1rem;">
+    {page.points.map((point) => (
+      <article class="card">
+        <h3>{point}</h3>
+        <p class="muted" style="margin:0;">Focused on practical rollout for L&D, enablement, and operations teams.</p>
+      </article>
+    ))}
+  </div>
+  <div class="hero-actions" style="margin-top:1rem;">
+    <a class="btn btn-primary" href={page.enPath}>Open English implementation page</a>
+    <a class="btn btn-secondary" href="/advertise/">Join founding partner waitlist</a>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="checklist-heading">
+  <h2 id="checklist-heading">Market rollout checklist</h2>
+  <ul>
+    {supportBlocks.checklist.map((item) => <li>{item}</li>)}
+  </ul>
+</section>
+
+<section class="section" aria-labelledby="next-links-heading">
+  <h2 id="next-links-heading">Next pages to visit</h2>
+  <div class="chips">
+    {supportBlocks.internalLinks.map((item) => (
+      <a class="chip" href={item.href}>{item.label}</a>
+    ))}
+  </div>
+</section>
+
+{Boolean(siblingPages.length) && (
+  <section class="section" aria-labelledby="other-editions-heading">
+    <h2 id="other-editions-heading">Other language editions</h2>
+    <div class="chips">
+      {siblingPages.map((item) => (
+        <a class="chip" href={`/${item.locale}/${item.slug}/`}>{localeMeta[item.locale]?.name || item.locale.toUpperCase()}</a>
+      ))}
+    </div>
+  </section>
+)}
+<p class="muted" style="font-size:14px;">{supportBlocks.intentCopy}</p>

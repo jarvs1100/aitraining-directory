@@ -1,11 +1,11 @@
 export const localeMeta = {
-  en: { name: 'English', path: '' },
-  pl: { name: 'Polski', path: '/pl' },
-  cs: { name: 'Čeština', path: '/cs' },
-  sk: { name: 'Slovenčina', path: '/sk' },
-  hu: { name: 'Magyar', path: '/hu' },
-  de: { name: 'Deutsch', path: '/de' },
-  es: { name: 'Español', path: '/es' }
+  en: { name: 'English', path: '', hreflang: 'en' },
+  pl: { name: 'Polski', path: '/pl', hreflang: 'pl-PL' },
+  cs: { name: 'Čeština', path: '/cs', hreflang: 'cs-CZ' },
+  sk: { name: 'Slovenčina', path: '/sk', hreflang: 'sk-SK' },
+  hu: { name: 'Magyar', path: '/hu', hreflang: 'hu-HU' },
+  de: { name: 'Deutsch', path: '/de', hreflang: 'de-DE' },
+  es: { name: 'Español', path: '/es', hreflang: 'es-ES' }
 };
 
 export const localizedLandingPages = [
@@ -109,6 +109,17 @@ export const localizedLandingPages = [
     enPath: '/solutions/sop-to-video-training/'
   },
   {
+    key: 'sop-video',
+    locale: 'de',
+    slug: 'sop-zu-schulungsvideos-mit-ki',
+    title: 'SOP zu Schulungsvideos mit KI',
+    description: 'Interne SOPs mit KI schneller in klare Schulungsvideos umsetzen.',
+    h1: 'SOP zu Schulungsvideos mit KI',
+    intro: 'Ideal für Teams, die Einarbeitung standardisieren und Prozesse laufend aktualisieren müssen.',
+    points: ['Schnellere Veröffentlichung', 'Höheres Prozessverständnis', 'Weniger Einarbeitungsfehler im Alltag'],
+    enPath: '/solutions/sop-to-video-training/'
+  },
+  {
     key: 'ai-training-tools',
     locale: 'es',
     slug: 'herramientas-ia-formacion-empleados',
@@ -118,6 +129,17 @@ export const localizedLandingPages = [
     intro: 'Pensado para equipos de formación que necesitan velocidad y consistencia en contenidos.',
     points: ['Menor tiempo de producción', 'Mejor consistencia entre equipos', 'Actualizaciones más rápidas de procesos internos'],
     enPath: '/solutions/new-hire-onboarding-automation/'
+  },
+  {
+    key: 'sop-video',
+    locale: 'es',
+    slug: 'de-sop-a-video-de-formacion-con-ia',
+    title: 'De SOP a video de formación con IA',
+    description: 'Convierte procedimientos internos en videos de formación claros y actualizables.',
+    h1: 'De SOP a video de formación con IA',
+    intro: 'Una ruta práctica para equipos L&D que necesitan escalar onboarding sin duplicar esfuerzo.',
+    points: ['Publicación más rápida de contenidos', 'Mejor comprensión de procesos', 'Más control para auditoría y cumplimiento'],
+    enPath: '/solutions/sop-to-video-training/'
   }
 ];
 
@@ -127,11 +149,62 @@ export function buildLocalizedPath(locale, slug) {
 
 export function getAlternatesForKey(key, currentLocale) {
   const siblings = localizedLandingPages.filter((p) => p.key === key);
-  const links = siblings.map((page) => ({ hreflang: page.locale, href: `https://aitraining.directory/${page.locale}/${page.slug}/` }));
+  const links = [];
+
+  for (const page of siblings) {
+    const localeInfo = localeMeta[page.locale];
+    const href = `https://aitraining.directory/${page.locale}/${page.slug}/`;
+    links.push({ hreflang: page.locale, href });
+    if (localeInfo?.hreflang && localeInfo.hreflang !== page.locale) {
+      links.push({ hreflang: localeInfo.hreflang, href });
+    }
+  }
+
   const current = siblings.find((p) => p.locale === currentLocale) || siblings[0];
   if (current?.enPath) {
     links.push({ hreflang: 'en', href: `https://aitraining.directory${current.enPath}` });
     links.push({ hreflang: 'x-default', href: `https://aitraining.directory${current.enPath}` });
   }
+
   return links;
+}
+
+export function getSiblingLocalizedPages(key, currentLocale) {
+  return localizedLandingPages.filter((p) => p.key === key && p.locale !== currentLocale);
+}
+
+export function getLocalizedSupportBlocks(key, locale) {
+  const localeName = localeMeta[locale]?.name || locale.toUpperCase();
+
+  if (key === 'ai-training-tools') {
+    return {
+      checklist: [
+        'Map top 3 repetitive training workflows (onboarding, role-specific SOP updates, compliance refreshes).',
+        'Define the single source of truth for SOP docs, playbooks, and change logs.',
+        'Pilot with one team and track time-to-publish plus completion quality.',
+        'Set governance: approvers, update cadence, and ownership for each training stream.'
+      ],
+      internalLinks: [
+        { label: 'Browse AI training solutions', href: '/solutions/' },
+        { label: 'Compare tools side-by-side', href: '/compare/' },
+        { label: 'Explore training categories', href: '/categories/' }
+      ],
+      intentCopy: `This ${localeName} page is designed for market-relevant discovery and routes readers to implementation-ready English solution pages.`
+    };
+  }
+
+  return {
+    checklist: [
+      'Select 1–2 SOPs with high update frequency and clear step-by-step logic.',
+      'Turn each SOP into short modules (3–7 minutes) tied to job roles.',
+      'Assign review owners for legal/compliance checks before publishing.',
+      'Measure quiz scores, process adherence, and retraining rate after rollout.'
+    ],
+    internalLinks: [
+      { label: 'SOP-to-video implementation pages', href: '/solutions/sop-to-video-training/' },
+      { label: 'New-hire onboarding automation', href: '/solutions/new-hire-onboarding-automation/' },
+      { label: 'Submit a relevant tool', href: '/submit/' }
+    ],
+    intentCopy: `Localized in ${localeName} for search intent, while keeping implementation pathways consistent with core solution pages.`
+  };
 }
