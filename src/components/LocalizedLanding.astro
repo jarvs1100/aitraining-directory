@@ -1,0 +1,14 @@
+---
+import Breadcrumbs from './Breadcrumbs.astro';
+const { page, alternates = [] } = Astro.props;
+---
+<Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: page.locale.toUpperCase(), href: `/${page.locale}/` }, { label: page.h1, href: `/${page.locale}/${page.slug}/` }]} />
+<h1>{page.h1}</h1>
+<p class="muted">{page.intro}</p>
+<ul>
+  {page.points.map((point) => <li>{point}</li>)}
+</ul>
+<p>
+  <a href={page.enPath}>View English reference page</a> · <a href="/solutions/">Browse all solutions</a>
+</p>
+<p class="muted" style="font-size:14px;">Localized for {page.locale.toUpperCase()} market. Primary audience remains L&D and enablement teams.</p>

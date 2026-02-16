@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import LocalizedLanding from '../../components/LocalizedLanding.astro';
+import { localizedLandingPages, getAlternatesForKey } from '../../lib/i18n.js';
+
+export async function getStaticPaths() {
+  return localizedLandingPages.map((page) => ({
+    params: { lang: page.locale, slug: page.slug },
+    props: { page }
+  }));
+}
+
+const { page } = Astro.props;
+const canonical = `https://aitraining.directory/${page.locale}/${page.slug}/`;
+const alternates = getAlternatesForKey(page.key, page.locale);
+const faq = [
+  {
+    q: 'Is this page manually localized for market intent?',
+    a: 'Yes. Localization is curated for intent and context. Pages are not bulk machine-translated spam.'
+  },
+  {
+    q: 'Who is the primary target audience?',
+    a: 'Learning & Development teams, enablement leads, and training operations managers.'
+  }
+];
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: page.locale,
+  mainEntity: faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a }
+  }))
+};
+---
+<Base title={page.title} description={page.description} canonical={canonical} jsonLd={jsonLd} alternates={alternates} lang={page.locale}>
+  <LocalizedLanding page={page} alternates={alternates} />
+  <h2>FAQ</h2>
+  {faq.map((item) => (
+    <>
+      <h3>{item.q}</h3>
+      <p>{item.a}</p>
+    </>
+  ))}
+</Base>
