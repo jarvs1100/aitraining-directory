@@ -61,28 +61,33 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Tool', href: `/tool/${tool.slug}/` }]} />
-  <h1>{tool.name}</h1>
-  <p>
-    <span class="badge">{tool.category}</span>
-    <span class="badge">{tool.pricing}</span>
-  </p>
-  <p>{tool.summary}</p>
 
-  <h2>Key features</h2>
-  <ul>
-    {tool.features.map((feature) => <li>{feature}</li>)}
-  </ul>
+  <article>
+    <header class="hero" style="margin-bottom:1.25rem;">
+      <div class="chips" style="margin-bottom:.8rem;">
+        <span class="badge">{tool.category}</span>
+        <span class="badge">{tool.pricing}</span>
+      </div>
+      <h1 style="margin-bottom:.7rem;">{tool.name}</h1>
+      <p class="muted" style="max-width:72ch;">{tool.summary}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href={tool.website} target="_blank" rel="nofollow noopener">Visit {tool.name} ↗</a>
+        <a class="btn btn-secondary" href="/compare/">Compare alternatives</a>
+      </div>
+    </header>
 
-  <p>
-    <a href={tool.website} target="_blank" rel="nofollow noopener">Visit {tool.name} ↗</a>
-  </p>
+    <section class="card" aria-labelledby="features-heading">
+      <h2 id="features-heading">Key features</h2>
+      <ul>
+        {tool.features.map((feature) => <li>{feature}</li>)}
+      </ul>
+    </section>
 
-  <h2>Who this is for</h2>
-  <p>
-    Teams building repeatable onboarding, SOP, and internal training workflows that need faster content production.
-  </p>
+    <section class="section card" aria-labelledby="fit-heading">
+      <h2 id="fit-heading">Who this is for</h2>
+      <p class="muted" style="margin-bottom:0;">Teams building repeatable onboarding, SOP, and internal training workflows that need faster content production without sacrificing quality controls.</p>
+    </section>
 
-  <p>
-    <a href="/compare/">Compare alternatives</a> · <a href="/solutions/">Find role/use-case pages</a>
-  </p>
+    <p class="section"><a class="chip" href="/solutions/">Find role/use-case pages</a></p>
+  </article>
 </Base>

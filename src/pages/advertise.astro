@@ -8,36 +8,40 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   canonical="https://aitraining.directory/advertise/"
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Founding Partners', href: '/advertise/' }]} />
-  <h1>Founding partner interest (pre-launch)</h1>
-  <p class="muted">We are prioritizing audience quality and category relevance before turning on self-serve paid placements.</p>
 
-  <div class="grid">
+  <section class="hero">
+    <span class="eyebrow">Founding partner program</span>
+    <h1 style="margin-top:.7rem;max-width:18ch;">Reach L&D buyers early with premium visibility placements</h1>
+    <p class="muted" style="max-width:70ch;">We keep placements category-relevant and trust-safe. Join the waitlist now to reserve early opportunities before public sponsorship opens.</p>
+  </section>
+
+  <section class="grid" aria-label="Partnership options">
     <article class="card">
-      <h2>Waitlist: Sponsored Category Slots</h2>
-      <p>Reserve early access for category sponsorship opportunities when traffic benchmarks are hit.</p>
-      <p><a href="mailto:sales@aitraining.directory?subject=Founding%20Partner%20Waitlist">Join waitlist</a></p>
+      <h2>Sponsored category slots</h2>
+      <p class="muted">Reserve first access to the highest-intent category pages once traffic thresholds are met.</p>
+      <p><a class="chip" href="mailto:sales@aitraining.directory?subject=Founding%20Partner%20Waitlist">Join waitlist</a></p>
     </article>
 
     <article class="card">
-      <h2>Founding Partner Program</h2>
-      <p>Best for L&D-focused platforms that want launch visibility plus positioning input on category pages.</p>
-      <p><a href="mailto:sales@aitraining.directory?subject=Founding%20Partner%20Interest">Submit interest</a></p>
+      <h2>Founding partner package</h2>
+      <p class="muted">Ideal for L&D-focused products that want launch visibility and input on positioning standards.</p>
+      <p><a class="chip" href="mailto:sales@aitraining.directory?subject=Founding%20Partner%20Interest">Submit interest</a></p>
     </article>
 
     <article class="card">
-      <h2>DFY Listing Optimization</h2>
-      <p>Optional advisory service for positioning, copy upgrades, and internal link strategy once volume is live.</p>
-      <p><a href="mailto:sales@aitraining.directory?subject=Listing%20Optimization%20Interest">Request details</a></p>
+      <h2>DFY listing optimization</h2>
+      <p class="muted">Optional advisory support for conversion copy, taxonomy fit, and internal linking strategy.</p>
+      <p><a class="chip" href="mailto:sales@aitraining.directory?subject=Listing%20Optimization%20Interest">Request details</a></p>
     </article>
-  </div>
+  </section>
 
-  <h2>Monetization path (documented, not hard-sold)</h2>
-  <ul>
-    <li>Phase 1: Waitlist capture + qualification</li>
-    <li>Phase 2: Invite-only sponsored slots after baseline organic demand is proven</li>
-    <li>Phase 3: Public media kit and transparent placement guidelines</li>
-  </ul>
-
-  <h2>Need invoicing or procurement details?</h2>
-  <p>Email <a href="mailto:sales@aitraining.directory">sales@aitraining.directory</a>.</p>
+  <section class="section card" aria-labelledby="roadmap-heading">
+    <h2 id="roadmap-heading">Transparent monetization roadmap</h2>
+    <ul>
+      <li>Phase 1: Waitlist capture + qualification</li>
+      <li>Phase 2: Invite-only sponsored slots after baseline organic demand is proven</li>
+      <li>Phase 3: Public media kit and transparent placement guidelines</li>
+    </ul>
+    <p style="margin-top:1rem;margin-bottom:0;">Need invoicing or procurement details? Email <a href="mailto:sales@aitraining.directory">sales@aitraining.directory</a>.</p>
+  </section>
 </Base>

@@ -34,3 +34,7 @@ npm run build
 3. Commit + push to `main`
 
 GitHub Pages serves `docs/` on `aitraining.directory`.
+
+## UI refresh note (before/after)
+- **Before:** Minimal default styling with limited visual hierarchy and weaker mobile presentation.
+- **After:** Introduced a reusable design system (tokens + shared UI classes), stronger hero/CTA sections, premium chips/cards/navigation/footer polish, and better responsive/accessibility defaults (focus styles, landmarks, improved contrast) while keeping Astro static output and SEO structure unchanged.

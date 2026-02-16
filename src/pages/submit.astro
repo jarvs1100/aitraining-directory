@@ -8,18 +8,30 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   canonical="https://aitraining.directory/submit/"
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Submit Tool', href: '/submit/' }]} />
-  <h1>Submit your AI training tool</h1>
-  <p class="muted">We review every submission for relevance and quality.</p>
 
-  <h2>What to include</h2>
-  <ul>
-    <li>Tool name + URL</li>
-    <li>Primary category</li>
-    <li>Pricing model (Freemium/Paid)</li>
-    <li>One-paragraph summary</li>
-    <li>3–5 core features</li>
-  </ul>
+  <section class="hero">
+    <span class="eyebrow">Submission review</span>
+    <h1 style="margin-top:.7rem;">Submit your AI training tool</h1>
+    <p class="muted" style="max-width:68ch;">We review submissions for relevance, trust signals, and practical L&D value. High-quality listings get published with category context and internal links.</p>
+  </section>
 
-  <p>Email: <a href="mailto:submit@aitraining.directory?subject=Submit%20AI%20Training%20Tool">submit@aitraining.directory</a></p>
-  <p><a href="/advertise/">Interested in founding partner visibility?</a></p>
+  <section class="grid" aria-label="Submission details">
+    <article class="card">
+      <h2>What to include</h2>
+      <ul>
+        <li>Tool name + URL</li>
+        <li>Primary category</li>
+        <li>Pricing model (Freemium/Paid)</li>
+        <li>One-paragraph summary</li>
+        <li>3–5 core features</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Where to send it</h2>
+      <p class="muted">Email your submission and we’ll reply after editorial review.</p>
+      <p><a class="btn btn-primary" href="mailto:submit@aitraining.directory?subject=Submit%20AI%20Training%20Tool">submit@aitraining.directory</a></p>
+      <p style="margin-bottom:0;"><a class="chip" href="/advertise/">Interested in founding partner visibility?</a></p>
+    </article>
+  </section>
 </Base>

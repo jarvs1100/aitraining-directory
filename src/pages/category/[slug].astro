@@ -37,18 +37,25 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Categories', href: '/categories/' }, { label: category.name, href: `/category/${slug}/` }]} />
-  <h1>{category.name} tools</h1>
-  <p class="muted">{tools.length} tools in this category.</p>
 
-  <div class="grid">
-    {tools.map((tool) => (
-      <article class="card">
-        <div><span class="badge">{tool.pricing}</span></div>
-        <h2 style="margin:10px 0;"><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h2>
-        <p>{tool.summary}</p>
-      </article>
-    ))}
-  </div>
+  <section class="hero" style="margin-bottom:1.25rem;">
+    <span class="eyebrow">{tools.length} options</span>
+    <h1 style="margin-top:.7rem;">{category.name} tools for modern training teams</h1>
+    <p class="muted" style="max-width:70ch;">Compare feature fit, pricing model, and workflow compatibility before piloting tools with your L&D stakeholders.</p>
+  </section>
 
-  <p><a href="/solutions/">Need scenario-based picks? Browse the solutions hub.</a></p>
+  <section aria-labelledby="category-list-heading">
+    <h2 id="category-list-heading">Tools in this category</h2>
+    <div class="grid">
+      {tools.map((tool) => (
+        <article class="card">
+          <div class="chips" style="margin-bottom:.85rem;"><span class="badge">{tool.pricing}</span></div>
+          <h3 style="margin-bottom:.45rem;"><a href={`/tool/${tool.slug}/`} style="color:inherit;">{tool.name}</a></h3>
+          <p class="muted" style="margin:0;">{tool.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <p class="section"><a class="chip" href="/solutions/">Need scenario-based picks? Browse the solutions hub.</a></p>
 </Base>

@@ -11,13 +11,22 @@ const categories = getCategories();
   canonical="https://aitraining.directory/categories/"
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Categories', href: '/categories/' }]} />
-  <h1>All categories</h1>
-  <div class="grid">
-    {categories.map((c) => (
-      <a class="card" href={`/category/${c.slug}/`}>
-        <h2 style="margin:0 0 6px 0;font-size:20px;">{c.name}</h2>
-        <p class="muted" style="margin:0;">{c.count} tools</p>
-      </a>
-    ))}
-  </div>
+
+  <section class="hero" style="margin-bottom:1.25rem;">
+    <span class="eyebrow">Category map</span>
+    <h1 style="margin-top:.7rem;">Browse AI tools by training workflow</h1>
+    <p class="muted" style="max-width:65ch;">Choose a category to see vetted tools with summaries, pricing model, and direct links for faster evaluation.</p>
+  </section>
+
+  <section aria-labelledby="all-categories-heading">
+    <h2 id="all-categories-heading">All categories</h2>
+    <div class="grid">
+      {categories.map((c) => (
+        <a class="card" href={`/category/${c.slug}/`}>
+          <h3 style="margin-bottom:.45rem;color:inherit;">{c.name}</h3>
+          <p class="muted" style="margin:0;">{c.count} tools</p>
+        </a>
+      ))}
+    </div>
+  </section>
 </Base>

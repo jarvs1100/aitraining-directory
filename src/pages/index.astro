@@ -27,37 +27,60 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
-  <h1>AI Training Directory</h1>
-  <p class="muted">Find and compare AI tools for training, onboarding, SOP documentation, and corporate L&D operations.</p>
 
-  <p>
-    <a class="badge" href="/solutions/">Browse by use case</a>
-    <a class="badge" href="/compare/">Compare alternatives</a>
-    <a class="badge" href="/advertise/">Join founding partner waitlist</a>
-  </p>
+  <section class="hero">
+    <span class="eyebrow">Built for L&D teams</span>
+    <h1 style="margin-top:.7rem;max-width:17ch;">Find trustworthy AI tools for faster, higher-quality training content</h1>
+    <p class="muted" style="max-width:70ch;">Stop wasting cycles on generic AI lists. Compare tools purpose-built for onboarding, SOPs, internal enablement, and repeatable learning outcomes.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/categories/">Explore categories</a>
+      <a class="btn btn-secondary" href="/solutions/">Browse use-case playbooks</a>
+      <a class="btn btn-secondary" href="/submit/">Submit your tool</a>
+    </div>
+  </section>
 
-  <h2>Browse categories</h2>
-  <p>
-    {categories.map((c) => <a class="badge" href={`/category/${c.slug}/`}>{c.name} ({c.count})</a>)}
-  </p>
+  <section class="section" aria-labelledby="category-heading">
+    <h2 id="category-heading">Popular categories</h2>
+    <div class="chips">
+      {categories.map((c) => <a class="chip" href={`/category/${c.slug}/`}>{c.name} <span aria-hidden="true">·</span> {c.count}</a>)}
+    </div>
+  </section>
 
-  <h2>Featured tools</h2>
-  <div class="grid">
-    {featured.map((tool) => (
-      <article class="card">
-        <div>
-          <span class="badge">{tool.category}</span>
-          <span class="badge">{tool.pricing}</span>
-        </div>
-        <h3><a href={`/tool/${tool.slug}/`}>{tool.name}</a></h3>
-        <p>{tool.summary}</p>
-        <p><a href={tool.website} rel="nofollow noopener" target="_blank">Visit website ↗</a></p>
-      </article>
-    ))}
-  </div>
+  <section class="section" aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured tools</h2>
+    <div class="grid">
+      {featured.map((tool) => (
+        <article class="card">
+          <div class="chips" style="margin-bottom:.85rem;">
+            <span class="badge">{tool.category}</span>
+            <span class="badge">{tool.pricing}</span>
+          </div>
+          <h3 style="margin-bottom:.45rem;"><a href={`/tool/${tool.slug}/`} style="color:inherit;">{tool.name}</a></h3>
+          <p class="muted" style="margin-bottom:1rem;">{tool.summary}</p>
+          <a href={tool.website} rel="nofollow noopener" target="_blank">Visit website ↗</a>
+        </article>
+      ))}
+    </div>
+  </section>
 
-  <h2>For L&D teams first</h2>
-  <p>
-    This directory prioritizes learning and development operators who need repeatable training outcomes. Automation assistants like OpenClaw bots can support operations, but the primary lens here is practical L&D execution.
-  </p>
+  <section class="section card" aria-labelledby="why-heading">
+    <h2 id="why-heading">Why teams use this directory</h2>
+    <p class="muted">We prioritize tools with practical L&D workflows, not hype metrics. Use this as a shortlist engine before pilots and procurement.</p>
+    <div class="chips">
+      <a class="chip" href="/compare/">Compare alternatives</a>
+      <a class="chip" href="/advertise/">Founding partner opportunities</a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="lang-heading">
+    <h2 id="lang-heading">European language editions</h2>
+    <div class="chips">
+      <a class="chip" href="/pl/narzedzia-ai-do-szkolen/">Polski</a>
+      <a class="chip" href="/cs/ai-nastroje-pro-skoleni-zamestnancu/">Čeština</a>
+      <a class="chip" href="/sk/ai-nastroje-na-skolenie-zamestnancov/">Slovenčina</a>
+      <a class="chip" href="/hu/ai-eszkozok-munkavallaloi-kepzeshez/">Magyar</a>
+      <a class="chip" href="/de/ki-tools-fuer-mitarbeiterschulung/">Deutsch</a>
+      <a class="chip" href="/es/herramientas-ia-formacion-empleados/">Español</a>
+    </div>
+  </section>
 </Base>
