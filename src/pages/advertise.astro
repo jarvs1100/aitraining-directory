@@ -8,10 +8,18 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
   canonical="https://aitraining.directory/advertise/"
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Founding Partners', href: '/advertise/' }]} />
-  <h1>Founding partner waitlist (pre-launch traffic phase)</h1>
-  <p class="muted">We are prioritizing audience quality and category relevance before opening self-serve paid placements.</p>
 
-  <div class="grid">
+  <section class="hero">
+    <span class="eyebrow">Pre-launch partner access</span>
+    <div class="chips" style="margin-bottom:.8rem;">
+      <span class="badge badge-active">Waitlist open</span>
+      <span class="badge">Traffic quality first</span>
+    </div>
+    <h1>Founding partner waitlist (pre-launch traffic phase)</h1>
+    <p class="muted">We are prioritizing audience quality and category relevance before opening self-serve paid placements.</p>
+  </section>
+
+  <section class="grid">
     <article class="card">
       <h2>Waitlist: Sponsored Category Slots</h2>
       <p>Reserve early access for category sponsorship opportunities once traffic thresholds are met.</p>
@@ -29,15 +37,19 @@ import Breadcrumbs from '../components/Breadcrumbs.astro';
       <p>Optional advisory package for listing copy, CRO improvements, and internal-link strategy.</p>
       <p><a class="btn btn-secondary" href="mailto:sales@aitraining.directory?subject=Listing%20Optimization%20Interest">Request details</a></p>
     </article>
-  </div>
+  </section>
 
-  <h2>Monetization path (documented, not hard-sold)</h2>
-  <ul>
-    <li>Phase 1: Waitlist capture + qualification</li>
-    <li>Phase 2: Invite-only sponsored slots after baseline organic demand is proven</li>
-    <li>Phase 3: Public media kit and transparent placement guidelines</li>
-  </ul>
+  <section class="section card">
+    <h2>Monetization path (documented, not hard-sold)</h2>
+    <ul>
+      <li>Phase 1: Waitlist capture + qualification</li>
+      <li>Phase 2: Invite-only sponsored slots after baseline organic demand is proven</li>
+      <li>Phase 3: Public media kit and transparent placement guidelines</li>
+    </ul>
+  </section>
 
-  <h2>Need procurement details?</h2>
-  <p>Email <a href="mailto:sales@aitraining.directory">sales@aitraining.directory</a> and include your target category + launch timeline.</p>
+  <section class="section">
+    <h2>Need procurement details?</h2>
+    <p>Email <a href="mailto:sales@aitraining.directory">sales@aitraining.directory</a> and include your target category + launch timeline.</p>
+  </section>
 </Base>
