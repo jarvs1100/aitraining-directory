@@ -468,6 +468,23 @@ const comparisonContentBySlug = {
       'Choose the model with lower remediation friction per compliant closure, not the model that sends the most reminders.'
     ]
   },
+  'ai-compliance-training-evidence-access-segregation-of-duties-enforcement-vs-manual-role-review-meetings-for-audit-defense': {
+    decisionMatrix: [
+      { criterion: 'Speed of conflict detection after role or scope changes', weight: '25%', whatGoodLooksLike: 'Segregation-of-duties conflicts are identified before evidence access creates audit or exposure risk.', leftLens: 'Measure time from role-change trigger to detected conflict, routed owner action, and closed resolution state.', rightLens: 'Measure time when conflicts are found in periodic role-review meetings and manual spreadsheet checks.' },
+      { criterion: 'Consistency of SoD decisions across teams and regions', weight: '25%', whatGoodLooksLike: 'Equivalent duty-conflict cases lead to consistent allow/deny/remediate outcomes tied to policy.', leftLens: 'Assess rule-based conflict scoring, exception governance, and override rationale by policy clause.', rightLens: 'Assess variance across meeting-led reviewer judgment, calendar timing, and local operating norms.' },
+      { criterion: 'Audit traceability of access-conflict resolution', weight: '20%', whatGoodLooksLike: 'Teams can prove conflict source, reviewer action, approver chain, and closure timestamp for every case.', leftLens: 'Evaluate immutable conflict logs with linked source events, approval lineage, and closure evidence.', rightLens: 'Evaluate reconstructability when proof is spread across meeting notes, ticket comments, and shared files.' },
+      { criterion: 'Operational burden during audit and recertification windows', weight: '15%', whatGoodLooksLike: 'SoD governance remains stable without review-meeting backlog spikes.', leftLens: 'Track effort for rule tuning, false-positive handling, and governance QA rituals.', rightLens: 'Track recurring analyst and manager hours for prep, meetings, follow-ups, and tracker reconciliation.' },
+      { criterion: 'Cost per audit-defensible SoD resolution', weight: '15%', whatGoodLooksLike: 'Cost per closed SoD conflict declines while stale-conflict risk and reopen rate decrease.', leftLens: 'Model platform + governance overhead against faster closure, fewer escalations, and lower pre-audit scramble.', rightLens: 'Model lower tooling spend against recurring meeting labor, delayed closure, and evidence rework costs.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one evidence domain with frequent role transitions and at least one historical SoD conflict pattern.',
+      'Use one scorecard: conflict-detection latency, closure cycle time, reopen rate, and reviewer/manager hours.',
+      'Define explicit controls for automated conflict thresholds, exception routing, and manual override authority before rollout.',
+      'Assign RACI across compliance owner, training ops lead, system admin, and internal audit reviewer for each conflict stage.',
+      'Choose the model with lower governance friction per audit-defensible SoD closure, not the model that simply schedules more review meetings.'
+    ]
+  },
+
   'ai-compliance-training-evidence-access-revocation-sla-enforcement-vs-manual-permission-cleanup-for-audit-readiness': {
     decisionMatrix: [
       { criterion: 'Revocation cycle time after role or audit-scope changes', weight: '25%', whatGoodLooksLike: 'Evidence access is revoked before stale entitlements create audit or exposure risk.', leftLens: 'Measure time from revocation trigger to enforced removal with SLA timers, escalation states, and closure evidence.', rightLens: 'Measure time when analysts run periodic manual permission cleanups from spreadsheets and inbox reminders.' },

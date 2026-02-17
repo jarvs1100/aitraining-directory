@@ -78,7 +78,7 @@ const jsonLd = {
     {comparisonPages.map((page) => (
       <article class="card compare-card">
         <h2 style="margin:0 0 8px 0;font-size:20px;"><a href={`/compare/${page.slug}/`}>{page.title}</a></h2>
-        <p class="muted" style="margin:0;">{page.meta}</p>
+        <p class="muted compare-card-meta" style="margin:0;">{page.meta}</p>
         <div class="compare-card-cta-wrap">
           <a class="btn btn-primary compare-card-cta" href={`/compare/${page.slug}/`}>Open comparison route</a>
         </div>
@@ -100,6 +100,11 @@ const jsonLd = {
 
     .compare-card h2 a:hover {
       text-decoration: underline;
+    }
+
+    .compare-card-meta {
+      line-height: 1.45;
+      overflow-wrap: anywhere;
     }
 
     .compare-card-cta-wrap {
@@ -143,12 +148,17 @@ const jsonLd = {
         letter-spacing: -0.01em;
       }
 
+      .compare-card-meta {
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
       .compare-card-cta-wrap {
-        padding-top: 0.6rem;
+        padding-top: 0.68rem;
       }
 
       .compare-card-cta {
-        min-height: 46px;
+        min-height: 48px;
       }
     }
   </style>

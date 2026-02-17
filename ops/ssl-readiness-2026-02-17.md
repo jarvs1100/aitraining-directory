@@ -3893,3 +3893,9 @@ Content-Type: text/html
 - HTTPS remains valid for apex and www redirects to apex over HTTPS.
 - DNS remains pointed to GitHub Pages edge IPs.
 - Latest deploy freshness is reflected by the Last-Modified timestamp above.
+
+### 2026-02-17 22:56 UTC — Evidence delta
+- Re-ran `npm run qa:https` after source changes: **passed** with **299 HTML files checked**.
+- `https://aitraining.directory` returns `HTTP/2 200` (GitHub Pages) with `Last-Modified: Tue, 17 Feb 2026 22:42:16 GMT`.
+- `https://www.aitraining.directory` returns `HTTP/2 301` redirecting to `https://aitraining.directory/`.
+- SSL posture remains healthy (Let's Encrypt cert chain already validated earlier); no hostname mismatch observed.

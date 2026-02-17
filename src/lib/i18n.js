@@ -2203,6 +2203,28 @@ localizedLandingPages.push(
     enPath: '/compare/ai-compliance-training-evidence-release-governance-vs-manual-hold-lift-email-approvals/'
   },
   {
+    key: 'evidence-access-segregation-of-duties-enforcement-vs-manual-role-review-meetings',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-segregation-of-duties-enforcement-vs-manuelle-role-review-meetings-audit-defense',
+    title: 'KI-Compliance-Training-Evidence-Access-SoD-Enforcement vs. manuelle Role-Review-Meetings für Audit Defense | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Segregation-of-Duties-Enforcement-Workflows gegen manuelle Role-Review-Meetings für Trainingsevidenz vergleichen.',
+    h1: 'KI-Evidence-Access-SoD-Enforcement vs. manuelle Role-Review-Meetings für Audit Defense',
+    intro: 'Hilft Compliance-, Legal- und Training-Ops-Teams, Konflikterkennung, Entscheidungs-Konsistenz und auditfeste Nachvollziehbarkeit zwischen beiden SoD-Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Konflikt-Erkennungszeit nach Rollenwechseln und Scope-Änderungen', 'Messbare Kriterien für konsistente SoD-Entscheidungen, Override-Governance und Owner-Transparenz', 'Pilot-Framework für defensible Conflict-Resolution-Logs mit weniger Meeting-getriebener Nacharbeit'],
+    enPath: '/compare/ai-compliance-training-evidence-access-segregation-of-duties-enforcement-vs-manual-role-review-meetings-for-audit-defense/'
+  },
+  {
+    key: 'evidence-access-segregation-of-duties-enforcement-vs-manual-role-review-meetings',
+    locale: 'es',
+    slug: 'enforcement-segregacion-funciones-acceso-evidencia-training-compliance-ia-vs-reuniones-manuales-revision-roles-audit-defense',
+    title: 'Enforcement de segregación de funciones en acceso a evidencia de training compliance con IA vs. reuniones manuales de revisión de roles para audit defense | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan enforcement de segregación de funciones con IA frente a reuniones manuales de revisión de roles en acceso a evidencia de training compliance.',
+    h1: 'Enforcement SoD de acceso a evidencia con IA vs. reuniones manuales de revisión de roles para audit defense',
+    intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar detección de conflictos, consistencia de decisiones y trazabilidad defendible entre ambos enfoques SoD.',
+    points: ['Comparativa de latencia de detección de conflictos tras cambios de rol y alcance', 'Criterios operativos para consistencia de decisiones SoD, gobernanza de overrides y ownership claro', 'Marco de piloto para logs de resolución de conflictos audit-ready con menos retrabajo por reuniones'],
+    enPath: '/compare/ai-compliance-training-evidence-access-segregation-of-duties-enforcement-vs-manual-role-review-meetings-for-audit-defense/'
+  },
+  {
     key: 'evidence-access-recertification-vs-manual-quarterly-permission-audits',
     locale: 'de',
     slug: 'ki-compliance-training-evidence-access-recertification-vs-manuelle-quartalsweise-permission-audits',
@@ -2213,6 +2235,7 @@ localizedLandingPages.push(
     points: ['Vergleich von Drift-Detection-Latenz bei Rollenwechseln und Zugriffsausnahmen', 'Messbare Kriterien für konsistente Access-Entscheidungen, Revocation-Timing und Owner-Transparenz', 'Pilot-Framework für auditfeste Recertification-Zyklen mit weniger Spreadsheet-Rework'],
     enPath: '/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/'
   },
+
   {
     key: 'evidence-access-recertification-vs-manual-quarterly-permission-audits',
     locale: 'es',
