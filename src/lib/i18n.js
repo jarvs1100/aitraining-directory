@@ -2135,6 +2135,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de disposición, consistencia de política y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de cycle-time desde trigger de retención hasta cierre de disposición', 'Criterios operativos para decisiones consistentes de conservar, archivar o eliminar', 'Marco de piloto para escalado, ownership y evidencia de cierre defendible'],
     enPath: '/compare/ai-compliance-training-evidence-disposition-workflows-vs-manual-retention-signoff-logs/'
+  },
+  {
+    key: 'evidence-legal-hold-automation-vs-manual-email-freeze-requests',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-legal-hold-automatisierung-vs-manuelle-email-freeze-requests',
+    title: 'KI-Compliance-Training-Evidence-Legal-Hold-Automatisierung vs. manuelle E-Mail-Freeze-Requests | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Legal-Hold-Automatisierung gegen manuelle E-Mail-Freeze-Requests für Trainingsevidenz vergleichen.',
+    h1: 'KI-Legal-Hold-Automatisierung vs. manuelle E-Mail-Freeze-Requests für Compliance-Training',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Hold-Aktivierungs-SLA, Scope-Konsistenz und Chain-of-Custody-Qualität zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Hold-Aktivierungszeit und Scope-Abdeckung unter Deadline-Druck', 'Messbare Kriterien für konsistente Hold/Release-Entscheidungen und Eigentümerklarheit', 'Pilot-Framework für auditfeste Legal-Hold-Ausführung mit weniger manueller Eskalationsreibung'],
+    enPath: '/compare/ai-compliance-training-evidence-legal-hold-automation-vs-manual-email-freeze-requests/'
+  },
+  {
+    key: 'evidence-legal-hold-automation-vs-manual-email-freeze-requests',
+    locale: 'es',
+    slug: 'automatizacion-legal-hold-evidencia-training-compliance-ia-vs-requests-email-freeze-manuales',
+    title: 'Automatización de legal hold de evidencia en training compliance con IA vs. requests manuales por email de freeze | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan automatización de legal hold con IA frente a requests manuales por email para congelar evidencia de training compliance.',
+    h1: 'Automatización de legal hold con IA vs. requests manuales por email de freeze',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de activación de hold, consistencia de alcance y trazabilidad defensible entre ambos enfoques.',
+    points: ['Comparativa de SLA de activación de legal hold y cobertura de evidencia in-scope', 'Criterios operativos para decisiones consistentes de hold/release y ownership claro', 'Marco de piloto para reducir retrabajo legal y fricción de auditoría en ciclos de retención'],
+    enPath: '/compare/ai-compliance-training-evidence-legal-hold-automation-vs-manual-email-freeze-requests/'
   }
 );
 
