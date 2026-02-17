@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { localizedLandingPages, localeMeta } from '../../lib/i18n.js';
+import { localizedLandingPages, localeMeta, getLocalizedUiStrings } from '../../lib/i18n.js';
 
 export async function getStaticPaths() {
   return Object.keys(localeMeta)
@@ -17,6 +17,7 @@ if (!locale || lang === 'en') {
 
 const pages = localizedLandingPages.filter((page) => page.locale === lang);
 const canonical = `https://aitraining.directory/${lang}/`;
+const ui = getLocalizedUiStrings(lang);
 
 const copy = {
   pl: {
@@ -85,7 +86,7 @@ const jsonLd = {
 };
 ---
 <Base title={`${locale.name} | AI Training Directory`} description={`Localized AI training and L&D pages for ${locale.name} market intent.`} canonical={canonical} jsonLd={jsonLd} lang={lang}>
-  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: locale.name, href: `/${lang}/` }]} />
+  <Breadcrumbs items={[{ label: ui.home, href: '/' }, { label: locale.name, href: `/${lang}/` }]} />
 
   <section class="hero" style="margin-bottom:1.25rem;">
     <span class="eyebrow">{copy.edition}</span>

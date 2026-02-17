@@ -173,124 +173,240 @@ export function getSiblingLocalizedPages(key, currentLocale) {
   return localizedLandingPages.filter((p) => p.key === key && p.locale !== currentLocale);
 }
 
-export function getLocalizedSupportBlocks(key, locale) {
+export function getLocalizedUiStrings(locale) {
   const localeName = localeMeta[locale]?.name || locale.toUpperCase();
 
   const labels = {
     en: {
+      home: 'Home',
+      faqHeading: 'FAQ',
       editionTag: `${localeName} edition`,
       openEnglishPageCta: 'Open English implementation page',
       waitlistCta: 'Join founding partner waitlist',
       checklistHeading: 'Market rollout checklist',
       nextPagesHeading: 'Next pages to visit',
-      otherLanguagesHeading: 'Other language editions'
+      otherLanguagesHeading: 'Other language editions',
+      pointSupportCopy: 'Focused on practical rollout for L&D, enablement, and operations teams.'
     },
     pl: {
+      home: 'Strona główna',
+      faqHeading: 'Najczęstsze pytania',
       editionTag: 'Wersja polska',
       openEnglishPageCta: 'Otwórz angielską stronę wdrożeniową',
       waitlistCta: 'Dołącz do listy partnerów założycielskich',
       checklistHeading: 'Checklista wejścia na rynek',
       nextPagesHeading: 'Kolejne strony do odwiedzenia',
-      otherLanguagesHeading: 'Inne wersje językowe'
+      otherLanguagesHeading: 'Inne wersje językowe',
+      pointSupportCopy: 'Skupione na praktycznym wdrożeniu dla zespołów L&D, enablement i operacji.'
     },
     cs: {
+      home: 'Domů',
+      faqHeading: 'Často kladené dotazy',
       editionTag: 'Česká verze',
       openEnglishPageCta: 'Otevřít anglickou implementační stránku',
       waitlistCta: 'Připojit se na čekací listinu partnerů',
-      checklistHeading: 'Checklist pro vstup na trh',
+      checklistHeading: 'Kontrolní seznam pro vstup na trh',
       nextPagesHeading: 'Další stránky k návštěvě',
-      otherLanguagesHeading: 'Další jazykové verze'
+      otherLanguagesHeading: 'Další jazykové verze',
+      pointSupportCopy: 'Zaměřeno na praktické nasazení pro týmy L&D, enablement a provoz.'
     },
     sk: {
+      home: 'Domov',
+      faqHeading: 'Časté otázky',
       editionTag: 'Slovenská verzia',
       openEnglishPageCta: 'Otvoriť anglickú implementačnú stránku',
       waitlistCta: 'Pridať sa do čakacej listiny partnerov',
-      checklistHeading: 'Checklist pre vstup na trh',
+      checklistHeading: 'Kontrolný zoznam pre vstup na trh',
       nextPagesHeading: 'Ďalšie stránky na návštevu',
-      otherLanguagesHeading: 'Ďalšie jazykové verzie'
+      otherLanguagesHeading: 'Ďalšie jazykové verzie',
+      pointSupportCopy: 'Zamerané na praktické nasadenie pre tímy L&D, enablement a operácií.'
     },
     hu: {
+      home: 'Főoldal',
+      faqHeading: 'Gyakori kérdések',
       editionTag: 'Magyar kiadás',
       openEnglishPageCta: 'Angol megvalósítási oldal megnyitása',
       waitlistCta: 'Csatlakozás az alapító partner várólistához',
       checklistHeading: 'Piaci bevezetési ellenőrzőlista',
       nextPagesHeading: 'Következő meglátogatandó oldalak',
-      otherLanguagesHeading: 'További nyelvi kiadások'
+      otherLanguagesHeading: 'További nyelvi kiadások',
+      pointSupportCopy: 'A gyakorlati bevezetésre fókuszál L&D-, enablement- és operációs csapatoknál.'
     },
     de: {
+      home: 'Startseite',
+      faqHeading: 'Häufige Fragen',
       editionTag: 'Deutsche Ausgabe',
       openEnglishPageCta: 'Englische Umsetzungsseite öffnen',
       waitlistCta: 'Zur Founding-Partner-Warteliste',
       checklistHeading: 'Checkliste für den Markteintritt',
       nextPagesHeading: 'Nächste empfohlene Seiten',
-      otherLanguagesHeading: 'Weitere Sprachversionen'
+      otherLanguagesHeading: 'Weitere Sprachversionen',
+      pointSupportCopy: 'Fokussiert auf die praktische Umsetzung für L&D-, Enablement- und Operations-Teams.'
     },
     es: {
+      home: 'Inicio',
+      faqHeading: 'Preguntas frecuentes',
       editionTag: 'Edición en español',
       openEnglishPageCta: 'Abrir página de implementación en inglés',
       waitlistCta: 'Unirse a la lista de socios fundadores',
-      checklistHeading: 'Checklist de salida al mercado',
+      checklistHeading: 'Lista de verificación de salida al mercado',
       nextPagesHeading: 'Siguientes páginas recomendadas',
-      otherLanguagesHeading: 'Otras ediciones por idioma'
+      otherLanguagesHeading: 'Otras ediciones por idioma',
+      pointSupportCopy: 'Enfocado en una implementación práctica para equipos de L&D, enablement y operaciones.'
     }
   };
 
-  if (key === 'ai-training-tools') {
-    return {
-      labels: labels[locale] || labels.en,
-      checklist: [
-        'Map top 3 repetitive training workflows (onboarding, role-specific SOP updates, compliance refreshes).',
-        'Define the single source of truth for SOP docs, playbooks, and change logs.',
-        'Pilot with one team and track time-to-publish plus completion quality.',
-        'Set governance: approvers, update cadence, and ownership for each training stream.'
-      ],
-      internalLinks: [
-        { label: (locale === 'pl' ? 'Przeglądaj rozwiązania AI dla szkoleń' : locale === 'cs' ? 'Procházet AI řešení pro školení' : locale === 'sk' ? 'Prejsť AI riešenia pre školenia' : locale === 'hu' ? 'AI képzési megoldások böngészése' : locale === 'de' ? 'KI-Trainingslösungen durchsuchen' : locale === 'es' ? 'Explorar soluciones de IA para formación' : 'Browse AI training solutions'), href: '/solutions/' },
-        { label: (locale === 'pl' ? 'Porównaj narzędzia obok siebie' : locale === 'cs' ? 'Porovnat nástroje vedle sebe' : locale === 'sk' ? 'Porovnať nástroje vedľa seba' : locale === 'hu' ? 'Eszközök összehasonlítása egymás mellett' : locale === 'de' ? 'Tools im Direktvergleich ansehen' : locale === 'es' ? 'Comparar herramientas lado a lado' : 'Compare tools side-by-side'), href: '/compare/' },
-        { label: (locale === 'pl' ? 'Poznaj kategorie szkoleniowe' : locale === 'cs' ? 'Prozkoumat školicí kategorie' : locale === 'sk' ? 'Preskúmať kategórie školení' : locale === 'hu' ? 'Képzési kategóriák felfedezése' : locale === 'de' ? 'Trainingskategorien ansehen' : locale === 'es' ? 'Explorar categorías de formación' : 'Explore training categories'), href: '/categories/' }
-      ],
-      intentCopy: locale === 'pl'
-        ? 'Ta wersja została dostosowana do polskiego intentu wyszukiwania i kieruje do angielskich stron wdrożeniowych.'
-        : locale === 'cs'
-          ? 'Tato verze je přizpůsobena českému vyhledávacímu záměru a vede na anglické implementační stránky.'
-          : locale === 'sk'
-            ? 'Táto verzia je prispôsobená slovenskému vyhľadávaciemu intentu a vedie na anglické implementačné stránky.'
-            : locale === 'hu'
-              ? 'Ez a verzió a magyar keresési szándékhoz igazodik, és angol megvalósítási oldalakra irányít.'
-              : locale === 'de'
-                ? 'Diese Version ist auf deutschsprachige Suchintention ausgerichtet und verweist auf englische Umsetzungsseiten.'
-                : locale === 'es'
-                  ? 'Esta versión está adaptada a la intención de búsqueda local y dirige a páginas de implementación en inglés.'
-                  : `This ${localeName} page is designed for market-relevant discovery and routes readers to implementation-ready English solution pages.`
-    };
-  }
+  return labels[locale] || labels.en;
+}
+
+export function getLocalizedSupportBlocks(key, locale) {
+  const localeName = localeMeta[locale]?.name || locale.toUpperCase();
+  const labels = getLocalizedUiStrings(locale);
+
+  const content = {
+    'ai-training-tools': {
+      checklist: {
+        pl: [
+          'Zmapuj 3 najczęściej powtarzające się procesy szkoleniowe (onboarding, aktualizacje SOP dla ról, odświeżenia compliance).',
+          'Ustal jedno źródło prawdy dla SOP, playbooków i historii zmian.',
+          'Uruchom pilotaż na jednym zespole i mierz czas publikacji oraz jakość ukończenia.',
+          'Ustal governance: osoby akceptujące, rytm aktualizacji i właścicieli każdego strumienia szkoleniowego.'
+        ],
+        cs: [
+          'Zmapujte 3 nejčastěji opakované školicí workflowy (onboarding, aktualizace SOP pro role, refresh compliance).',
+          'Určete jednotný zdroj pravdy pro SOP dokumenty, playbooky a changelogy.',
+          'Spusťte pilot v jednom týmu a sledujte čas do publikace i kvalitu dokončení.',
+          'Nastavte governance: schvalovatele, kadenci aktualizací a vlastníky jednotlivých školicích proudů.'
+        ],
+        sk: [
+          'Zmapujte 3 najčastejšie opakované školiace workflowy (onboarding, aktualizácie SOP podľa rolí, refresh compliance).',
+          'Definujte jeden zdroj pravdy pre SOP dokumenty, playbooky a záznamy zmien.',
+          'Spustite pilot v jednom tíme a sledujte čas publikácie aj kvalitu dokončenia.',
+          'Nastavte governance: schvaľovateľov, frekvenciu aktualizácií a vlastníkov každého školiaceho prúdu.'
+        ],
+        hu: [
+          'Térképezd fel a 3 leggyakrabban ismétlődő képzési workflow-t (onboarding, szerepkörhöz kötött SOP-frissítések, compliance frissítések).',
+          'Határozz meg egyetlen hiteles forrást a SOP-dokumentumokhoz, playbookokhoz és változásnaplókhoz.',
+          'Indíts pilotot egy csapattal, és mérd a publikálásig eltelt időt, valamint a teljesítés minőségét.',
+          'Állítsd be a governance-et: jóváhagyók, frissítési ütemezés és felelősségi körök képzési streamenként.'
+        ],
+        de: [
+          'Erfassen Sie die 3 häufigsten wiederkehrenden Trainings-Workflows (Onboarding, rollenspezifische SOP-Updates, Compliance-Refreshes).',
+          'Definieren Sie eine zentrale Source of Truth für SOP-Dokumente, Playbooks und Änderungsprotokolle.',
+          'Starten Sie einen Pilot mit einem Team und messen Sie Time-to-Publish sowie Abschlussqualität.',
+          'Legen Sie Governance fest: Freigaben, Update-Rhythmus und Verantwortlichkeiten je Trainings-Stream.'
+        ],
+        es: [
+          'Mapea los 3 flujos de formación más repetitivos (onboarding, actualizaciones de SOP por rol, refrescos de compliance).',
+          'Define una única fuente de verdad para SOP, playbooks y registros de cambios.',
+          'Lanza un piloto con un equipo y mide tiempo de publicación y calidad de finalización.',
+          'Establece la gobernanza: aprobadores, cadencia de actualización y responsables por cada flujo de formación.'
+        ],
+        en: [
+          'Map top 3 repetitive training workflows (onboarding, role-specific SOP updates, compliance refreshes).',
+          'Define the single source of truth for SOP docs, playbooks, and change logs.',
+          'Pilot with one team and track time-to-publish plus completion quality.',
+          'Set governance: approvers, update cadence, and ownership for each training stream.'
+        ]
+      },
+      internalLinks: {
+        pl: ['Przeglądaj rozwiązania AI dla szkoleń', 'Porównaj narzędzia obok siebie', 'Poznaj kategorie szkoleniowe'],
+        cs: ['Procházet AI řešení pro školení', 'Porovnat nástroje vedle sebe', 'Prozkoumat školicí kategorie'],
+        sk: ['Prejsť AI riešenia pre školenia', 'Porovnať nástroje vedľa seba', 'Preskúmať kategórie školení'],
+        hu: ['AI képzési megoldások böngészése', 'Eszközök összehasonlítása egymás mellett', 'Képzési kategóriák felfedezése'],
+        de: ['KI-Trainingslösungen durchsuchen', 'Tools im Direktvergleich ansehen', 'Trainingskategorien ansehen'],
+        es: ['Explorar soluciones de IA para formación', 'Comparar herramientas lado a lado', 'Explorar categorías de formación'],
+        en: ['Browse AI training solutions', 'Compare tools side-by-side', 'Explore training categories']
+      },
+      intentCopy: {
+        pl: 'Ta wersja została dostosowana do polskiego intentu wyszukiwania i kieruje do angielskich stron wdrożeniowych.',
+        cs: 'Tato verze je přizpůsobena českému vyhledávacímu záměru a vede na anglické implementační stránky.',
+        sk: 'Táto verzia je prispôsobená slovenskému vyhľadávaciemu intentu a vedie na anglické implementačné stránky.',
+        hu: 'Ez a verzió a magyar keresési szándékhoz igazodik, és angol megvalósítási oldalakra irányít.',
+        de: 'Diese Version ist auf deutschsprachige Suchintention ausgerichtet und verweist auf englische Umsetzungsseiten.',
+        es: 'Esta versión está adaptada a la intención de búsqueda local y dirige a páginas de implementación en inglés.',
+        en: `This ${localeName} page is designed for market-relevant discovery and routes readers to implementation-ready English solution pages.`
+      }
+    },
+    default: {
+      checklist: {
+        pl: [
+          'Wybierz 1–2 SOP-y o wysokiej częstotliwości zmian i jasnej logice krok po kroku.',
+          'Podziel każdy SOP na krótkie moduły (3–7 minut) przypisane do ról.',
+          'Przypisz właścicieli przeglądu dla wymogów prawnych i compliance przed publikacją.',
+          'Mierz wyniki quizów, przestrzeganie procesów i skalę doszkalania po wdrożeniu.'
+        ],
+        cs: [
+          'Vyberte 1–2 SOP s vysokou frekvencí změn a jasnou krokovou logikou.',
+          'Rozdělte každý SOP do krátkých modulů (3–7 minut) navázaných na pracovní role.',
+          'Před publikací určete vlastníky revize pro právní a compliance kontrolu.',
+          'Po nasazení sledujte výsledky kvízů, dodržování procesů a míru přeškolování.'
+        ],
+        sk: [
+          'Vyberte 1–2 SOP s vysokou frekvenciou zmien a jasnou logikou krok za krokom.',
+          'Rozdeľte každý SOP do krátkych modulov (3–7 minút) naviazaných na pracovné roly.',
+          'Pred publikáciou priraďte vlastníkov revízie pre právne a compliance kontroly.',
+          'Po nasadení merajte výsledky kvízov, dodržiavanie procesov a mieru preškoľovania.'
+        ],
+        hu: [
+          'Válassz 1–2 SOP-t, amely gyakran változik és jól követhető lépésről lépésre logikával működik.',
+          'Bonts minden SOP-t rövid (3–7 perces), szerepkörhöz kötött modulokra.',
+          'Publikálás előtt jelölj ki felülvizsgálati felelősöket a jogi és compliance ellenőrzéshez.',
+          'Bevezetés után mérd a kvízeredményeket, a folyamatkövetést és az újraképzési arányt.'
+        ],
+        de: [
+          'Wählen Sie 1–2 SOPs mit hoher Update-Frequenz und klarer Schritt-für-Schritt-Logik.',
+          'Teilen Sie jede SOP in kurze Module (3–7 Minuten), abgestimmt auf Rollenprofile.',
+          'Legen Sie vor der Veröffentlichung Review-Verantwortliche für Recht und Compliance fest.',
+          'Messen Sie nach dem Rollout Quiz-Ergebnisse, Prozessdisziplin und Nachschulungsquote.'
+        ],
+        es: [
+          'Selecciona 1–2 SOP con alta frecuencia de cambios y lógica clara paso a paso.',
+          'Convierte cada SOP en módulos cortos (3–7 minutos) vinculados a roles.',
+          'Asigna responsables de revisión legal y de compliance antes de publicar.',
+          'Tras el despliegue, mide resultados de quizzes, adherencia al proceso y tasa de reentrenamiento.'
+        ],
+        en: [
+          'Select 1–2 SOPs with high update frequency and clear step-by-step logic.',
+          'Turn each SOP into short modules (3–7 minutes) tied to job roles.',
+          'Assign review owners for legal/compliance checks before publishing.',
+          'Measure quiz scores, process adherence, and retraining rate after rollout.'
+        ]
+      },
+      internalLinks: {
+        pl: ['Strony wdrożeniowe SOP→wideo', 'Automatyzacja onboardingu', 'Dodaj odpowiednie narzędzie'],
+        cs: ['Implementační stránky SOP→video', 'Automatizace onboardingu nováčků', 'Přidat relevantní nástroj'],
+        sk: ['Implementačné stránky SOP→video', 'Automatizácia onboardingu nových ľudí', 'Pridať relevantný nástroj'],
+        hu: ['SOP→videó megvalósítási oldalak', 'Új belépők onboarding automatizálása', 'Releváns eszköz beküldése'],
+        de: ['SOP-zu-Video-Umsetzungsseiten', 'Automatisierung des Onboardings', 'Passendes Tool einreichen'],
+        es: ['Páginas de implementación SOP→video', 'Automatización de onboarding', 'Enviar una herramienta relevante'],
+        en: ['SOP-to-video implementation pages', 'New-hire onboarding automation', 'Submit a relevant tool']
+      },
+      intentCopy: {
+        pl: 'Treść lokalna dla polskiego intentu wyszukiwania, z jednolitą ścieżką wdrożeniową do głównych stron rozwiązań.',
+        cs: 'Lokalizováno pro český vyhledávací záměr při zachování jednotné implementační cesty na hlavní stránky řešení.',
+        sk: 'Lokalizované pre slovenský vyhľadávací intent pri zachovaní jednotnej implementačnej cesty na hlavné stránky riešení.',
+        hu: 'A tartalom magyar keresési szándékra lokalizált, miközben a megvalósítási útvonal egységes marad.',
+        de: 'Für lokale Suchintention lokalisiert, bei gleichzeitig konsistenten Umsetzungswegen zu den Kernlösungsseiten.',
+        es: 'Localizado para intención de búsqueda local, manteniendo rutas de implementación consistentes hacia páginas clave.',
+        en: `Localized in ${localeName} for search intent, while keeping implementation pathways consistent with core solution pages.`
+      }
+    }
+  };
+
+  const block = content[key] || content.default;
+  const checklist = block.checklist[locale] || block.checklist.en;
+  const linkLabels = block.internalLinks[locale] || block.internalLinks.en;
 
   return {
-    labels: labels[locale] || labels.en,
-    checklist: [
-      'Select 1–2 SOPs with high update frequency and clear step-by-step logic.',
-      'Turn each SOP into short modules (3–7 minutes) tied to job roles.',
-      'Assign review owners for legal/compliance checks before publishing.',
-      'Measure quiz scores, process adherence, and retraining rate after rollout.'
-    ],
+    labels,
+    checklist,
     internalLinks: [
-      { label: (locale === 'pl' ? 'Strony wdrożeniowe SOP→wideo' : locale === 'cs' ? 'Implementační stránky SOP→video' : locale === 'sk' ? 'Implementačné stránky SOP→video' : locale === 'hu' ? 'SOP→videó megvalósítási oldalak' : locale === 'de' ? 'SOP-zu-Video-Umsetzungsseiten' : locale === 'es' ? 'Páginas de implementación SOP→video' : 'SOP-to-video implementation pages'), href: '/solutions/sop-to-video-training/' },
-      { label: (locale === 'pl' ? 'Automatyzacja onboardingu' : locale === 'cs' ? 'Automatizace onboardingu nováčků' : locale === 'sk' ? 'Automatizácia onboardingu nových ľudí' : locale === 'hu' ? 'Új belépők onboarding automatizálása' : locale === 'de' ? 'Automatisierung des Onboardings' : locale === 'es' ? 'Automatización de onboarding' : 'New-hire onboarding automation'), href: '/solutions/new-hire-onboarding-automation/' },
-      { label: (locale === 'pl' ? 'Dodaj odpowiednie narzędzie' : locale === 'cs' ? 'Přidat relevantní nástroj' : locale === 'sk' ? 'Pridať relevantný nástroj' : locale === 'hu' ? 'Releváns eszköz beküldése' : locale === 'de' ? 'Passendes Tool einreichen' : locale === 'es' ? 'Enviar una herramienta relevante' : 'Submit a relevant tool'), href: '/submit/' }
+      { label: linkLabels[0], href: key === 'ai-training-tools' ? '/solutions/' : '/solutions/sop-to-video-training/' },
+      { label: linkLabels[1], href: key === 'ai-training-tools' ? '/compare/' : '/solutions/new-hire-onboarding-automation/' },
+      { label: linkLabels[2], href: key === 'ai-training-tools' ? '/categories/' : '/submit/' }
     ],
-    intentCopy: locale === 'pl'
-      ? 'Treść lokalna dla polskiego intentu wyszukiwania, z jednolitą ścieżką wdrożeniową do głównych stron rozwiązań.'
-      : locale === 'cs'
-        ? 'Lokalizováno pro český vyhledávací záměr při zachování jednotné implementační cesty na hlavní stránky řešení.'
-        : locale === 'sk'
-          ? 'Lokalizované pre slovenský vyhľadávací intent pri zachovaní jednotnej implementačnej cesty na hlavné stránky riešení.'
-          : locale === 'hu'
-            ? 'A tartalom magyar keresési szándékra lokalizált, miközben a megvalósítási útvonal egységes marad.'
-            : locale === 'de'
-              ? 'Für lokale Suchintention lokalisiert, bei gleichzeitig konsistenten Umsetzungswegen zu den Kernlösungsseiten.'
-              : locale === 'es'
-                ? 'Localizado para intención de búsqueda local, manteniendo rutas de implementación consistentes hacia páginas clave.'
-                : `Localized in ${localeName} for search intent, while keeping implementation pathways consistent with core solution pages.`
+    intentCopy: block.intentCopy[locale] || block.intentCopy.en
   };
 }
 

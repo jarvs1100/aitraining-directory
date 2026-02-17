@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import LocalizedLanding from '../../components/LocalizedLanding.astro';
-import { localizedLandingPages, getAlternatesForKey, getSiblingLocalizedPages, getLocalizedFaq } from '../../lib/i18n.js';
+import { localizedLandingPages, getAlternatesForKey, getSiblingLocalizedPages, getLocalizedFaq, getLocalizedUiStrings } from '../../lib/i18n.js';
 
 export async function getStaticPaths() {
   return localizedLandingPages.map((page) => ({
@@ -27,6 +27,7 @@ const localeSchema = {
   }
 };
 const faq = getLocalizedFaq(page.locale);
+const ui = getLocalizedUiStrings(page.locale);
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -45,7 +46,7 @@ const jsonLd = {
 ---
 <Base title={page.title} description={page.description} canonical={canonical} jsonLd={jsonLd} alternates={alternates} lang={page.locale}>
   <LocalizedLanding page={page} alternates={alternates} siblingPages={siblingPages} />
-  <h2>FAQ</h2>
+  <h2>{ui.faqHeading}</h2>
   {faq.map((item) => (
     <>
       <h3>{item.q}</h3>
