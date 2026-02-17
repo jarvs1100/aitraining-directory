@@ -1737,6 +1737,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de entrega, calidad de redacción y controles de privacidad al compartir evidencia para auditorías.',
     points: ['Comparativa de SLA de compartición y tasa de fallos de redacción en ventanas de auditoría', 'Criterios operativos para cobertura de detección de PII y gobernanza de overrides', 'Marco de piloto para escalado seguro con trazabilidad audit-ready'],
     enPath: '/compare/ai-training-record-redaction-automation-vs-manual-pii-scrubbing-for-audit-shares/'
+  },
+  {
+    key: 'access-control-audit-trails-vs-shared-drive-permissions',
+    locale: 'de',
+    slug: 'ki-training-access-control-audit-trails-vs-shared-drive-permissions-fuer-evidence-governance',
+    title: 'KI-Training-Access-Control-Audit-Trails vs. Shared-Drive-Permissions für Evidence Governance | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Access-Control-Audit-Trails gegen Shared-Drive-Permissions für Governance von Training-Evidenz vergleichen.',
+    h1: 'KI-Access-Control-Audit-Trails vs. Shared-Drive-Permissions für Evidence Governance',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Zugriffstransparenz, Berechtigungssteuerung und Audit-Defensibility zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Access-Traceability und Exception-Handling unter Auditdruck', 'Messbare Kriterien für Rechteentzug, Reviewer-Durchlauf und Governance-Kontrollen', 'Pilot-Framework für sichere Evidenzfreigaben mit belastbarer Audit-Lineage'],
+    enPath: '/compare/ai-training-access-control-audit-trails-vs-shared-drive-permissions-for-evidence-governance/'
+  },
+  {
+    key: 'access-control-audit-trails-vs-shared-drive-permissions',
+    locale: 'es',
+    slug: 'audit-trails-control-acceso-training-ia-vs-permisos-shared-drive-para-gobernanza-evidencia',
+    title: 'Audit trails de control de acceso en training con IA vs. permisos de shared drive para gobernanza de evidencia | AI Training Directory',
+    description: 'Entrada localizada para comparar audit trails de control de acceso con IA frente a permisos de shared drive para la gobernanza de evidencia de formación.',
+    h1: 'Audit trails de control de acceso con IA vs. permisos de shared drive para gobernanza de evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar trazabilidad de acceso, control de permisos y defensibilidad en auditoría entre ambos enfoques.',
+    points: ['Comparativa de trazabilidad de accesos y manejo de excepciones bajo presión de auditoría', 'Criterios operativos para revocación de permisos, throughput de revisores y controles de gobernanza', 'Marco de piloto para compartir evidencia de forma segura con lineage audit-ready'],
+    enPath: '/compare/ai-training-access-control-audit-trails-vs-shared-drive-permissions-for-evidence-governance/'
   }
 );
 

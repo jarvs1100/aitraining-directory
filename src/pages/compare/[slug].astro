@@ -1193,8 +1193,9 @@ const jsonLd = {
       }
 
       .faq-anchor-list {
-        gap: 0.34rem;
+        gap: 0.44rem;
         padding-left: 0;
+        margin-bottom: 1.12rem;
         list-style: none;
         counter-reset: faq-anchor;
       }
@@ -1205,29 +1206,30 @@ const jsonLd = {
       }
 
       .faq-anchor-list a {
-        padding: 0.56rem 0.64rem;
-        line-height: 1.3;
-        min-height: 46px;
+        padding: 0.62rem 0.68rem;
+        line-height: 1.32;
+        min-height: 48px;
         display: grid;
         grid-template-columns: auto 1fr;
-        align-items: start;
-        gap: 0.5rem;
-        border: 1px solid #dbe4ef;
-        background: #f8fafc;
+        align-items: center;
+        gap: 0.54rem;
+        border: 1px solid #cddaea;
+        border-radius: 0.58rem;
+        background: linear-gradient(180deg, #f8fbff 0%, #f3f8ff 100%);
+        box-shadow: 0 1px 0 rgba(15, 23, 42, 0.03);
       }
 
       .faq-anchor-list a::before {
         content: counter(faq-anchor);
         display: inline-grid;
         place-items: center;
-        width: 1.22rem;
-        height: 1.22rem;
-        margin-top: 0.08rem;
+        width: 1.3rem;
+        height: 1.3rem;
         border-radius: 999px;
-        border: 1px solid #a3b7cf;
-        background: #eff6ff;
+        border: 1px solid #9fb4cf;
+        background: #e8f0ff;
         color: #0f172a;
-        font-size: 0.71rem;
+        font-size: 0.72rem;
         font-weight: 800;
         line-height: 1;
       }
