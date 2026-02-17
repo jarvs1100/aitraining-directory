@@ -117,4 +117,4 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Add i18n parity stubs for the new exception-routing route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
 - [x] Mobile UX polish pass: tighten compare-page decision-matrix card row spacing + bullet rhythm on 360-390px devices for faster scanability.
-- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.

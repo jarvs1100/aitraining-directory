@@ -1557,3 +1557,70 @@ notAfter=May 18 09:20:44 2026 GMT
 - HTTPS remains valid and hostname-compatible on apex + `www` redirect path.
 - Build-level HTTPS QA still clean after adding new compare + i18n pages (185 HTML files checked).
 - Last-Modified on apex currently reports `13:27:01 UTC`; next deploy should advance this.
+
+---
+
+## Evidence delta — 2026-02-17 13:53 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 185 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.109.153
+185.199.110.153
+185.199.111.153
+185.199.108.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.109.153
+185.199.111.153
+185.199.108.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTP/HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 13:43:03 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 13:43:03 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid on apex (`HTTP/2 200`) and `www` continues to 301 redirect to apex over HTTPS.
+- DNS and certificate chain remain stable with Let's Encrypt `R12`.
+- Deploy freshness advanced (`Last-Modified` now `13:43:03 UTC`, up from `13:27:01 UTC`).
