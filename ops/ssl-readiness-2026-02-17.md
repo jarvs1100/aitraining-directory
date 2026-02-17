@@ -1455,3 +1455,67 @@ HTTP/1.1 301 Moved Permanently
 - `qa:https` passes for current generated artifacts (179 HTML files).
 - TLS moved from GitHub wildcard cert to Let's Encrypt (`CN=www.aitraining.directory`), indicating custom-domain certificate provisioning is now active.
 - HTTPS requests now succeed for apex and redirect behavior is functioning for `www`.
+
+---
+
+## Evidence delta — 2026-02-17 13:25 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 182 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.109.153
+185.199.111.153
+185.199.108.153
+185.199.110.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTP/HTTPS behavior
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+
+curl -I https://aitraining.directory
+HTTP/2 200
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid on apex with `HTTP/2 200`; `www` continues redirecting to apex over HTTPS.
+- Build-level HTTPS QA passed after route + i18n + mobile FAQ quick-nav updates (182 generated HTML files checked).
+- DNS and certificate state remain stable with Let's Encrypt `R12` certificate chain.

@@ -420,6 +420,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower readiness friction per stable deployment window, not the model with the highest data volume.'
     ]
   },
+  'ai-training-deadline-risk-forecasting-vs-manual-reminder-calendars-for-compliance-ops': {
+    decisionMatrix: [
+      { criterion: 'Deadline miss prediction quality across cohorts', weight: '25%', whatGoodLooksLike: 'At-risk learner cohorts are identified early enough to intervene before SLA breach windows open.', leftLens: 'Measure precision/recall of AI risk forecasts by role, site, manager span, and historical completion behavior.', rightLens: 'Measure how often calendar-based reminders catch the same at-risk cohorts before deadlines are breached.' },
+      { criterion: 'Escalation timing and owner clarity', weight: '25%', whatGoodLooksLike: 'Escalations trigger at the right threshold with explicit accountable owners and minimal duplicate follow-up.', leftLens: 'Evaluate whether risk thresholds auto-route escalations to managers/compliance owners with trackable closure states.', rightLens: 'Evaluate whether manual reminder calendars preserve consistent escalation timing and ownership during peak periods.' },
+      { criterion: 'Audit defensibility of follow-up actions', weight: '20%', whatGoodLooksLike: 'Teams can prove why each escalation occurred, who acted, and when remediation closed.', leftLens: 'Assess whether AI workflows log score movement, escalation triggers, overrides, and remediation evidence in one chain.', rightLens: 'Assess reconstructability of reminder and follow-up history across calendars, inboxes, and spreadsheet notes.' },
+      { criterion: 'Operational burden on compliance ops and managers', weight: '15%', whatGoodLooksLike: 'Reminder and escalation operations stay stable as assignment volume spikes near deadlines.', leftLens: 'Track upkeep effort for threshold tuning, false-positive review, and escalation-governance calibration.', rightLens: 'Track recurring effort for reminder maintenance, manager chase loops, and status reconciliation across tools.' },
+      { criterion: 'Cost per on-time compliance completion', weight: '15%', whatGoodLooksLike: 'On-time completion rates improve while total reminder/escalation effort per learner declines.', leftLens: 'Model platform + governance cost against fewer missed deadlines, fewer emergency campaigns, and faster closure.', rightLens: 'Model lower tooling spend against manual follow-up labor, deadline misses, and late-cycle remediation costs.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one mandatory-training stream with at least two cohorts and known historical deadline slippage.',
+      'Use one scorecard: forecast lead-time, escalation closure cycle time, missed-deadline rate, and manager follow-up hours.',
+      'Require explicit threshold-override and escalation-accountability rules before production rollout.',
+      'Define RACI across compliance ops, manager owners, L&D operations, and audit/risk partner for enforcement decisions.',
+      'Choose the model with lower escalation friction per on-time completion, not the model generating the most reminder volume.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -799,8 +815,11 @@ const jsonLd = {
       }
 
       .faq-anchor-list a {
-        display: inline-block;
-        padding: 0.18rem 0;
+        display: block;
+        padding: 0.42rem 0.45rem;
+        min-height: 44px;
+        border-radius: 0.5rem;
+        background: #f8fafc;
       }
 
       .faq-item {

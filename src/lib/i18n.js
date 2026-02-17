@@ -671,6 +671,30 @@ export const localizedLandingPages = [
     points: ['Comparativa de anticipación de riesgo y velocidad de intervención antes del go-live', 'Criterios operativos para decisiones go/no-go defendibles por cohorte y ubicación', 'Marco de piloto para reglas de override, ownership de escalado y estabilidad post-despliegue'],
     enPath: '/compare/ai-readiness-risk-scoring-vs-manager-confidence-surveys-for-training-deployment/'
   }
+,
+  {
+    key: 'deadline-risk-forecasting-vs-manual-reminder-calendars',
+    locale: 'de',
+    slug: 'ki-training-deadline-risk-forecasting-vs-manuelle-erinnerungskalender-fuer-compliance-ops',
+    title: 'KI-Training-Deadline-Risk-Forecasting vs. manuelle Erinnerungskalender für Compliance Ops | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Deadline-Risikoprognosen gegen manuelle Erinnerungskalender in Compliance-Trainingsprozessen vergleichen.',
+    h1: 'KI-Deadline-Risikoprognosen vs. manuelle Erinnerungskalender für Compliance Ops',
+    intro: 'Hilft Compliance-, L&D- und Operations-Teams, Termintreue, Eskalationsklarheit und Audit-Nachvollziehbarkeit zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Frühwarnqualität bei Deadline-Risiken je Kohorte und Standort', 'Messbare Kriterien für Eskalations-Timing, Owner-Klarheit und Closing-Speed', 'Pilot-Framework für Override-Regeln, Governance-Cadence und belastbare Nachweisführung'],
+    enPath: '/compare/ai-training-deadline-risk-forecasting-vs-manual-reminder-calendars-for-compliance-ops/'
+  },
+  {
+    key: 'deadline-risk-forecasting-vs-manual-reminder-calendars',
+    locale: 'es',
+    slug: 'forecasting-riesgo-deadlines-training-ia-vs-calendarios-recordatorios-manuales-compliance-ops',
+    title: 'Forecasting de riesgo de deadlines de training con IA vs. calendarios manuales de recordatorios para compliance ops | AI Training Directory',
+    description: 'Entrada localizada para comparar forecasting de riesgo de plazos con IA frente a calendarios manuales de recordatorios en operaciones de compliance training.',
+    h1: 'Forecasting de riesgo de deadlines con IA vs. calendarios manuales de recordatorios para compliance ops',
+    intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar fiabilidad de plazos, timing de escalado y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de anticipación de riesgo de vencimiento por cohorte y ubicación', 'Criterios operativos para timing de escalado, ownership y velocidad de cierre', 'Marco de piloto para reglas de override, cadencia de gobernanza y evidencia defensible'],
+    enPath: '/compare/ai-training-deadline-risk-forecasting-vs-manual-reminder-calendars-for-compliance-ops/'
+  }
+
 
 ];
 
