@@ -1389,3 +1389,69 @@ location: https://aitraining.directory/
 - HTTPS remains valid on apex and `www` (redirecting to apex over HTTPS) with Let's Encrypt `R12`.
 - Build-level HTTPS QA passed with 176 generated HTML files after the i18n + mobile FAQ updates.
 - Deploy freshness signal remains current (`Last-Modified: 12:42:57 UTC`).
+
+---
+
+## Evidence delta — 2026-02-17 13:11 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 179 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.111.153
+185.199.110.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now (state change)
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+```
+
+### HTTP behavior
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+```
+
+### Current delta summary
+- `qa:https` passes for current generated artifacts (179 HTML files).
+- TLS moved from GitHub wildcard cert to Let's Encrypt (`CN=www.aitraining.directory`), indicating custom-domain certificate provisioning is now active.
+- HTTPS requests now succeed for apex and redirect behavior is functioning for `www`.

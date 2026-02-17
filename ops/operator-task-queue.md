@@ -100,8 +100,8 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Mobile UX polish pass: improve compare-page FAQ question spacing and anchor scanability on mobile screens.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
 
-- [ ] Add one traffic-driving high-intent compare route for workforce readiness operations: `/compare/ai-readiness-risk-scoring-vs-manager-confidence-surveys-for-training-deployment/` with implementation-led rubric + FAQ schema.
-- [ ] Create distribution asset pack for the readiness-risk-scoring comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
-- [ ] Add i18n parity stubs for the new readiness-risk-scoring route on `/de` and `/es` localized hubs with canonical compare linkage.
-- [ ] Mobile UX polish pass: improve compare-page decision-matrix header stickiness and horizontal scan cues on small mobile screens.
-- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Add one traffic-driving high-intent compare route for workforce readiness operations: `/compare/ai-readiness-risk-scoring-vs-manager-confidence-surveys-for-training-deployment/` with implementation-led rubric + FAQ schema.
+- [x] Create distribution asset pack for the readiness-risk-scoring comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new readiness-risk-scoring route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [x] Mobile UX polish pass: improve compare-page decision-matrix header stickiness and horizontal scan cues on small mobile screens.
+- [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.

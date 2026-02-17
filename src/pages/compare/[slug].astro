@@ -404,6 +404,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower reporting friction per trusted decision, not the one with the most charts.'
     ]
   },
+  'ai-readiness-risk-scoring-vs-manager-confidence-surveys-for-training-deployment': {
+    decisionMatrix: [
+      { criterion: 'Deployment timing accuracy by role and site', weight: '25%', whatGoodLooksLike: 'Training launches when teams are actually ready, avoiding premature go-lives and avoidable incident spikes.', leftLens: 'Measure whether AI risk scoring identifies hidden readiness gaps (knowledge decay, supervisor coverage, shift constraints) before rollout windows.', rightLens: 'Measure whether manager confidence snapshots alone catch equivalent risk patterns early enough to adjust deployment timing.' },
+      { criterion: 'Early-risk detection and intervention speed', weight: '25%', whatGoodLooksLike: 'At-risk cohorts are flagged early with clear owners and corrective actions before launch milestones are missed.', leftLens: 'Evaluate detection lead time, alert quality, and intervention routing when risk thresholds trigger targeted remediation workflows.', rightLens: 'Evaluate detection lead time when interventions depend on periodic confidence surveys and manual follow-up conversations.' },
+      { criterion: 'Readiness evidence defensibility for governance reviews', weight: '20%', whatGoodLooksLike: 'Leaders can explain why deployment proceeded, paused, or was phased using traceable readiness evidence.', leftLens: 'Assess whether model inputs, score changes, overrides, and remediation closure are logged in a defensible decision trail.', rightLens: 'Assess whether survey summaries and manager rationale provide equivalent traceability for challenge sessions and audits.' },
+      { criterion: 'Operational load on managers and training ops', weight: '15%', whatGoodLooksLike: 'Readiness checks remain sustainable across multiple launches without weekly coordination fire drills.', leftLens: 'Track upkeep effort for threshold tuning, data QA, exception handling, and cadence reviews after AI scoring rollout.', rightLens: 'Track recurring effort for survey design, response chasing, calibration meetings, and manual synthesis of confidence signals.' },
+      { criterion: 'Cost per deployment-ready learner cohort', weight: '15%', whatGoodLooksLike: 'Readiness assurance cost declines while launch reliability and post-launch stability improve.', leftLens: 'Model platform + governance cost against fewer rollback events, fewer reactive interventions, and faster risk closure.', rightLens: 'Model lower tooling spend against manual coordination overhead, slower risk visibility, and higher late-stage correction cost.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day side-by-side pilot on one high-change deployment program with at least two role cohorts and one constrained site.',
+      'Use one scorecard: risk-detection lead time, intervention cycle time, launch-delay variance, and post-launch incident rate.',
+      'Require explicit override policy for model scores and clear escalation ownership before production rollout.',
+      'Define RACI across training ops, frontline managers, compliance/risk owner, and analytics support for readiness governance.',
+      'Choose the model with lower readiness friction per stable deployment window, not the model with the highest data volume.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -483,6 +499,7 @@ const jsonLd = {
 
   <h2>Decision matrix</h2>
   <p class="muted" style="margin-top:-0.4rem;">On mobile, use the card view below for faster side-by-side scoring.</p>
+  <p class="matrix-scroll-cue" aria-hidden="true">Swipe horizontally to compare all columns →</p>
   <div class="matrix-table-wrap" aria-label="Desktop decision matrix table">
     <table class="matrix-table">
       <thead>
@@ -568,9 +585,42 @@ const jsonLd = {
   </section>
 
   <style>
+    .matrix-scroll-cue {
+      display: none;
+      margin: 0.2rem 0 0.45rem;
+      font-size: 0.82rem;
+      color: #334155;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
     .matrix-table-wrap {
       overflow-x: auto;
       display: block;
+      position: relative;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .matrix-table-wrap::before,
+    .matrix-table-wrap::after {
+      content: '';
+      position: sticky;
+      top: 0;
+      width: 14px;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .matrix-table-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, rgba(248, 250, 252, 0.96), rgba(248, 250, 252, 0));
+    }
+
+    .matrix-table-wrap::after {
+      float: right;
+      right: 0;
+      background: linear-gradient(to left, rgba(248, 250, 252, 0.96), rgba(248, 250, 252, 0));
     }
 
     .matrix-table {
@@ -592,6 +642,27 @@ const jsonLd = {
     .matrix-table th {
       background: #dcfce7;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 520px) {
+      .matrix-scroll-cue {
+        display: block;
+      }
+
+      .matrix-table-wrap {
+        display: block;
+      }
+
+      .matrix-mobile {
+        display: none;
+      }
+
+      .matrix-table th {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        box-shadow: inset 0 -1px 0 #86efac;
+      }
     }
 
     .matrix-mobile {
@@ -738,6 +809,16 @@ const jsonLd = {
 
       .faq-item h3 {
         margin-bottom: 0.6rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .matrix-table-wrap {
+        display: block;
+      }
+
+      .matrix-mobile {
+        display: none;
       }
     }
   </style>

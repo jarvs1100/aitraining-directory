@@ -648,6 +648,28 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de L&D, analytics y finanzas a evaluar latencia de reporting, claridad de atribución y defensibilidad ejecutiva entre ambos modelos.',
     points: ['Comparativa de velocidad de reporte para revisiones mensuales y trimestrales', 'Criterios operativos para claims de ROI con límites metodológicos explícitos', 'Marco de piloto para trazabilidad de KPIs, ownership y decisiones presupuestarias con confianza'],
     enPath: '/compare/ai-training-impact-attribution-dashboards-vs-manual-survey-reporting-for-ld-roi/'
+  },
+  {
+    key: 'readiness-risk-scoring-vs-manager-confidence-surveys',
+    locale: 'de',
+    slug: 'ki-readiness-risk-scoring-vs-manager-confidence-surveys-fuer-training-deployment',
+    title: 'KI-Readiness-Risk-Scoring vs. Manager-Confidence-Surveys für Training Deployment | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Readiness-Risk-Scoring gegen Manager-Confidence-Surveys für Trainings-Rollouts vergleichen.',
+    h1: 'KI-Readiness-Risk-Scoring vs. Manager-Confidence-Surveys für Training Deployment',
+    intro: 'Hilft L&D-, Operations- und Compliance-Teams, Deployment-Timing, Frühwarnqualität und Governance-Defensibility zwischen beiden Readiness-Modellen zu bewerten.',
+    points: ['Vergleich von Risk-Detection-Lead-Time und Intervention-Speed vor Rollout-Fenstern', 'Messbare Kriterien für evidenzbasierte Go/No-Go-Entscheidungen je Rolle und Standort', 'Pilot-Framework für Override-Regeln, Escalation-Ownership und stabile Launch-Ausführung'],
+    enPath: '/compare/ai-readiness-risk-scoring-vs-manager-confidence-surveys-for-training-deployment/'
+  },
+  {
+    key: 'readiness-risk-scoring-vs-manager-confidence-surveys',
+    locale: 'es',
+    slug: 'scoring-riesgo-readiness-ia-vs-encuestas-confianza-managers-despliegue-training',
+    title: 'Scoring de riesgo de readiness con IA vs. encuestas de confianza de managers para despliegue de training | AI Training Directory',
+    description: 'Entrada localizada para comparar scoring de riesgo de readiness con IA frente a encuestas de confianza de managers en despliegues de formación.',
+    h1: 'Scoring de riesgo de readiness con IA vs. encuestas de confianza de managers para despliegue de training',
+    intro: 'Ayuda a equipos de L&D, operaciones y compliance a evaluar timing de despliegue, detección temprana de riesgo y trazabilidad de decisiones entre ambos enfoques.',
+    points: ['Comparativa de anticipación de riesgo y velocidad de intervención antes del go-live', 'Criterios operativos para decisiones go/no-go defendibles por cohorte y ubicación', 'Marco de piloto para reglas de override, ownership de escalado y estabilidad post-despliegue'],
+    enPath: '/compare/ai-readiness-risk-scoring-vs-manager-confidence-surveys-for-training-deployment/'
   }
 
 ];
