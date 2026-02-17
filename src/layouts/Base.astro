@@ -285,12 +285,21 @@ const {
           flex-direction: column;
         }
         .top-nav {
-          overflow-x: auto;
-          flex-wrap: nowrap;
-          padding-bottom: 0.2rem;
-          -webkit-overflow-scrolling: touch;
-          scrollbar-width: thin;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: .45rem;
           width: 100%;
+        }
+        .top-nav a {
+          text-align: center;
+          border: 2px solid #166534;
+          background: #ecfdf5;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .top-nav {
+          grid-template-columns: 1fr;
         }
       }
     </style>
