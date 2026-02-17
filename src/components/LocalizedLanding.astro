@@ -41,6 +41,35 @@ const ui = getLocalizedUiStrings(page.locale);
   </div>
 </section>
 
+<section class="section card" aria-labelledby="trust-method-heading">
+  <h2 id="trust-method-heading">{supportBlocks.parityFramework.landingTrustHeading}</h2>
+  <ul>
+    {supportBlocks.trustBullets.map((item) => <li>{item}</li>)}
+  </ul>
+  <div class="chips chips-nav">
+    {supportBlocks.methodologyLinks.map((item) => (
+      <a class="chip" href={item.href}>{item.label}</a>
+    ))}
+  </div>
+</section>
+
+<section class="section card" aria-labelledby="routing-quality-heading">
+  <h2 id="routing-quality-heading">{supportBlocks.parityFramework.routingHeading}</h2>
+  <ul>
+    {supportBlocks.routingChecks.map((item) => <li>{item}</li>)}
+  </ul>
+</section>
+
+<section class="section card" aria-labelledby="parity-framework-heading">
+  <h2 id="parity-framework-heading">{supportBlocks.parityFramework.heading}</h2>
+  <p class="muted">{supportBlocks.parityFramework.intro}</p>
+  <ul>
+    {supportBlocks.parityFramework.dimensions.map((dimension) => (
+      <li>{dimension.localizedName}</li>
+    ))}
+  </ul>
+</section>
+
 {Boolean(siblingPages.length) && (
   <section class="section" aria-labelledby="other-editions-heading">
     <h2 id="other-editions-heading">{supportBlocks.labels.otherLanguagesHeading}</h2>

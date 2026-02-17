@@ -473,6 +473,307 @@ export const localizedLandingPages = [
   }
 ];
 
+export const i18nParityRubric = [
+  {
+    id: 'section-depth',
+    name: 'Section depth parity',
+    requirement: 'Each localized route includes: hero context, buyer checklist, trust/methodology context, routing guidance, and FAQ.',
+    passGate: 'No localized page is a short teaser or thin bridge page.'
+  },
+  {
+    id: 'decision-utility',
+    name: 'Decision utility parity',
+    requirement: 'Localized copy helps teams choose pilots, owners, metrics, and escalation paths.',
+    passGate: 'Reader can decide next operational step without opening extra context tabs.'
+  },
+  {
+    id: 'buyer-checklist-quality',
+    name: 'Buyer checklist quality parity',
+    requirement: 'Checklist items are concrete, sequenced, and auditable (owner, cadence, metric, evidence).',
+    passGate: 'Checklist supports a 2-4 week pilot plan, not generic advice.'
+  },
+  {
+    id: 'trust-methodology',
+    name: 'Trust and methodology parity',
+    requirement: 'Localized routes explain conservative claim boundaries and link to shared editorial standards.',
+    passGate: 'Pages communicate evidence posture and avoid fabricated performance claims.'
+  },
+  {
+    id: 'internal-link-intent',
+    name: 'Internal-link intent parity',
+    requirement: 'Links move users from discovery to implementation and use only valid route paths.',
+    passGate: 'No locale-prefixed links are used for non-localized sections.'
+  }
+];
+
+export function getLocalizedParityFramework(locale) {
+  const copy = {
+    en: {
+      heading: 'Cross-language parity framework',
+      intro: 'Shared quality gates that keep localized hubs and landings at the same practical depth as English implementation pages.',
+      dimensionNames: {
+        'section-depth': 'Section depth parity',
+        'decision-utility': 'Decision utility parity',
+        'buyer-checklist-quality': 'Buyer checklist quality parity',
+        'trust-methodology': 'Trust and methodology parity',
+        'internal-link-intent': 'Internal-link intent parity'
+      },
+      landingTrustHeading: 'Trust and methodology context',
+      hubTrustHeading: 'Trust guardrails for localized routes',
+      routingHeading: 'Action routing quality checks',
+      checklistExtension: 'Define a review checkpoint after week 2 with one approval owner and one fallback escalation owner.',
+      hubChecklist: [
+        'Start with one localized page that matches your immediate buying intent.',
+        'Run one pilot workflow for 2-4 weeks before expanding scope.',
+        'Assign one content owner, one reviewer, and one escalation owner.',
+        'Capture cycle-time and quality deltas before procurement decisions.'
+      ],
+      trustBullets: [
+        'Claims are intentionally conservative and framed as pilot decisions, not guaranteed outcomes.',
+        'Evaluation standards stay aligned to workflow-fit, governance, localization, and implementation difficulty.',
+        'Localized pages are reviewed with build and route checks before publish.'
+      ],
+      routingChecks: [
+        'Use localized pages for discovery intent and route implementation work to canonical English execution pages.',
+        'Send compare intent to /compare/ routes and deployment intent to /solutions/ routes.',
+        'Keep links unprefixed for non-localized sections unless a locale route is explicitly available.'
+      ],
+      methodologyLinks: [
+        { label: 'Open editorial methodology', href: '/editorial-methodology/' },
+        { label: 'Open L&D tech evaluation checklist', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+        { label: 'Open compare hub', href: '/compare/' }
+      ]
+    },
+    pl: {
+      heading: 'Ramy parytetu między językami',
+      intro: 'Wspólne progi jakości utrzymujące lokalne huby i landingi na tym samym poziomie użyteczności co strony angielskie.',
+      dimensionNames: {
+        'section-depth': 'Parytet głębokości sekcji',
+        'decision-utility': 'Parytet użyteczności decyzyjnej',
+        'buyer-checklist-quality': 'Parytet jakości checklisty zakupowej',
+        'trust-methodology': 'Parytet zaufania i metodologii',
+        'internal-link-intent': 'Parytet intencji linkowania wewnętrznego'
+      },
+      landingTrustHeading: 'Kontekst zaufania i metodologii',
+      hubTrustHeading: 'Zasady zaufania dla stron lokalnych',
+      routingHeading: 'Kontrola jakości ścieżek przejścia',
+      checklistExtension: 'Po 2 tygodniach zaplanuj formalny przegląd z właścicielem akceptacji i osobą eskalacyjną.',
+      hubChecklist: [
+        'Zacznij od lokalnej strony najlepiej dopasowanej do bieżącego intentu zakupowego.',
+        'Uruchom jeden workflow pilotowy na 2-4 tygodnie przed rozszerzeniem zakresu.',
+        'Wyznacz właściciela treści, recenzenta i osobę odpowiedzialną za eskalację.',
+        'Zapisz różnicę czasu cyklu i jakości przed decyzją zakupową.'
+      ],
+      trustBullets: [
+        'Stosujemy konserwatywne claimy i opisujemy rekomendacje jako decyzje pilotowe.',
+        'Ocena jest spójna z kryteriami: workflow-fit, governance, lokalizacja i trudność wdrożenia.',
+        'Każda lokalna strona przechodzi kontrolę builda i ścieżek linków przed publikacją.'
+      ],
+      routingChecks: [
+        'Strony lokalne łapią intent odkrywania, a wdrożenie kierujemy do kanonicznych stron angielskich.',
+        'Intent porównawczy prowadź do /compare/, a intent wdrożeniowy do /solutions/.',
+        'Dla sekcji bez lokalizacji używaj linków bez prefiksu językowego.'
+      ],
+      methodologyLinks: [
+        { label: 'Otwórz metodologię redakcyjną', href: '/editorial-methodology/' },
+        { label: 'Otwórz checklistę oceny L&D', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+        { label: 'Przejdź do hubu porównań', href: '/compare/' }
+      ]
+    },
+    cs: {
+      heading: 'Rámec parity mezi jazyky',
+      intro: 'Sdílené kvalitativní brány, které drží lokalizované huby i landing stránky na stejné praktické úrovni jako anglické implementační stránky.',
+      dimensionNames: {
+        'section-depth': 'Parita hloubky sekcí',
+        'decision-utility': 'Parita rozhodovací užitečnosti',
+        'buyer-checklist-quality': 'Parita kvality nákupního checklistu',
+        'trust-methodology': 'Parita důvěry a metodiky',
+        'internal-link-intent': 'Parita záměru interního linkování'
+      },
+      landingTrustHeading: 'Kontext důvěry a metodiky',
+      hubTrustHeading: 'Pravidla důvěry pro lokalizované stránky',
+      routingHeading: 'Kontroly kvality navigace',
+      checklistExtension: 'Po 2 týdnech proveďte formální review s vlastníkem schválení i eskalační odpovědností.',
+      hubChecklist: [
+        'Začněte lokalizovanou stránkou, která odpovídá aktuálnímu nákupnímu záměru.',
+        'Spusťte jeden pilotní workflow na 2-4 týdny, než rozšíříte rozsah.',
+        'Určete vlastníka obsahu, review odpovědnost i eskalační roli.',
+        'Před nákupním rozhodnutím změřte změnu cyklu i kvality.'
+      ],
+      trustBullets: [
+        'Tvrzení jsou záměrně konzervativní a formulovaná jako pilotní rozhodnutí.',
+        'Hodnocení drží stejná kritéria: workflow-fit, governance, lokalizace a implementační náročnost.',
+        'Každá lokalizovaná stránka prochází build verifikací a kontrolou tras.'
+      ],
+      routingChecks: [
+        'Lokalizované stránky zachytí discovery intent, implementace směřuje na kanonické anglické stránky.',
+        'Srovnávací intent veďte na /compare/ a implementační intent na /solutions/.',
+        'U nelokalizovaných sekcí používejte odkazy bez jazykového prefixu.'
+      ],
+      methodologyLinks: [
+        { label: 'Otevřít redakční metodiku', href: '/editorial-methodology/' },
+        { label: 'Otevřít checklist pro L&D evaluaci', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+        { label: 'Přejít na hub srovnání', href: '/compare/' }
+      ]
+    },
+    sk: {
+      heading: 'Rámec parity medzi jazykmi',
+      intro: 'Spoločné kvalitatívne brány, ktoré držia lokalizované huby a landingy na rovnakej praktickej úrovni ako anglické implementačné stránky.',
+      dimensionNames: {
+        'section-depth': 'Parita hĺbky sekcií',
+        'decision-utility': 'Parita rozhodovacej použiteľnosti',
+        'buyer-checklist-quality': 'Parita kvality nákupného checklistu',
+        'trust-methodology': 'Parita dôvery a metodiky',
+        'internal-link-intent': 'Parita zámeru interného linkovania'
+      },
+      landingTrustHeading: 'Kontext dôvery a metodiky',
+      hubTrustHeading: 'Pravidlá dôvery pre lokalizované stránky',
+      routingHeading: 'Kontroly kvality navigácie',
+      checklistExtension: 'Po 2 týždňoch urobte formálne review s vlastníkom schválenia aj eskalačným vlastníkom.',
+      hubChecklist: [
+        'Začni lokalizovanou stránkou, ktorá zodpovedá aktuálnemu nákupnému intentu.',
+        'Spusť jeden pilotný workflow na 2-4 týždne pred rozšírením rozsahu.',
+        'Priraď vlastníka obsahu, review vlastníka aj eskalačnú rolu.',
+        'Pred nákupným rozhodnutím zmeraj zmenu cyklu a kvality.'
+      ],
+      trustBullets: [
+        'Tvrdenia sú zámerne konzervatívne a formulované ako pilotné rozhodnutia.',
+        'Hodnotenie zostáva pri rovnakých kritériách: workflow-fit, governance, lokalizácia a náročnosť implementácie.',
+        'Každá lokalizovaná stránka prechádza build overením a kontrolou trás.'
+      ],
+      routingChecks: [
+        'Lokalizované stránky zachytávajú discovery intent, implementácia smeruje na kanonické anglické stránky.',
+        'Porovnávací intent smerujte na /compare/ a implementačný intent na /solutions/.',
+        'Pri nelokalizovaných sekciách používajte odkazy bez jazykového prefixu.'
+      ],
+      methodologyLinks: [
+        { label: 'Otvoriť redakčnú metodiku', href: '/editorial-methodology/' },
+        { label: 'Otvoriť checklist pre L&D evaluáciu', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+        { label: 'Prejsť na hub porovnaní', href: '/compare/' }
+      ]
+    },
+    hu: {
+      heading: 'Nyelvek közötti paritási keretrendszer',
+      intro: 'Közös minőségi kapuk, amelyek a lokalizált hubokat és landing oldalakat az angol implementációs oldalakkal azonos gyakorlati szinten tartják.',
+      dimensionNames: {
+        'section-depth': 'Szekciómélység-paritás',
+        'decision-utility': 'Döntési használhatóság paritása',
+        'buyer-checklist-quality': 'Beszerzési checklist minőségi paritása',
+        'trust-methodology': 'Bizalmi és módszertani paritás',
+        'internal-link-intent': 'Belső linkelési szándék paritása'
+      },
+      landingTrustHeading: 'Bizalmi és módszertani kontextus',
+      hubTrustHeading: 'Bizalmi korlátok a lokalizált oldalakhoz',
+      routingHeading: 'Navigációs minőségellenőrzések',
+      checklistExtension: 'A 2. hét után legyen formális review egy jóváhagyó és egy eszkalációs felelős kijelölésével.',
+      hubChecklist: [
+        'Kezdj egy olyan lokalizált oldallal, ami a legfontosabb beszerzési szándékot fedi.',
+        'Futtass egy pilot workflow-t 2-4 hétig, mielőtt bővíted a scope-ot.',
+        'Nevezz ki tartalomgazdát, review felelőst és eszkalációs felelőst.',
+        'Beszerzési döntés előtt mérd a ciklusidő- és minőségváltozást.'
+      ],
+      trustBullets: [
+        'Az állítások tudatosan konzervatívak, és pilot döntésként vannak keretezve.',
+        'Az értékelés ugyanazokra a szempontokra épül: workflow-fit, governance, lokalizáció, implementációs nehézség.',
+        'Minden lokalizált oldal build- és útvonalellenőrzéssel megy ki.'
+      ],
+      routingChecks: [
+        'A lokalizált oldalak discovery intentet fednek le, az implementáció a kanonikus angol oldalakra megy.',
+        'Összehasonlítási intentet /compare/ alá, bevezetési intentet /solutions/ alá irányíts.',
+        'Nem lokalizált szekcióknál nyelvi előtag nélküli linket használj.'
+      ],
+      methodologyLinks: [
+        { label: 'Szerkesztői módszertan megnyitása', href: '/editorial-methodology/' },
+        { label: 'L&D technológiai checklist megnyitása', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+        { label: 'Összehasonlítási hub megnyitása', href: '/compare/' }
+      ]
+    },
+    de: {
+      heading: 'Sprachübergreifendes Paritäts-Framework',
+      intro: 'Gemeinsame Qualitäts-Gates, damit lokalisierte Hubs und Landingpages den gleichen praktischen Nutzen wie englische Umsetzungsseiten liefern.',
+      dimensionNames: {
+        'section-depth': 'Parität der Abschnittstiefe',
+        'decision-utility': 'Parität der Entscheidungsnutzung',
+        'buyer-checklist-quality': 'Parität der Buyer-Checklist-Qualität',
+        'trust-methodology': 'Parität von Vertrauen und Methodik',
+        'internal-link-intent': 'Parität der internen Link-Intention'
+      },
+      landingTrustHeading: 'Vertrauens- und Methodik-Kontext',
+      hubTrustHeading: 'Trust-Guardrails für lokalisierte Seiten',
+      routingHeading: 'Qualitätschecks für Routing',
+      checklistExtension: 'Nach Woche 2 ein formales Review mit Freigabe-Verantwortung und klarer Eskalationsrolle einplanen.',
+      hubChecklist: [
+        'Starten Sie mit der lokalisierten Seite, die Ihrem aktuellen Buying-Intent entspricht.',
+        'Führen Sie einen Pilot-Workflow 2-4 Wochen durch, bevor Sie den Umfang erweitern.',
+        'Benennen Sie Content-Owner, Reviewer und Eskalationsverantwortung.',
+        'Messen Sie Zykluszeit- und Qualitätsdifferenz vor der Beschaffungsentscheidung.'
+      ],
+      trustBullets: [
+        'Aussagen sind bewusst konservativ und als Pilotentscheidungen statt Erfolgsversprechen formuliert.',
+        'Die Bewertung bleibt konsistent auf Workflow-Fit, Governance, Lokalisierung und Implementierungsaufwand.',
+        'Lokalisierte Seiten werden vor Veröffentlichung mit Build- und Routenchecks verifiziert.'
+      ],
+      routingChecks: [
+        'Lokalisierte Seiten bedienen Discovery-Intent; Umsetzung geht auf kanonische englische Ausführungsseiten.',
+        'Vergleichs-Intent auf /compare/, Implementierungs-Intent auf /solutions/ routen.',
+        'Für nicht lokalisierte Bereiche nur unpräfixte Links verwenden.'
+      ],
+      methodologyLinks: [
+        { label: 'Redaktionelle Methodik öffnen', href: '/editorial-methodology/' },
+        { label: 'L&D-Evaluations-Checklist öffnen', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+        { label: 'Compare-Hub öffnen', href: '/compare/' }
+      ]
+    },
+    es: {
+      heading: 'Marco de paridad entre idiomas',
+      intro: 'Puertas de calidad compartidas para que hubs y landings localizados mantengan el mismo valor práctico que las páginas de implementación en inglés.',
+      dimensionNames: {
+        'section-depth': 'Paridad de profundidad de secciones',
+        'decision-utility': 'Paridad de utilidad para decisiones',
+        'buyer-checklist-quality': 'Paridad de calidad de checklist de compra',
+        'trust-methodology': 'Paridad de confianza y metodología',
+        'internal-link-intent': 'Paridad de intención de enlazado interno'
+      },
+      landingTrustHeading: 'Contexto de confianza y metodología',
+      hubTrustHeading: 'Guardrails de confianza para rutas localizadas',
+      routingHeading: 'Controles de calidad de enrutamiento',
+      checklistExtension: 'Después de la semana 2, ejecuta una revisión formal con dueño de aprobación y responsable de escalado.',
+      hubChecklist: [
+        'Empieza por la página localizada que mejor encaje con tu intención de compra actual.',
+        'Ejecuta un piloto de workflow durante 2-4 semanas antes de ampliar alcance.',
+        'Asigna dueño de contenido, reviewer y responsable de escalado.',
+        'Mide cambio en ciclo y calidad antes de decidir compra.'
+      ],
+      trustBullets: [
+        'Los claims se mantienen conservadores y se presentan como decisiones de piloto.',
+        'La evaluación conserva los mismos criterios: workflow-fit, gobernanza, localización y dificultad de implementación.',
+        'Cada página localizada pasa verificación de build y chequeo de rutas antes de publicar.'
+      ],
+      routingChecks: [
+        'Las páginas localizadas capturan intención discovery y la implementación se deriva a páginas canónicas en inglés.',
+        'Dirige intención comparativa a /compare/ y intención de despliegue a /solutions/.',
+        'En secciones no localizadas, usa enlaces sin prefijo de idioma.'
+      ],
+      methodologyLinks: [
+        { label: 'Abrir metodología editorial', href: '/editorial-methodology/' },
+        { label: 'Abrir checklist de evaluación L&D', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+        { label: 'Abrir hub de comparativas', href: '/compare/' }
+      ]
+    }
+  };
+
+  const localized = copy[locale] || copy.en;
+
+  return {
+    updatedOn: '2026-02-17',
+    ...localized,
+    dimensions: i18nParityRubric.map((dimension) => ({
+      ...dimension,
+      localizedName: localized.dimensionNames[dimension.id] || dimension.name
+    }))
+  };
+}
+
 export function buildLocalizedPath(locale, slug) {
   return `/${locale}/${slug}/`;
 }
@@ -608,6 +909,7 @@ export function getLocalizedUiStrings(locale) {
 export function getLocalizedSupportBlocks(key, locale) {
   const localeName = localeMeta[locale]?.name || locale.toUpperCase();
   const labels = getLocalizedUiStrings(locale);
+  const parityFramework = getLocalizedParityFramework(locale);
 
   const content = {
     'ai-training-tools': {
@@ -845,9 +1147,13 @@ export function getLocalizedSupportBlocks(key, locale) {
 
   return {
     labels,
-    checklist,
+    checklist: [...checklist, parityFramework.checklistExtension],
     internalLinks,
-    intentCopy: block.intentCopy[locale] || block.intentCopy.en
+    intentCopy: block.intentCopy[locale] || block.intentCopy.en,
+    trustBullets: parityFramework.trustBullets,
+    routingChecks: parityFramework.routingChecks,
+    methodologyLinks: parityFramework.methodologyLinks,
+    parityFramework
   };
 }
 
