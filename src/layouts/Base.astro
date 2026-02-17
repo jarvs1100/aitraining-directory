@@ -326,12 +326,23 @@ const localizedHref = (path) => {
           width: 100%;
         }
         .chips {
-          gap: 0.42rem;
+          gap: 0.5rem;
         }
         .chip,
         .badge {
           font-size: 0.92rem;
-          padding: 0.45rem 0.7rem;
+          padding: 0.5rem 0.78rem;
+          min-height: 44px;
+        }
+        .chips-nav {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 0.55rem;
+        }
+        .chips-nav .chip {
+          width: 100%;
+          justify-content: flex-start;
+          padding-inline: 0.82rem;
         }
       }
 

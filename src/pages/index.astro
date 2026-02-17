@@ -95,7 +95,7 @@ const jsonLd = {
       <li><strong>Week 3:</strong> measure quality and business outcomes (completion, readiness, error reduction).</li>
       <li><strong>Week 4:</strong> document SOPs, approval gates, and rollout plan for scale.</li>
     </ol>
-    <div class="chips">
+    <div class="chips chips-nav">
       <a class="chip" href="/solutions/ai-tools-for-training-and-development/">Best AI tools for training & development</a>
       <a class="chip" href="/solutions/sop-to-video-training/">SOP to video playbook</a>
       <a class="chip" href="/solutions/new-hire-onboarding-automation/">Onboarding automation</a>
@@ -105,7 +105,7 @@ const jsonLd = {
 
   <section class="section" aria-labelledby="category-heading">
     <h2 id="category-heading">Popular categories</h2>
-    <div class="chips">
+    <div class="chips chips-nav">
       {categories.map((c) => <a class="chip" href={`/category/${c.slug}/`}>{c.name} <span aria-hidden="true">·</span> {c.count}</a>)}
     </div>
   </section>
