@@ -1038,6 +1038,17 @@ const jsonLd = {
       line-height: 1.52;
     }
 
+    .section[aria-labelledby="implementation-playbook-heading"] ol {
+      margin: 0.25rem 0 0;
+      padding-left: 1.15rem;
+      display: grid;
+      gap: 0.52rem;
+    }
+
+    .section[aria-labelledby="implementation-playbook-heading"] li {
+      line-height: 1.52;
+    }
+
     .next-step-actions {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1256,6 +1267,21 @@ const jsonLd = {
       .section.card ul li {
         margin-bottom: 0.46rem;
         line-height: 1.5;
+      }
+
+      .section[aria-labelledby="implementation-playbook-heading"] ol {
+        list-style: none;
+        padding-left: 0;
+        gap: 0.48rem;
+      }
+
+      .section[aria-labelledby="implementation-playbook-heading"] li {
+        margin: 0;
+        padding: 0.62rem 0.66rem;
+        border: 1px solid #dbe4ef;
+        border-radius: 0.58rem;
+        background: #f8fafc;
+        line-height: 1.46;
       }
     }
 
