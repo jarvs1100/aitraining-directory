@@ -52,6 +52,22 @@ const comparisonContentBySlug = {
       'Choose the assistant that delivers lower revision burden over a 30-day pilot, not prettier first drafts.'
     ]
   },
+  'heygen-vs-synthesia-for-training-videos': {
+    decisionMatrix: [
+      { criterion: 'Avatar realism and learner trust', weight: '20%', whatGoodLooksLike: 'Learners perceive delivery as credible and stay engaged through the full module.', leftLens: 'Evaluate presenter realism, emotional range, and pronunciation consistency for internal terminology.', rightLens: 'Evaluate the same signals plus whether templates remain consistent across departments.' },
+      { criterion: 'Revision speed after SME feedback', weight: '25%', whatGoodLooksLike: 'Content owners can ship approved updates within one review cycle.', leftLens: 'Score how quickly teams can revise scenes, script timing, and visual emphasis.', rightLens: 'Score revision speed when edits span multiple lessons and recurring templates.' },
+      { criterion: 'Localization + multilingual QA load', weight: '20%', whatGoodLooksLike: 'Regional language versions can be shipped with minimal manual clean-up.', leftLens: 'Test dubbing quality and pronunciation controls for role-specific vocabulary.', rightLens: 'Test language coverage, glossary control, and reviewer effort for multilingual rollouts.' },
+      { criterion: 'Governance and enterprise readiness', weight: '20%', whatGoodLooksLike: 'Approval routing, workspace controls, and audit trails are clear for compliance reviews.', leftLens: 'Validate permissioning model and revision traceability for cross-functional teams.', rightLens: 'Validate equivalent controls and how easily reviewers can sign off in-platform.' },
+      { criterion: 'Cost per published training minute', weight: '15%', whatGoodLooksLike: 'Total production cost falls as module volume scales month over month.', leftLens: 'Model spend using your planned lesson volume + localization footprint.', rightLens: 'Run the same model and compare against approved output velocity, not draft volume.' }
+    ],
+    buyingCriteria: [
+      'Run one controlled pilot with the same SOP source and the same reviewer panel in both tools.',
+      'Track learner-facing QA defects (pronunciation, pacing, visual mismatch) per published minute.',
+      'Require at least one multilingual module in pilot scope before final selection.',
+      'Document who owns script QA, media QA, and final compliance signoff after go-live.',
+      'Select the platform that achieves lower revision burden and faster publish cadence over 30 days.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
