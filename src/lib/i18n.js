@@ -1935,6 +1935,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de aprobación, consistencia de decisiones y trazabilidad audit-ready durante ventanas de cambio regulatorio.',
     points: ['Comparativa de tiempo de ciclo de aprobaciones bajo SLA regulatorios', 'Criterios operativos para profundidad de revisión según nivel de riesgo', 'Marco de piloto para reducir cuellos de botella y mejorar defensibilidad en auditoría'],
     enPath: '/compare/ai-compliance-training-change-approval-orchestration-vs-manual-policy-signoff-chains/'
+  },
+  {
+    key: 'control-owner-attestations-vs-manager-confirmation-emails',
+    locale: 'de',
+    slug: 'ki-compliance-training-control-owner-attestations-vs-manuelle-manager-confirmation-emails',
+    title: 'KI-Compliance-Training-Control-Owner-Attestations vs. manuelle Manager-Confirmation-Emails | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Control-Owner-Attestations gegen manuelle Manager-Confirmation-Emails in Compliance-Training-Programmen vergleichen.',
+    h1: 'KI-Control-Owner-Attestations vs. manuelle Manager-Confirmation-Emails',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Abschlusszuverlässigkeit, Ownership-Klarheit und auditfeste Attestation-Lineage zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von On-time-Attestation-Closure unter Audit-Deadlines', 'Messbare Kriterien für klare Owner-Zuordnung und weniger Reassignment-Churn', 'Pilot-Framework für belastbare Evidence-Lineage und geringere Reminder-Last'],
+    enPath: '/compare/ai-compliance-training-control-owner-attestations-vs-manual-manager-confirmation-emails/'
+  },
+  {
+    key: 'control-owner-attestations-vs-manager-confirmation-emails',
+    locale: 'es',
+    slug: 'attestations-control-owner-training-compliance-ia-vs-emails-confirmacion-manual-manager',
+    title: 'Attestations de control owner en training compliance con IA vs. emails manuales de confirmación de manager | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan attestations de control owner con IA frente a emails manuales de confirmación de managers en training compliance.',
+    h1: 'Attestations de control owner con IA vs. emails manuales de confirmación de manager',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar fiabilidad de cierre, claridad de ownership y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de cierre en plazo antes de cortes de auditoría', 'Criterios operativos para reducir churn de reasignaciones y ambigüedad de ownership', 'Marco de piloto para reforzar lineage de evidencia y reducir carga de recordatorios manuales'],
+    enPath: '/compare/ai-compliance-training-control-owner-attestations-vs-manual-manager-confirmation-emails/'
   }
 );
 
