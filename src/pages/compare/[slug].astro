@@ -502,6 +502,23 @@ const comparisonContentBySlug = {
     ]
   },
 
+  'ai-compliance-training-evidence-access-least-privilege-attestation-vs-manual-annual-access-certifications-for-audit-readiness': {
+    decisionMatrix: [
+      { criterion: 'Privilege-creep detection latency', weight: '25%', whatGoodLooksLike: 'Excess evidence access is detected and corrected before it becomes an audit or data-exposure finding.', leftLens: 'Measure time from role/scope drift signal to least-privilege attestation, owner action, and verified closure.', rightLens: 'Measure detection lag when excess access is only reviewed in annual certification windows and manual exception logs.' },
+      { criterion: 'Decision consistency across approvers and regions', weight: '25%', whatGoodLooksLike: 'Equivalent access cases produce consistent keep/revoke decisions tied to policy and risk tier.', leftLens: 'Assess rule-backed attestation prompts, required justification quality, and override governance by policy clause.', rightLens: 'Assess variance in annual reviewer judgment, meeting cadence, and spreadsheet interpretation across teams.' },
+      { criterion: 'Audit traceability of least-privilege outcomes', weight: '20%', whatGoodLooksLike: 'Teams can prove why access was retained or revoked, by whom, and under which policy version.', leftLens: 'Evaluate immutable attestation logs linking request context, approver chain, remediation evidence, and timestamped closure.', rightLens: 'Evaluate reconstructability when evidence is split across annual certification spreadsheets, inbox threads, and meeting notes.' },
+      { criterion: 'Operational burden between certification cycles', weight: '15%', whatGoodLooksLike: 'Access governance remains stable without end-of-year cleanup surges.', leftLens: 'Track effort for threshold tuning, false-positive handling, and recurring governance QA checks.', rightLens: 'Track recurring analyst and manager hours for annual prep, chase loops, and post-review reconciliation.' },
+      { criterion: 'Cost per audit-defensible access decision', weight: '15%', whatGoodLooksLike: 'Cost per retained/revoked decision declines while stale-access defects and reopen rate decrease.', leftLens: 'Model platform + governance overhead against reduced privilege creep, faster closure, and lower pre-audit cleanup spend.', rightLens: 'Model lower tooling spend against annual fire-drill labor, delayed revocations, and elevated audit-response rework.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one evidence domain with frequent role changes and at least one upcoming internal audit sample.',
+      'Use one scorecard: drift-detection latency, revocation cycle time, stale-access defect rate, and reviewer hours.',
+      'Define mandatory controls for attestation thresholds, exception routing, and manual override authority before rollout.',
+      'Assign RACI across compliance owner, training ops lead, system admin, and internal audit reviewer for each attestation stage.',
+      'Choose the model with lower least-privilege governance friction per audit-defensible decision, not the model that only looks cheaper annually.'
+    ]
+  },
+
   'ai-training-capacity-forecasting-vs-manual-headcount-guessing-for-ld-operations': {
     decisionMatrix: [
       { criterion: 'Planning accuracy for upcoming training demand spikes', weight: '25%', whatGoodLooksLike: 'Capacity plans predict enrollment and delivery load accurately enough to avoid recurring SLA breaches.', leftLens: 'Measure forecast error for learner volume, facilitation demand, and support-ticket throughput across 4-8 week windows.', rightLens: 'Measure variance when staffing assumptions rely on ad-hoc manager estimates and static quarterly spreadsheets.' },
@@ -1762,8 +1779,18 @@ const jsonLd = {
         margin-top: 0.56rem;
       }
 
+      .next-step-actions {
+        gap: 0.66rem;
+      }
+
+      .next-step-actions .btn {
+        min-height: 52px;
+        padding: 0.86rem 0.9rem;
+        line-height: 1.22;
+      }
+
       .faq-anchor-list {
-        gap: 0.52rem;
+        gap: 0.46rem;
         padding-left: 0;
       }
 
@@ -1773,17 +1800,17 @@ const jsonLd = {
       }
 
       .faq-anchor-list a {
-        min-height: 58px;
-        padding: 0.82rem 0.8rem;
-        line-height: 1.44;
+        min-height: 56px;
+        padding: 0.74rem 0.72rem;
+        line-height: 1.36;
         align-items: flex-start;
-        gap: 0.6rem;
+        gap: 0.54rem;
       }
 
       .faq-anchor-list a::before {
-        width: 1.4rem;
-        height: 1.4rem;
-        margin-top: 0.03rem;
+        width: 1.34rem;
+        height: 1.34rem;
+        margin-top: 0.02rem;
         flex-shrink: 0;
       }
     }

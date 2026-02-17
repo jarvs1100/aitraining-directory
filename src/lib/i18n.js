@@ -2290,6 +2290,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar cumplimiento de SLA, calidad de escalaciones y trazabilidad defendible entre ambos enfoques.',
     points: ['Comparativa del cumplimiento de SLA request-to-approval bajo presión de auditoría', 'Criterios operativos para escalación consistente, ownership claro y control de alcance', 'Marco de piloto para decisiones de acceso audit-ready con menos retrabajo en correo'],
     enPath: '/compare/ai-compliance-training-evidence-access-approval-sla-monitoring-vs-manual-inbox-follow-ups-for-audit-requests/'
+  },
+  {
+    key: 'evidence-access-least-privilege-attestation-vs-manual-annual-access-certifications',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-least-privilege-attestation-vs-manuelle-jaehrliche-access-zertifizierungen-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access-Least-Privilege-Attestation vs. manuelle jährliche Access-Zertifizierungen für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Least-Privilege-Attestations-Workflows gegen manuelle jährliche Access-Zertifizierungen für Trainingsevidenz vergleichen.',
+    h1: 'KI-Least-Privilege-Attestation vs. manuelle jährliche Access-Zertifizierungen für Audit Readiness',
+    intro: 'Hilft Compliance-, Legal- und Training-Ops-Teams, Privilege-Creep-Erkennung, Entscheidungs-Konsistenz und auditfeste Nachvollziehbarkeit zwischen beiden Access-Governance-Modellen zu bewerten.',
+    points: ['Vergleich von Erkennungslatenz für überprivilegierten Zugriff nach Rollen- und Scope-Änderungen', 'Messbare Kriterien für konsistente Keep/Revoke-Entscheidungen, Override-Governance und Owner-Transparenz', 'Pilot-Framework für auditfeste Least-Privilege-Entscheidungen mit weniger jährlichem Zertifizierungs-Rework'],
+    enPath: '/compare/ai-compliance-training-evidence-access-least-privilege-attestation-vs-manual-annual-access-certifications-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-least-privilege-attestation-vs-manual-annual-access-certifications',
+    locale: 'es',
+    slug: 'attestation-minimo-privilegio-acceso-evidencia-training-compliance-ia-vs-certificaciones-anuales-manuales-audit-readiness',
+    title: 'Attestation de mínimo privilegio para acceso a evidencia de training compliance con IA vs. certificaciones anuales manuales de acceso para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan workflows de attestation de mínimo privilegio con IA frente a certificaciones anuales manuales de acceso para evidencia de training compliance.',
+    h1: 'Attestation de mínimo privilegio con IA vs. certificaciones anuales manuales de acceso para audit readiness',
+    intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar detección de privilege creep, consistencia de decisiones y trazabilidad defendible entre ambos enfoques de gobernanza de acceso.',
+    points: ['Comparativa de latencia para detectar y corregir accesos sobredimensionados tras cambios de rol', 'Criterios operativos para decisiones consistentes de mantener/revocar acceso y control de overrides', 'Marco de piloto para decisiones de mínimo privilegio audit-ready con menos retrabajo anual de certificación'],
+    enPath: '/compare/ai-compliance-training-evidence-access-least-privilege-attestation-vs-manual-annual-access-certifications-for-audit-readiness/'
   }
 );
 
