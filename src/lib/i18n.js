@@ -895,10 +895,29 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de compliance, auditoría y L&D operations a evaluar velocidad de respuesta, trazabilidad de evidencia y defensibilidad entre ensamblaje automatizado de paquetes y preparación manual de binders.',
     points: ['Comparativa del ciclo de respuesta a solicitudes de auditoría con muestras multi-sede', 'Criterios operativos para chain-of-custody, consistencia de signoff y cierre verificable de excepciones', 'Marco de piloto para campos obligatorios, RACI cross-funcional y paquetes listos para auditoría con menos retrabajo'],
     enPath: '/compare/ai-compliance-audit-packet-assembly-vs-manual-evidence-binders-for-training-programs/'
+  },
+  {
+    key: 'policy-change-impact-mapping-vs-manual-training-gap-analysis',
+    locale: 'de',
+    slug: 'ki-policy-change-impact-mapping-vs-manuelle-training-gap-analyse-fuer-regulatorische-updates',
+    title: 'KI-Policy-Change-Impact-Mapping vs. manuelle Training-Gap-Analyse für regulatorische Updates | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Policy-Change-Impact-Mapping mit manueller Training-Gap-Analyse bei regulatorischen Updates vergleichen.',
+    h1: 'KI-Policy-Change-Impact-Mapping vs. manuelle Training-Gap-Analyse für regulatorische Updates',
+    intro: 'Hilft Compliance-, Policy- und L&D-Ops-Teams, Update-Geschwindigkeit, Kontrollabdeckung und Audit-Defensibility zwischen KI-gestütztem Impact-Mapping und manueller Gap-Analyse zu bewerten.',
+    points: ['Vergleich der Zykluszeit von regulatorischem Update bis freigegebenem Trainings-Änderungsplan', 'Messbare Kriterien für vollständige Erfassung betroffener Controls, Rollen und Jurisdiktionen', 'Pilot-Framework für Routing-Ownership, SLA-Eskalation und auditfeste Entscheidungsnachweise'],
+    enPath: '/compare/ai-policy-change-impact-mapping-vs-manual-training-gap-analysis-for-regulatory-updates/'
+  },
+  {
+    key: 'policy-change-impact-mapping-vs-manual-training-gap-analysis',
+    locale: 'es',
+    slug: 'mapeo-impacto-cambios-politica-ia-vs-analisis-manual-brechas-training-actualizaciones-regulatorias',
+    title: 'Mapeo de impacto de cambios de política con IA vs. análisis manual de brechas de training para actualizaciones regulatorias | AI Training Directory',
+    description: 'Entrada localizada para comparar mapeo de impacto de cambios regulatorios con IA frente a análisis manual de brechas de training.',
+    h1: 'Mapeo de impacto de cambios de política con IA vs. análisis manual de brechas de training para actualizaciones regulatorias',
+    intro: 'Ayuda a equipos de compliance, policy y L&D operations a evaluar velocidad de actualización, cobertura de controles y defensibilidad para auditoría entre ambos enfoques.',
+    points: ['Comparativa del tiempo desde actualización regulatoria hasta plan de cambios de training aprobado', 'Criterios operativos para cobertura completa de controles, audiencias y jurisdicciones impactadas', 'Marco de piloto para routing de propietarios, SLA de cierre y evidencia audit-ready de decisiones'],
+    enPath: '/compare/ai-policy-change-impact-mapping-vs-manual-training-gap-analysis-for-regulatory-updates/'
   }
-
-
-
 
 ];
 

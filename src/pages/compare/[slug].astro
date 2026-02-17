@@ -569,6 +569,23 @@ const comparisonContentBySlug = {
     ]
   },
 
+  'ai-policy-change-impact-mapping-vs-manual-training-gap-analysis-for-regulatory-updates': {
+    decisionMatrix: [
+      { criterion: 'Time from regulatory update to approved training-change plan', weight: '25%', whatGoodLooksLike: 'Teams convert new regulatory text into role-specific training actions fast enough to meet enforcement windows without quality shortcuts.', leftLens: 'Measure cycle time from update intake to approved impact map with affected audiences, control statements, and content-change owners auto-routed.', rightLens: 'Measure cycle time when analysts manually review policy text, compile gap notes, and align owners across spreadsheet trackers and meetings.' },
+      { criterion: 'Coverage quality of impacted controls and audiences', weight: '25%', whatGoodLooksLike: 'All materially affected controls, learner cohorts, and jurisdictions are captured before rollout decisions are made.', leftLens: 'Assess mapping completeness across policies, control libraries, role matrices, locales, and legacy course dependencies.', rightLens: 'Assess miss-rate when manual gap analysis relies on tribal knowledge, static mapping files, and periodic stakeholder memory checks.' },
+      { criterion: 'Remediation routing and closure governance', weight: '20%', whatGoodLooksLike: 'Every identified training gap has a clear owner, due date, escalation path, and closure evidence.', leftLens: 'Evaluate automated routing by control severity, ownership queue, and SLA with timestamped closure verification and escalation logs.', rightLens: 'Evaluate reliability of manual follow-up chains for assigning owners, tracking overdue actions, and proving closure in audit reviews.' },
+      { criterion: 'Audit defensibility of change-impact decisions', weight: '15%', whatGoodLooksLike: 'Auditors can trace why a change was (or was not) mapped to specific training updates and who approved each decision.', leftLens: 'Check immutable decision history linking source regulation clauses to training actions, reviewer comments, overrides, and approval timestamps.', rightLens: 'Check reconstructability when rationale is scattered across meeting notes, inbox threads, and versioned spreadsheet tabs.' },
+      { criterion: 'Cost per regulatory update cycle', weight: '15%', whatGoodLooksLike: 'Cost per compliant policy-update cycle declines while missed-impact risk and rework both decrease.', leftLens: 'Model platform + governance overhead against reduced analysis labor, faster updates, and lower audit-response friction.', rightLens: 'Model lower tooling cost against recurring manual analysis hours, missed-impact remediation, and delayed enforcement readiness.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one high-change regulation domain with at least one cross-jurisdiction policy update.',
+      'Use one scorecard: update-to-plan cycle time, impacted-control miss rate, remediation closure SLA, and reviewer hours per update.',
+      'Define required output artifacts before kickoff: impact map, owner-routing log, approval history, and closure evidence packet.',
+      'Assign RACI across compliance owner, policy SME, L&D operations lead, and internal audit reviewer.',
+      'Choose the model with lower friction per defensible regulatory update, not the model that appears easiest in week one.'
+    ]
+  },
+
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -687,7 +704,7 @@ const jsonLd = {
   </div>
 
   <h2>Buying criteria before final selection</h2>
-  <ul>
+  <ul class="buying-criteria-list">
     {comparisonContent.buyingCriteria.map((item) => <li>{item}</li>)}
   </ul>
 
@@ -848,6 +865,17 @@ const jsonLd = {
     .matrix-card p strong {
       display: inline-block;
       margin-bottom: 0.18rem;
+    }
+
+    .buying-criteria-list {
+      margin: 0.2rem 0 1rem;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .buying-criteria-list li {
+      line-height: 1.52;
     }
 
     .next-step-actions {
@@ -1018,6 +1046,16 @@ const jsonLd = {
         min-height: 48px;
         display: flex;
         align-items: center;
+      }
+
+      .buying-criteria-list {
+        padding-left: 1rem;
+        gap: 0.56rem;
+      }
+
+      .buying-criteria-list li {
+        line-height: 1.56;
+        margin-bottom: 0.08rem;
       }
 
       .section.card ul {

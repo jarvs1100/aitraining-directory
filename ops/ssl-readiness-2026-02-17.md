@@ -2299,3 +2299,62 @@ Accept-Ranges: bytes
 - `qa:https` passed after content updates.
 - HTTPS remains valid for apex and `www` with Lets Encrypt certificate; `www` redirects to apex over HTTPS.
 - HTTP origin still redirects/serves as expected; freshness can be tracked via `Last-Modified` header.
+
+---
+
+## Evidence delta — 2026-02-17 15:57 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 212 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 15:43:10 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid for apex and `www` redirect behavior is correct (`www` → apex over HTTPS).
+- TLS certificate remains Let's Encrypt `R12` with active validity window through May 18, 2026.
+- Deploy freshness advanced (`Last-Modified: 15:43:10 UTC`) and static HTTPS QA passed for 212 generated HTML files.
