@@ -915,3 +915,63 @@ last-modified: Tue, 17 Feb 2026 10:56:27 GMT
 - ✅ Custom-domain HTTPS is now valid and serving a Let's Encrypt certificate for `www.aitraining.directory`.
 - ✅ Apex `https://aitraining.directory` now returns `HTTP/2 200` without hostname mismatch errors.
 - ✅ SSL readiness blocker is cleared; retain periodic checks after future deploys.
+
+---
+
+## Evidence delta — 2026-02-17 11:23 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 158 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+
+dig +short www.aitraining.directory CNAME
+jarvs1100.github.io.
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -servername aitraining.directory -connect aitraining.directory:443 2>/dev/null | openssl x509 -noout -subject -issuer -dates
+subject=CN = www.aitraining.directory
+issuer=C = US, O = Let's Encrypt, CN = R12
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests
+```bash
+curl -I -L --max-redirs 5 https://aitraining.directory
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 11:12:27 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### HTTP behavior (current)
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 11:12:27 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- ✅ HTTPS remains valid for apex and `www`; no hostname mismatch regression observed.
+- ✅ Certificate remains Let's Encrypt `R12` (`subject=CN=www.aitraining.directory`, valid through 2026-05-18).
+- ✅ Fresh deploy is visible (`Last-Modified` advanced to `11:12:27 UTC`).
