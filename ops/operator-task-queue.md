@@ -16,5 +16,5 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Re-run SSL readiness checks after the next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
 - [x] Add one high-intent onboarding evaluation route (`/compare/ai-roleplay-simulators-vs-video-only-onboarding/`) with implementation-led rubric + buying criteria.
 - [x] Create distribution asset pack for the onboarding roleplay comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
-- [ ] Re-run SSL readiness checks after the next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
-- [ ] Add i18n parity stubs for the new onboarding roleplay comparison route on `/de` and `/es` localized landing hubs (with canonical route linkage).
+- [x] Re-run SSL readiness checks after the next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Add i18n parity stubs for the new onboarding roleplay comparison route on `/de` and `/es` localized landing hubs (with canonical route linkage).

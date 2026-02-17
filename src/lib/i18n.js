@@ -142,6 +142,28 @@ export const localizedLandingPages = [
     enPath: '/solutions/sop-to-video-training/'
   },
   {
+    key: 'onboarding-roleplay',
+    locale: 'de',
+    slug: 'ki-rollenspiel-simulatoren-vs-video-onboarding',
+    title: 'KI-Rollenspiel-Simulatoren vs. reines Video-Onboarding | AI Training Directory',
+    description: 'Lokalisierter Einstieg für DACH-Teams, die den Umstieg von Video-only auf simulationsgestütztes Onboarding bewerten.',
+    h1: 'KI-Rollenspiel-Simulatoren vs. Video-only-Onboarding',
+    intro: 'Hilft L&D- und Enablement-Teams, interaktive Simulationen gegenüber reinem Video-Training nach Umsetzungsaufwand und Wirkung zu bewerten.',
+    points: ['Messbare Praxiskompetenz statt nur Abschlussquote', 'Höhere Umsetzungssicherheit in den ersten 30 Tagen', 'Klare Kriterien für Pilot, Skalierung und Einkauf'],
+    enPath: '/compare/ai-roleplay-simulators-vs-video-only-onboarding/'
+  },
+  {
+    key: 'onboarding-roleplay',
+    locale: 'es',
+    slug: 'simuladores-roleplay-ia-vs-onboarding-solo-video',
+    title: 'Simuladores de roleplay con IA vs. onboarding solo en vídeo | AI Training Directory',
+    description: 'Versión localizada para evaluar cuándo conviene pasar de onboarding en vídeo a simulaciones guiadas por IA.',
+    h1: 'Simuladores de roleplay con IA vs. onboarding solo en vídeo',
+    intro: 'Ayuda a equipos de formación y enablement a decidir entre vídeo-only y simulación interactiva según impacto operativo y velocidad de despliegue.',
+    points: ['Competencia práctica evaluable desde la primera semana', 'Mejor transferencia al puesto en escenarios reales', 'Criterios claros para piloto, compra y escalado'],
+    enPath: '/compare/ai-roleplay-simulators-vs-video-only-onboarding/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
