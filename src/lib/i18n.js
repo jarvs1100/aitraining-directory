@@ -2047,6 +2047,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar claridad de trazabilidad, continuidad de ownership y fiabilidad de respuesta en auditorías.',
     points: ['Comparativa de continuidad de lineage cuando hay múltiples cambios de evidencia y fechas de corte', 'Criterios operativos para reducir huecos de ownership y retrabajo de reconciliación', 'Marco de piloto para sostener cadenas de evidencia auditables sin mantenimiento manual intensivo'],
     enPath: '/compare/ai-compliance-training-evidence-lineage-monitoring-vs-manual-versioned-audit-trackers/'
+  },
+  {
+    key: 'evidence-integrity-checks-vs-manual-spreadsheet-verification',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-integrity-checks-vs-manuelle-spreadsheet-verifizierung-fuer-audit-defense',
+    title: 'KI-Compliance-Training-Evidence-Integrity-Checks vs. manuelle Spreadsheet-Verifizierung für Audit Defense | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-Integrity-Checks gegen manuelle Spreadsheet-Verifizierung in Compliance-Trainings-Auditprozessen vergleichen.',
+    h1: 'KI-Evidence-Integrity-Checks vs. manuelle Spreadsheet-Verifizierung für Audit Defense',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Integritätsprüfung, Defekterkennungsgeschwindigkeit und Audit-Traceability zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich der Defekterkennungsquote bei inkonsistenten Completion-/Evidence-Datensätzen', 'Messbare Kriterien für weniger Verifizierungs-Stau und klarere Owner-Übergaben vor Audits', 'Pilot-Framework für belastbare Audit-Defense mit weniger manueller Spreadsheet-Nacharbeit'],
+    enPath: '/compare/ai-compliance-training-evidence-integrity-checks-vs-manual-spreadsheet-verification-for-audit-defense/'
+  },
+  {
+    key: 'evidence-integrity-checks-vs-manual-spreadsheet-verification',
+    locale: 'es',
+    slug: 'checks-integridad-evidencia-training-compliance-ia-vs-verificacion-manual-spreadsheets-audit-defense',
+    title: 'Checks de integridad de evidencia en training compliance con IA vs. verificación manual en spreadsheets para audit defense | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan checks de integridad de evidencia con IA frente a verificación manual en spreadsheets para defensa de auditoría en training compliance.',
+    h1: 'Checks de integridad de evidencia con IA vs. verificación manual en spreadsheets para audit defense',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar detección de defectos, velocidad de validación y trazabilidad defensible en auditorías entre ambos enfoques.',
+    points: ['Comparativa de detección temprana de inconsistencias entre completions, versiones y evidencia adjunta', 'Criterios operativos para reducir cuellos de botella de verificación manual antes de auditorías', 'Marco de piloto para sostener audit defense con menos retrabajo en hojas de cálculo'],
+    enPath: '/compare/ai-compliance-training-evidence-integrity-checks-vs-manual-spreadsheet-verification-for-audit-defense/'
   }
 );
 

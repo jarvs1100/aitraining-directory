@@ -3391,3 +3391,17 @@ Location: http://aitraining.directory/
 - HTTPS remains valid for apex and `www` behavior is correct (`https://www` redirects to HTTPS apex).
 - Certificate chain remains Let's Encrypt (`R12`) with active validity window.
 - Deployed content freshness advanced (`Last-Modified` now `19:58:06 UTC`).
+
+## Evidence delta — 2026-02-17 20:25 UTC
+- \: pass (269 HTML files checked).
+- Apex HTTPS status: HTTP/2 200 
+- WWW HTTPS status: HTTP/2 301 
+- TLS certificate: subject=CN = www.aitraining.directory; issuer=C = US, O = Let's Encrypt, CN = R12.
+- Apex Last-Modified: Tue, 17 Feb 2026 20:12:26 GMT.
+
+## Evidence delta — 2026-02-17 20:26 UTC
+- qa:https: pass (269 HTML files checked).
+- Apex HTTPS status: HTTP/2 200 
+- WWW HTTPS status: HTTP/2 301 
+- TLS certificate: subject=CN = www.aitraining.directory; issuer=C = US, O = Let's Encrypt, CN = R12.
+- Apex Last-Modified: Tue, 17 Feb 2026 20:12:26 GMT.
