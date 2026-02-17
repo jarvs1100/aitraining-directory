@@ -2113,6 +2113,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de escalado, consistencia de decisiones y trazabilidad defensible en auditorías.',
     points: ['Comparativa de cumplimiento de SLA al gestionar excepciones de retención por nivel de riesgo', 'Criterios operativos para reducir reversos de decisiones y retrabajo de triage manual', 'Marco de piloto para sostener gobernanza de excepciones audit-ready con menor carga operativa'],
     enPath: '/compare/ai-compliance-training-retention-exception-workflows-vs-manual-audit-hold-triage/'
+  },
+  {
+    key: 'evidence-disposition-workflows-vs-manual-signoff-logs',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-disposition-workflows-vs-manuelle-retention-signoff-logs',
+    title: 'KI-Compliance-Training-Evidence-Disposition-Workflows vs. manuelle Retention-Signoff-Logs | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-Disposition-Workflows gegen manuelle Retention-Signoff-Logs in Compliance-Trainingsprozessen vergleichen.',
+    h1: 'KI-Evidence-Disposition-Workflows vs. manuelle Retention-Signoff-Logs für Compliance-Training',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Disposition-Cycle-Time, Policy-Konsistenz und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Trigger-to-Disposition-Durchlaufzeit und Overdue-Backlog', 'Messbare Kriterien für konsistente Keep/Archive/Dispose-Entscheidungen', 'Pilot-Framework für eskalationsfeste Ownership und auditfähige Closure-Evidenz'],
+    enPath: '/compare/ai-compliance-training-evidence-disposition-workflows-vs-manual-retention-signoff-logs/'
+  },
+  {
+    key: 'evidence-disposition-workflows-vs-manual-signoff-logs',
+    locale: 'es',
+    slug: 'workflows-disposicion-evidencia-training-compliance-ia-vs-logs-manuales-signoff-retencion',
+    title: 'Workflows de disposición de evidencia en training compliance con IA vs. logs manuales de signoff de retención | AI Training Directory',
+    description: 'Entrada localizada para comparar workflows de disposición de evidencia con IA frente a logs manuales de signoff de retención en operaciones de training compliance.',
+    h1: 'Workflows de disposición de evidencia con IA vs. logs manuales de signoff de retención',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de disposición, consistencia de política y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de cycle-time desde trigger de retención hasta cierre de disposición', 'Criterios operativos para decisiones consistentes de conservar, archivar o eliminar', 'Marco de piloto para escalado, ownership y evidencia de cierre defendible'],
+    enPath: '/compare/ai-compliance-training-evidence-disposition-workflows-vs-manual-retention-signoff-logs/'
   }
 );
 
