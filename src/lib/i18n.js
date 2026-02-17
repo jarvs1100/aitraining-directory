@@ -693,8 +693,29 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar fiabilidad de plazos, timing de escalado y trazabilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de anticipación de riesgo de vencimiento por cohorte y ubicación', 'Criterios operativos para timing de escalado, ownership y velocidad de cierre', 'Marco de piloto para reglas de override, cadencia de gobernanza y evidencia defensible'],
     enPath: '/compare/ai-training-deadline-risk-forecasting-vs-manual-reminder-calendars-for-compliance-ops/'
+  },
+  {
+    key: 'training-exception-routing-vs-manual-waiver-approvals',
+    locale: 'de',
+    slug: 'ki-training-exception-routing-vs-manuelle-waiver-freigaben-fuer-compliance-ops',
+    title: 'KI-Training-Exception-Routing vs. manuelle Waiver-Freigaben für Compliance Ops | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Exception-Routing gegen manuelle Waiver-Freigaben in Compliance-Trainingsprozessen vergleichen.',
+    h1: 'KI-Exception-Routing vs. manuelle Waiver-Freigaben für Compliance Ops',
+    intro: 'Hilft Compliance-, L&D- und Operations-Teams, Entscheidungszyklus, Freigabekonsistenz und Audit-Nachvollziehbarkeit zwischen beiden Ausnahme-Workflows zu bewerten.',
+    points: ['Vergleich von Exception-Cycle-Time und Escalation-SLA bei Deadline-Druck', 'Messbare Kriterien für Policy-Konsistenz, Override-Governance und Owner-Klarheit', 'Pilot-Framework für defensible Decision-Logs, Remediation-Closure und Audit-Readiness'],
+    enPath: '/compare/ai-training-exception-routing-vs-manual-waiver-approvals-for-compliance-ops/'
+  },
+  {
+    key: 'training-exception-routing-vs-manual-waiver-approvals',
+    locale: 'es',
+    slug: 'routing-excepciones-training-ia-vs-aprobaciones-manuales-waivers-compliance-ops',
+    title: 'Routing de excepciones de training con IA vs. aprobaciones manuales de waivers para compliance ops | AI Training Directory',
+    description: 'Entrada localizada para comparar routing de excepciones con IA frente a aprobaciones manuales de waivers en operaciones de compliance training.',
+    h1: 'Routing de excepciones de training con IA vs. aprobaciones manuales de waivers para compliance ops',
+    intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar velocidad de decisión, consistencia de aprobaciones y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de cycle-time de excepciones y cierre de escalados bajo presión de deadlines', 'Criterios operativos para consistencia de política, gobernanza de overrides y ownership', 'Marco de piloto para logs de decisión defendibles, cierre de remediaciones y readiness para auditoría'],
+    enPath: '/compare/ai-training-exception-routing-vs-manual-waiver-approvals-for-compliance-ops/'
   }
-
 
 ];
 

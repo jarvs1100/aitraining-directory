@@ -436,6 +436,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower escalation friction per on-time completion, not the model generating the most reminder volume.'
     ]
   },
+  'ai-training-exception-routing-vs-manual-waiver-approvals-for-compliance-ops': {
+    decisionMatrix: [
+      { criterion: 'Exception decision cycle time under deadline pressure', weight: '25%', whatGoodLooksLike: 'Training exceptions are approved, denied, or remediated fast enough to prevent deadline breaches.', leftLens: 'Measure time from exception trigger to routed decision with SLA-based escalation and closure states.', rightLens: 'Measure cycle time when waiver requests move through inbox threads, spreadsheet trackers, and manual follow-ups.' },
+      { criterion: 'Approval consistency and policy alignment', weight: '25%', whatGoodLooksLike: 'Similar exception cases receive consistent outcomes mapped to policy guardrails.', leftLens: 'Assess rule-based routing quality, policy mapping, and override controls for edge-case decisions.', rightLens: 'Assess variance in manager/compliance waiver judgments and the frequency of policy interpretation drift.' },
+      { criterion: 'Audit traceability of exception rationale', weight: '20%', whatGoodLooksLike: 'Teams can show why exceptions were granted, who approved, and what remediation was required.', leftLens: 'Evaluate whether AI workflows log rationale, approver chain, timestamps, and remediation evidence in one defensible trail.', rightLens: 'Evaluate reconstructability of rationale and approvals from fragmented emails, tickets, and meeting notes.' },
+      { criterion: 'Operational burden on compliance ops', weight: '15%', whatGoodLooksLike: 'Exception handling remains stable during high-volume compliance windows without staffing spikes.', leftLens: 'Track effort for routing-rule maintenance, false-escalation triage, and governance QA.', rightLens: 'Track recurring workload for waiver triage, reminder chasing, and manual status reconciliation.' },
+      { criterion: 'Cost per policy-compliant exception closure', weight: '15%', whatGoodLooksLike: 'Exception operations cost declines while control quality and on-time completion improve.', leftLens: 'Model platform + governance cost against faster closure and fewer late-stage compliance escalations.', rightLens: 'Model lower tooling spend against manual labor, inconsistent decisions, and delayed remediation costs.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-volume mandatory-training stream with known exception patterns (leave, role change, system access delay).',
+      'Use a shared scorecard: exception cycle time, policy-consistency rate, escalation count, and closure evidence quality.',
+      'Define hard guardrails for auto-routing, manual override authority, and mandatory remediation follow-up.',
+      'Assign RACI across compliance owner, L&D ops, manager approvers, and audit partner before rollout.',
+      'Choose the model with lower exception-handling friction per compliant closure, not the model that processes the most tickets.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -828,6 +844,32 @@ const jsonLd = {
 
       .faq-item h3 {
         margin-bottom: 0.6rem;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .matrix-card {
+        padding: 0.9rem;
+      }
+
+      .matrix-card h3 {
+        font-size: 1.03rem;
+        margin-bottom: 0.55rem;
+      }
+
+      .matrix-card p {
+        font-size: 0.92rem;
+        line-height: 1.45;
+      }
+
+      .matrix-card p + p {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
+      .section.card ul li {
+        margin-bottom: 0.38rem;
+        line-height: 1.45;
       }
     }
 
