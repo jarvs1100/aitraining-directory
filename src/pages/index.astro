@@ -6,18 +6,47 @@ import { allListings, getCategories } from '../lib/data.js';
 const categories = getCategories();
 const featured = allListings.slice(0, 12);
 
+const lastReviewedDate = '2026-02-17';
+
+const homepageFaq = [
+  {
+    q: 'How often is AI Training Directory reviewed?',
+    a: 'Core pages are reviewed in active operating cycles with build verification before publish.'
+  },
+  {
+    q: 'Is this a generic AI tools list?',
+    a: 'No. The directory is structured around L&D workflows such as onboarding, SOP updates, compliance refreshes, and enablement rollouts.'
+  }
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'AI Training Directory',
-  description: 'Curated AI tools for employee training and learning & development teams.',
-  url: 'https://aitraining.directory/',
-  hasPart: featured.map((tool, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    url: `https://aitraining.directory/tool/${tool.slug}/`,
-    name: tool.name
-  }))
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      name: 'AI Training Directory',
+      description: 'Curated AI tools for employee training and learning & development teams.',
+      url: 'https://aitraining.directory/',
+      dateModified: lastReviewedDate,
+      hasPart: featured.map((tool, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `https://aitraining.directory/tool/${tool.slug}/`,
+        name: tool.name
+      }))
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: homepageFaq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a
+        }
+      }))
+    }
+  ]
 };
 ---
 <Base
@@ -47,6 +76,11 @@ const jsonLd = {
       <li><strong>Freshness cadence:</strong> pages are reviewed in active operating cycles and updated as implementation patterns evolve.</li>
     </ul>
     <p class="muted" style="margin-top:.75rem;">Update cadence: this project runs daily operator passes with build verification before publish.</p>
+  </section>
+
+  <section class="section card" aria-labelledby="review-metadata-heading">
+    <h2 id="review-metadata-heading">Content freshness</h2>
+    <p class="muted" style="margin:0;">Last reviewed: <time datetime={lastReviewedDate}>{lastReviewedDate}</time> (UTC). Verification includes build pass and link/path checks before publish.</p>
   </section>
 
   <section class="section card" aria-labelledby="framework-heading">
@@ -86,6 +120,16 @@ const jsonLd = {
         </article>
       ))}
     </div>
+  </section>
+
+  <section class="section" aria-labelledby="homepage-faq-heading">
+    <h2 id="homepage-faq-heading">FAQ</h2>
+    {homepageFaq.map((item) => (
+      <>
+        <h3>{item.q}</h3>
+        <p>{item.a}</p>
+      </>
+    ))}
   </section>
 
   <section class="section card" aria-labelledby="distribution-playbook-heading">

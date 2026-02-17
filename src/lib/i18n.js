@@ -140,6 +140,72 @@ export const localizedLandingPages = [
     intro: 'Una ruta práctica para equipos L&D que necesitan escalar onboarding sin duplicar esfuerzo.',
     points: ['Publicación más rápida de contenidos', 'Mejor comprensión de procesos', 'Más control para auditoría y cumplimiento'],
     enPath: '/solutions/sop-to-video-training/'
+  },
+  {
+    key: 'distribution-playbook',
+    locale: 'pl',
+    slug: 'playbook-dystrybucji-katalogu-ai',
+    title: 'Playbook dystrybucji katalogu AI | AI Training Directory',
+    description: 'Lokalny playbook promocji katalogu AI z odnośnikiem do głównej checklisty outreachowej.',
+    h1: 'Playbook dystrybucji katalogu AI',
+    intro: 'Skrócona wersja dla zespołów, które chcą uruchomić regularny ruch na treściach szkoleniowych.',
+    points: ['Kanały tygodniowej dystrybucji', 'Checklista jakości publikacji', 'Rytm raportowania działań'],
+    enPath: '/solutions/'
+  },
+  {
+    key: 'distribution-playbook',
+    locale: 'cs',
+    slug: 'distribucni-playbook-ai-katalogu',
+    title: 'Distribuční playbook AI katalogu | AI Training Directory',
+    description: 'Lokalizovaný distribuční playbook s odkazem na kanonický outreach checklist.',
+    h1: 'Distribuční playbook AI katalogu',
+    intro: 'Praktická verze pro týmy, které chtějí pravidelně zvyšovat návštěvnost tréninkového katalogu.',
+    points: ['Týdenní distribuční kanály', 'Checklist kvality publikace', 'Rytmus reportingu výsledků'],
+    enPath: '/solutions/'
+  },
+  {
+    key: 'distribution-playbook',
+    locale: 'sk',
+    slug: 'distribucny-playbook-ai-katalogu',
+    title: 'Distribučný playbook AI katalógu | AI Training Directory',
+    description: 'Lokalizovaný distribučno-outreach playbook s odkazom na kanonický checklist.',
+    h1: 'Distribučný playbook AI katalógu',
+    intro: 'Praktická verzia pre tímy, ktoré chcú konzistentne zvyšovať návštevnosť tréningového katalógu.',
+    points: ['Týždenné distribučné kanály', 'Checklist kvality publikácie', 'Rytmus reportovania výsledkov'],
+    enPath: '/solutions/'
+  },
+  {
+    key: 'distribution-playbook',
+    locale: 'hu',
+    slug: 'terjesztesi-playbook-ai-katalogus',
+    title: 'AI katalógus terjesztési playbook | AI Training Directory',
+    description: 'Lokalizált terjesztési playbook hivatkozással a kanonikus outreach checklistre.',
+    h1: 'AI katalógus terjesztési playbook',
+    intro: 'Gyakorlati változat csapatoknak, akik rendszeres forgalomnövelést akarnak a képzési tartalmakra.',
+    points: ['Heti terjesztési csatornák', 'Publikációs minőségi checklist', 'Riportálási ritmus'],
+    enPath: '/solutions/'
+  },
+  {
+    key: 'distribution-playbook',
+    locale: 'de',
+    slug: 'distribution-playbook-ki-verzeichnis',
+    title: 'Distribution-Playbook für KI-Verzeichnis | AI Training Directory',
+    description: 'Lokales Distribution-Playbook mit Verweis auf die kanonische Outreach-Checklist.',
+    h1: 'Distribution-Playbook für KI-Verzeichnis',
+    intro: 'Praxisversion für Teams, die kontinuierlich mehr Traffic auf Trainingsinhalte bringen wollen.',
+    points: ['Wöchentliche Distributionskanäle', 'Qualitäts-Checklist für Publishes', 'Rhythmus für Ergebnis-Reporting'],
+    enPath: '/solutions/'
+  },
+  {
+    key: 'distribution-playbook',
+    locale: 'es',
+    slug: 'playbook-distribucion-directorio-ia',
+    title: 'Playbook de distribución del directorio de IA | AI Training Directory',
+    description: 'Playbook localizado de distribución con enlace al checklist canónico de outreach.',
+    h1: 'Playbook de distribución del directorio de IA',
+    intro: 'Versión práctica para equipos que buscan crecimiento continuo de tráfico hacia contenido de formación.',
+    points: ['Canales semanales de distribución', 'Checklist de calidad de publicación', 'Cadencia de reporte de resultados'],
+    enPath: '/solutions/'
   }
 ];
 
@@ -328,6 +394,98 @@ export function getLocalizedSupportBlocks(key, locale) {
         en: `This ${localeName} page is designed for market-relevant discovery and routes readers to implementation-ready English solution pages.`
       }
     },
+    'distribution-playbook': {
+      checklist: {
+        pl: [
+          'Zacznij od kanału o najszybszym sprzężeniu zwrotnym (newsletter, LinkedIn, społeczność branżowa).',
+          'Publikuj 1 konkretny insight tygodniowo i zawsze linkuj do checklisty kanonicznej.',
+          'Mierz kliknięcia, wejścia na strony rozwiązaniowe i zapisy z ruchu dystrybucyjnego.',
+          'Raz w tygodniu aktualizuj backlog tematów na podstawie najlepiej konwertujących wejść.'
+        ],
+        cs: [
+          'Začněte kanálem s nejrychlejší zpětnou vazbou (newsletter, LinkedIn, oborová komunita).',
+          'Publikujte 1 konkrétní insight týdně a vždy odkazujte na kanonický checklist.',
+          'Měřte prokliky, návštěvy solution stránek a konverze z distribučního provozu.',
+          'Jednou týdně aktualizujte tematický backlog podle nejlépe konvertujících vstupů.'
+        ],
+        sk: [
+          'Začnite kanálom s najrýchlejšou spätnou väzbou (newsletter, LinkedIn, odborná komunita).',
+          'Publikujte 1 konkrétny insight týždenne a vždy odkazujte na kanonický checklist.',
+          'Merajte prekliky, návštevy solution stránok a konverzie z distribučnej návštevnosti.',
+          'Raz týždenne aktualizujte backlog tém podľa najlepšie konvertujúcich vstupov.'
+        ],
+        hu: [
+          'Kezdd a leggyorsabb visszacsatolású csatornával (hírlevél, LinkedIn, szakmai közösség).',
+          'Hetente 1 konkrét insightot publikálj, és mindig hivatkozz a kanonikus checklistre.',
+          'Mérd az átkattintásokat, a solution oldalak látogatását és a terjesztési forgalom konverzióit.',
+          'Hetente frissítsd a témabacklogot a legjobban konvertáló belépési pontok alapján.'
+        ],
+        de: [
+          'Starten Sie mit einem Kanal mit schnellem Feedback (Newsletter, LinkedIn, Fach-Community).',
+          'Veröffentlichen Sie wöchentlich 1 konkreten Insight und verlinken Sie immer die kanonische Checklist.',
+          'Messen Sie Klicks, Besuche auf Solution-Seiten und Conversions aus dem Distributions-Traffic.',
+          'Aktualisieren Sie den Themen-Backlog wöchentlich anhand der stärksten Einstiegsseiten.'
+        ],
+        es: [
+          'Empieza por el canal con feedback más rápido (newsletter, LinkedIn, comunidad profesional).',
+          'Publica 1 insight concreto por semana y enlaza siempre al checklist canónico.',
+          'Mide clics, visitas a páginas de soluciones y conversiones del tráfico de distribución.',
+          'Actualiza semanalmente el backlog de temas según las entradas con mejor conversión.'
+        ],
+        en: [
+          'Start with the channel that has the fastest feedback loop (newsletter, LinkedIn, niche community).',
+          'Publish one concrete insight weekly and always link back to the canonical checklist.',
+          'Track clicks, solution-page sessions, and conversions from distribution traffic.',
+          'Refresh the topic backlog weekly based on the highest-converting entry points.'
+        ]
+      },
+      internalLinks: {
+        pl: [
+          { label: 'Otwórz kanoniczną checklistę outreach', href: 'https://github.com/jarvs1100/aitraining-directory/blob/main/ops/outreach-distribution-checklist.md' },
+          { label: 'Przejdź do stron rozwiązań', href: '/solutions/' },
+          { label: 'Porównania narzędzi', href: '/compare/' }
+        ],
+        cs: [
+          { label: 'Otevřít kanonický outreach checklist', href: 'https://github.com/jarvs1100/aitraining-directory/blob/main/ops/outreach-distribution-checklist.md' },
+          { label: 'Přejít na stránky řešení', href: '/solutions/' },
+          { label: 'Srovnání nástrojů', href: '/compare/' }
+        ],
+        sk: [
+          { label: 'Otvoriť kanonický outreach checklist', href: 'https://github.com/jarvs1100/aitraining-directory/blob/main/ops/outreach-distribution-checklist.md' },
+          { label: 'Prejsť na stránky riešení', href: '/solutions/' },
+          { label: 'Porovnania nástrojov', href: '/compare/' }
+        ],
+        hu: [
+          { label: 'Kanonikus outreach checklist megnyitása', href: 'https://github.com/jarvs1100/aitraining-directory/blob/main/ops/outreach-distribution-checklist.md' },
+          { label: 'Megoldási oldalak', href: '/solutions/' },
+          { label: 'Eszköz-összehasonlítások', href: '/compare/' }
+        ],
+        de: [
+          { label: 'Kanonische Outreach-Checklist öffnen', href: 'https://github.com/jarvs1100/aitraining-directory/blob/main/ops/outreach-distribution-checklist.md' },
+          { label: 'Zu den Lösungsseiten', href: '/solutions/' },
+          { label: 'Tool-Vergleiche', href: '/compare/' }
+        ],
+        es: [
+          { label: 'Abrir checklist canónico de outreach', href: 'https://github.com/jarvs1100/aitraining-directory/blob/main/ops/outreach-distribution-checklist.md' },
+          { label: 'Ir a páginas de soluciones', href: '/solutions/' },
+          { label: 'Comparativas de herramientas', href: '/compare/' }
+        ],
+        en: [
+          { label: 'Open canonical outreach checklist', href: 'https://github.com/jarvs1100/aitraining-directory/blob/main/ops/outreach-distribution-checklist.md' },
+          { label: 'Go to solution pages', href: '/solutions/' },
+          { label: 'Compare tools', href: '/compare/' }
+        ]
+      },
+      intentCopy: {
+        pl: 'Lokalna wersja playbooka dystrybucji prowadzi do jednej kanonicznej checklisty operacyjnej.',
+        cs: 'Lokalizovaná verze distribučního playbooku odkazuje na jednu kanonickou provozní checklistu.',
+        sk: 'Lokalizovaná verzia distribučného playbooku smeruje na jeden kanonický operačný checklist.',
+        hu: 'A lokalizált terjesztési playbook egyetlen kanonikus operatív checklistre mutat.',
+        de: 'Diese lokalisierte Playbook-Seite verweist auf eine zentrale kanonische Operations-Checklist.',
+        es: 'Esta versión localizada del playbook enlaza a una única checklist canónica de operaciones.',
+        en: 'This localized distribution playbook points to one canonical operations checklist.'
+      }
+    },
     default: {
       checklist: {
         pl: [
@@ -397,15 +555,18 @@ export function getLocalizedSupportBlocks(key, locale) {
   const block = content[key] || content.default;
   const checklist = block.checklist[locale] || block.checklist.en;
   const linkLabels = block.internalLinks[locale] || block.internalLinks.en;
+  const internalLinks = typeof linkLabels[0] === 'object'
+    ? linkLabels
+    : [
+        { label: linkLabels[0], href: key === 'ai-training-tools' ? '/solutions/' : '/solutions/sop-to-video-training/' },
+        { label: linkLabels[1], href: key === 'ai-training-tools' ? '/compare/' : '/solutions/new-hire-onboarding-automation/' },
+        { label: linkLabels[2], href: key === 'ai-training-tools' ? '/categories/' : '/submit/' }
+      ];
 
   return {
     labels,
     checklist,
-    internalLinks: [
-      { label: linkLabels[0], href: key === 'ai-training-tools' ? '/solutions/' : '/solutions/sop-to-video-training/' },
-      { label: linkLabels[1], href: key === 'ai-training-tools' ? '/compare/' : '/solutions/new-hire-onboarding-automation/' },
-      { label: linkLabels[2], href: key === 'ai-training-tools' ? '/categories/' : '/submit/' }
-    ],
+    internalLinks,
     intentCopy: block.intentCopy[locale] || block.intentCopy.en
   };
 }
