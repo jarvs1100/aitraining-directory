@@ -17,6 +17,23 @@ const contentBySlug = {
     frameworkName: 'SOP-to-Video Acceleration Framework',
     framework: ['Select top 10 SOPs with highest error rate and update frequency.', 'Convert each SOP into a 3-part script: context, steps, and common failure points.', 'Generate first-cut videos with AI voice/avatar, then run SME QA using a fixed rubric.', 'Publish to LMS/knowledge base with version tags and 30-day review reminders.'],
     example: 'Example: A logistics L&D team converted forklift safety SOP updates into 6-minute videos and reduced supervisor re-training requests by standardizing every monthly revision cycle.',
+    checklist: [
+      'Prioritize SOPs with measurable incident or error impact before touching long-tail docs.',
+      'Create one script template per SOP type (safety, compliance, role process) to cut revision churn.',
+      'Define SME signoff SLA (e.g., 48h) and escalation path before production starts.',
+      'Map each video to LMS object ID + SOP version number to avoid outdated content drift.',
+      'Track completion and task performance together so training impact is tied to real workflow outcomes.'
+    ],
+    pitfalls: [
+      'Publishing polished videos that still miss edge-case steps operators use in the field.',
+      'Treating translation as localization and skipping native reviewer checks for critical workflows.',
+      'Losing source-of-truth ownership between SOP authors and training owners after launch.'
+    ],
+    internalLinks: [
+      { label: 'Compare AI video tooling options', href: '/compare/synthesia-alternatives/' },
+      { label: 'Audit-ready compliance training route', href: '/solutions/compliance-training-content-creation/' },
+      { label: 'Multilingual training implementation route', href: '/solutions/multilingual-employee-training/' }
+    ],
     faqs: [
       { q: 'How fast can SOP-to-video production go live?', a: 'Most teams can launch a pilot in 10 business days when script templates and QA ownership are pre-assigned.' },
       { q: 'What is the biggest failure mode?', a: 'Treating AI output as publish-ready. Always keep SME signoff and a compliance checklist before release.' }
@@ -83,13 +100,30 @@ const defaultContent = {
   frameworkName: 'Practical implementation framework',
   framework: ['Define one measurable workflow outcome tied to business impact.', 'Pilot with a small team and strict QA ownership.', 'Standardize templates, review process, and publishing cadence.', 'Scale only after measurable gains in cycle time and learner outcomes.'],
   example: 'Example: Teams usually see stronger adoption when they start with one repetitive training workflow and a clear owner.',
+  checklist: [
+    'Define baseline KPIs before tool trials (cycle time, completion, quality score, or ramp speed).',
+    'Assign one accountable owner for prompts, templates, and governance approvals.',
+    'Document review standards so AI-assisted content stays consistent and audit-safe.',
+    'Link every module to a business workflow, not just a content topic.',
+    'Plan monthly refresh cycles to avoid stale training assets.'
+  ],
+  pitfalls: [
+    'Running pilots without a baseline, then claiming gains without evidence.',
+    'Splitting ownership across too many stakeholders and slowing approvals.',
+    'Scaling output before QA standards and version controls are stable.'
+  ],
+  internalLinks: [
+    { label: 'Compare implementation-focused alternatives', href: '/compare/' },
+    { label: 'Browse all AI training solutions', href: '/solutions/' },
+    { label: 'Explore tool categories', href: '/categories/' }
+  ],
   faqs: [
     { q: `How should ${page.label.toLowerCase()} teams shortlist AI tools?`, a: 'Start with one workflow bottleneck, run a 2-week pilot, and measure cycle-time reduction before broader rollout.' },
     { q: 'What matters most for L&D buyers?', a: 'Version control, collaboration, integration with existing systems, and ease of updating training assets over time.' }
   ]
 };
 
-const content = contentBySlug[slug] || defaultContent;
+const content = { ...defaultContent, ...(contentBySlug[slug] || {}) };
 const faq = [
   ...content.faqs,
   { q: 'How do we keep quality high while scaling output?', a: 'Use standard templates, assign clear approvers, and require a lightweight QA pass before each publish cycle.' }
@@ -152,12 +186,24 @@ const jsonLd = {
   <section class="section">
     <h2>Implementation checklist for L&D teams</h2>
     <ul>
-      <li>Define baseline KPIs before tool trials (cycle time, completion, quality score, or ramp speed).</li>
-      <li>Assign one accountable owner for prompts, templates, and governance approvals.</li>
-      <li>Document review standards so AI-assisted content stays consistent and audit-safe.</li>
-      <li>Link every module to a business workflow, not just a content topic.</li>
-      <li>Plan monthly refresh cycles to avoid stale training assets.</li>
+      {content.checklist.map((item) => <li>{item}</li>)}
     </ul>
+  </section>
+
+  <section class="section">
+    <h2>Common implementation pitfalls</h2>
+    <ul>
+      {content.pitfalls.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Internal planning links</h2>
+    <div class="chips">
+      {content.internalLinks.map((item) => (
+        <a class="chip" href={item.href}>{item.label}</a>
+      ))}
+    </div>
   </section>
 
   <section class="section">

@@ -2,7 +2,7 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
-- [ ] Expand high-intent content depth on `/solutions/sop-to-video-training/` (add implementation checklist + pitfalls + internal links)
+- [x] Expand high-intent content depth on `/solutions/sop-to-video-training/` (add implementation checklist + pitfalls + internal links)
 - [ ] Expand high-intent content depth on `/compare/synthesia-alternatives/` (decision matrix + buying criteria)
 - [ ] Improve homepage above-the-fold trust proof block (why trust this directory + update cadence)
 - [ ] Localize any remaining English CTA strings on localized hubs (`/pl,/cs,/sk,/hu,/de,/es`)
