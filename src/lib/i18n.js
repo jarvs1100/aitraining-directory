@@ -296,6 +296,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-translation-management-platforms-vs-spreadsheets-for-training-localization/'
   },
   {
+    key: 'audit-evidence-vs-lms-completion-reports',
+    locale: 'de',
+    slug: 'ki-nachweis-proof-of-completion-vs-lms-abschlussberichte-fuer-compliance-audits',
+    title: 'KI-Nachweise (Proof of Completion) vs. LMS-Abschlussberichte für Compliance-Audits | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Nachweis-Workflows gegen klassische LMS-Abschlussberichte für Audit-Sicherheit vergleichen.',
+    h1: 'KI-Nachweise vs. LMS-Abschlussberichte für Compliance-Audits',
+    intro: 'Hilft Compliance- und L&D-Teams, Audit-Response-Zeit, Evidenzqualität und Remediation-Nachverfolgung zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich der Audit-Defensibility bei Follow-up-Anfragen', 'Kriterien für schnellere Audit-Paket-Erstellung und belastbare Chain-of-Custody', 'Pilot-Framework für Remediation-Tracking und Evidence-Qualität'],
+    enPath: '/compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/'
+  },
+  {
+    key: 'audit-evidence-vs-lms-completion-reports',
+    locale: 'es',
+    slug: 'registros-prueba-finalizacion-ia-vs-reportes-finalizacion-lms-auditorias-compliance',
+    title: 'Registros de prueba de finalización con IA vs. reportes de finalización LMS para auditorías de compliance | AI Training Directory',
+    description: 'Entrada localizada para comparar flujos de evidencia con IA frente a reportes de finalización LMS en contextos de auditoría de cumplimiento.',
+    h1: 'Registros de prueba de finalización con IA vs. reportes LMS para auditorías de compliance',
+    intro: 'Ayuda a equipos de compliance y L&D a evaluar defensibilidad de evidencia, velocidad de respuesta y trazabilidad de remediación entre ambos modelos.',
+    points: ['Comparativa de tiempo de respuesta ante requerimientos de auditoría', 'Criterios operativos para trazabilidad de evidencia y control de cambios', 'Marco de piloto para medir defectos de evidencia y carga de retrabajo'],
+    enPath: '/compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',

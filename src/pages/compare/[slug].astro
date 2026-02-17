@@ -228,6 +228,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower 30-day localization friction per approved module, not the cheapest initial tooling line item.'
     ]
   },
+  'ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits': {
+    decisionMatrix: [
+      { criterion: 'Audit defensibility for follow-up evidence requests', weight: '25%', whatGoodLooksLike: 'Team can quickly prove who completed what, when, and against which policy version without manual reconstruction.', leftLens: 'Test whether AI-assisted evidence records link completion events to policy/SOP snapshots, attestations, and assessor notes in one traceable chain.', rightLens: 'Test whether standard LMS completion reports alone can answer auditor follow-up questions without separate spreadsheet/email evidence hunts.' },
+      { criterion: 'Time-to-respond during active compliance audits', weight: '25%', whatGoodLooksLike: 'Audit response packets can be assembled within SLA even under multi-site sampling requests.', leftLens: 'Measure response cycle time for pulling learner-level proof bundles (completion logs, assessment evidence, remediation actions).', rightLens: 'Measure response cycle time when teams rely on baseline completion exports plus manual enrichment from admins/managers.' },
+      { criterion: 'Remediation tracking and closure quality', weight: '20%', whatGoodLooksLike: 'Failed/missing completions are remediated with clear owner assignment, deadlines, and closure proof.', leftLens: 'Assess whether AI workflows auto-flag gaps, route remediation tasks, and maintain closure evidence for re-audit readiness.', rightLens: 'Assess whether LMS report workflows provide equivalent remediation visibility without creating parallel tracker debt.' },
+      { criterion: 'Governance, access control, and chain-of-custody', weight: '15%', whatGoodLooksLike: 'Evidence handling is role-restricted, tamper-aware, and reviewable for internal/external auditors.', leftLens: 'Evaluate permission boundaries, evidence-change logs, and approval checkpoints for compliance-sensitive records.', rightLens: 'Evaluate how well LMS-only exports preserve chain-of-custody and change history once data leaves reporting modules.' },
+      { criterion: 'Cost per audit-ready training record', weight: '15%', whatGoodLooksLike: 'Operating cost per defensible record decreases as audit scope and learner volume increase.', leftLens: 'Model platform + governance overhead against reduced manual evidence assembly and fewer late-stage audit escalations.', rightLens: 'Model lower tooling cost against recurring manual prep effort, reconciliation hours, and higher audit-response risk.' }
+    ],
+    buyingCriteria: [
+      'Run a side-by-side pilot on one audit-critical program (e.g., safety, privacy, or regulated process training) for at least one audit cycle simulation.',
+      'Use one shared defect taxonomy: missing evidence link, unverifiable timestamp, unresolved remediation, and non-defensible policy-version mapping.',
+      'Track audit packet assembly time and reviewer rework minutes as primary operating metrics.',
+      'Require explicit RACI for evidence ownership: LMS admin, compliance lead, program owner, and remediation approver.',
+      'Choose the model with lower 30-day audit-response friction per sampled learner record, not just lower reporting license cost.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
