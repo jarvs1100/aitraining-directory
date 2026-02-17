@@ -2702,3 +2702,74 @@ Location: https://aitraining.directory/
 - HTTPS remains valid and production-ready for apex + `www` redirect.
 - TLS cert still Let's Encrypt `R12` (subject `www.aitraining.directory`) and accepted for apex flow.
 - Deployed content freshness advanced (`Last-Modified: 17:12:54 UTC`).
+
+---
+
+## Evidence delta — 2026-02-17 17:40 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 236 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+Last-Modified: Tue, 17 Feb 2026 17:40:22 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+Location: https://aitraining.directory/
+```
+
+### HTTP behavior
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 17:40:22 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid and serving successfully on apex with Let's Encrypt `R12` (`HTTP/2 200`).
+- `www` over HTTPS still canonicalizes to apex over HTTPS (`301 -> https://aitraining.directory/`).
+- `www` over HTTP still redirects to HTTP apex first; HTTPS canonical path remains correct for secure requests.
+- Deployment freshness confirmed (`Last-Modified` advanced to `17:40:22 UTC`).
