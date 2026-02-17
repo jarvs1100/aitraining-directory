@@ -89,3 +89,49 @@ If your team is deciding how to build and maintain training at scale, this weekâ
 The rubric covers first-course launch speed, update velocity, reporting fidelity, governance, and total operating cost per maintained course.
 
 Read: https://aitraining.directory/compare/scorm-authoring-vs-lms-native-builders/
+
+---
+
+## Focus URL
+- Canonical: https://aitraining.directory/compare/ai-roleplay-simulators-vs-video-only-onboarding/
+
+## LinkedIn post draft
+**Headline:** AI roleplay simulators vs video-only onboarding: which one actually shortens ramp time?
+
+Most onboarding programs optimize for content production speed.
+
+But frontline outcomes depend on practice quality:
+- Can new hires rehearse high-risk conversations before they go live?
+- Can managers see coaching gaps early?
+- Can you reduce intervention time without sacrificing quality?
+
+We published a practical comparison framework for L&D and enablement teams evaluating AI roleplay simulators against video-only onboarding:
+https://aitraining.directory/compare/ai-roleplay-simulators-vs-video-only-onboarding/
+
+If you own onboarding outcomes, use the buying-criteria checklist to pilot one role and measure ramp-ready performance in 30 days.
+
+## X/Twitter hook + thread starter
+**Post 1:**
+AI roleplay simulators vs video-only onboarding = operating model decision, not content format preference.
+
+The real trade-off: ramp speed, coaching signal, and manager workload.
+
+New implementation-led comparison:
+https://aitraining.directory/compare/ai-roleplay-simulators-vs-video-only-onboarding/
+
+**Post 2:**
+Quick pilot before standardizing onboarding format:
+1) Pick one high-risk frontline role
+2) Run simulation vs video-only cohorts
+3) Measure manager intervention time + ramp-ready performance at day 30
+
+Choose based on outcomes, not production convenience.
+
+## Newsletter blurb
+**Subject option:** Should onboarding stay video-only? A practical framework for L&D leaders
+
+This weekâ€™s new route compares AI roleplay simulators with traditional video-only onboarding using implementation criteria: time-to-ramp, practice depth, coaching signal, governance overhead, and cost per ramp-ready employee.
+
+If your team is trying to improve frontline readiness without burning manager time, this gives you a pilot-ready evaluation structure.
+
+Read: https://aitraining.directory/compare/ai-roleplay-simulators-vs-video-only-onboarding/

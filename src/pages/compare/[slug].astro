@@ -100,6 +100,22 @@ const comparisonContentBySlug = {
       'Choose the option that minimizes long-term maintenance burden, not just first-launch speed.'
     ]
   },
+  'ai-roleplay-simulators-vs-video-only-onboarding': {
+    decisionMatrix: [
+      { criterion: 'Time-to-ramp for customer-facing behavior', weight: '25%', whatGoodLooksLike: 'New hires can demonstrate target conversations before live customer exposure.', leftLens: 'Score how quickly roleplay scenarios produce measurable behavior improvement in week 1-2.', rightLens: 'Score how quickly video-only modules prepare hires without supervised practice loops.' },
+      { criterion: 'Practice depth and feedback quality', weight: '25%', whatGoodLooksLike: 'Learners receive actionable feedback tied to rubric criteria, not generic completion signals.', leftLens: 'Evaluate scenario realism, coaching prompts, and retry loops by competency.', rightLens: 'Evaluate knowledge-check depth and whether managers can identify skill gaps from quiz data alone.' },
+      { criterion: 'Manager coaching signal', weight: '20%', whatGoodLooksLike: 'Frontline managers can see who needs intervention and where.', leftLens: 'Measure analytics quality from simulated interactions (objection handling, policy phrasing, tone).', rightLens: 'Measure whether video completion + quiz scores provide enough detail for targeted coaching.' },
+      { criterion: 'Operational overhead and governance', weight: '15%', whatGoodLooksLike: 'Program owners can maintain content updates without tool sprawl or unclear ownership.', leftLens: 'Assess scenario authoring effort, QA workflow, and reviewer signoff requirements.', rightLens: 'Assess update cadence, content drift risk, and compliance version control in static modules.' },
+      { criterion: 'Cost per ramp-ready employee', weight: '15%', whatGoodLooksLike: 'Total enablement cost falls while quality outcomes improve across cohorts.', leftLens: 'Model simulator licensing + scenario maintenance against reduced manager shadowing time.', rightLens: 'Model lower content-production cost against longer ramp and higher live-call correction effort.' }
+    ],
+    buyingCriteria: [
+      'Pilot one role with high conversation risk (sales, support, or compliance intake) before deciding default onboarding mode.',
+      'Use the same manager rubric to score simulation performance and post-onboarding live performance.',
+      'Track manager intervention time per new hire, not just module completion rates.',
+      'Define trigger points for when video-only paths must escalate to practice-based simulation.',
+      'Choose the approach with better 30-day ramp outcomes per unit of manager coaching effort.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },

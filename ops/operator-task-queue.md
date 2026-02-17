@@ -13,4 +13,8 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Create distribution asset pack for new compliance localization comparison route (LinkedIn post, X thread hook, and newsletter blurb with canonical URL).
 - [x] Add one traffic-driving high-intent compare route targeting implementation evaluation for SCORM/LMS workflow tooling.
 - [x] Create distribution asset pack for SCORM/LMS comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Re-run SSL readiness checks after the next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Add one high-intent onboarding evaluation route (`/compare/ai-roleplay-simulators-vs-video-only-onboarding/`) with implementation-led rubric + buying criteria.
+- [x] Create distribution asset pack for the onboarding roleplay comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [ ] Re-run SSL readiness checks after the next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [ ] Add i18n parity stubs for the new onboarding roleplay comparison route on `/de` and `/es` localized landing hubs (with canonical route linkage).
