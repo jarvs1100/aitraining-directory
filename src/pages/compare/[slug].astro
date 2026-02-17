@@ -180,6 +180,22 @@ const comparisonContentBySlug = {
       'Select the model with lower total assessment friction and stronger 30-day proficiency lift per learner.'
     ]
   },
+  'ai-onboarding-buddy-chatbots-vs-manager-shadowing-checklists': {
+    decisionMatrix: [
+      { criterion: 'Day-1 to day-14 new-hire confidence coverage', weight: '25%', whatGoodLooksLike: 'New hires can resolve routine onboarding blockers without waiting for manager availability.', leftLens: 'Measure chatbot answer quality for policy/process questions across first-two-week onboarding tasks.', rightLens: 'Measure how often shadowing checklist users still need unscheduled manager support for unresolved questions.' },
+      { criterion: 'Manager time load and interruption rate', weight: '25%', whatGoodLooksLike: 'Manager support remains predictable even as onboarding cohorts scale.', leftLens: 'Track manager interruption minutes and escalation volume after chatbot rollout.', rightLens: 'Track manager shadowing prep time, ad-hoc support volume, and follow-up burden from checklist-only onboarding.' },
+      { criterion: 'Consistency of onboarding guidance', weight: '20%', whatGoodLooksLike: 'All new hires receive the same approved answers and process guidance across teams/locations.', leftLens: 'Evaluate source-grounded answer consistency, stale-content safeguards, and versioned response controls.', rightLens: 'Evaluate checklist adherence variance across managers, teams, and handoff styles.' },
+      { criterion: 'Governance and update responsiveness', weight: '15%', whatGoodLooksLike: 'Policy/process changes are reflected quickly with clear ownership and audit trail.', leftLens: 'Assess sync speed from SOP changes to chatbot knowledge base plus reviewer signoff workflow.', rightLens: 'Assess checklist revision cadence, distribution lag, and confidence that managers use the latest version.' },
+      { criterion: 'Cost per onboarding-ready employee', weight: '15%', whatGoodLooksLike: 'Total onboarding support cost falls while readiness outcomes hold or improve.', leftLens: 'Model chatbot platform + QA oversight cost against reduced manager shadowing hours and faster issue resolution.', rightLens: 'Model lower software spend against recurring manager coaching load and slower answer resolution.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day side-by-side pilot on one onboarding cohort with a shared readiness rubric (confidence, error rate, escalation count).',
+      'Track manager interruption minutes per new hire as a primary operating metric, not just completion rate.',
+      'Use the same approved SOP source set for both models and log stale-answer or outdated-checklist defects.',
+      'Define escalation rules for high-risk questions (compliance/safety) before pilot launch.',
+      'Choose the model with lower total support friction and stronger day-14 readiness outcomes per cohort.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },

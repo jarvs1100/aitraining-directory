@@ -230,6 +230,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/'
   },
   {
+    key: 'onboarding-buddy-vs-shadowing',
+    locale: 'de',
+    slug: 'ki-onboarding-buddy-chatbots-vs-manager-shadowing-checklisten',
+    title: 'KI-Onboarding-Buddy-Chatbots vs. Manager-Shadowing-Checklisten | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die Onboarding-Buddy-Chatbots gegen managergeführte Shadowing-Checklisten vergleichen.',
+    h1: 'KI-Onboarding-Buddy-Chatbots vs. Manager-Shadowing-Checklisten',
+    intro: 'Hilft L&D- und Onboarding-Teams, Support-Last, Guidance-Konsistenz und Time-to-Confidence zwischen beiden Modellen zu bewerten.',
+    points: ['Weniger ungeplante Manager-Unterbrechungen in Woche 1-2', 'Klarer Vergleich von Guidance-Konsistenz und Aktualität', 'Pilot-Framework für belastbare Rollout-Entscheidungen'],
+    enPath: '/compare/ai-onboarding-buddy-chatbots-vs-manager-shadowing-checklists/'
+  },
+  {
+    key: 'onboarding-buddy-vs-shadowing',
+    locale: 'es',
+    slug: 'chatbots-buddy-onboarding-ia-vs-checklists-shadowing-manager',
+    title: 'Chatbots buddy de onboarding con IA vs. checklists de shadowing de manager | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan chatbots buddy de onboarding con checklists de shadowing gestionados por managers.',
+    h1: 'Chatbots buddy de onboarding con IA vs. checklists de shadowing de manager',
+    intro: 'Ayuda a equipos de formación y onboarding a evaluar carga de soporte, consistencia de guía y tiempo-a-confianza entre ambos enfoques.',
+    points: ['Menos interrupciones no planificadas para managers en semanas 1-2', 'Comparación clara de consistencia y actualización de respuestas', 'Marco de piloto para decidir despliegue con evidencia operativa'],
+    enPath: '/compare/ai-onboarding-buddy-chatbots-vs-manager-shadowing-checklists/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
