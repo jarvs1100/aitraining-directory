@@ -176,8 +176,68 @@ export function getSiblingLocalizedPages(key, currentLocale) {
 export function getLocalizedSupportBlocks(key, locale) {
   const localeName = localeMeta[locale]?.name || locale.toUpperCase();
 
+  const labels = {
+    en: {
+      editionTag: `${localeName} edition`,
+      openEnglishPageCta: 'Open English implementation page',
+      waitlistCta: 'Join founding partner waitlist',
+      checklistHeading: 'Market rollout checklist',
+      nextPagesHeading: 'Next pages to visit',
+      otherLanguagesHeading: 'Other language editions'
+    },
+    pl: {
+      editionTag: 'Wersja polska',
+      openEnglishPageCta: 'Otwórz angielską stronę wdrożeniową',
+      waitlistCta: 'Dołącz do listy partnerów założycielskich',
+      checklistHeading: 'Checklista wejścia na rynek',
+      nextPagesHeading: 'Kolejne strony do odwiedzenia',
+      otherLanguagesHeading: 'Inne wersje językowe'
+    },
+    cs: {
+      editionTag: 'Česká verze',
+      openEnglishPageCta: 'Otevřít anglickou implementační stránku',
+      waitlistCta: 'Připojit se na čekací listinu partnerů',
+      checklistHeading: 'Checklist pro vstup na trh',
+      nextPagesHeading: 'Další stránky k návštěvě',
+      otherLanguagesHeading: 'Další jazykové verze'
+    },
+    sk: {
+      editionTag: 'Slovenská verzia',
+      openEnglishPageCta: 'Otvoriť anglickú implementačnú stránku',
+      waitlistCta: 'Pridať sa do čakacej listiny partnerov',
+      checklistHeading: 'Checklist pre vstup na trh',
+      nextPagesHeading: 'Ďalšie stránky na návštevu',
+      otherLanguagesHeading: 'Ďalšie jazykové verzie'
+    },
+    hu: {
+      editionTag: 'Magyar kiadás',
+      openEnglishPageCta: 'Angol megvalósítási oldal megnyitása',
+      waitlistCta: 'Csatlakozás az alapító partner várólistához',
+      checklistHeading: 'Piaci bevezetési ellenőrzőlista',
+      nextPagesHeading: 'Következő meglátogatandó oldalak',
+      otherLanguagesHeading: 'További nyelvi kiadások'
+    },
+    de: {
+      editionTag: 'Deutsche Ausgabe',
+      openEnglishPageCta: 'Englische Umsetzungsseite öffnen',
+      waitlistCta: 'Zur Founding-Partner-Warteliste',
+      checklistHeading: 'Checkliste für den Markteintritt',
+      nextPagesHeading: 'Nächste empfohlene Seiten',
+      otherLanguagesHeading: 'Weitere Sprachversionen'
+    },
+    es: {
+      editionTag: 'Edición en español',
+      openEnglishPageCta: 'Abrir página de implementación en inglés',
+      waitlistCta: 'Unirse a la lista de socios fundadores',
+      checklistHeading: 'Checklist de salida al mercado',
+      nextPagesHeading: 'Siguientes páginas recomendadas',
+      otherLanguagesHeading: 'Otras ediciones por idioma'
+    }
+  };
+
   if (key === 'ai-training-tools') {
     return {
+      labels: labels[locale] || labels.en,
       checklist: [
         'Map top 3 repetitive training workflows (onboarding, role-specific SOP updates, compliance refreshes).',
         'Define the single source of truth for SOP docs, playbooks, and change logs.',
@@ -185,15 +245,28 @@ export function getLocalizedSupportBlocks(key, locale) {
         'Set governance: approvers, update cadence, and ownership for each training stream.'
       ],
       internalLinks: [
-        { label: 'Browse AI training solutions', href: '/solutions/' },
-        { label: 'Compare tools side-by-side', href: '/compare/' },
-        { label: 'Explore training categories', href: '/categories/' }
+        { label: (locale === 'pl' ? 'Przeglądaj rozwiązania AI dla szkoleń' : locale === 'cs' ? 'Procházet AI řešení pro školení' : locale === 'sk' ? 'Prejsť AI riešenia pre školenia' : locale === 'hu' ? 'AI képzési megoldások böngészése' : locale === 'de' ? 'KI-Trainingslösungen durchsuchen' : locale === 'es' ? 'Explorar soluciones de IA para formación' : 'Browse AI training solutions'), href: '/solutions/' },
+        { label: (locale === 'pl' ? 'Porównaj narzędzia obok siebie' : locale === 'cs' ? 'Porovnat nástroje vedle sebe' : locale === 'sk' ? 'Porovnať nástroje vedľa seba' : locale === 'hu' ? 'Eszközök összehasonlítása egymás mellett' : locale === 'de' ? 'Tools im Direktvergleich ansehen' : locale === 'es' ? 'Comparar herramientas lado a lado' : 'Compare tools side-by-side'), href: '/compare/' },
+        { label: (locale === 'pl' ? 'Poznaj kategorie szkoleniowe' : locale === 'cs' ? 'Prozkoumat školicí kategorie' : locale === 'sk' ? 'Preskúmať kategórie školení' : locale === 'hu' ? 'Képzési kategóriák felfedezése' : locale === 'de' ? 'Trainingskategorien ansehen' : locale === 'es' ? 'Explorar categorías de formación' : 'Explore training categories'), href: '/categories/' }
       ],
-      intentCopy: `This ${localeName} page is designed for market-relevant discovery and routes readers to implementation-ready English solution pages.`
+      intentCopy: locale === 'pl'
+        ? 'Ta wersja została dostosowana do polskiego intentu wyszukiwania i kieruje do angielskich stron wdrożeniowych.'
+        : locale === 'cs'
+          ? 'Tato verze je přizpůsobena českému vyhledávacímu záměru a vede na anglické implementační stránky.'
+          : locale === 'sk'
+            ? 'Táto verzia je prispôsobená slovenskému vyhľadávaciemu intentu a vedie na anglické implementačné stránky.'
+            : locale === 'hu'
+              ? 'Ez a verzió a magyar keresési szándékhoz igazodik, és angol megvalósítási oldalakra irányít.'
+              : locale === 'de'
+                ? 'Diese Version ist auf deutschsprachige Suchintention ausgerichtet und verweist auf englische Umsetzungsseiten.'
+                : locale === 'es'
+                  ? 'Esta versión está adaptada a la intención de búsqueda local y dirige a páginas de implementación en inglés.'
+                  : `This ${localeName} page is designed for market-relevant discovery and routes readers to implementation-ready English solution pages.`
     };
   }
 
   return {
+    labels: labels[locale] || labels.en,
     checklist: [
       'Select 1–2 SOPs with high update frequency and clear step-by-step logic.',
       'Turn each SOP into short modules (3–7 minutes) tied to job roles.',
@@ -201,11 +274,23 @@ export function getLocalizedSupportBlocks(key, locale) {
       'Measure quiz scores, process adherence, and retraining rate after rollout.'
     ],
     internalLinks: [
-      { label: 'SOP-to-video implementation pages', href: '/solutions/sop-to-video-training/' },
-      { label: 'New-hire onboarding automation', href: '/solutions/new-hire-onboarding-automation/' },
-      { label: 'Submit a relevant tool', href: '/submit/' }
+      { label: (locale === 'pl' ? 'Strony wdrożeniowe SOP→wideo' : locale === 'cs' ? 'Implementační stránky SOP→video' : locale === 'sk' ? 'Implementačné stránky SOP→video' : locale === 'hu' ? 'SOP→videó megvalósítási oldalak' : locale === 'de' ? 'SOP-zu-Video-Umsetzungsseiten' : locale === 'es' ? 'Páginas de implementación SOP→video' : 'SOP-to-video implementation pages'), href: '/solutions/sop-to-video-training/' },
+      { label: (locale === 'pl' ? 'Automatyzacja onboardingu' : locale === 'cs' ? 'Automatizace onboardingu nováčků' : locale === 'sk' ? 'Automatizácia onboardingu nových ľudí' : locale === 'hu' ? 'Új belépők onboarding automatizálása' : locale === 'de' ? 'Automatisierung des Onboardings' : locale === 'es' ? 'Automatización de onboarding' : 'New-hire onboarding automation'), href: '/solutions/new-hire-onboarding-automation/' },
+      { label: (locale === 'pl' ? 'Dodaj odpowiednie narzędzie' : locale === 'cs' ? 'Přidat relevantní nástroj' : locale === 'sk' ? 'Pridať relevantný nástroj' : locale === 'hu' ? 'Releváns eszköz beküldése' : locale === 'de' ? 'Passendes Tool einreichen' : locale === 'es' ? 'Enviar una herramienta relevante' : 'Submit a relevant tool'), href: '/submit/' }
     ],
-    intentCopy: `Localized in ${localeName} for search intent, while keeping implementation pathways consistent with core solution pages.`
+    intentCopy: locale === 'pl'
+      ? 'Treść lokalna dla polskiego intentu wyszukiwania, z jednolitą ścieżką wdrożeniową do głównych stron rozwiązań.'
+      : locale === 'cs'
+        ? 'Lokalizováno pro český vyhledávací záměr při zachování jednotné implementační cesty na hlavní stránky řešení.'
+        : locale === 'sk'
+          ? 'Lokalizované pre slovenský vyhľadávací intent pri zachovaní jednotnej implementačnej cesty na hlavné stránky riešení.'
+          : locale === 'hu'
+            ? 'A tartalom magyar keresési szándékra lokalizált, miközben a megvalósítási útvonal egységes marad.'
+            : locale === 'de'
+              ? 'Für lokale Suchintention lokalisiert, bei gleichzeitig konsistenten Umsetzungswegen zu den Kernlösungsseiten.'
+              : locale === 'es'
+                ? 'Localizado para intención de búsqueda local, manteniendo rutas de implementación consistentes hacia páginas clave.'
+                : `Localized in ${localeName} for search intent, while keeping implementation pathways consistent with core solution pages.`
   };
 }
 
