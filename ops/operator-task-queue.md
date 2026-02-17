@@ -2,8 +2,8 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
-- [x] Improve mobile UX on compare pages by replacing horizontal-only matrix tables with mobile decision cards.
-- [x] Add internal-link modules to high-intent tool pages (`/tool/synthesia/`, `/tool/descript/`, `/tool/elevenlabs/`) to improve distribution path depth.
-- [x] Create localized distribution-playbook stubs for `/pl,/cs,/sk,/hu,/de,/es` with links back to canonical checklist.
-- [x] Add homepage FAQ schema + concise “last reviewed” metadata block for trust and CTR support.
-- [x] Run SSL readiness re-check after next deploy and capture fresh evidence in `ops/ssl-readiness-2026-02-17.md`.
+- [x] Improve `/compare/*` decision matrix quality by using page-specific tool labels (instead of Synthesia-only wording) and add a deeper rubric for `/compare/chatgpt-vs-claude-for-ld-content/`.
+- [ ] Add localized i18n parity pages for `/de/sop-zu-schulungsvideos/` and `/es/sop-a-video-de-formacion/` with canonical outreach checklist linkage.
+- [ ] Build one new high-intent comparison route (`/compare/heygen-vs-synthesia-for-training-videos/`) with implementation-led decision criteria and FAQ schema.
+- [ ] Polish mobile chip navigation spacing/tap targets on homepage + compare pages for better thumb usability.
+- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.

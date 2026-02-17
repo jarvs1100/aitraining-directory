@@ -10,7 +10,48 @@ if (!page) throw new Error(`Comparison page not found: ${slug}`);
 const canonical = `https://aitraining.directory/compare/${slug}/`;
 const candidates = pickTools((slug.length + 3) % 8, 4);
 
+function formatToolName(part = '') {
+  return part
+    .split('-')
+    .filter(Boolean)
+    .map((chunk) => chunk.toUpperCase() === 'AI' ? 'AI' : chunk.charAt(0).toUpperCase() + chunk.slice(1))
+    .join(' ');
+}
+
+function getComparisonLabels(currentSlug) {
+  if (currentSlug.includes('-vs-')) {
+    const [leftRaw, rightTail] = currentSlug.split('-vs-');
+    const rightRaw = rightTail.split('-for-')[0];
+    return { left: formatToolName(leftRaw), right: formatToolName(rightRaw) };
+  }
+
+  if (currentSlug.includes('-alternatives')) {
+    const base = formatToolName(currentSlug.replace('-alternatives', ''));
+    return { left: `${base} (current choice)`, right: 'Alternative options' };
+  }
+
+  return { left: 'Option A', right: 'Option B' };
+}
+
+const comparisonLabels = getComparisonLabels(slug);
+
 const comparisonContentBySlug = {
+  'chatgpt-vs-claude-for-ld-content': {
+    decisionMatrix: [
+      { criterion: 'Long-form policy rewriting quality', weight: '25%', whatGoodLooksLike: 'Assistant preserves intent, legal nuance, and audience readability in one pass.', leftLens: 'Strong at fast first drafts with broad prompt flexibility; verify tone consistency across long docs.', rightLens: 'Often stronger on structured, context-heavy rewrites; still run legal/compliance review before publish.' },
+      { criterion: 'Prompt-to-output reliability for SMEs', weight: '20%', whatGoodLooksLike: 'SMEs can reuse one prompt template and get stable quality across modules.', leftLens: 'Performs well with concise prompt scaffolds and examples.', rightLens: 'Performs well when you provide explicit structure and role context.' },
+      { criterion: 'Knowledge-base synthesis', weight: '20%', whatGoodLooksLike: 'Assistant can summarize multiple SOP sources into one coherent learning narrative.', leftLens: 'Good for rapid synthesis if source chunks are curated.', rightLens: 'Good for longer context windows and narrative continuity in dense docs.' },
+      { criterion: 'Review + governance workflow', weight: '20%', whatGoodLooksLike: 'Outputs move through reviewer signoff with clear revision notes and version trails.', leftLens: 'Pair with external review checklist + change log for compliance-sensitive assets.', rightLens: 'Pair with the same checklist; score based on reviewer edit-load and cycle time.' },
+      { criterion: 'Cost per approved module', weight: '15%', whatGoodLooksLike: 'Total cost decreases as approved module volume increases month over month.', leftLens: 'Model cost with your expected weekly generation + revision volume.', rightLens: 'Model the same scenario and compare cost to approved output, not draft count.' }
+    ],
+    buyingCriteria: [
+      'Test one real SOP rewrite + one scenario-based lesson in both assistants using the same rubric.',
+      'Track reviewer edit-load (minutes per module) as your primary quality metric.',
+      'Create a shared prompt library so SMEs can reuse proven templates.',
+      'Require source citation or reference notes for every factual claim in learner-facing copy.',
+      'Choose the assistant that delivers lower revision burden over a 30-day pilot, not prettier first drafts.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -82,8 +123,8 @@ const jsonLd = {
           <th>Criterion</th>
           <th>Weight</th>
           <th>What good looks like</th>
-          <th>Synthesia lens</th>
-          <th>Alternative lens</th>
+          <th>{comparisonLabels.left} lens</th>
+          <th>{comparisonLabels.right} lens</th>
         </tr>
       </thead>
       <tbody>
@@ -92,8 +133,8 @@ const jsonLd = {
             <td><strong>{row.criterion}</strong></td>
             <td>{row.weight}</td>
             <td>{row.whatGoodLooksLike}</td>
-            <td>{row.synthesiaLens}</td>
-            <td>{row.alternativesLens}</td>
+            <td>{row.leftLens || row.synthesiaLens}</td>
+            <td>{row.rightLens || row.alternativesLens}</td>
           </tr>
         ))}
       </tbody>
@@ -106,8 +147,8 @@ const jsonLd = {
         <h3>{row.criterion}</h3>
         <p><strong>Weight:</strong> {row.weight}</p>
         <p><strong>What good looks like:</strong> {row.whatGoodLooksLike}</p>
-        <p><strong>Synthesia lens:</strong> {row.synthesiaLens}</p>
-        <p><strong>Alternative lens:</strong> {row.alternativesLens}</p>
+        <p><strong>{comparisonLabels.left} lens:</strong> {row.leftLens || row.synthesiaLens}</p>
+        <p><strong>{comparisonLabels.right} lens:</strong> {row.rightLens || row.alternativesLens}</p>
       </article>
     ))}
   </div>
