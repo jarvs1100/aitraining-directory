@@ -1693,6 +1693,31 @@ export function getLocalizedSupportBlocks(key, locale) {
   };
 }
 
+localizedLandingPages.push(
+  {
+    key: 'evidence-retention-automation-vs-manual-archive-folders',
+    locale: 'de',
+    slug: 'ki-training-evidence-retention-automatisierung-vs-manuelle-archivordner-fuer-compliance-audits',
+    title: 'KI-Training-Evidence-Retention-Automatisierung vs. manuelle Archivordner für Compliance-Audits | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-Retention-Automatisierung gegen manuelle Archivordner-Workflows für Compliance-Audits vergleichen.',
+    h1: 'KI-Evidence-Retention-Automatisierung vs. manuelle Archivordner für Compliance-Audits',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Retrieval-SLA, Evidenz-Traceability und Retention-Governance zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Audit-Response-Geschwindigkeit und Retrieval-Defekten', 'Messbare Kriterien für Evidenz-Lineage und Retention-Policy-Durchsetzung', 'Pilot-Framework für Ownership, Review-Last und skalierbare Audit-Bereitschaft'],
+    enPath: '/compare/ai-training-evidence-retention-automation-vs-manual-archive-folders-for-compliance-audits/'
+  },
+  {
+    key: 'evidence-retention-automation-vs-manual-archive-folders',
+    locale: 'es',
+    slug: 'automatizacion-retencion-evidencia-training-ia-vs-carpetas-archivo-manuales-auditorias-compliance',
+    title: 'Automatización de retención de evidencia de training con IA vs. carpetas de archivo manuales para auditorías de compliance | AI Training Directory',
+    description: 'Entrada localizada para comparar automatización de retención de evidencia con IA frente a carpetas de archivo manuales en auditorías de compliance.',
+    h1: 'Automatización de retención de evidencia con IA vs. carpetas de archivo manuales para auditorías de compliance',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de recuperación, trazabilidad de evidencia y control de políticas de retención entre ambos enfoques.',
+    points: ['Comparativa de tiempo de respuesta en auditoría y defectos de recuperación', 'Criterios operativos para lineage de evidencia y enforcement de retención', 'Marco de piloto para ownership, carga de revisión y escalado audit-ready'],
+    enPath: '/compare/ai-training-evidence-retention-automation-vs-manual-archive-folders-for-compliance-audits/'
+  }
+);
+
 export function getLocalizedFaq(locale) {
   const localized = {
     pl: [
