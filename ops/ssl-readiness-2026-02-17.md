@@ -1691,3 +1691,72 @@ Location: http://aitraining.directory/
 - HTTPS remains valid on apex (`HTTP/2 200`) and `www` continues to redirect to apex over HTTPS.
 - TLS certificate chain remains stable with Let's Encrypt `R12`.
 - Deploy freshness advanced (`Last-Modified` now `13:58:15 UTC`).
+## Evidence delta — 2026-02-17 14:12 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 191 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Tue, 17 Feb 2026 13:59:33 GMT
+access-control-allow-origin: *
+etag: "69947445-4eb3"
+
+curl -I https://www.aitraining.directory
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: https://aitraining.directory/
+x-github-request-id: 6D94:20FECC:1682FD:16B69B:6994740B
+accept-ranges: bytes
+age: 847
+date: Tue, 17 Feb 2026 14:12:45 GMT
+```
+
+### Current delta summary
+- HTTPS remains valid for apex and www with Let's Encrypt certificate coverage.
+- www continues redirecting to HTTPS apex.
+- Static HTTPS QA passed on 191 generated HTML files.
+
+---
+

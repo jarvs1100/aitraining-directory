@@ -468,6 +468,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower remediation friction per compliant closure, not the model that sends the most reminders.'
     ]
   },
+  'ai-compliance-training-version-control-vs-manual-course-republishing-for-policy-updates': {
+    decisionMatrix: [
+      { criterion: 'Policy-update publish latency', weight: '25%', whatGoodLooksLike: 'Approved policy changes are reflected in learner-facing modules before next operational shift windows.', leftLens: 'Measure time from policy approval to versioned publish with automated dependency checks and release gating.', rightLens: 'Measure time from policy approval to manual republish across authoring files, LMS updates, and notification threads.' },
+      { criterion: 'Version traceability for audits', weight: '25%', whatGoodLooksLike: 'Teams can prove which learner completed which policy version with timestamped evidence and approver chain.', leftLens: 'Assess version lineage quality, immutable change logs, and learner-version mapping defensibility under sampling.', rightLens: 'Assess reconstructability when version history is scattered across manual exports, filenames, and inbox approvals.' },
+      { criterion: 'Regression and mismatch risk during updates', weight: '20%', whatGoodLooksLike: 'Update cycles do not introduce broken links, stale modules, or conflicting policy language across regions.', leftLens: 'Evaluate automated guardrails for superseded versions, localization drift, and rollout rollback triggers.', rightLens: 'Evaluate frequency of stale copies, missed republishes, and sync errors in manual update workflows.' },
+      { criterion: 'Operational load on L&D ops and compliance owners', weight: '15%', whatGoodLooksLike: 'Update cadence scales without recurring release-week fire drills.', leftLens: 'Track effort for version-rule maintenance, exception triage, and governance QA signoff.', rightLens: 'Track recurring labor for republish checklists, status chasing, and manual reconciliation across systems.' },
+      { criterion: 'Cost per audit-defensible policy update', weight: '15%', whatGoodLooksLike: 'Total cost per compliant release declines as update frequency grows.', leftLens: 'Model platform + governance overhead against lower rework, fewer incidents, and faster release cycles.', rightLens: 'Model lower tooling spend against compounding coordination labor, rework, and missed-update exposure.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one high-change policy stream with at least two update cycles and multilingual dependencies.',
+      'Use one scorecard: publish latency, version-trace defects, rollback events, and audit packet preparation time.',
+      'Define hard guardrails for approval gates, rollback authority, and exception handling before production rollout.',
+      'Assign RACI across compliance owner, L&D operations, LMS admin, and audit/risk partner for every release stage.',
+      'Choose the model with lower release friction per defensible policy update, not the model that appears cheapest in month one.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -884,6 +900,17 @@ const jsonLd = {
       .matrix-card p + p {
         margin-top: 0.5rem;
         padding-top: 0.5rem;
+      }
+
+      .next-step-actions .btn {
+        min-height: 48px;
+        padding: 0.78rem 0.84rem;
+      }
+
+      .next-steps-chips .chip {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
       }
 
       .section.card ul li {

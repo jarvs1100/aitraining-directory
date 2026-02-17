@@ -737,6 +737,28 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar velocidad de cierre, consistencia de intervención y calidad de evidencia audit-ready entre ambos enfoques.',
     points: ['Comparativa de cycle-time de cierre de remediaciones tras detección de non-compliance', 'Criterios operativos para consistencia de intervención entre managers, sedes y cohortes', 'Marco de piloto para trazabilidad de recovery, reglas de override y ownership de escalado'],
     enPath: '/compare/ai-training-remediation-workflows-vs-manual-coaching-follow-ups-for-compliance-recovery/'
+  },
+  {
+    key: 'compliance-version-control-vs-manual-republishing',
+    locale: 'de',
+    slug: 'ki-compliance-training-version-control-vs-manuelles-kurs-republishing-fuer-policy-updates',
+    title: 'KI-Compliance-Training-Version-Control vs. manuelles Kurs-Republishing für Policy-Updates | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Version-Control-Workflows gegen manuelles Kurs-Republishing bei Policy-Updates vergleichen.',
+    h1: 'KI-Compliance-Training-Version-Control vs. manuelles Kurs-Republishing für Policy-Updates',
+    intro: 'Hilft Compliance-, L&D- und Operations-Teams, Update-Latenz, Versionsnachweis und Audit-Defensibility zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Publish-Latenz nach Policy-Freigaben über Rollen und Standorte', 'Messbare Kriterien für Version-Traceability und auditfeste Learner-Zuordnung', 'Pilot-Framework für Rollback-Regeln, Governance-Gates und Ownership je Release-Schritt'],
+    enPath: '/compare/ai-compliance-training-version-control-vs-manual-course-republishing-for-policy-updates/'
+  },
+  {
+    key: 'compliance-version-control-vs-manual-republishing',
+    locale: 'es',
+    slug: 'control-versiones-training-compliance-ia-vs-republicacion-manual-cursos-actualizaciones-politica',
+    title: 'Control de versiones de training compliance con IA vs. republicación manual de cursos para actualizaciones de política | AI Training Directory',
+    description: 'Entrada localizada para comparar control de versiones con IA frente a republicación manual de cursos en actualizaciones de políticas de compliance.',
+    h1: 'Control de versiones de training compliance con IA vs. republicación manual de cursos para actualizaciones de política',
+    intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar latencia de actualización, trazabilidad de versiones y defensibilidad para auditoría entre ambos enfoques.',
+    points: ['Comparativa de velocidad de publicación tras aprobaciones de política', 'Criterios operativos para trazabilidad versión-por-learner y evidencia audit-ready', 'Marco de piloto para reglas de rollback, gates de gobernanza y ownership por release'],
+    enPath: '/compare/ai-compliance-training-version-control-vs-manual-course-republishing-for-policy-updates/'
   }
 
 ];
