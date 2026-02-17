@@ -501,6 +501,23 @@ const comparisonContentBySlug = {
       'Choose the model with lower release friction per defensible policy update, not the model that appears cheapest in month one.'
     ]
   },
+  'ai-training-quality-monitoring-vs-manual-course-spot-checks-for-ld-ops': {
+    decisionMatrix: [
+      { criterion: 'Issue-detection lead time for learner-impact problems', weight: '25%', whatGoodLooksLike: 'Quality defects are identified early enough to prevent repeated learner confusion or compliance drift.', leftLens: 'Measure time from first signal (drop-offs, assessment anomalies, support spikes) to confirmed quality incident and owner assignment.', rightLens: 'Measure detection delay when issues are discovered only during scheduled manual spot checks or ad-hoc manager escalation.' },
+      { criterion: 'Coverage consistency across courses, locales, and cohorts', weight: '25%', whatGoodLooksLike: 'Quality monitoring coverage remains reliable across high-volume catalog updates and multilingual rollouts.', leftLens: 'Assess breadth of automated checks across completion behavior, assessment integrity, localization drift, and broken-link/content regressions.', rightLens: 'Assess sampling consistency when reviewer bandwidth limits manual spot-check depth across course portfolio and language variants.' },
+      { criterion: 'Remediation routing and closure accountability', weight: '20%', whatGoodLooksLike: 'Detected issues move to the right owner with clear SLA, evidence trail, and closure verification.', leftLens: 'Evaluate workflow automation for incident triage, owner routing, due-date escalation, and post-fix validation logs.', rightLens: 'Evaluate manual ticketing and follow-up discipline for ensuring fixes are completed and documented without backlog drift.' },
+      { criterion: 'Governance and audit defensibility of quality controls', weight: '15%', whatGoodLooksLike: 'Teams can prove what was monitored, what failed, who approved fixes, and when controls were revalidated.', leftLens: 'Check whether quality controls, overrides, and remediation approvals are captured in a traceable audit trail by role.', rightLens: 'Check reconstructability of evidence when monitoring artifacts are split across checklists, spreadsheets, and meeting notes.' },
+      { criterion: 'Cost per resolved quality incident', weight: '15%', whatGoodLooksLike: 'Quality operations cost declines while incident recurrence and learner-impact duration both decrease.', leftLens: 'Model platform + governance overhead against earlier detection, lower rework effort, and fewer repeated learner complaints.', rightLens: 'Model lower tooling cost against manual review labor, missed defects, and longer incident resolution cycles.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one high-change learning portfolio with known update velocity and multilingual dependencies.',
+      'Use one scorecard: issue-detection lead time, incident recurrence rate, remediation cycle time, and reviewer hours per week.',
+      'Define severity thresholds, override rights, and escalation ownership before enabling automation in production.',
+      'Assign RACI across L&D ops owner, instructional design lead, LMS admin, and compliance/audit partner.',
+      'Choose the model with lower quality-control friction per resolved incident, not the model with the fewest dashboard widgets.'
+    ]
+  },
+
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -928,6 +945,11 @@ const jsonLd = {
         min-height: 44px;
         display: inline-flex;
         align-items: center;
+      }
+
+      .faq-anchor-list a {
+        padding: 0.54rem 0.6rem;
+        line-height: 1.35;
       }
 
       .section.card ul {

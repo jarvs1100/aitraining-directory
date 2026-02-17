@@ -783,6 +783,29 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-training-capacity-forecasting-vs-manual-headcount-guessing-for-ld-operations/'
   }
 
+  ,{
+    key: 'training-quality-monitoring-vs-manual-course-spot-checks',
+    locale: 'de',
+    slug: 'ki-training-quality-monitoring-vs-manuelle-course-spot-checks-fuer-ld-ops',
+    title: 'KI-Training-Quality-Monitoring vs. manuelle Course-Spot-Checks für L&D Ops | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Training-Quality-Monitoring gegen manuelle Course-Spot-Checks in L&D Operations vergleichen.',
+    h1: 'KI-Training-Quality-Monitoring vs. manuelle Course-Spot-Checks für L&D Ops',
+    intro: 'Hilft L&D-Operations-, QA- und Compliance-Teams, Issue-Detection-Geschwindigkeit, Coverage-Konsistenz und Remediation-Closure zwischen beiden Qualitätsmodellen zu bewerten.',
+    points: ['Vergleich von Frühwarnsignalen für Qualitätsprobleme über Kurse, Kohorten und Sprachen', 'Messbare Kriterien für Incident-Routing, SLA-Einhaltung und verifizierte Remediation-Closure', 'Pilot-Framework für auditfähige Quality-Controls, Override-Governance und Owner-Transparenz'],
+    enPath: '/compare/ai-training-quality-monitoring-vs-manual-course-spot-checks-for-ld-ops/'
+  },
+  {
+    key: 'training-quality-monitoring-vs-manual-course-spot-checks',
+    locale: 'es',
+    slug: 'monitorizacion-calidad-training-ia-vs-spot-checks-manuales-cursos-ld-ops',
+    title: 'Monitorización de calidad de training con IA vs. spot checks manuales de cursos para L&D ops | AI Training Directory',
+    description: 'Entrada localizada para comparar monitorización de calidad de training con IA frente a spot checks manuales de cursos en operaciones de L&D.',
+    h1: 'Monitorización de calidad de training con IA vs. spot checks manuales de cursos para L&D ops',
+    intro: 'Ayuda a equipos de L&D operations, QA y compliance a evaluar velocidad de detección, cobertura de control y cierre de remediaciones entre ambos enfoques.',
+    points: ['Comparativa de detección temprana de incidencias de calidad por curso, cohorte e idioma', 'Criterios operativos para routing de incidentes, cumplimiento de SLA y verificación de cierres', 'Marco de piloto para controles audit-ready, gobernanza de overrides y ownership claro'],
+    enPath: '/compare/ai-training-quality-monitoring-vs-manual-course-spot-checks-for-ld-ops/'
+  }
+
 
 ];
 
