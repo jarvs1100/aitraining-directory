@@ -308,6 +308,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower total upskilling friction per confirmed proficiency gain, not the one with the most automation features.'
     ]
   },
+  'ai-mandatory-training-escalation-workflows-vs-manager-email-chasing-for-compliance-completion': {
+    decisionMatrix: [
+      { criterion: 'Completion-rate reliability before compliance deadlines', weight: '25%', whatGoodLooksLike: 'Mandatory training completion stays on target without last-week scramble campaigns.', leftLens: 'Evaluate whether AI-triggered escalations consistently reduce overdue learners before deadline windows close.', rightLens: 'Evaluate whether manager email follow-ups reliably close completion gaps across teams and shifts.' },
+      { criterion: 'Escalation path clarity and accountability', weight: '25%', whatGoodLooksLike: 'Every overdue case has clear owner, SLA, and fallback escalation route.', leftLens: 'Measure owner assignment quality, escalation timing controls, and visibility into unresolved risk pockets.', rightLens: 'Measure how often email chains produce ambiguous ownership, delayed handoffs, or dropped follow-ups.' },
+      { criterion: 'Operational load on managers and training ops', weight: '20%', whatGoodLooksLike: 'Managers spend less time chasing completions while oversight quality remains high.', leftLens: 'Track reduction in manager chase time and ops intervention needed to keep escalations moving.', rightLens: 'Track recurring manager/admin effort for reminders, response tracking, and manual status reconciliation.' },
+      { criterion: 'Audit defensibility of completion enforcement', weight: '15%', whatGoodLooksLike: 'Teams can prove escalation actions, response timing, and closure evidence during audits.', leftLens: 'Assess whether escalation logs and completion evidence are captured in one traceable workflow.', rightLens: 'Assess reconstructability of reminder and enforcement history from inboxes, spreadsheets, and notes.' },
+      { criterion: 'Cost per on-time mandatory completion', weight: '15%', whatGoodLooksLike: 'Per-learner enforcement cost declines while on-time completion and control confidence improve.', leftLens: 'Model platform + governance overhead against reduced overdue backlog and fewer manual chase cycles.', rightLens: 'Model lower tooling spend against higher labor effort and deadline-miss risk under peak load.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day side-by-side pilot on one mandatory curriculum with recurring completion slippage.',
+      'Use one scorecard: on-time completion rate, overdue backlog age, manager chase minutes, and escalation defect count.',
+      'Define hard escalation rules before rollout: SLA windows, owner hierarchy, and executive fallback path.',
+      'Assign RACI across compliance lead, training ops owner, manager population, and LMS admin support.',
+      'Choose the model with lower enforcement friction per on-time completion, not the model with the most reminder volume.'
+    ]
+  },
   'ai-certification-renewal-alerting-vs-manual-spreadsheet-tracking-for-workforce-compliance': {
     decisionMatrix: [
       { criterion: 'Renewal deadline reliability across large populations', weight: '25%', whatGoodLooksLike: 'Expiring certifications are identified early with reliable reminders before compliance windows close.', leftLens: 'Evaluate lead-time quality, escalation logic, and missed-deadline prevention in AI-driven alerting workflows.', rightLens: 'Evaluate how consistently manual spreadsheet owners detect expiries and trigger reminders before deadlines.' },
