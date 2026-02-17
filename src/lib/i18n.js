@@ -2157,6 +2157,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de activación de hold, consistencia de alcance y trazabilidad defensible entre ambos enfoques.',
     points: ['Comparativa de SLA de activación de legal hold y cobertura de evidencia in-scope', 'Criterios operativos para decisiones consistentes de hold/release y ownership claro', 'Marco de piloto para reducir retrabajo legal y fricción de auditoría en ciclos de retención'],
     enPath: '/compare/ai-compliance-training-evidence-legal-hold-automation-vs-manual-email-freeze-requests/'
+  },
+  {
+    key: 'evidence-release-governance-vs-manual-hold-lift-email-approvals',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-release-governance-vs-manuelle-hold-lift-email-freigaben',
+    title: 'KI-Compliance-Training-Evidence-Release-Governance vs. manuelle Hold-Lift-E-Mail-Freigaben | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-Release-Governance gegen manuelle Hold-Lift-E-Mail-Freigaben in Compliance-Training-Operationen vergleichen.',
+    h1: 'KI-Evidence-Release-Governance vs. manuelle Hold-Lift-E-Mail-Freigaben',
+    intro: 'Hilft Compliance-, Legal- und Training-Ops-Teams, Release-SLA, Scope-Kontrolle und auditfeste Nachvollziehbarkeit zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Release-Zykluszeit nach Hold-Bedingungserfüllung', 'Messbare Kriterien für Scope-Genauigkeit und Vermeidung von Over-Release-Risiken', 'Pilot-Framework für saubere Hold-Lift-Entscheidungen mit klarer Owner-Verantwortung'],
+    enPath: '/compare/ai-compliance-training-evidence-release-governance-vs-manual-hold-lift-email-approvals/'
+  },
+  {
+    key: 'evidence-release-governance-vs-manual-hold-lift-email-approvals',
+    locale: 'es',
+    slug: 'gobernanza-liberacion-evidencia-training-compliance-ia-vs-aprobaciones-email-manuales-levantamiento-hold',
+    title: 'Gobernanza de liberación de evidencia en training compliance con IA vs. aprobaciones manuales por email para levantamiento de hold | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan gobernanza de liberación de evidencia con IA frente a aprobaciones manuales por email para levantar legal holds en operaciones de training compliance.',
+    h1: 'Gobernanza de liberación de evidencia con IA vs. aprobaciones manuales por email de levantamiento de hold',
+    intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar velocidad de liberación, control de alcance y trazabilidad defendible entre ambos enfoques.',
+    points: ['Comparativa de cycle-time de liberación tras cumplir condiciones de hold', 'Criterios operativos para evitar over-release y mantener control de evidencia in-scope', 'Marco de piloto para decisiones hold-lift audit-ready con ownership claro'],
+    enPath: '/compare/ai-compliance-training-evidence-release-governance-vs-manual-hold-lift-email-approvals/'
   }
 );
 

@@ -635,6 +635,7 @@ const comparisonContentBySlug = {
       'Validate export/integration path into LMS or knowledge base before procurement signoff.',
       'Tie final selection to 90-day operating model: owners, approval SLA, and update cadence.'
     ]
+
   }
 };
 
@@ -668,6 +669,22 @@ const supplementalComparisonContentBySlug = {
       'Define mandatory evidence fields and ownership rules before launch (assignment logic, completions, review signoff, change history).',
       'Assign RACI across compliance owner, L&D operations, policy reviewer, and audit stakeholder.',
       'Choose the model with lower governance friction per defensible literacy cycle, not the model with the shortest initial rollout.'
+    ]
+  },
+  'ai-compliance-training-evidence-release-governance-vs-manual-hold-lift-email-approvals': {
+    decisionMatrix: [
+      { criterion: 'Hold-release decision cycle time', weight: '25%', whatGoodLooksLike: 'Release decisions are completed within policy SLA once hold conditions are met.', leftLens: 'Measure time from release-request intake to approved release package with policy checks and owner routing.', rightLens: 'Measure delay introduced by manual hold-lift emails, inbox handoffs, and ambiguous approver sequencing.' },
+      { criterion: 'Release-scope accuracy and over-release risk', weight: '25%', whatGoodLooksLike: 'Only in-scope records are released; protected records remain blocked with zero accidental leakage.', leftLens: 'Assess rule-based scope controls, required release rationale fields, and validation gates before unlock.', rightLens: 'Assess over-release/under-release risk when scope is interpreted manually from email context and spreadsheet notes.' },
+      { criterion: 'Audit traceability for hold-lift decisions', weight: '20%', whatGoodLooksLike: 'Auditors can reconstruct who approved release, why, and which evidence set changed status.', leftLens: 'Validate immutable approval logs, timestamped state transitions, and policy-version linkage for each release action.', rightLens: 'Validate reconstructability from email approvals, thread forwards, and manual tracker entries.' },
+      { criterion: 'Operational load on legal, compliance, and training ops', weight: '15%', whatGoodLooksLike: 'Release workflows remain predictable during concurrent legal hold windows without escalation pileups.', leftLens: 'Track upkeep effort for release rules, exception handling, and periodic governance calibration.', rightLens: 'Track recurring effort for reminder chasing, approval reconciliation, and duplicate decision clean-up.' },
+      { criterion: 'Cost per audit-defensible release decision', weight: '15%', whatGoodLooksLike: 'Per-release decision cost declines while control quality and response speed improve.', leftLens: 'Model platform + governance overhead against reduced rework, fewer release defects, and faster legal-closeout cycles.', rightLens: 'Model lower tooling spend against manual coordination labor, higher defect-repair effort, and slower closeout.' }
+    ],
+    buyingCriteria: [
+      'Pilot one active legal-hold program with at least two release windows and mixed evidence classes before selecting a default model.',
+      'Use one scorecard: release-cycle time, scope defects, reopened decisions, and reviewer rework minutes.',
+      'Define non-bypassable release gates, override ownership, and mandatory rationale capture before scale-up.',
+      'Assign RACI across legal owner, compliance lead, training-ops owner, and internal audit reviewer.',
+      'Choose the model with lower friction per audit-defensible release decision, not the model with the longest email approval thread.'
     ]
   },
   'ai-compliance-training-exemption-governance-vs-manual-email-waivers-for-regulated-workforces': {
@@ -1651,20 +1668,27 @@ const jsonLd = {
       }
 
       .section[aria-labelledby="implementation-playbook-heading"] li {
-        padding: 0.92rem 0.9rem;
-        line-height: 1.58;
-        border-radius: 0.72rem;
-        min-height: 62px;
+        padding: 0.96rem 0.92rem;
+        line-height: 1.6;
+        border-radius: 0.74rem;
+        min-height: 66px;
         border-color: #cfddec;
         box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04);
-        gap: 0.6rem;
+        gap: 0.66rem;
         overflow-wrap: anywhere;
         word-break: break-word;
         hyphens: auto;
+        align-items: center;
       }
 
       .section[aria-labelledby="implementation-playbook-heading"] li::before {
-        margin-top: 0.1rem;
+        margin-top: 0;
+        width: 1.12rem;
+        height: 1.12rem;
+        border-radius: 999px;
+        display: inline-grid;
+        place-items: center;
+        background: #e7f7ec;
       }
 
       .matrix-card h3 {
