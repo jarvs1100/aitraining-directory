@@ -3147,3 +3147,70 @@ HTTP/1.1 301 Moved Permanently
 - `qa:https` remains green across generated artifacts (254 HTML files).
 - HTTPS remains valid on apex with Let's Encrypt `R12`; `www` still redirects to HTTPS apex.
 - Deployment freshness advanced to `Last-Modified: 19:11:52 UTC` on apex.
+
+---
+
+## Evidence delta — 2026-02-17 19:27 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 257 HTML files.
+```
+
+### DNS (stable)
+```bash
+dig +short aitraining.directory A
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTP/HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+Last-Modified: Tue, 17 Feb 2026 19:26:49 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+Location: https://aitraining.directory/
+
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 19:26:49 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS is valid and serving with Let's Encrypt (`R12`) for apex + www access path.
+- Apex HTTPS responds `HTTP/2 200`; `www` HTTPS correctly redirects to apex HTTPS.
+- Deployment freshness advanced (`Last-Modified: 19:26:49 UTC`) after latest i18n/mobile updates.

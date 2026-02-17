@@ -1533,17 +1533,29 @@ const jsonLd = {
 
       .section[aria-labelledby="implementation-playbook-heading"] li {
         margin: 0;
-        padding: 0.62rem 0.66rem;
+        padding: 0.68rem 0.72rem;
         border: 1px solid #dbe4ef;
         border-radius: 0.58rem;
         background: #f8fafc;
-        line-height: 1.46;
+        line-height: 1.48;
+        min-height: 46px;
       }
     }
 
     @media (max-width: 360px) {
       .matrix-card {
         padding: 0.82rem;
+      }
+
+      .section[aria-labelledby="implementation-playbook-heading"] ol {
+        gap: 0.56rem;
+      }
+
+      .section[aria-labelledby="implementation-playbook-heading"] li {
+        padding: 0.74rem 0.76rem;
+        line-height: 1.5;
+        border-radius: 0.62rem;
+        min-height: 50px;
       }
 
       .matrix-card h3 {
