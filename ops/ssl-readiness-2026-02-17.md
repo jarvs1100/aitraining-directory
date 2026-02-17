@@ -1,4 +1,4 @@
-# SSL Readiness Verification — 2026-02-17 06:12 UTC
+# SSL Readiness Verification — 2026-02-17 06:41 UTC
 
 ## Scope
 - Domain checked: `aitraining.directory` and `www.aitraining.directory`
@@ -11,22 +11,22 @@
 npm run qa:https
 
 ✅ HTTPS readiness QA passed
-Checked 104 HTML files.
+Checked 110 HTML files.
 ```
 
 ### DNS
 ```bash
 dig +short aitraining.directory A
 185.199.110.153
-185.199.109.153
 185.199.111.153
 185.199.108.153
+185.199.109.153
 
 dig +short www.aitraining.directory A
 jarvs1100.github.io.
 185.199.108.153
-185.199.109.153
 185.199.110.153
+185.199.109.153
 185.199.111.153
 ```
 
@@ -58,6 +58,7 @@ curl: (60) SSL: no alternative certificate subject name matches target host name
 ```bash
 curl -I http://aitraining.directory
 HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 06:41:20 GMT
 
 curl -I http://www.aitraining.directory
 HTTP/1.1 301 Moved Permanently
