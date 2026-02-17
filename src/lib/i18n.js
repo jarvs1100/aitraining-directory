@@ -2201,6 +2201,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar detección de drift de permisos, consistencia de decisiones y trazabilidad defendible entre ambos enfoques.',
     points: ['Comparativa de latencia para detectar permisos obsoletos y cerrar revocaciones', 'Criterios operativos para consistencia de decisiones de acceso y ownership claro', 'Marco de piloto para ciclos de recertificación audit-ready con menor retrabajo manual'],
     enPath: '/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/'
+  },
+  {
+    key: 'evidence-access-justification-workflows-vs-manual-shared-drive-access-forms',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-justification-workflows-vs-manuelle-shared-drive-access-forms',
+    title: 'KI-Compliance-Training-Evidence-Access-Justification-Workflows vs. manuelle Shared-Drive-Access-Forms | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Access-Justification-Workflows gegen manuelle Shared-Drive-Access-Forms für Trainingsevidenz vergleichen.',
+    h1: 'KI-Evidence-Access-Justification-Workflows vs. manuelle Shared-Drive-Access-Forms',
+    intro: 'Hilft Compliance-, Legal- und Training-Ops-Teams, Genehmigungsqualität, Durchlaufzeit und auditfeste Nachvollziehbarkeit zwischen beiden Access-Modellen zu bewerten.',
+    points: ['Vergleich der Request-Turnaround-Zeit von Antrag bis dokumentierter Freigabe', 'Messbare Kriterien für Begründungsqualität, Scope-Genauigkeit und konsistente Reviewer-Entscheidungen', 'Pilot-Framework für auditfeste Access-Decision-Logs mit weniger manueller Nacharbeit'],
+    enPath: '/compare/ai-compliance-training-evidence-access-justification-workflows-vs-manual-shared-drive-access-forms/'
+  },
+  {
+    key: 'evidence-access-justification-workflows-vs-manual-shared-drive-access-forms',
+    locale: 'es',
+    slug: 'workflows-justificacion-acceso-evidencia-training-compliance-ia-vs-forms-manuales-shared-drive',
+    title: 'Workflows de justificación de acceso a evidencia en training compliance con IA vs. forms manuales de shared drive | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan workflows de justificación de acceso con IA frente a forms manuales de shared drive en evidencia de training compliance.',
+    h1: 'Workflows de justificación de acceso con IA vs. forms manuales de shared drive',
+    intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar claridad de aprobación, velocidad de ciclo y trazabilidad defendible entre ambos enfoques.',
+    points: ['Comparativa del cycle-time desde request hasta aprobación documentada', 'Criterios operativos para calidad de justificación, precisión de alcance y consistencia de revisores', 'Marco de piloto para decision-logs audit-ready con menos retrabajo manual'],
+    enPath: '/compare/ai-compliance-training-evidence-access-justification-workflows-vs-manual-shared-drive-access-forms/'
   }
 );
 
