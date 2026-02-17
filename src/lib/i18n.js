@@ -164,6 +164,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-roleplay-simulators-vs-video-only-onboarding/'
   },
   {
+    key: 'knowledge-chatbot-vs-search',
+    locale: 'de',
+    slug: 'ki-wissens-chatbots-vs-lms-suche-performance-support',
+    title: 'KI-Wissens-Chatbots vs. LMS-Suche für Performance Support | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-Chatbot-Support gegen LMS-Suchworkflows für den Arbeitsalltag bewerten.',
+    h1: 'KI-Wissens-Chatbots vs. LMS-Suche für Performance Support',
+    intro: 'Hilft L&D- und LMS-Teams, Support-Deflection, Antwortqualität und Governance-Aufwand für beide Modelle realistisch zu vergleichen.',
+    points: ['Schneller Vergleich von Antwortpräzision und Eskalationsquote', 'Klare Bewertungslogik für Governance und Content-Freshness', 'Pilotkriterien für fundierte Tool-Entscheidungen'],
+    enPath: '/compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/'
+  },
+  {
+    key: 'knowledge-chatbot-vs-search',
+    locale: 'es',
+    slug: 'chatbots-conocimiento-ia-vs-busqueda-lms-performance-support',
+    title: 'Chatbots de conocimiento con IA vs. búsqueda en LMS para performance support | AI Training Directory',
+    description: 'Entrada localizada para equipos que evalúan soporte con chatbots IA frente a búsqueda LMS en trabajo real.',
+    h1: 'Chatbots de conocimiento con IA vs. búsqueda en LMS para performance support',
+    intro: 'Ayuda a equipos de formación y LMS a comparar precisión de respuesta, velocidad de resolución y carga operativa entre ambos enfoques.',
+    points: ['Comparativa práctica de precisión y tiempo de respuesta', 'Criterios claros para gobernanza y actualización de contenidos', 'Marco de piloto para decidir con evidencia operativa'],
+    enPath: '/compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
