@@ -2315,6 +2315,31 @@ localizedLandingPages.push(
   }
 );
 
+localizedLandingPages.push(
+  {
+    key: 'evidence-access-purpose-limitation',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-purpose-limitation-enforcement-vs-manuelle-justification-notes-audit-readiness',
+    title: 'KI-Compliance-Training Evidence-Access Purpose-Limitation Enforcement vs. manuelle Justification Notes für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Purpose-Limitation-Enforcement-Workflows gegen manuelle Justification Notes bei Evidence-Access-Entscheidungen vergleichen.',
+    h1: 'KI Evidence-Access Purpose-Limitation Enforcement vs. manuelle Justification Notes',
+    intro: 'Hilft Compliance- und Training-Ops-Teams zu bewerten, wie klar Zugriffszwecke erzwungen, dokumentiert und auditfest nachverfolgt werden.',
+    points: ['Strengere Zweckbindung bei Evidence-Access-Freigaben', 'Konsistentere Entscheidungs- und Eskalationspfade', 'Besser nachvollziehbare Audit-Trails bei Berechtigungsänderungen'],
+    enPath: '/compare/ai-compliance-training-evidence-access-purpose-limitation-enforcement-vs-manual-justification-notes-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-purpose-limitation',
+    locale: 'es',
+    slug: 'enforcement-purpose-limitation-acceso-evidencia-training-compliance-ia-vs-notas-manuales-justificacion-audit-readiness',
+    title: 'Enforcement de purpose limitation para acceso a evidencia en training compliance con IA vs. notas manuales de justificación | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan enforcement de purpose limitation con IA frente a notas manuales de justificación en accesos a evidencia.',
+    h1: 'Enforcement de purpose limitation con IA vs. notas manuales de justificación',
+    intro: 'Ayuda a equipos de compliance y training ops a decidir cómo mejorar control de alcance, coherencia de aprobación y trazabilidad audit-ready en accesos a evidencia.',
+    points: ['Mayor control del propósito permitido por solicitud', 'Decisiones y escalados más consistentes entre equipos', 'Trazabilidad defendible para auditorías de acceso y evidencia'],
+    enPath: '/compare/ai-compliance-training-evidence-access-purpose-limitation-enforcement-vs-manual-justification-notes-for-audit-readiness/'
+  }
+);
+
 export function getLocalizedFaq(locale) {
   const localized = {
     pl: [
