@@ -517,6 +517,23 @@ const comparisonContentBySlug = {
       'Choose the model with lower quality-control friction per resolved incident, not the model with the fewest dashboard widgets.'
     ]
   },
+  'ai-training-control-effectiveness-scoring-vs-manual-audit-sampling-for-compliance-assurance': {
+    decisionMatrix: [
+      { criterion: 'Sensitivity of control-failure detection', weight: '25%', whatGoodLooksLike: 'Weak training controls are detected early enough to prevent repeated non-compliant completions.', leftLens: 'Measure detection lead time for low-confidence completions, policy-misaligned responses, and recurring learner-risk clusters with threshold tuning.', rightLens: 'Measure detection lag when failures surface only through periodic audit sampling and manual exception review.' },
+      { criterion: 'Coverage depth across cohorts, roles, and locales', weight: '25%', whatGoodLooksLike: 'Assurance coverage remains consistent even as training volume and localization complexity increase.', leftLens: 'Assess scoring coverage across role-critical controls, multilingual content variants, and high-frequency training cycles.', rightLens: 'Assess how often manual samples miss edge cohorts, small populations, or locale-specific control breakdowns.' },
+      { criterion: 'Remediation targeting precision and closure speed', weight: '20%', whatGoodLooksLike: 'Teams can route corrective actions to the right owners quickly with clear evidence trails.', leftLens: 'Evaluate automated severity scoring, owner routing, and closure-verification logs for every flagged control gap.', rightLens: 'Evaluate manual triage burden and rework when sampled findings require broader retroactive investigation.' },
+      { criterion: 'Audit defensibility of control-assurance evidence', weight: '15%', whatGoodLooksLike: 'Auditors can trace how control scores were produced, reviewed, overridden, and resolved.', leftLens: 'Check for timestamped scoring lineage, override rationale, reviewer accountability, and immutable remediation history.', rightLens: 'Check reconstructability when audit packets depend on sampling spreadsheets, inbox chains, and meeting notes.' },
+      { criterion: 'Cost per validated control-assurance decision', weight: '15%', whatGoodLooksLike: 'Cost per defensible control decision declines while assurance confidence improves.', leftLens: 'Model platform + governance overhead against lower false assurance, faster remediation, and fewer repeat audit findings.', rightLens: 'Model lower tooling spend against sampling labor, missed-risk exposure, and delayed corrective actions.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one policy-critical training stream with known control-variance history.',
+      'Use one scorecard: detection lead time, missed-control rate, remediation cycle time, and reviewer hours per week.',
+      'Define score thresholds, override authority, and escalation ownership before production rollout.',
+      'Assign RACI across compliance owner, L&D operations, internal audit partner, and system administrator.',
+      'Choose the model with lower assurance friction per validated control decision, not the model with the most dashboard volume.'
+    ]
+  },
+
 
   'synthesia-alternatives': {
     decisionMatrix: [
@@ -936,9 +953,14 @@ const jsonLd = {
         padding-top: 0.5rem;
       }
 
+      .next-step-actions {
+        gap: 0.58rem;
+      }
+
       .next-step-actions .btn {
         min-height: 48px;
         padding: 0.78rem 0.84rem;
+        justify-content: center;
       }
 
       .next-steps-chips .chip {

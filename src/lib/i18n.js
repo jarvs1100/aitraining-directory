@@ -827,6 +827,29 @@ export const localizedLandingPages = [
     points: ['Comparativa de detección temprana de cambios de política, procesos y terminología crítica', 'Criterios operativos para routing de incidencias, SLA de remediación y trazabilidad versionada', 'Marco de piloto para tuning de umbrales, ownership de revisión y reglas de escalado audit-ready'],
     enPath: '/compare/ai-training-content-drift-detection-vs-annual-course-reviews-for-compliance-ops/'
   }
+  ,{
+    key: 'training-control-effectiveness-scoring-vs-manual-audit-sampling',
+    locale: 'de',
+    slug: 'ki-training-control-effectiveness-scoring-vs-manuelles-audit-sampling-fuer-compliance-assurance',
+    title: 'KI-Training-Control-Effectiveness-Scoring vs. manuelles Audit-Sampling für Compliance Assurance | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Control-Effectiveness-Scoring gegen manuelles Audit-Sampling in der Compliance-Absicherung vergleichen.',
+    h1: 'KI-Training-Control-Effectiveness-Scoring vs. manuelles Audit-Sampling für Compliance Assurance',
+    intro: 'Hilft Compliance-, Audit- und L&D-Ops-Teams, Detektionssensitivität, Abdeckungstiefe und Remediation-Präzision zwischen beiden Assurance-Modellen zu bewerten.',
+    points: ['Vergleich der Früherkennung von schwachen Kontrollen über Rollen, Cohorts und Sprachvarianten', 'Messbare Kriterien für präzises Routing von Remediation-Maßnahmen und nachvollziehbare Closure-Logs', 'Pilot-Framework für Score-Schwellen, Override-Governance und auditfeste Evidence-Traces'],
+    enPath: '/compare/ai-training-control-effectiveness-scoring-vs-manual-audit-sampling-for-compliance-assurance/'
+  },
+  {
+    key: 'training-control-effectiveness-scoring-vs-manual-audit-sampling',
+    locale: 'es',
+    slug: 'scoring-efectividad-controles-training-ia-vs-audit-sampling-manual-compliance-assurance',
+    title: 'Scoring de efectividad de controles de training con IA vs. audit sampling manual para compliance assurance | AI Training Directory',
+    description: 'Entrada localizada para comparar scoring de efectividad de controles con IA frente a audit sampling manual en aseguramiento de compliance training.',
+    h1: 'Scoring de efectividad de controles de training con IA vs. audit sampling manual para compliance assurance',
+    intro: 'Ayuda a equipos de compliance, auditoría y L&D operations a evaluar sensibilidad de detección, cobertura de control y precisión de remediación entre ambos enfoques.',
+    points: ['Comparativa de detección temprana de fallos de control en cohorts, roles e idiomas', 'Criterios operativos para routing preciso de remediaciones y trazabilidad verificable de cierre', 'Marco de piloto para umbrales de score, gobernanza de overrides y evidencia audit-ready'],
+    enPath: '/compare/ai-training-control-effectiveness-scoring-vs-manual-audit-sampling-for-compliance-assurance/'
+  }
+
 
 
 ];
