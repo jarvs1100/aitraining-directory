@@ -1781,6 +1781,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar trazabilidad, velocidad de respuesta y defensibilidad de evidencia entre ambos enfoques.',
     points: ['Comparativa de lineage de evidencia y continuidad de custodia en auditorías', 'Criterios operativos para tiempo de armado, defectos y escalaciones', 'Marco de piloto para gobernanza de evidencia audit-ready sin hojas de control frágiles'],
     enPath: '/compare/ai-training-evidence-chain-of-custody-workflows-vs-manual-export-tracking-for-audits/'
+  },
+  {
+    key: 'audit-evidence-request-triage-vs-manual-shared-inbox-handoffs',
+    locale: 'de',
+    slug: 'ki-audit-evidence-request-triage-vs-manuelle-shared-inbox-handoffs-fuer-training-compliance',
+    title: 'KI-Audit-Evidence-Request-Triage vs. manuelle Shared-Inbox-Handoffs für Training-Compliance | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Audit-Evidence-Request-Triage gegen manuelle Shared-Inbox-Handoffs in der Training-Compliance vergleichen.',
+    h1: 'KI-Audit-Evidence-Request-Triage vs. manuelle Shared-Inbox-Handoffs',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Ownership-Klarheit, SLA-Zuverlässigkeit und Defensibility bei Audit-Anfragen zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Zuweisungsgeschwindigkeit und Eskalationsqualität bei Audit-Evidence-Anfragen', 'Messbare Kriterien für SLA-Trefferquote, Reopen-Rate und Governance-Transparenz', 'Pilot-Framework für klare Request-Triage mit auditfester Verantwortungszuordnung'],
+    enPath: '/compare/ai-audit-evidence-request-triage-vs-manual-shared-inbox-handoffs-for-training-compliance/'
+  },
+  {
+    key: 'audit-evidence-request-triage-vs-manual-shared-inbox-handoffs',
+    locale: 'es',
+    slug: 'triaje-solicitudes-evidencia-auditoria-ia-vs-handoffs-manuales-shared-inbox-training-compliance',
+    title: 'Triaje de solicitudes de evidencia de auditoría con IA vs. handoffs manuales en shared inbox para training compliance | AI Training Directory',
+    description: 'Entrada localizada para comparar triaje con IA de solicitudes de evidencia de auditoría frente a handoffs manuales en shared inbox en training compliance.',
+    h1: 'Triaje de solicitudes de evidencia de auditoría con IA vs. handoffs manuales en shared inbox',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar claridad de ownership, fiabilidad de SLA y defensibilidad operativa entre ambos enfoques.',
+    points: ['Comparativa de latencia de asignación y calidad de escalado para solicitudes de auditoría', 'Criterios operativos para cumplimiento de SLA, tasa de reapertura y trazabilidad de handoffs', 'Marco de piloto para triage audit-ready con responsables claros y menor retrabajo'],
+    enPath: '/compare/ai-audit-evidence-request-triage-vs-manual-shared-inbox-handoffs-for-training-compliance/'
   }
 );
 
