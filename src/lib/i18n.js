@@ -494,6 +494,29 @@ export const localizedLandingPages = [
     enPath: '/editorial-methodology/'
   },
   {
+    key: 'skills-passporting-vs-manual-competency-matrices',
+    locale: 'de',
+    slug: 'ki-skills-passporting-vs-manuelle-kompetenzmatrizen-fuer-workforce-zertifizierung',
+    title: 'KI-Skills-Passporting vs. manuelle Kompetenzmatrizen für Workforce-Zertifizierung | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-basiertes Skills-Passporting gegen manuelle Kompetenzmatrizen in Zertifizierungsprozessen bewerten.',
+    h1: 'KI-Skills-Passporting vs. manuelle Kompetenzmatrizen für Workforce-Zertifizierung',
+    intro: 'Hilft Zertifizierungs- und L&D-Teams, Assessor-Konsistenz, Durchlaufzeiten und Audit-Traceability zwischen beiden Betriebsmodellen zu vergleichen.',
+    points: ['Vergleich von Bewertungs-Konsistenz und Zertifizierungsdurchsatz', 'Praktische Kriterien für Audit-Evidenz und Recertification-Workflows', 'Pilot-Framework für Governance, Overrides und skalierbare Umsetzung'],
+    enPath: '/compare/ai-skills-passporting-vs-manual-competency-matrices-for-workforce-certification/'
+  },
+  {
+    key: 'skills-passporting-vs-manual-competency-matrices',
+    locale: 'es',
+    slug: 'skills-passporting-ia-vs-matrices-competencias-manuales-para-certificacion-workforce',
+    title: 'Skills passporting con IA vs. matrices manuales de competencias para certificación de workforce | AI Training Directory',
+    description: 'Entrada localizada para comparar skills passporting con IA frente a matrices manuales de competencias en operaciones de certificación laboral.',
+    h1: 'Skills passporting con IA vs. matrices manuales de competencias para certificación de workforce',
+    intro: 'Ayuda a equipos de certificación y L&D a evaluar consistencia entre evaluadores, velocidad operativa y trazabilidad de evidencia para auditorías.',
+    points: ['Comparativa de consistencia de evaluación y throughput de certificación', 'Criterios operativos para evidencia auditable y recertificación', 'Marco de piloto con controles de gobernanza, overrides y escalado'],
+    enPath: '/compare/ai-skills-passporting-vs-manual-competency-matrices-for-workforce-certification/'
+  },
+
+  {
     key: 'learning-path-recommendations-vs-manager-curricula',
     locale: 'de',
     slug: 'ki-lernpfad-empfehlungen-vs-manager-zugewiesene-curricula-fuer-upskilling',

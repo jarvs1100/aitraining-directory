@@ -308,6 +308,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower total upskilling friction per confirmed proficiency gain, not the one with the most automation features.'
     ]
   },
+  'ai-skills-passporting-vs-manual-competency-matrices-for-workforce-certification': {
+    decisionMatrix: [
+      { criterion: 'Certification decision consistency across assessors', weight: '25%', whatGoodLooksLike: 'Certification outcomes remain consistent across regions, assessor tenure levels, and cohort size changes.', leftLens: 'Evaluate whether AI passporting applies one role-based evidence rubric and flags borderline cases for calibrated human review.', rightLens: 'Evaluate inter-rater variance when managers and assessors maintain manual competency matrices with local interpretation differences.' },
+      { criterion: 'Time-to-certification and recertification throughput', weight: '25%', whatGoodLooksLike: 'Eligible employees can be certified or recertified quickly without queue spikes before compliance deadlines.', leftLens: 'Measure cycle time from evidence submission to certification decision when AI triage, pre-scoring, and task routing are enabled.', rightLens: 'Measure cycle time when matrix updates, evidence collection, and assessor assignment are coordinated manually.' },
+      { criterion: 'Evidence traceability for audits and external accreditation', weight: '20%', whatGoodLooksLike: 'Every certification decision is backed by source evidence, rubric version, and approver history in one defensible chain.', leftLens: 'Assess whether passport records link assessments to role standards, policy versions, and remediation history with minimal reconstruction.', rightLens: 'Assess how reliably manual matrix workflows preserve evidence links across spreadsheets, shared drives, and email signoffs.' },
+      { criterion: 'Operational ownership and governance load', weight: '15%', whatGoodLooksLike: 'Certification operations can scale without recurring fire drills or undocumented exception paths.', leftLens: 'Score upkeep effort for rubric tuning, model QA, exception governance, and monthly calibration ceremonies.', rightLens: 'Score recurring effort for matrix hygiene, version reconciliation, assessor coordination, and late-cycle cleanup.' },
+      { criterion: 'Cost per audit-ready certified employee', weight: '15%', whatGoodLooksLike: 'Per-certification operating cost declines while decision quality and audit confidence improve.', leftLens: 'Model platform + governance overhead against reduced assessor rework, faster decisions, and fewer audit follow-up loops.', rightLens: 'Model lower tooling spend against manual labor intensity, slower throughput, and evidence-compilation overhead.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day side-by-side pilot on one certification track with repeatable role standards and known assessor bottlenecks.',
+      'Use one shared scorecard: assessor agreement rate, decision turnaround time, recertification backlog age, and evidence-defect count.',
+      'Require governance controls before scale: override policy, calibration cadence, and explicit escalation path for contested outcomes.',
+      'Define RACI across certification owner, L&D ops, compliance/audit lead, and frontline managers for decision accountability.',
+      'Choose the model with lower certification friction per audit-ready decision, not the model with the highest automation surface area.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
