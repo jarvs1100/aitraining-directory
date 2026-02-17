@@ -804,6 +804,28 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de L&D operations, QA y compliance a evaluar velocidad de detección, cobertura de control y cierre de remediaciones entre ambos enfoques.',
     points: ['Comparativa de detección temprana de incidencias de calidad por curso, cohorte e idioma', 'Criterios operativos para routing de incidentes, cumplimiento de SLA y verificación de cierres', 'Marco de piloto para controles audit-ready, gobernanza de overrides y ownership claro'],
     enPath: '/compare/ai-training-quality-monitoring-vs-manual-course-spot-checks-for-ld-ops/'
+  },
+  {
+    key: 'training-content-drift-detection-vs-annual-course-reviews',
+    locale: 'de',
+    slug: 'ki-training-content-drift-detection-vs-jaehrliche-course-reviews-fuer-compliance-ops',
+    title: 'KI-Training-Content-Drift-Detection vs. jährliche Course-Reviews für Compliance Ops | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Content-Drift-Detection gegen jährliche Course-Reviews in Compliance Operations vergleichen.',
+    h1: 'KI-Training-Content-Drift-Detection vs. jährliche Course-Reviews für Compliance Ops',
+    intro: 'Hilft Compliance-, L&D- und Ops-Teams, Update-Latenz, Drift-Risiko und Evidenzqualität zwischen kontinuierlicher Erkennung und periodischen Reviews zu bewerten.',
+    points: ['Vergleich von Drift-Detection-Latenz für Policy-, Prozess- und Terminologieänderungen über Trainingsbibliotheken', 'Messbare Kriterien für Incident-Routing, Remediation-SLA und versionierte Nachweise pro Lernobjekt', 'Pilot-Framework für Threshold-Tuning, Reviewer-Ownership und auditfeste Escalation-Regeln'],
+    enPath: '/compare/ai-training-content-drift-detection-vs-annual-course-reviews-for-compliance-ops/'
+  },
+  {
+    key: 'training-content-drift-detection-vs-annual-course-reviews',
+    locale: 'es',
+    slug: 'deteccion-deriva-contenido-training-ia-vs-revisiones-anuales-cursos-compliance-ops',
+    title: 'Detección de deriva de contenido de training con IA vs. revisiones anuales de cursos para compliance ops | AI Training Directory',
+    description: 'Entrada localizada para comparar detección de deriva de contenido con IA frente a revisiones anuales manuales de cursos en operaciones de compliance.',
+    h1: 'Detección de deriva de contenido de training con IA vs. revisiones anuales de cursos para compliance ops',
+    intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar latencia de actualización, riesgo de deriva y calidad de evidencia entre monitoreo continuo y revisiones periódicas.',
+    points: ['Comparativa de detección temprana de cambios de política, procesos y terminología crítica', 'Criterios operativos para routing de incidencias, SLA de remediación y trazabilidad versionada', 'Marco de piloto para tuning de umbrales, ownership de revisión y reglas de escalado audit-ready'],
+    enPath: '/compare/ai-training-content-drift-detection-vs-annual-course-reviews-for-compliance-ops/'
   }
 
 

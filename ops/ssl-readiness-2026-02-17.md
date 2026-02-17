@@ -1894,3 +1894,62 @@ Location: http://aitraining.directory/
 - HTTPS remains valid with Let's Encrypt `R12` certificate.
 - Apex returns `HTTP/2 200`; `www` continues redirecting to apex over HTTPS.
 - Deploy freshness advanced (`Last-Modified: 14:32:41 UTC`) after this content batch.
+
+---
+
+## Evidence delta — 2026-02-17 14:56 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 200 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTP behavior (current)
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 14:42:08 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid for apex and `www` redirection path with Let's Encrypt `R12` cert chain.
+- Apex continues to return `HTTP/2 200`; `www` continues to redirect to apex over HTTPS.
+- Deploy freshness advanced (`Last-Modified` now `14:42:08 UTC`).
