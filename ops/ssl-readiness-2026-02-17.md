@@ -3214,3 +3214,27 @@ Location: http://aitraining.directory/
 - HTTPS is valid and serving with Let's Encrypt (`R12`) for apex + www access path.
 - Apex HTTPS responds `HTTP/2 200`; `www` HTTPS correctly redirects to apex HTTPS.
 - Deployment freshness advanced (`Last-Modified: 19:26:49 UTC`) after latest i18n/mobile updates.
+
+## Evidence delta — 2026-02-17 19:40 UTC
+
+```bash
+npm run qa:https
+✅ HTTPS readiness QA passed
+Checked 260 HTML files.
+
+curl -I https://aitraining.directory
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 19:29:02 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+
+echo | openssl s_client -servername aitraining.directory -connect aitraining.directory:443 2>/dev/null | openssl x509 -noout -subject -issuer -dates
+subject=CN = www.aitraining.directory
+issuer=C = US, O = Let's Encrypt, CN = R12
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+Status: HTTPS remains valid on apex + www redirect path with Let's Encrypt cert chain; deployment freshness advanced (`Last-Modified: 19:29:02 UTC`).

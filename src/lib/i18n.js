@@ -516,6 +516,29 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-skills-passporting-vs-manual-competency-matrices-for-workforce-certification/'
   },
 
+
+  {
+    key: 'evidence-gap-alerting-vs-manual-checklists',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-gap-alerting-vs-manuelle-audit-prep-checklisten',
+    title: 'KI-Compliance-Training-Evidence-Gap-Alerting vs. manuelle Audit-Prep-Checklisten | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Evidence-Gap-Alerting gegen manuelle Audit-Prep-Checklisten in Compliance-Trainingsprogrammen vergleichen.',
+    h1: 'KI-Evidence-Gap-Alerting vs. manuelle Audit-Prep-Checklisten für Compliance-Training',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Lückenfrüherkennung, Eskalationsgeschwindigkeit und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Lead-Time bei Evidenzlücken vor Audits', 'Kriterien für schnellere Eskalation und saubere Ownership', 'Pilot-Framework für auditfeste Nachweisqualität ohne Last-Minute-Fire-Drills'],
+    enPath: '/compare/ai-compliance-training-evidence-gap-alerting-vs-manual-audit-prep-checklists/'
+  },
+  {
+    key: 'evidence-gap-alerting-vs-manual-checklists',
+    locale: 'es',
+    slug: 'alertas-brechas-evidencia-training-compliance-ia-vs-checklists-manuales-preparacion-auditoria',
+    title: 'Alertas de brechas de evidencia en training compliance con IA vs. checklists manuales de preparación de auditoría | AI Training Directory',
+    description: 'Entrada localizada para comparar alertas de brechas de evidencia con IA frente a checklists manuales en la preparación de auditorías de formación compliance.',
+    h1: 'Alertas de brechas de evidencia con IA vs. checklists manuales para preparación de auditoría',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar detección temprana de brechas, velocidad de escalado y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de detección anticipada de brechas antes de auditoría', 'Criterios operativos para ownership y escalaciones más limpias', 'Marco de piloto para reducir retrabajo de última hora en auditorías'],
+    enPath: '/compare/ai-compliance-training-evidence-gap-alerting-vs-manual-audit-prep-checklists/'
+  },
   {
     key: 'certification-renewal-alerting-vs-manual-tracking',
     locale: 'de',
@@ -527,6 +550,7 @@ export const localizedLandingPages = [
     points: ['Vergleich von On-time-Renewal-Rate und Overdue-Backlog', 'Klare Kriterien für Eskalationen, Owner-Rollen und Nachweisführung', 'Pilot-Framework für nachhaltige Zertifizierungs-Compliance ohne Fire-Drills'],
     enPath: '/compare/ai-certification-renewal-alerting-vs-manual-spreadsheet-tracking-for-workforce-compliance/'
   },
+
   {
     key: 'certification-renewal-alerting-vs-manual-tracking',
     locale: 'es',
