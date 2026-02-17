@@ -6,7 +6,7 @@ const currentLocaleName = localeMeta[page.locale]?.name || page.locale.toUpperCa
 const supportBlocks = getLocalizedSupportBlocks(page.key, page.locale);
 const ui = getLocalizedUiStrings(page.locale);
 ---
-<Breadcrumbs items={[{ label: ui.home, href: '/' }, { label: currentLocaleName, href: `/${page.locale}/` }, { label: page.h1, href: `/${page.locale}/${page.slug}/` }]} />
+<Breadcrumbs items={[{ label: ui.home, href: `/${page.locale}/` }, { label: currentLocaleName, href: `/${page.locale}/` }, { label: page.h1, href: `/${page.locale}/${page.slug}/` }]} />
 <section class="hero">
   <span class="eyebrow">{supportBlocks.labels.editionTag}</span>
   <h1 style="margin-top:0.8rem;">{page.h1}</h1>

@@ -74,6 +74,23 @@ const contentBySlug = {
     frameworkName: '30-60-90 Onboarding Automation Loop',
     framework: ['Map role-specific outcomes for day 30, 60, and 90.', 'Auto-generate onboarding modules and manager check-in prompts from role requirements.', 'Trigger reminders, nudges, and progress flags in weekly cadence.', 'Review completion + proficiency signals and tune the next cohort.'],
     example: 'Example: A SaaS people ops team automated onboarding plans for support and sales roles, giving managers weekly coaching prompts tied to each milestone.',
+    checklist: [
+      'Define role-specific day-30 tasks that directly map to production work, not generic orientation activity.',
+      'Standardize one onboarding template with role branches so managers are not rebuilding plans from scratch.',
+      'Instrument manager check-ins with a fixed scorecard (knowledge, behavior, confidence) for each milestone.',
+      'Track time-to-ramp at cohort level and compare against pre-automation baseline before expanding scope.',
+      'Document ownership split between L&D, hiring manager, and HR ops for content updates and completion accountability.'
+    ],
+    pitfalls: [
+      'Automating reminders without clarifying what “ramp-ready” means for each role.',
+      'Pushing the same onboarding flow to every role and hiding critical job-specific gaps.',
+      'Using completion as success metric while ignoring manager intervention load and first-month performance.'
+    ],
+    internalLinks: [
+      { label: 'Compare onboarding delivery models', href: '/compare/ai-roleplay-simulators-vs-video-only-onboarding/' },
+      { label: 'Open customer support training route', href: '/solutions/customer-support-training/' },
+      { label: 'Open manager coaching playbooks route', href: '/solutions/manager-coaching-playbooks/' }
+    ],
     faqs: [
       { q: 'Should every role share one onboarding pathway?', a: 'No. Keep a shared foundation, then branch role modules by required systems, compliance exposure, and customer impact.' },
       { q: 'What metrics matter most?', a: 'Time-to-productivity, manager confidence, and first-90-day retention are the strongest indicators.' }
@@ -83,6 +100,23 @@ const contentBySlug = {
     frameworkName: 'Policy-to-Practice Compliance Content Cycle',
     framework: ['Track policy changes and map them to affected audiences.', 'Generate explainer modules with scenario-based examples by risk level.', 'Route content through legal/compliance review with version history.', 'Record completion evidence and schedule refresher cadence by policy criticality.'],
     example: 'Example: A financial services team used AI-assisted rewrites to update AML modules after policy revisions and cut update cycle time from weeks to days.',
+    checklist: [
+      'Map every learning module to a policy clause and control ID so audits can trace source-to-training lineage.',
+      'Require legal/compliance reviewers to approve both wording and scenario accuracy before release.',
+      'Set risk-tiered SLAs for policy updates (for example: critical in 72h, standard in 10 business days).',
+      'Store policy version, training version, audience assignment, and completion evidence in one governed record set.',
+      'Run quarterly defect reviews on quiz misses and incident data to identify compliance-content blind spots.'
+    ],
+    pitfalls: [
+      'Publishing policy summaries without validating role-specific edge cases from operations teams.',
+      'Breaking audit trails by updating learning content without preserving source policy version references.',
+      'Assuming translation quality equals regulatory clarity in multilingual compliance rollouts.'
+    ],
+    internalLinks: [
+      { label: 'AI dubbing vs subtitles compliance route', href: '/compare/ai-dubbing-vs-subtitles-for-compliance-training/' },
+      { label: 'Audit-ready training records route', href: '/solutions/ai-compliance-audit-ready-training-records/' },
+      { label: 'EU AI literacy training route', href: '/solutions/eu-ai-act-ai-literacy-training/' }
+    ],
     faqs: [
       { q: 'Can AI generate fully compliant content alone?', a: 'No. AI can draft quickly, but policy owners must approve final language and controls mapping.' },
       { q: 'How do we reduce audit risk?', a: 'Maintain linked records: policy source, approved training version, audience assignment, and completion evidence.' }

@@ -42,6 +42,22 @@ const internalLinkModules = {
       { href: '/solutions/compliance-training-content-creation/', label: 'Compliance content creation workflow' },
       { href: '/solutions/product-training-rollouts/', label: 'Product training rollout operations' }
     ]
+  },
+  loom: {
+    heading: 'Loom workflow routes for onboarding and enablement',
+    links: [
+      { href: '/solutions/new-hire-onboarding-automation/', label: 'Onboarding automation framework' },
+      { href: '/solutions/manager-coaching-playbooks/', label: 'Manager coaching playbook route' },
+      { href: '/compare/ai-roleplay-simulators-vs-video-only-onboarding/', label: 'Roleplay vs video-only onboarding comparison' }
+    ]
+  },
+  guidde: {
+    heading: 'Guidde implementation routes for SOP and process training',
+    links: [
+      { href: '/solutions/sop-to-video-training/', label: 'SOP-to-video implementation route' },
+      { href: '/solutions/knowledge-base-to-training/', label: 'Knowledge base to training workflow' },
+      { href: '/compare/scorm-authoring-vs-lms-native-builders/', label: 'SCORM vs LMS-native builders comparison' }
+    ]
   }
 };
 
@@ -119,6 +135,15 @@ const jsonLd = {
     <section class="section card" aria-labelledby="fit-heading">
       <h2 id="fit-heading">Who this is for</h2>
       <p class="muted" style="margin-bottom:0;">Teams building repeatable onboarding, SOP, and internal training workflows that need faster content production without sacrificing quality controls.</p>
+    </section>
+
+    <section class="section card" aria-labelledby="route-bridge-heading">
+      <h2 id="route-bridge-heading">Navigate implementation routes from this tool</h2>
+      <div class="chips chips-nav">
+        <a class="chip" href="/">Return to homepage</a>
+        <a class="chip" href="/solutions/">Open solution hub</a>
+        <a class="chip" href="/compare/">Open compare hub</a>
+      </div>
     </section>
 
     {internalModule && (

@@ -28,6 +28,15 @@ const navHref = (path) => {
   return path;
 };
 const languageHref = (code) => (code === 'en' ? '/' : `/${code}/`);
+const languageSwitchHref = (code) => {
+  const exact = alternates.find((alt) => alt.hreflang === code);
+  if (exact?.href) return exact.href;
+
+  const regional = alternates.find((alt) => alt.hreflang?.toLowerCase().startsWith(`${code.toLowerCase()}-`));
+  if (regional?.href) return regional.href;
+
+  return languageHref(code);
+};
 ---
 <!doctype html>
 <html lang={lang}>
@@ -437,7 +446,7 @@ const languageHref = (code) => (code === 'en' ? '/' : `/${code}/`);
           <div class="header-aux">
             <nav class="lang-switcher" aria-label="Language switcher">
               {localeCodes.map((code) => (
-                <a href={languageHref(code)} aria-current={code === lang ? 'true' : undefined}>
+                <a href={languageSwitchHref(code)} aria-current={code === lang ? 'true' : undefined}>
                   {code.toUpperCase()}
                 </a>
               ))}
