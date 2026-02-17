@@ -1825,6 +1825,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar fiabilidad de SLA, calidad de escalado y defensibilidad operativa entre ambos enfoques.',
     points: ['Comparativa de latencia de respuesta y claridad de ownership para solicitudes de evidencia de auditoría', 'Criterios operativos para cumplimiento de SLA, tasa de reapertura y trazabilidad de escalaciones', 'Marco de piloto para reducir riesgo de deadlines de auditoría con handoffs más consistentes'],
     enPath: '/compare/ai-compliance-evidence-sla-orchestration-vs-manual-ticket-escalations-for-training-audits/'
+  },
+  {
+    key: 'obligation-mapping-vs-regulation-crosswalks',
+    locale: 'de',
+    slug: 'ki-compliance-training-obligation-mapping-vs-manuelle-regulierungs-spreadsheet-crosswalks',
+    title: 'KI-Compliance-Training-Obligation-Mapping vs. manuelle Regulierungs-Spreadsheet-Crosswalks | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Obligation-Mapping gegen manuelle Regulierungs-Crosswalks in Spreadsheet-Workflows vergleichen.',
+    h1: 'KI-Obligation-Mapping vs. manuelle Regulierungs-Crosswalks für Compliance-Training',
+    intro: 'Hilft Compliance- und L&D-Teams, Mapping-Geschwindigkeit, Coverage-Verlässlichkeit und Audit-Defensibility zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Update-Latenz bei regulatorischen Änderungen', 'Messbare Kriterien für Mapping-Vollständigkeit, Owner-Klarheit und Nachvollziehbarkeit', 'Pilot-Framework für auditfeste Obligation-zu-Training-Verknüpfung ohne Spreadsheet-Drift'],
+    enPath: '/compare/ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks/'
+  },
+  {
+    key: 'obligation-mapping-vs-regulation-crosswalks',
+    locale: 'es',
+    slug: 'mapeo-obligaciones-training-compliance-ia-vs-crosswalks-manuales-spreadsheets-regulatorios',
+    title: 'Mapeo de obligaciones de training compliance con IA vs. crosswalks manuales en spreadsheets regulatorios | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan mapeo de obligaciones de compliance con IA frente a crosswalks manuales basados en hojas de cálculo regulatorias.',
+    h1: 'Mapeo de obligaciones de compliance con IA vs. crosswalks manuales en spreadsheets regulatorios',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de actualización, cobertura de obligaciones y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de tiempo de mapeo tras cambios regulatorios', 'Criterios operativos para cobertura completa, ownership y trazabilidad de decisiones', 'Marco de piloto para reducir retrabajo y riesgo de gaps en mapeos de obligaciones'],
+    enPath: '/compare/ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks/'
   }
 );
 

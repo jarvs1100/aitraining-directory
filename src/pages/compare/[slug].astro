@@ -652,6 +652,22 @@ const supplementalComparisonContentBySlug = {
       'Assign RACI across compliance owner, L&D operations, policy reviewer, and audit stakeholder.',
       'Choose the model with lower governance friction per defensible literacy cycle, not the model with the shortest initial rollout.'
     ]
+  },
+  'ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks': {
+    decisionMatrix: [
+      { criterion: 'Regulatory-change ingestion speed', weight: '25%', whatGoodLooksLike: 'New regulatory obligations are mapped to impacted training paths before rollout deadlines compress.', leftLens: 'Measure time from regulation update to mapped obligation entries with owner assignment and due-date logic.', rightLens: 'Measure time when analysts manually update spreadsheet tabs and reconcile references across teams.' },
+      { criterion: 'Coverage confidence across entities, roles, and geographies', weight: '25%', whatGoodLooksLike: 'Teams can prove all in-scope populations and obligations are covered with minimal blind spots.', leftLens: 'Assess mapping completeness checks, duplicate detection, and risk flags for missing role-jurisdiction links.', rightLens: 'Assess miss rate when coverage depends on manual filtering, copy-paste logic, and spreadsheet hygiene.' },
+      { criterion: 'Audit defensibility of obligation-to-training linkage', weight: '20%', whatGoodLooksLike: 'Auditors can trace each obligation to current training artifacts, owners, and evidence timestamps.', leftLens: 'Evaluate immutable mapping history, approval trails, and version lineage for every obligation change.', rightLens: 'Evaluate reconstructability from spreadsheet versions, inbox approvals, and ad-hoc meeting notes.' },
+      { criterion: 'Operational burden on compliance and L&D ops', weight: '15%', whatGoodLooksLike: 'Mapping operations stay stable during high-change regulatory windows without fire-drill staffing.', leftLens: 'Track upkeep effort for rule tuning, exception triage, and monthly governance calibration.', rightLens: 'Track recurring burden for manual crosswalk updates, QA sweeps, and stakeholder follow-up loops.' },
+      { criterion: 'Cost per audit-ready obligation mapping decision', weight: '15%', whatGoodLooksLike: 'Per-obligation operating cost decreases while mapping confidence and update reliability improve.', leftLens: 'Model platform + governance overhead against fewer misses, faster updates, and lower rework.', rightLens: 'Model lower tooling spend against manual labor intensity, error correction, and delayed remediation.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one regulatory domain with at least two update events and multi-jurisdiction impact.',
+      'Use one scorecard: mapping cycle time, missing-link defect rate, reviewer rework minutes, and escalation count.',
+      'Define hard guardrails for approval gates, override ownership, and evidence retention before scaling.',
+      'Assign RACI across compliance lead, L&D ops owner, legal/policy reviewer, and internal audit partner.',
+      'Choose the model with lower mapping friction per audit-ready obligation decision, not the model with the largest spreadsheet footprint.'
+    ]
   }
 };
 
@@ -685,6 +701,12 @@ const implementationPlaybookBySlug = {
     'Run pilot with two cohorts and one policy-update scenario to test update and evidence workflows.',
     'Validate completion tracking, policy-linkage traceability, and remediation routing before scale.',
     'Publish standard operating model with owner RACI, cadence, and evidence packet format.'
+  ],
+  'ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks': [
+    'Scope one regulation family and map current obligation-to-training crosswalk artifacts with defect baseline.',
+    'Run side-by-side update drills (AI mapping vs spreadsheet crosswalk) for two simulated policy-change events.',
+    'Track mapping latency, missed-coverage defects, and reviewer rework effort under the same governance rubric.',
+    'Promote only after validating approval lineage, owner accountability, and audit packet reconstruction speed.'
   ]
 };
 
@@ -704,6 +726,10 @@ const decisionOutcomesBySlug = {
   'ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness': {
     left: ['You need role-based literacy pathways, tighter evidence controls, and frequent policy updates.', 'Audit and governance requirements demand stronger assignment and traceability logic.'],
     right: ['Your literacy requirement is early-stage and can be managed with scoped foundational modules.', 'You can tolerate more manual governance while validating organization-wide adoption first.']
+  },
+  'ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks': {
+    left: ['You need faster obligation-to-training mapping updates with stronger coverage controls and traceable ownership.', 'Audit pressure requires defensible lineage from regulation change to training assignment and evidence artifacts.'],
+    right: ['Your regulatory change volume is low and spreadsheet governance is currently disciplined and auditable.', 'You can tolerate slower update cycles while validating future automation requirements.']
   }
 };
 
@@ -1208,6 +1234,9 @@ const jsonLd = {
         min-height: 44px;
         display: inline-flex;
         align-items: center;
+        line-height: 1.32;
+        padding-top: 0.38rem;
+        padding-bottom: 0.38rem;
       }
 
       .faq-anchor-list {
