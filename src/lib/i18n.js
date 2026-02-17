@@ -2223,6 +2223,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar claridad de aprobación, velocidad de ciclo y trazabilidad defendible entre ambos enfoques.',
     points: ['Comparativa del cycle-time desde request hasta aprobación documentada', 'Criterios operativos para calidad de justificación, precisión de alcance y consistencia de revisores', 'Marco de piloto para decision-logs audit-ready con menos retrabajo manual'],
     enPath: '/compare/ai-compliance-training-evidence-access-justification-workflows-vs-manual-shared-drive-access-forms/'
+  },
+  {
+    key: 'evidence-access-approval-sla-monitoring-vs-manual-inbox-follow-ups-for-audit-requests',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-sla-monitoring-vs-manuelle-inbox-follow-ups-fuer-audit-requests',
+    title: 'KI-Compliance-Training-Evidence-Access-Approval-SLA-Monitoring vs. manuelle Inbox-Follow-ups für Audit-Requests | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Access-Approval-SLA-Monitoring gegen manuelle Inbox-Follow-ups für Audit-Requests vergleichen.',
+    h1: 'KI-Access-Approval-SLA-Monitoring vs. manuelle Inbox-Follow-ups für Audit-Requests',
+    intro: 'Hilft Compliance-, Legal- und Training-Ops-Teams, SLA-Einhaltung, Eskalationsqualität und auditfeste Nachvollziehbarkeit zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Request-to-Approval-SLA-Erfüllung unter Audit-Deadline-Druck', 'Messbare Kriterien für Eskalationsklarheit, Owner-Responsiveness und Scope-Konsistenz', 'Pilot-Framework für auditfeste Access-Approval-Entscheidungen mit weniger Inbox-Rework'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-sla-monitoring-vs-manual-inbox-follow-ups-for-audit-requests/'
+  },
+  {
+    key: 'evidence-access-approval-sla-monitoring-vs-manual-inbox-follow-ups-for-audit-requests',
+    locale: 'es',
+    slug: 'monitorizacion-sla-aprobacion-acceso-evidencia-training-compliance-ia-vs-follow-ups-manuales-inbox-audit-requests',
+    title: 'Monitorización SLA de aprobación de acceso a evidencia en training compliance con IA vs. follow-ups manuales en inbox para audit requests | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan monitorización SLA de aprobación de acceso con IA frente a follow-ups manuales en inbox para requests de auditoría.',
+    h1: 'Monitorización SLA de aprobación de acceso con IA vs. follow-ups manuales en inbox',
+    intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar cumplimiento de SLA, calidad de escalaciones y trazabilidad defendible entre ambos enfoques.',
+    points: ['Comparativa del cumplimiento de SLA request-to-approval bajo presión de auditoría', 'Criterios operativos para escalación consistente, ownership claro y control de alcance', 'Marco de piloto para decisiones de acceso audit-ready con menos retrabajo en correo'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-sla-monitoring-vs-manual-inbox-follow-ups-for-audit-requests/'
   }
 );
 
