@@ -2340,6 +2340,32 @@ localizedLandingPages.push(
   }
 );
 
+
+localizedLandingPages.push(
+  {
+    key: 'evidence-access-time-bound-approvals',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-time-bound-approvals-vs-manuelle-open-ended-permissions-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Time-Bound Approvals vs. manuelle Open-Ended Permissions für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Time-Bound-Approval-Workflows gegen manuelle Open-Ended-Permissions bei Compliance-Training-Evidence-Access vergleichen.',
+    h1: 'KI Time-Bound Approvals vs. manuelle Open-Ended Permissions für Evidence Access',
+    intro: 'Hilft Compliance-, Legal- und Training-Ops-Teams zu bewerten, wie stark zeitlich begrenzte Freigaben Entitlement-Drift senken und Audit-Response-Zyklen stabilisieren.',
+    points: ['Vergleich von Ablaufdisziplin und automatisierter Entitlement-Bereinigung nach Fristende', 'Messbare Kriterien für Eskalationsklarheit, Owner-Reaktionszeit und konsistente Re-Approval-Entscheidungen', 'Pilot-Framework für auditfeste Time-Bound-Access-Governance mit weniger manueller Nachverfolgung'],
+    enPath: '/compare/ai-compliance-training-evidence-access-time-bound-approvals-vs-manual-open-ended-permissions-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-time-bound-approvals',
+    locale: 'es',
+    slug: 'aprobaciones-time-bound-acceso-evidencia-training-compliance-ia-vs-permisos-manuales-open-ended-audit-readiness',
+    title: 'Aprobaciones time-bound de acceso a evidencia en training compliance con IA vs. permisos manuales open-ended para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan aprobaciones time-bound con IA frente a permisos manuales open-ended en flujos de acceso a evidencia de training compliance.',
+    h1: 'Aprobaciones time-bound con IA vs. permisos manuales open-ended para acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar control de expiraciones, velocidad de escalación y trazabilidad defendible en decisiones de acceso a evidencia.',
+    points: ['Comparativa de disciplina de expiración y limpieza automática de permisos tras cada ventana de acceso', 'Criterios operativos para re-aprobaciones consistentes, ownership claro y escalaciones sin cuellos de botella', 'Marco de piloto para gobernanza de acceso audit-ready con menos retrabajo manual en seguimientos'],
+    enPath: '/compare/ai-compliance-training-evidence-access-time-bound-approvals-vs-manual-open-ended-permissions-for-audit-readiness/'
+  }
+);
+
 export function getLocalizedFaq(locale) {
   const localized = {
     pl: [
