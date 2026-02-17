@@ -17,6 +17,36 @@ if (!tool) {
 const canonical = `https://aitraining.directory/tool/${tool.slug}/`;
 const categorySlug = getCategorySlug(tool.category);
 const relatedTools = allListings.filter((item) => item.category === tool.category && item.slug !== tool.slug).slice(0, 3);
+
+const internalLinkModules = {
+  synthesia: {
+    heading: 'Implementation paths to evaluate Synthesia faster',
+    links: [
+      { href: '/solutions/sop-to-video-training/', label: 'SOP to video implementation checklist' },
+      { href: '/compare/synthesia-alternatives/', label: 'Synthesia alternatives decision matrix' },
+      { href: '/solutions/multilingual-employee-training/', label: 'Multilingual training rollout playbook' }
+    ]
+  },
+  descript: {
+    heading: 'Where Descript fits in training operations',
+    links: [
+      { href: '/compare/descript-vs-camtasia-for-training-videos/', label: 'Descript vs Camtasia for training videos' },
+      { href: '/solutions/microlearning-video-production/', label: 'Microlearning video production workflow' },
+      { href: '/solutions/knowledge-base-to-training/', label: 'Knowledge base to training process' }
+    ]
+  },
+  'elevenlabs': {
+    heading: 'Voiceover planning routes before committing to ElevenLabs',
+    links: [
+      { href: '/compare/murf-vs-elevenlabs-for-training-voiceovers/', label: 'Murf vs ElevenLabs for training voiceovers' },
+      { href: '/solutions/compliance-training-content-creation/', label: 'Compliance content creation workflow' },
+      { href: '/solutions/product-training-rollouts/', label: 'Product training rollout operations' }
+    ]
+  }
+};
+
+const internalModule = internalLinkModules[tool.slug];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -90,6 +120,17 @@ const jsonLd = {
       <h2 id="fit-heading">Who this is for</h2>
       <p class="muted" style="margin-bottom:0;">Teams building repeatable onboarding, SOP, and internal training workflows that need faster content production without sacrificing quality controls.</p>
     </section>
+
+    {internalModule && (
+      <section class="section card" aria-labelledby="internal-links-heading">
+        <h2 id="internal-links-heading">{internalModule.heading}</h2>
+        <div class="chips">
+          {internalModule.links.map((item) => (
+            <a class="chip" href={item.href}>{item.label}</a>
+          ))}
+        </div>
+      </section>
+    )}
 
     {Boolean(relatedTools.length) && (
       <section class="section" aria-labelledby="related-heading">
