@@ -12,13 +12,13 @@ const {
 } = Astro.props;
 
 const uiByLang = {
-  en: { announcement: 'NEW: Curated for L&D teams shipping onboarding, SOP, and enablement programs faster.', home: 'Home', categories: 'Categories', solutions: 'Solutions', compare: 'Compare', partners: 'Founding Partners', submit: 'Submit Tool', footer: 'Trusted picks for L&D and enablement teams' },
-  pl: { announcement: 'NOWE: Katalog dla zespołów L&D wdrażających onboarding, SOP i programy enablement szybciej.', home: 'Strona główna', categories: 'Kategorie', solutions: 'Scenariusze', compare: 'Porównania', partners: 'Partnerzy założycielscy', submit: 'Dodaj narzędzie', footer: 'Zaufane propozycje dla zespołów L&D i enablement' },
-  cs: { announcement: 'NOVINKA: Katalog pro L&D týmy zrychlující onboarding, SOP a enablement programy.', home: 'Domů', categories: 'Kategorie', solutions: 'Scénáře', compare: 'Srovnání', partners: 'Zakládající partneři', submit: 'Přidat nástroj', footer: 'Ověřené tipy pro L&D a enablement týmy' },
-  sk: { announcement: 'NOVINKA: Katalóg pre L&D tímy zrýchľujúce onboarding, SOP a enablement programy.', home: 'Domov', categories: 'Kategórie', solutions: 'Scenáre', compare: 'Porovnania', partners: 'Zakladajúci partneri', submit: 'Pridať nástroj', footer: 'Overené výbery pre L&D a enablement tímy' },
-  hu: { announcement: 'ÚJ: Katalógus L&D csapatoknak onboarding, SOP és enablement programok gyorsításához.', home: 'Kezdőlap', categories: 'Kategóriák', solutions: 'Megoldások', compare: 'Összehasonlítás', partners: 'Alapító partnerek', submit: 'Eszköz beküldése', footer: 'Megbízható ajánlások L&D és enablement csapatoknak' },
-  de: { announcement: 'NEU: Kuratiert für L&D-Teams, die Onboarding-, SOP- und Enablement-Programme schneller umsetzen.', home: 'Startseite', categories: 'Kategorien', solutions: 'Lösungen', compare: 'Vergleiche', partners: 'Founding-Partner', submit: 'Tool einreichen', footer: 'Verlässliche Empfehlungen für L&D- und Enablement-Teams' },
-  es: { announcement: 'NUEVO: Directorio para equipos de L&D que aceleran onboarding, SOP y programas de enablement.', home: 'Inicio', categories: 'Categorías', solutions: 'Soluciones', compare: 'Comparar', partners: 'Socios fundadores', submit: 'Enviar herramienta', footer: 'Selecciones confiables para equipos de L&D y enablement' }
+  en: { announcement: 'NEW: Curated for L&D teams shipping onboarding, SOP, and enablement programs faster.', home: 'Home', categories: 'Categories', solutions: 'Solutions', compare: 'Compare', partners: 'Founding Partners', submit: 'Submit Tool', footer: 'Trusted picks for L&D and enablement teams', skip: 'Skip to content', mainNav: 'Main navigation', languageSwitcher: 'Language switcher' },
+  pl: { announcement: 'NOWE: Katalog dla zespołów L&D wdrażających onboarding, SOP i programy enablement szybciej.', home: 'Strona główna', categories: 'Kategorie', solutions: 'Scenariusze', compare: 'Porównania', partners: 'Partnerzy założycielscy', submit: 'Dodaj narzędzie', footer: 'Zaufane propozycje dla zespołów L&D i enablement', skip: 'Przejdź do treści', mainNav: 'Nawigacja główna', languageSwitcher: 'Przełącznik języka' },
+  cs: { announcement: 'NOVINKA: Katalog pro L&D týmy zrychlující onboarding, SOP a enablement programy.', home: 'Domů', categories: 'Kategorie', solutions: 'Scénáře', compare: 'Srovnání', partners: 'Zakládající partneři', submit: 'Přidat nástroj', footer: 'Ověřené tipy pro L&D a enablement týmy', skip: 'Přejít na obsah', mainNav: 'Hlavní navigace', languageSwitcher: 'Přepínač jazyka' },
+  sk: { announcement: 'NOVINKA: Katalóg pre L&D tímy zrýchľujúce onboarding, SOP a enablement programy.', home: 'Domov', categories: 'Kategórie', solutions: 'Scenáre', compare: 'Porovnania', partners: 'Zakladajúci partneri', submit: 'Pridať nástroj', footer: 'Overené výbery pre L&D a enablement tímy', skip: 'Prejsť na obsah', mainNav: 'Hlavná navigácia', languageSwitcher: 'Prepínač jazyka' },
+  hu: { announcement: 'ÚJ: Katalógus L&D csapatoknak onboarding, SOP és enablement programok gyorsításához.', home: 'Kezdőlap', categories: 'Kategóriák', solutions: 'Megoldások', compare: 'Összehasonlítás', partners: 'Alapító partnerek', submit: 'Eszköz beküldése', footer: 'Megbízható ajánlások L&D és enablement csapatoknak', skip: 'Ugrás a tartalomhoz', mainNav: 'Fő navigáció', languageSwitcher: 'Nyelvváltó' },
+  de: { announcement: 'NEU: Kuratiert für L&D-Teams, die Onboarding-, SOP- und Enablement-Programme schneller umsetzen.', home: 'Startseite', categories: 'Kategorien', solutions: 'Lösungen', compare: 'Vergleiche', partners: 'Founding-Partner', submit: 'Tool einreichen', footer: 'Verlässliche Empfehlungen für L&D- und Enablement-Teams', skip: 'Zum Inhalt springen', mainNav: 'Hauptnavigation', languageSwitcher: 'Sprachumschalter' },
+  es: { announcement: 'NUEVO: Directorio para equipos de L&D que aceleran onboarding, SOP y programas de enablement.', home: 'Inicio', categories: 'Categorías', solutions: 'Soluciones', compare: 'Comparar', partners: 'Socios fundadores', submit: 'Enviar herramienta', footer: 'Selecciones confiables para equipos de L&D y enablement', skip: 'Saltar al contenido', mainNav: 'Navegación principal', languageSwitcher: 'Selector de idioma' }
 };
 
 const ui = uiByLang[lang] || uiByLang.en;
@@ -425,7 +425,7 @@ const languageSwitchHref = (code) => {
   </head>
   <body>
     <div class="site-shell">
-      <a href="#main-content" class="chip" style="position:absolute;left:-9999px;top:12px;z-index:200;">Skip to content</a>
+      <a href="#main-content" class="chip" style="position:absolute;left:-9999px;top:12px;z-index:200;">{ui.skip}</a>
 
       <div class="announcement" role="status" aria-live="polite">
         <div class="wrap">
@@ -436,7 +436,7 @@ const languageSwitchHref = (code) => {
       <header class="site" role="banner">
         <div class="wrap nav-row">
           <a href={navHref('/')} class="brand">AI Training Directory</a>
-          <nav class="top-nav" aria-label="Main navigation">
+          <nav class="top-nav" aria-label={ui.mainNav}>
             <a href={navHref('/')}>{ui.home}</a>
             <a href={navHref('/categories/')}>{ui.categories}</a>
             <a href={navHref('/solutions/')}>{ui.solutions}</a>
@@ -445,7 +445,7 @@ const languageSwitchHref = (code) => {
             <a href={navHref('/submit/')}>{ui.submit}</a>
           </nav>
           <div class="header-aux">
-            <nav class="lang-switcher" aria-label="Language switcher">
+            <nav class="lang-switcher" aria-label={ui.languageSwitcher}>
               {localeCodes.map((code) => (
                 <a href={languageSwitchHref(code)} aria-current={code === lang ? 'true' : undefined}>
                   {code.toUpperCase()}

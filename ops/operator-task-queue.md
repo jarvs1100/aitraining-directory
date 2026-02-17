@@ -53,5 +53,5 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
 - [x] Add one high-intent compare route for frontline compliance execution: `/compare/ai-dynamic-policy-updates-vs-static-compliance-manuals-for-frontline-teams/` with implementation-led rubric + FAQ schema.
 - [x] Create distribution asset pack for the new frontline compliance comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
-- [ ] i18n content parity pass: align localized hubs (`/pl,/cs,/sk,/hu,/de,/es`) with current core utility routes (editorial methodology + AI L&D tech evaluation checklist) and localize link labels/descriptions naturally.
-- [ ] i18n UI parity fix: localize shared footer copy and verify no English leftovers remain on localized pages (excluding brand/product names).
+- [x] i18n content parity pass: align localized hubs (`/pl,/cs,/sk,/hu,/de,/es`) with current core utility routes (editorial methodology + AI L&D tech evaluation checklist) and localize link labels/descriptions naturally.
+- [x] i18n UI parity fix: localize shared footer copy and verify no English leftovers remain on localized pages (excluding brand/product names).
