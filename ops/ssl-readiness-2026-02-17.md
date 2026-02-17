@@ -1137,3 +1137,58 @@ Accept-Ranges: bytes
 - ✅ www host redirects to canonical HTTPS apex route.
 - ✅ QA scan remains clean after latest content + UX updates (164 HTML files checked).
 
+## Evidence delta — 2026-02-17 12:09 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 167 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS / HTTP validation tests
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+Last-Modified: Tue, 17 Feb 2026 11:58:51 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+Location: https://aitraining.directory/
+
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 11:58:51 GMT
+```
+
+### Current delta summary
+- ✅ HTTPS remains valid on apex with Let's Encrypt (`HTTP/2 200`).
+- ✅ `www` continues to redirect to canonical HTTPS apex route.
+- ✅ Deploy freshness advanced to `Last-Modified: 11:58:51 UTC`.
+- ✅ HTTPS QA remains clean after i18n parity + mobile CTA hierarchy updates (167 HTML files checked).

@@ -489,15 +489,17 @@ const jsonLd = {
 
   <section class="section" aria-labelledby="next-steps-heading">
     <h2 id="next-steps-heading">Next steps</h2>
-    <div class="chips chips-nav">
-      <a class="chip" href="/">Return to homepage</a>
-      <a class="chip" href="/compare/">Browse all compare routes</a>
-      <a class="chip" href="/editorial-methodology/">Editorial methodology</a>
-      <a class="chip" href="/solutions/ai-ld-tech-evaluation-checklist/">L&D tech evaluation checklist route</a>
+    <div class="next-step-actions" aria-label="Primary next steps">
+      <a class="btn btn-primary" href="/solutions/ai-ld-tech-evaluation-checklist/">Start with the L&D tech evaluation checklist</a>
+      <a class="btn btn-secondary" href="/compare/">Browse all compare routes</a>
+    </div>
+    <div class="chips chips-nav next-steps-chips">
       <a class="chip" href="/solutions/">Browse solution pages</a>
       <a class="chip" href="/solutions/sop-to-video-training/">SOP-to-video implementation route</a>
       <a class="chip" href="/solutions/compliance-training-content-creation/">Compliance content route</a>
+      <a class="chip" href="/editorial-methodology/">Editorial methodology</a>
       <a class="chip" href="/categories/">Explore categories</a>
+      <a class="chip" href="/">Return to homepage</a>
     </div>
   </section>
 
@@ -565,6 +567,25 @@ const jsonLd = {
       margin-bottom: 0;
     }
 
+    .next-step-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.65rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .next-step-actions .btn {
+      width: 100%;
+      justify-content: center;
+      min-height: 46px;
+      text-align: center;
+      line-height: 1.2;
+    }
+
+    .next-steps-chips {
+      gap: 0.55rem;
+    }
+
     @media (max-width: 760px) {
       .matrix-table-wrap {
         display: none;
@@ -572,6 +593,14 @@ const jsonLd = {
 
       .matrix-mobile {
         display: grid;
+      }
+
+      .next-step-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .next-step-actions .btn {
+        justify-content: flex-start;
       }
     }
   </style>

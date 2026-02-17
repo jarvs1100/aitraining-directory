@@ -560,6 +560,28 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de L&D y enablement a evaluar precisión de asignación, tiempo a competencia y carga de gobernanza entre ambos enfoques.',
     points: ['Comparativa de precisión para cerrar brechas de habilidades', 'Criterios operativos para reducir tiempo hasta capacidad demostrable', 'Marco de piloto para reglas de override, equidad y escalado'],
     enPath: '/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/'
+  },
+  {
+    key: 'mandatory-training-escalation-vs-email-chasing',
+    locale: 'de',
+    slug: 'ki-eskalations-workflows-fuer-pflichtschulungen-vs-manager-email-nachverfolgung-compliance',
+    title: 'KI-Eskalations-Workflows für Pflichtschulungen vs. Manager-E-Mail-Nachverfolgung für Compliance | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Eskalations-Workflows gegen manuelles E-Mail-Nachfassen bei Pflichtschulungen vergleichen.',
+    h1: 'KI-Eskalations-Workflows vs. Manager-E-Mail-Nachverfolgung bei Pflichtschulungen',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Deadline-Zuverlässigkeit, Eskalationsklarheit und Audit-Defensibility zwischen beiden Umsetzungsmodellen zu bewerten.',
+    points: ['Vergleich von On-time-Completion und Overdue-Backlog-Entwicklung', 'Messbare Kriterien für Owner-Klarheit, SLA-Disziplin und Eskalationsqualität', 'Pilot-Framework für geringere Manager-Chase-Last bei stabiler Compliance-Steuerung'],
+    enPath: '/compare/ai-mandatory-training-escalation-workflows-vs-manager-email-chasing-for-compliance-completion/'
+  },
+  {
+    key: 'mandatory-training-escalation-vs-email-chasing',
+    locale: 'es',
+    slug: 'workflows-escalado-ia-formacion-obligatoria-vs-seguimiento-email-managers-compliance',
+    title: 'Workflows de escalado con IA para formación obligatoria vs. seguimiento por email de managers para compliance | AI Training Directory',
+    description: 'Entrada localizada para comparar workflows de escalado con IA frente al seguimiento manual por email en programas de formación obligatoria.',
+    h1: 'Workflows de escalado con IA vs. seguimiento por email de managers en formación obligatoria',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar fiabilidad de cumplimiento en plazo, claridad de escalado y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de finalización a tiempo y reducción de backlog vencido', 'Criterios operativos para ownership, SLA y cierre de casos con evidencia', 'Marco de piloto para reducir carga manual de persecución sin perder control de cumplimiento'],
+    enPath: '/compare/ai-mandatory-training-escalation-workflows-vs-manager-email-chasing-for-compliance-completion/'
   }
 
 ];

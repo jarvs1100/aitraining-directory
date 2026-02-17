@@ -4,9 +4,9 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 
 - [x] Add one traffic-driving high-intent compare route for mandatory training enforcement workflows: `/compare/ai-mandatory-training-escalation-workflows-vs-manager-email-chasing-for-compliance-completion/` with implementation-led rubric + FAQ schema.
 - [x] Create distribution asset pack for the mandatory-training escalation comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
-- [ ] Add i18n parity stubs for the new mandatory-training escalation route on `/de` and `/es` localized hubs with canonical compare linkage.
-- [ ] Mobile UX polish pass: improve compare-page "Next steps" chip spacing and CTA scan hierarchy for one-handed navigation.
-- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Add i18n parity stubs for the new mandatory-training escalation route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [x] Mobile UX polish pass: improve compare-page "Next steps" chip spacing and CTA scan hierarchy for one-handed navigation.
+- [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
 
 - [x] Add one traffic-driving high-intent compare route for certification renewal ops: `/compare/ai-certification-renewal-alerting-vs-manual-spreadsheet-tracking-for-workforce-compliance/` with implementation-led rubric + FAQ schema.
 - [x] Create distribution asset pack for the certification-renewal comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
