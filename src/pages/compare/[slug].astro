@@ -1550,6 +1550,9 @@ const jsonLd = {
         padding: 0.62rem 0.5rem;
         white-space: normal;
         vertical-align: bottom;
+        background: #bbf7d0;
+        color: #14532d;
+        box-shadow: inset 0 -2px 0 #15803d;
       }
 
       .matrix-table td {
@@ -1559,7 +1562,22 @@ const jsonLd = {
       }
 
       .matrix-table th:nth-child(1) {
-        min-width: 122px;
+        min-width: 148px;
+        position: sticky;
+        left: 0;
+        z-index: 4;
+      }
+
+      .matrix-table td:nth-child(1) {
+        min-width: 148px;
+        font-size: 0.88rem;
+        line-height: 1.38;
+        font-weight: 600;
+        background: #f8fafc;
+        position: sticky;
+        left: 0;
+        z-index: 1;
+        box-shadow: 2px 0 0 #e2e8f0;
       }
 
       .matrix-table th:nth-child(2) {
