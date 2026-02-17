@@ -26,4 +26,4 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Create distribution asset pack for the manager-enablement copilot comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [x] Add i18n parity stubs for the new manager-enablement route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
-- [ ] Add one traffic-driving high-intent compare route on AI scenario branching vs linear microlearning for frontline training execution.
+- [x] Add one traffic-driving high-intent compare route on AI scenario branching vs linear microlearning for frontline training execution.

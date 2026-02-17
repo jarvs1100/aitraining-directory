@@ -148,7 +148,23 @@ const comparisonContentBySlug = {
       'Choose the option that delivers better manager behavior lift per unit of enablement operating effort over 30 days.'
     ]
   },
-  'synthesia-alternatives': {
+  'ai-scenario-branching-vs-linear-microlearning-for-frontline-training': {
+    decisionMatrix: [
+      { criterion: 'Readiness for rare but high-risk frontline moments', weight: '25%', whatGoodLooksLike: 'Learners can make correct decisions in edge-case scenarios before they happen on shift.', leftLens: 'Test whether branching simulations improve judgment under ambiguity (escalations, safety exceptions, upset customers).', rightLens: 'Test whether linear modules provide enough context transfer for uncommon situations without guided practice.' },
+      { criterion: 'Speed to deploy across distributed shift teams', weight: '25%', whatGoodLooksLike: 'Training can launch quickly across locations without manager-heavy facilitation.', leftLens: 'Measure scenario-authoring and QA cycle time for role variants and location-specific policy differences.', rightLens: 'Measure production + publish speed for short modules that can be consumed between tasks or at shift start.' },
+      { criterion: 'Manager coaching signal and intervention clarity', weight: '20%', whatGoodLooksLike: 'Managers can identify who needs coaching and why using reliable learner-performance evidence.', leftLens: 'Evaluate branch-path analytics and error-pattern visibility for targeted coaching conversations.', rightLens: 'Evaluate whether completion + quiz data is specific enough to trigger actionable frontline coaching.' },
+      { criterion: 'Mobile execution quality in frontline environments', weight: '15%', whatGoodLooksLike: 'Learners can complete training on shared/mobile devices with low friction during real operations.', leftLens: 'Score mobile UX for branch navigation, response input speed, and session recovery on unstable connections.', rightLens: 'Score thumb-friendly consumption, offline tolerance, and completion reliability for short lessons on the floor.' },
+      { criterion: 'Cost per behavior-change outcome', weight: '15%', whatGoodLooksLike: 'Training spend maps to measurable behavior improvement and fewer live-operations errors.', leftLens: 'Model simulator licensing + scenario maintenance against reduction in incidents, rework, and supervisor escalations.', rightLens: 'Model lower production cost against potential increase in post-training correction effort by managers.' }
+    ],
+    buyingCriteria: [
+      'Pilot one frontline workflow with high operational risk (e.g., safety escalation, returns exception, or complaint de-escalation) in both formats.',
+      'Use one shared rubric: wrong decision path, time-to-correct action, and manager intervention minutes after training.',
+      'Require mobile-first QA in real shift conditions before selecting default mode for frontline populations.',
+      'Define escalation rules for when linear microlearning must be upgraded to branching simulation based on incident frequency or severity.',
+      'Choose the format that delivers stronger 30-day behavior outcomes per unit of manager coaching effort and operational downtime.'
+    ]
+  },
+    'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
       { criterion: 'Editing depth for L&D workflows', weight: '25%', whatGoodLooksLike: 'Instructional designers can refine pacing, visuals, and overlays without recreating scenes.', synthesiaLens: 'Clean workflow for standard formats, but complex edits can require workarounds.', alternativesLens: 'Favor tools with timeline-level control if your team iterates frequently.' },
