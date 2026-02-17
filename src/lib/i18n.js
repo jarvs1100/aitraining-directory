@@ -252,6 +252,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-onboarding-buddy-chatbots-vs-manager-shadowing-checklists/'
   },
   {
+    key: 'lms-admin-assistant-vs-shared-inbox',
+    locale: 'de',
+    slug: 'ki-lms-admin-assistenten-vs-shared-inbox-support-training-ops',
+    title: 'KI-LMS-Admin-Assistenten vs. Shared-Inbox-Support in Training Ops | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte LMS-Admin-Assistenten gegen Shared-Inbox-Support-Workflows vergleichen.',
+    h1: 'KI-LMS-Admin-Assistenten vs. Shared-Inbox-Support in Training Ops',
+    intro: 'Hilft Training-Operations-Teams, SLA-Zuverlässigkeit, Governance-Sicherheit und Admin-Last zwischen beiden Support-Modellen zu bewerten.',
+    points: ['Vergleich von Ticket-SLA und First-Resolution-Rate', 'Klare Kriterien für policy-sichere Aktionen und Eskalationen', 'Pilot-Framework für Backlog-Reduktion bei gleichbleibender Qualität'],
+    enPath: '/compare/ai-lms-admin-assistants-vs-shared-inbox-support-for-training-ops/'
+  },
+  {
+    key: 'lms-admin-assistant-vs-shared-inbox',
+    locale: 'es',
+    slug: 'asistentes-admin-lms-ia-vs-soporte-shared-inbox-training-ops',
+    title: 'Asistentes admin LMS con IA vs. soporte shared inbox en training ops | AI Training Directory',
+    description: 'Entrada localizada para comparar asistentes admin LMS con IA frente a flujos de soporte basados en shared inbox.',
+    h1: 'Asistentes admin LMS con IA vs. soporte shared inbox en training ops',
+    intro: 'Ayuda a equipos de operaciones de formación a decidir entre ambos modelos según SLA de resolución, control de gobernanza y carga operativa del equipo admin.',
+    points: ['Comparativa de SLA de tickets y resolución al primer intento', 'Criterios operativos para acciones seguras y auditables', 'Marco de piloto para reducir backlog sin degradar calidad'],
+    enPath: '/compare/ai-lms-admin-assistants-vs-shared-inbox-support-for-training-ops/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
