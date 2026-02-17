@@ -700,6 +700,22 @@ const supplementalComparisonContentBySlug = {
       'Assign RACI across compliance lead, L&D operations owner, policy reviewer, and internal audit partner.',
       'Choose the model with lower friction per audit-ready control-library update, not the model with the biggest spreadsheet archive.'
     ]
+  },
+  'ai-compliance-training-delegation-controls-vs-manual-approval-forwarding-for-regulated-teams': {
+    decisionMatrix: [
+      { criterion: 'Approval routing speed under regulatory SLAs', weight: '25%', whatGoodLooksLike: 'Delegated approvals move to the right reviewer quickly without missing policy deadlines.', leftLens: 'Measure end-to-end cycle time when delegation rules auto-route by region, role, risk tier, and due date.', rightLens: 'Measure delay introduced by inbox forwarding chains, manual triage, and reviewer handoff ambiguity.' },
+      { criterion: 'Decision consistency across delegated approvers', weight: '25%', whatGoodLooksLike: 'Equivalent requests receive consistent decisions with clear rationale across teams.', leftLens: 'Assess policy-rule enforcement, required rationale fields, and guardrails that prevent out-of-scope approvals.', rightLens: 'Assess variance risk when decisions depend on forwarded context quality and individual reviewer interpretation.' },
+      { criterion: 'Audit traceability of delegation lineage', weight: '20%', whatGoodLooksLike: 'Auditors can reconstruct who delegated, who approved, and why within minutes.', leftLens: 'Evaluate immutable delegation history, timestamped decision logs, and policy-version linkage for each approval.', rightLens: 'Evaluate reconstructability from email threads, ticket comments, and manually maintained approval trackers.' },
+      { criterion: 'Operational load on compliance + training ops', weight: '15%', whatGoodLooksLike: 'Teams manage high approval volume without escalation fire drills or ownership confusion.', leftLens: 'Track upkeep effort for delegation rules, exception handling, and monthly governance calibration.', rightLens: 'Track recurring effort for forwarding triage, reminder chasing, and conflict resolution during peak periods.' },
+      { criterion: 'Cost per policy-compliant approval closure', weight: '15%', whatGoodLooksLike: 'Per-approval cost declines while closure quality and SLA adherence improve.', leftLens: 'Model platform + governance overhead against fewer reopen events, fewer deadline misses, and cleaner audit packets.', rightLens: 'Model lower tooling spend against manual coordination labor, inconsistent outcomes, and higher rework.' }
+    ],
+    buyingCriteria: [
+      'Pilot one regulated approval workflow with at least two jurisdictions and one high-volume exception window.',
+      'Use one scorecard: routing latency, reopen rate, policy-deviation defects, and reviewer rework minutes.',
+      'Define non-delegable decisions, override ownership, and mandatory rationale fields before scale-up.',
+      'Assign RACI across compliance owner, training ops lead, delegated approvers, and internal audit reviewer.',
+      'Choose the model with lower friction per audit-ready approval decision, not the model with the longest email history.'
+    ]
   }
 };
 
@@ -751,6 +767,12 @@ const implementationPlaybookBySlug = {
     'Run side-by-side update drills (AI control-library sync vs matrix updates) for two policy-change events.',
     'Track sync latency, missing-control-link defects, and reviewer rework under one governance rubric.',
     'Promote only after validating approval lineage, owner accountability, and audit packet reconstruction speed.'
+  ],
+  'ai-compliance-training-delegation-controls-vs-manual-approval-forwarding-for-regulated-teams': [
+    'Scope one regulated approval workflow and baseline forwarding-cycle latency, reopen rate, and exception backlog age.',
+    'Run side-by-side approval routing drills (AI delegation controls vs manual forwarding) across at least two jurisdictions.',
+    'Track routing latency, policy-deviation defects, reviewer rework, and escalation misses under one governance rubric.',
+    'Promote only after validating delegation lineage, override accountability, and audit packet reconstruction speed.'
   ]
 };
 
@@ -782,6 +804,10 @@ const decisionOutcomesBySlug = {
   'ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates': {
     left: ['You need faster policy-to-control synchronization with stronger coverage checks and audit-grade traceability.', 'Control-change volume is high enough that manual matrix maintenance creates recurring delay and defect risk.'],
     right: ['Policy-control updates are infrequent and your matrix governance is currently disciplined and auditable.', 'You can tolerate slower update cycles while validating if automation ROI justifies operating-model change.']
+  },
+  'ai-compliance-training-delegation-controls-vs-manual-approval-forwarding-for-regulated-teams': {
+    left: ['You need SLA-stable delegation routing with consistent policy decisions and clear accountability lineage.', 'Approval volume and regulatory complexity are high enough that forwarding chains create repeated delay and decision drift.'],
+    right: ['Approval volume is low and your manual forwarding workflow remains consistent, documented, and auditable.', 'You can tolerate slower closure while validating whether delegation-automation ROI justifies operating-model change.']
   }
 };
 
@@ -815,6 +841,12 @@ const compareClusterLinksBySlug = {
     { label: 'Solution: Audit-ready training records', href: '/solutions/ai-compliance-audit-ready-training-records/' },
     { label: 'Compare: AI obligation mapping vs manual crosswalks', href: '/compare/ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks/' },
     { label: 'Compare: AI proof-of-completion vs LMS reports', href: '/compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/' }
+  ],
+  'ai-compliance-training-delegation-controls-vs-manual-approval-forwarding-for-regulated-teams': [
+    { label: 'Solution: Compliance training content creation', href: '/solutions/compliance-training-content-creation/' },
+    { label: 'Solution: Audit-ready training records', href: '/solutions/ai-compliance-audit-ready-training-records/' },
+    { label: 'Compare: AI exemption governance vs manual email waivers', href: '/compare/ai-compliance-training-exemption-governance-vs-manual-email-waivers-for-regulated-workforces/' },
+    { label: 'Compare: AI evidence SLA orchestration vs manual escalations', href: '/compare/ai-compliance-evidence-sla-orchestration-vs-manual-ticket-escalations-for-training-audits/' }
   ],
   'ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness': [
     { label: 'Solution: EU AI Act AI literacy training', href: '/solutions/eu-ai-act-ai-literacy-training/' },
