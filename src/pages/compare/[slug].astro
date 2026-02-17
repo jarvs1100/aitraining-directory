@@ -276,6 +276,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower 30-day policy-change friction per frontline team while preserving audit defensibility.'
     ]
   },
+  'ai-audit-trail-automation-vs-manual-training-evidence-compilation': {
+    decisionMatrix: [
+      { criterion: 'Audit packet assembly speed under deadline pressure', weight: '25%', whatGoodLooksLike: 'Teams can assemble defensible audit packets within SLA without late-night evidence hunts.', leftLens: 'Measure end-to-end time to produce complete, policy-linked evidence bundles when requests hit multiple teams/sites.', rightLens: 'Measure cycle time when teams manually gather LMS exports, manager attestations, screenshots, and spreadsheet proofs.' },
+      { criterion: 'Evidence completeness and traceability quality', weight: '25%', whatGoodLooksLike: 'Every completion claim is linked to source records, policy version, and reviewer signoff.', leftLens: 'Validate automated lineage between learner completion events, policy version snapshots, and remediation records.', rightLens: 'Validate how consistently manual workflows preserve evidence lineage across files, inboxes, and shared drives.' },
+      { criterion: 'Defect rate in submitted audit evidence', weight: '20%', whatGoodLooksLike: 'Low rate of missing artifacts, mismatched timestamps, and unverifiable mappings in auditor sampling.', leftLens: 'Track automated validation catches (missing links, stale records, version mismatches) before submission.', rightLens: 'Track manual QA defects discovered during internal review and auditor follow-up requests.' },
+      { criterion: 'Operational burden on L&D and compliance owners', weight: '15%', whatGoodLooksLike: 'Evidence preparation is sustainable without recurring fire drills during audit windows.', leftLens: 'Score ongoing maintenance load for integrations, evidence rules, and exception handling ownership.', rightLens: 'Score recurring labor for monthly evidence sweeps, reconciliation meetings, and ad-hoc rework.' },
+      { criterion: 'Cost per audit-ready learner record', weight: '15%', whatGoodLooksLike: 'Cost per defensible record declines as audit scope and program volume grow.', leftLens: 'Model platform + governance spend against reduced manual prep hours and fewer escalation loops.', rightLens: 'Model lower tooling spend against compounding manual prep time and higher follow-up risk during audits.' }
+    ],
+    buyingCriteria: [
+      'Pilot both operating models on one audit-critical curriculum before your next external or internal audit cycle.',
+      'Use one shared defect taxonomy: missing source link, stale policy version, timestamp mismatch, unresolved remediation item.',
+      'Track packet assembly hours, reviewer rework minutes, and auditor follow-up count as primary decision metrics.',
+      'Define RACI for data ownership (LMS admin, compliance lead, training ops, business approver) before scaling automation.',
+      'Choose the model with lower 30-day evidence-compilation friction per sampled learner record while preserving audit defensibility.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
