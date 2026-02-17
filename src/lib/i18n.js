@@ -1827,6 +1827,28 @@ localizedLandingPages.push(
     enPath: '/compare/ai-compliance-evidence-sla-orchestration-vs-manual-ticket-escalations-for-training-audits/'
   },
   {
+    key: 'training-exemption-governance-vs-email-waivers',
+    locale: 'de',
+    slug: 'ki-compliance-training-exemption-governance-vs-manuelle-email-waivers-fuer-regulierte-workforces',
+    title: 'KI-Compliance-Training-Exemption-Governance vs. manuelle Email-Waivers für regulierte Workforces | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Exemption-Governance gegen manuelle Email-Waiver-Workflows im regulierten Trainingsbetrieb vergleichen.',
+    h1: 'KI-Exemption-Governance vs. manuelle Email-Waivers für regulierte Workforces',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Entscheidungs-Tempo, Policy-Konsistenz und Audit-Defensibility zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Exemption-Entscheidungszeit und SLA-Stabilität unter Last', 'Messbare Kriterien für Policy-Konsistenz, Reopen-Rate und Eskalationsklarheit', 'Pilot-Framework für auditfeste Ausnahmeentscheidungen mit klarer Owner-Zuordnung'],
+    enPath: '/compare/ai-compliance-training-exemption-governance-vs-manual-email-waivers-for-regulated-workforces/'
+  },
+  {
+    key: 'training-exemption-governance-vs-email-waivers',
+    locale: 'es',
+    slug: 'gobernanza-exenciones-training-compliance-ia-vs-waivers-email-manuales-workforces-regulados',
+    title: 'Gobernanza de exenciones de training compliance con IA vs. waivers manuales por email para workforces regulados | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan gobernanza de exenciones con IA frente a waivers manuales por correo en operaciones de formación regulada.',
+    h1: 'Gobernanza de exenciones con IA vs. waivers manuales por email para workforces regulados',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de decisión, consistencia de política y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de latencia de decisión y fiabilidad de SLA para solicitudes de exención', 'Criterios operativos para consistencia de políticas, tasa de reapertura y trazabilidad', 'Marco de piloto para decisiones de exención defendibles con ownership claro'],
+    enPath: '/compare/ai-compliance-training-exemption-governance-vs-manual-email-waivers-for-regulated-workforces/'
+  },
+  {
     key: 'obligation-mapping-vs-regulation-crosswalks',
     locale: 'de',
     slug: 'ki-compliance-training-obligation-mapping-vs-manuelle-regulierungs-spreadsheet-crosswalks',
