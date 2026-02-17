@@ -213,6 +213,22 @@ export function buildLocalizedPath(locale, slug) {
   return `/${locale}/${slug}/`;
 }
 
+export function getSiteAlternates() {
+  const links = [{ hreflang: 'en', href: 'https://aitraining.directory/' }];
+
+  for (const [locale, meta] of Object.entries(localeMeta)) {
+    if (locale === 'en') continue;
+    const href = `https://aitraining.directory/${locale}/`;
+    links.push({ hreflang: locale, href });
+    if (meta.hreflang && meta.hreflang !== locale) {
+      links.push({ hreflang: meta.hreflang, href });
+    }
+  }
+
+  links.push({ hreflang: 'x-default', href: 'https://aitraining.directory/' });
+  return links;
+}
+
 export function getAlternatesForKey(key, currentLocale) {
   const siblings = localizedLandingPages.filter((p) => p.key === key);
   const links = [];

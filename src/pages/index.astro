@@ -2,11 +2,14 @@
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { allListings, getCategories } from '../lib/data.js';
+import { getSiteAlternates } from '../lib/i18n.js';
 
 const categories = getCategories();
 const featured = allListings.slice(0, 12);
 
 const lastReviewedDate = '2026-02-17';
+
+const alternates = getSiteAlternates();
 
 const homepageFaq = [
   {
@@ -54,6 +57,7 @@ const jsonLd = {
   description="Discover top AI tools for employee training, SOP-to-video workflows, onboarding, and corporate learning operations."
   canonical="https://aitraining.directory/"
   jsonLd={jsonLd}
+  alternates={alternates}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }]} />
 

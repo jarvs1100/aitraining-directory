@@ -21,6 +21,12 @@ const uiByLang = {
 };
 
 const ui = uiByLang[lang] || uiByLang.en;
+const basePath = lang && lang !== 'en' ? `/${lang}` : '';
+const localizedHref = (path) => {
+  if (!basePath) return path;
+  if (path === '/') return `${basePath}/`;
+  return `${basePath}${path}`;
+};
 ---
 <!doctype html>
 <html lang={lang}>
@@ -348,9 +354,9 @@ const ui = uiByLang[lang] || uiByLang.en;
 
       <header class="site" role="banner">
         <div class="wrap nav-row">
-          <a href="/" class="brand">AI Training Directory</a>
+          <a href={localizedHref('/')} class="brand">AI Training Directory</a>
           <nav class="top-nav" aria-label="Main navigation">
-            <a href="/">{ui.home}</a>
+            <a href={localizedHref('/')}>{ui.home}</a>
             <a href="/categories/">{ui.categories}</a>
             <a href="/solutions/">{ui.solutions}</a>
             <a href="/compare/">{ui.compare}</a>
