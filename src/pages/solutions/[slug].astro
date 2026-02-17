@@ -12,55 +12,96 @@ if (!page) throw new Error(`Solution page not found: ${slug}`);
 const canonical = `https://aitraining.directory/solutions/${slug}/`;
 const tools = pickTools(slug.length % 8, 6);
 
-const rolloutPlans = {
-  'use-case': [
-    'Week 1: pick one high-friction workflow and define success metrics (time-to-publish, completion, quality).',
-    'Week 2: pilot tool stack with one training owner and one stakeholder reviewer.',
-    'Week 3: codify SOP, governance checkpoints, and update cadence before scaling.'
-  ],
-  role: [
-    'Define your role-specific outcomes and where current tooling blocks execution.',
-    'Run a focused tool trial tied to one recurring deliverable your team ships every week.',
-    'Create an operating playbook: ownership, QA standard, and KPI dashboard for handoff.'
-  ],
-  industry: [
-    'Prioritize compliance/risk workflows where consistency matters most.',
-    'Pilot with region or business unit that can produce measurable operational lift quickly.',
-    'Scale with documented controls, audit evidence, and quarterly retraining calendar.'
+const contentBySlug = {
+  'sop-to-video-training': {
+    frameworkName: 'SOP-to-Video Acceleration Framework',
+    framework: ['Select top 10 SOPs with highest error rate and update frequency.', 'Convert each SOP into a 3-part script: context, steps, and common failure points.', 'Generate first-cut videos with AI voice/avatar, then run SME QA using a fixed rubric.', 'Publish to LMS/knowledge base with version tags and 30-day review reminders.'],
+    example: 'Example: A logistics L&D team converted forklift safety SOP updates into 6-minute videos and reduced supervisor re-training requests by standardizing every monthly revision cycle.',
+    faqs: [
+      { q: 'How fast can SOP-to-video production go live?', a: 'Most teams can launch a pilot in 10 business days when script templates and QA ownership are pre-assigned.' },
+      { q: 'What is the biggest failure mode?', a: 'Treating AI output as publish-ready. Always keep SME signoff and a compliance checklist before release.' }
+    ]
+  },
+  'new-hire-onboarding-automation': {
+    frameworkName: '30-60-90 Onboarding Automation Loop',
+    framework: ['Map role-specific outcomes for day 30, 60, and 90.', 'Auto-generate onboarding modules and manager check-in prompts from role requirements.', 'Trigger reminders, nudges, and progress flags in weekly cadence.', 'Review completion + proficiency signals and tune the next cohort.'],
+    example: 'Example: A SaaS people ops team automated onboarding plans for support and sales roles, giving managers weekly coaching prompts tied to each milestone.',
+    faqs: [
+      { q: 'Should every role share one onboarding pathway?', a: 'No. Keep a shared foundation, then branch role modules by required systems, compliance exposure, and customer impact.' },
+      { q: 'What metrics matter most?', a: 'Time-to-productivity, manager confidence, and first-90-day retention are the strongest indicators.' }
+    ]
+  },
+  'compliance-training-content-creation': {
+    frameworkName: 'Policy-to-Practice Compliance Content Cycle',
+    framework: ['Track policy changes and map them to affected audiences.', 'Generate explainer modules with scenario-based examples by risk level.', 'Route content through legal/compliance review with version history.', 'Record completion evidence and schedule refresher cadence by policy criticality.'],
+    example: 'Example: A financial services team used AI-assisted rewrites to update AML modules after policy revisions and cut update cycle time from weeks to days.',
+    faqs: [
+      { q: 'Can AI generate fully compliant content alone?', a: 'No. AI can draft quickly, but policy owners must approve final language and controls mapping.' },
+      { q: 'How do we reduce audit risk?', a: 'Maintain linked records: policy source, approved training version, audience assignment, and completion evidence.' }
+    ]
+  },
+  'sales-enablement-training': {
+    frameworkName: 'Enablement Sprint Framework',
+    framework: ['Pull loss reasons and call patterns from CRM/conversation data.', 'Create targeted modules for objection handling, discovery, and competitive positioning.', 'Ship weekly micro-practice with manager scorecards.', 'Measure impact through ramp speed, conversion lift, and coaching adherence.'],
+    example: 'Example: A mid-market sales org used AI-generated roleplay prompts and improved consistency in objection handling across new account executives.',
+    faqs: [
+      { q: 'What should be updated most often?', a: 'Battlecards, objection scripts, and demo narratives should refresh whenever product or competitor signals change.' },
+      { q: 'How do we involve frontline managers?', a: 'Give managers a simple weekly coaching checklist and tie it to one observable rep behavior.' }
+    ]
+  },
+  'customer-support-training': {
+    frameworkName: 'Support QA-to-Training Feedback Loop',
+    framework: ['Identify recurring ticket/call failure patterns from QA reviews.', 'Create short corrective learning modules tied to specific failure types.', 'Deliver in-shift microlearning and reinforce with team lead coaching.', 'Track quality score movement and re-train on unresolved patterns.'],
+    example: 'Example: A BPO support team turned failed interaction patterns into weekly learning bursts and improved first-contact resolution in priority queues.',
+    faqs: [
+      { q: 'Should support training be separate from QA?', a: 'No. QA findings should be the direct input for weekly coaching and content updates.' },
+      { q: 'What cadence works best?', a: 'Short weekly cycles outperform quarterly overhauls for high-volume support teams.' }
+    ]
+  },
+  'multilingual-employee-training': {
+    frameworkName: 'Localization Without Full Rebuild Framework',
+    framework: ['Prioritize high-impact modules by region and regulatory exposure.', 'Use AI translation + voice localization, then validate with native reviewer pass.', 'Adapt examples and terminology to local operating context.', 'Track comprehension and completion by language cohort to improve quality.'],
+    example: 'Example: A retail operations team localized onboarding into four languages and improved completion rates by matching examples to regional workflows.',
+    faqs: [
+      { q: 'Is translation enough for learning outcomes?', a: 'Not always. Local context, terminology, and scenario examples are usually required for true comprehension.' },
+      { q: 'How do we keep multilingual content current?', a: 'Use a source-of-truth English module and trigger automatic localization updates after every approved change.' }
+    ]
+  },
+  'ai-training-needs-analysis': { frameworkName: 'Needs Analysis in 4 Steps', framework: ['Collect role expectations from leaders and frontline managers.', 'Use AI to cluster recurring performance gaps from interviews and data.', 'Prioritize gaps by business risk and expected performance lift.', 'Convert priorities into a quarterly training roadmap with owners.'], example: 'Example: An L&D team triangulated survey feedback with support QA data to focus training on three measurable skills gaps.', faqs: [{ q: 'What inputs are required?', a: 'Use role expectations, current performance data, and stakeholder interviews.' }, { q: 'How often should needs analysis run?', a: 'Quarterly light updates plus one annual deep-dive usually works well.' }] },
+  'ai-skills-gap-analysis-for-ld': { frameworkName: 'Skills Gap Prioritization Model', framework: ['Define proficiency levels for critical roles.', 'Map current performance evidence against target proficiency.', 'Rank skill gaps by impact on revenue, risk, or customer outcomes.', 'Assign interventions and retest after each learning cycle.'], example: 'Example: A support org identified escalation handling as the top gap and built a focused coaching pathway.', faqs: [{ q: 'Can AI replace competency frameworks?', a: 'No. AI accelerates analysis, but role frameworks still need human design.' }, { q: 'Which KPI validates progress?', a: 'Track proficiency movement with operational outcomes like quality score or time-to-resolution.' }] },
+  'ai-course-outline-generator-for-subject-matter-experts': { frameworkName: 'SME-to-Course Outline Workflow', framework: ['Capture SME interviews and source documents.', 'Generate learning objectives, module flow, and assessment ideas.', 'Validate sequence with instructional design standards.', 'Approve outline before media production begins.'], example: 'Example: A compliance SME interview was converted into a full 6-module draft outline in one review session.', faqs: [{ q: 'Will AI preserve SME nuance?', a: 'It can if prompts include audience, constraints, and required terminology.' }, { q: 'What comes after the outline?', a: 'Build scripts, job aids, and assessments from the approved structure.' }] },
+  'ai-policy-change-training-updates': { frameworkName: 'Policy Update Response Cycle', framework: ['Detect policy or regulatory changes and affected audiences.', 'Auto-draft impacted lessons and scenario updates.', 'Run legal and compliance signoff with version control.', 'Republish and track completion by risk tier.'], example: 'Example: A regulated team republished policy updates within 72 hours using pre-approved update templates.', faqs: [{ q: 'How do we avoid conflicting versions?', a: 'Use one source-of-truth policy record and explicit version labels in training assets.' }, { q: 'What is the fastest safe cadence?', a: 'Rapid draft + mandatory approval checkpoints keeps speed without governance failure.' }] },
+  'ai-onboarding-for-remote-teams': { frameworkName: 'Remote Onboarding Consistency Framework', framework: ['Define core onboarding journey and remote role variants.', 'Create async modules with manager-led checkpoints.', 'Automate nudges for buddy sessions and milestone reviews.', 'Audit early performance and refine weak onboarding moments.'], example: 'Example: A distributed engineering team reduced first-month confusion by standardizing async onboarding paths.', faqs: [{ q: 'What breaks remote onboarding most often?', a: 'Unclear ownership and inconsistent manager follow-through are the main failure points.' }, { q: 'How do we keep culture onboarding strong?', a: 'Add live touchpoints and role-model examples alongside async content.' }] },
+  'ai-training-for-frontline-workers': { frameworkName: 'Frontline Training Delivery Model', framework: ['Design short mobile-first modules for shift-based access.', 'Use AI-generated visuals and translations for clarity.', 'Push training at point-of-need with supervisor reinforcement.', 'Monitor completion and safety/quality incidents for impact.'], example: 'Example: A warehouse operation used short multilingual modules to improve process adherence across shifts.', faqs: [{ q: 'What content format works best?', a: 'Short, visual, task-focused lessons outperform long slide courses for frontline roles.' }, { q: 'How do we reach low-desktop teams?', a: 'Use mobile-friendly delivery and supervisor-led reinforcement loops.' }] },
+  'ai-lms-content-migration-and-refresh': { frameworkName: 'LMS Modernization Sprint', framework: ['Audit legacy courses by usage, risk, and staleness.', 'Rewrite outdated modules with AI while preserving controls.', 'Standardize templates and media for modern UX.', 'Re-publish in phases and retire duplicated legacy assets.'], example: 'Example: A healthcare L&D team refreshed a 120-course catalog by prioritizing high-compliance modules first.', faqs: [{ q: 'Should we migrate everything?', a: 'No. Retire low-value content and refresh only priority assets first.' }, { q: 'How do we control quality during migration?', a: 'Use a fixed rubric for accuracy, readability, and learner actionability.' }] },
+  'ai-train-the-trainer-programs': { frameworkName: 'Trainer Capability Scaling Loop', framework: ['Define trainer competencies and facilitation standards.', 'Generate facilitator guides, practice prompts, and feedback rubrics.', 'Run observed sessions with structured coaching.', 'Certify trainers and schedule quarterly recalibration.'], example: 'Example: An internal academy created consistent facilitation quality across regional trainers using shared playbooks.', faqs: [{ q: 'What should trainer certification include?', a: 'Delivery quality, learner engagement, and assessment consistency should all be scored.' }, { q: 'How often should trainer refresh happen?', a: 'Quarterly coaching + annual recertification keeps standards high.' }] },
+  'ai-performance-support-for-managers': { frameworkName: 'Manager Performance Support System', framework: ['Identify recurring manager moments: feedback, delegation, coaching.', 'Generate structured conversation guides and prompts.', 'Embed support into weekly 1:1 and review routines.', 'Track behavior change and team outcomes over time.'], example: 'Example: A people ops team used AI coaching prompts to improve consistency in manager feedback conversations.', faqs: [{ q: 'Does this replace manager training?', a: 'No. It reinforces it by giving in-the-moment execution support.' }, { q: 'What proves value fastest?', a: 'Look for improved quality of 1:1s, clearer goals, and better team feedback signals.' }] },
+  'ai-compliance-audit-ready-training-records': { frameworkName: 'Audit-Ready Evidence Workflow', framework: ['Map mandatory training to policies and controls.', 'Automate completion tracking and evidence capture.', 'Use AI to flag missing records or inconsistencies.', 'Prepare audit packets by control area and date range.'], example: 'Example: A regulated operations team cut audit prep time by consolidating training evidence with control mapping.', faqs: [{ q: 'What evidence should always be available?', a: 'Assignment, completion, policy linkage, version date, and approval history.' }, { q: 'How do we reduce last-minute audit scrambles?', a: 'Run monthly record integrity checks and remediate gaps continuously.' }] }
+};
+
+const defaultContent = {
+  frameworkName: 'Practical implementation framework',
+  framework: ['Define one measurable workflow outcome tied to business impact.', 'Pilot with a small team and strict QA ownership.', 'Standardize templates, review process, and publishing cadence.', 'Scale only after measurable gains in cycle time and learner outcomes.'],
+  example: 'Example: Teams usually see stronger adoption when they start with one repetitive training workflow and a clear owner.',
+  faqs: [
+    { q: `How should ${page.label.toLowerCase()} teams shortlist AI tools?`, a: 'Start with one workflow bottleneck, run a 2-week pilot, and measure cycle-time reduction before broader rollout.' },
+    { q: 'What matters most for L&D buyers?', a: 'Version control, collaboration, integration with existing systems, and ease of updating training assets over time.' }
   ]
 };
 
-const relatedLinks = {
-  'use-case': [
-    { label: 'Compare leading options', href: '/compare/' },
-    { label: 'Explore all solution pages', href: '/solutions/' },
-    { label: 'Browse by tool category', href: '/categories/' }
-  ],
-  role: [
-    { label: 'Role-specific comparison guides', href: '/compare/' },
-    { label: 'Implementation solution library', href: '/solutions/' },
-    { label: 'Submit a tool your team uses', href: '/submit/' }
-  ],
-  industry: [
-    { label: 'Industry-neutral comparison pages', href: '/compare/' },
-    { label: 'Cross-functional L&D solutions', href: '/solutions/' },
-    { label: 'Founding partner placement', href: '/advertise/' }
-  ]
-};
-
+const content = contentBySlug[slug] || defaultContent;
 const faq = [
-  {
-    q: `How should ${page.label.toLowerCase()} teams shortlist AI tools?`,
-    a: 'Start with one workflow bottleneck, run a 2-week pilot, and measure cycle-time reduction before broader rollout.'
-  },
-  {
-    q: 'What matters most for L&D buyers?',
-    a: 'Version control, collaboration, integration with existing systems, and ease of updating training assets over time.'
-  },
-  {
-    q: 'How do we keep quality high while scaling output?',
-    a: 'Use standard templates, assign clear approvers, and require a lightweight QA pass before each publish cycle.'
-  }
+  ...content.faqs,
+  { q: 'How do we keep quality high while scaling output?', a: 'Use standard templates, assign clear approvers, and require a lightweight QA pass before each publish cycle.' }
+];
+
+const relatedLinks = [
+  { label: 'Browse all solution pages', href: '/solutions/' },
+  { label: 'Compare alternatives for your shortlist', href: '/compare/' },
+  { label: 'Explore category-level tool options', href: '/categories/' },
+  { label: 'SOP to Video Training', href: '/solutions/sop-to-video-training/' },
+  { label: 'Compliance Training Content', href: '/solutions/compliance-training-content-creation/' },
+  { label: 'Customer Support Training', href: '/solutions/customer-support-training/' }
 ];
 
 const jsonLd = {
@@ -82,9 +123,9 @@ const jsonLd = {
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Solutions', href: '/solutions/' }, { label: page.label, href: `/solutions/${slug}/` }]} />
 
   <section class="hero">
-    <span class="eyebrow">{page.type.replace('-', ' ')} strategy page</span>
+    <span class="eyebrow">{page.type.replace('-', ' ')} implementation page</span>
     <h1 style="margin-top:0.8rem;">{page.title}</h1>
-    <p class="muted">{page.intro}</p>
+    <p class="muted">{page.intro} Use this page to align stakeholder goals, pilot the right tools, and operationalize delivery.</p>
   </section>
 
   <section class="section">
@@ -101,27 +142,28 @@ const jsonLd = {
   </section>
 
   <section class="section">
-    <h2>30-day rollout plan</h2>
-    <ul>
-      {(rolloutPlans[page.type] || rolloutPlans['use-case']).map((step) => <li>{step}</li>)}
-    </ul>
+    <h2>{content.frameworkName}</h2>
+    <ol>
+      {content.framework.map((step) => <li>{step}</li>)}
+    </ol>
+    <p class="muted" style="margin-top:.7rem;">{content.example}</p>
   </section>
 
   <section class="section">
-    <h2>Evaluation checklist</h2>
+    <h2>Implementation checklist for L&D teams</h2>
     <ul>
-      <li>Does the tool reduce content production cycle time for L&D?</li>
-      <li>Can training managers update assets without vendor dependency?</li>
-      <li>Is governance clear for compliance-sensitive workflows?</li>
-      <li>Can this integrate into current knowledge and LMS systems?</li>
-      <li>Are localization and accessibility workflows supportable at scale?</li>
+      <li>Define baseline KPIs before tool trials (cycle time, completion, quality score, or ramp speed).</li>
+      <li>Assign one accountable owner for prompts, templates, and governance approvals.</li>
+      <li>Document review standards so AI-assisted content stays consistent and audit-safe.</li>
+      <li>Link every module to a business workflow, not just a content topic.</li>
+      <li>Plan monthly refresh cycles to avoid stale training assets.</li>
     </ul>
   </section>
 
   <section class="section">
     <h2>Related planning routes</h2>
     <div class="chips">
-      {(relatedLinks[page.type] || relatedLinks['use-case']).map((item) => (
+      {relatedLinks.map((item) => (
         <a class="chip" href={item.href}>{item.label}</a>
       ))}
     </div>
