@@ -517,6 +517,29 @@ export const localizedLandingPages = [
   },
 
   {
+    key: 'certification-renewal-alerting-vs-manual-tracking',
+    locale: 'de',
+    slug: 'ki-zertifizierungs-renewal-alerting-vs-manuelles-spreadsheet-tracking-fuer-workforce-compliance',
+    title: 'KI-Zertifizierungs-Renewal-Alerting vs. manuelles Spreadsheet-Tracking für Workforce-Compliance | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Renewal-Alerting gegen manuelles Spreadsheet-Tracking in Zertifizierungs-Compliance-Prozessen bewerten.',
+    h1: 'KI-Renewal-Alerting vs. manuelles Spreadsheet-Tracking für Workforce-Compliance',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Deadline-Sicherheit, Remediation-Geschwindigkeit und Audit-Traceability zwischen beiden Betriebsmodellen zu vergleichen.',
+    points: ['Vergleich von On-time-Renewal-Rate und Overdue-Backlog', 'Klare Kriterien für Eskalationen, Owner-Rollen und Nachweisführung', 'Pilot-Framework für nachhaltige Zertifizierungs-Compliance ohne Fire-Drills'],
+    enPath: '/compare/ai-certification-renewal-alerting-vs-manual-spreadsheet-tracking-for-workforce-compliance/'
+  },
+  {
+    key: 'certification-renewal-alerting-vs-manual-tracking',
+    locale: 'es',
+    slug: 'alertas-renovacion-certificacion-ia-vs-seguimiento-manual-hojas-calculo-compliance-workforce',
+    title: 'Alertas de renovación de certificación con IA vs. seguimiento manual en hojas de cálculo para compliance de workforce | AI Training Directory',
+    description: 'Entrada localizada para comparar alertas de renovación con IA frente a seguimiento manual en hojas de cálculo en operaciones de compliance de certificaciones.',
+    h1: 'Alertas de renovación con IA vs. seguimiento manual en hojas de cálculo para compliance de workforce',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar fiabilidad de plazos, velocidad de remediación y trazabilidad audit-ready entre ambos modelos.',
+    points: ['Comparativa de renovaciones a tiempo y reducción de vencimientos', 'Criterios operativos para escalaciones, ownership y evidencia auditable', 'Marco de piloto para sostener cumplimiento sin ciclos reactivos de última hora'],
+    enPath: '/compare/ai-certification-renewal-alerting-vs-manual-spreadsheet-tracking-for-workforce-compliance/'
+  },
+
+  {
     key: 'learning-path-recommendations-vs-manager-curricula',
     locale: 'de',
     slug: 'ki-lernpfad-empfehlungen-vs-manager-zugewiesene-curricula-fuer-upskilling',

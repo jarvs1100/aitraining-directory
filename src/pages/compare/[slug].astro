@@ -308,6 +308,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower total upskilling friction per confirmed proficiency gain, not the one with the most automation features.'
     ]
   },
+  'ai-certification-renewal-alerting-vs-manual-spreadsheet-tracking-for-workforce-compliance': {
+    decisionMatrix: [
+      { criterion: 'Renewal deadline reliability across large populations', weight: '25%', whatGoodLooksLike: 'Expiring certifications are identified early with reliable reminders before compliance windows close.', leftLens: 'Evaluate lead-time quality, escalation logic, and missed-deadline prevention in AI-driven alerting workflows.', rightLens: 'Evaluate how consistently manual spreadsheet owners detect expiries and trigger reminders before deadlines.' },
+      { criterion: 'Remediation speed for at-risk certifications', weight: '25%', whatGoodLooksLike: 'Teams can launch corrective actions quickly when learners are close to expiry or already overdue.', leftLens: 'Measure cycle time from risk detection to assigned remediation task with owner accountability.', rightLens: 'Measure cycle time when remediation depends on manual spreadsheet review, handoffs, and follow-up emails.' },
+      { criterion: 'Audit traceability of renewal actions', weight: '20%', whatGoodLooksLike: 'Auditors can verify who was alerted, when actions were taken, and how overdue cases were resolved.', leftLens: 'Assess whether alert logs, escalations, and completion evidence are linked in one defensible timeline.', rightLens: 'Assess reconstructability of reminder history and closure evidence across spreadsheets, inboxes, and ad-hoc notes.' },
+      { criterion: 'Operational load on compliance and training ops', weight: '15%', whatGoodLooksLike: 'Renewal operations remain stable during peak recertification periods without fire-drill staffing.', leftLens: 'Score maintenance effort for rule tuning, exception handling, and monthly governance calibration.', rightLens: 'Score recurring effort for spreadsheet hygiene, owner nudging, manual QA, and reconciliation work.' },
+      { criterion: 'Cost per on-time certification renewal', weight: '15%', whatGoodLooksLike: 'Per-renewal operating cost declines while on-time completion rate and audit confidence improve.', leftLens: 'Model platform + governance overhead against fewer misses, fewer escalations, and faster closure.', rightLens: 'Model lower tooling spend against higher manual labor, slower response, and deadline-miss risk.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day side-by-side pilot on one certification family with known renewal volume and deadline pressure.',
+      'Use one scorecard: on-time renewal rate, overdue backlog age, remediation cycle time, and evidence-defect count.',
+      'Require explicit escalation policy (owner, timing, and fallback approver) before scaling any model.',
+      'Define RACI across compliance owner, training ops, LMS admin, and frontline manager for renewal accountability.',
+      'Choose the model with lower renewal friction per on-time certified employee, not the model with the most notifications.'
+    ]
+  },
   'ai-skills-passporting-vs-manual-competency-matrices-for-workforce-certification': {
     decisionMatrix: [
       { criterion: 'Certification decision consistency across assessors', weight: '25%', whatGoodLooksLike: 'Certification outcomes remain consistent across regions, assessor tenure levels, and cohort size changes.', leftLens: 'Evaluate whether AI passporting applies one role-based evidence rubric and flags borderline cases for calibrated human review.', rightLens: 'Evaluate inter-rater variance when managers and assessors maintain manual competency matrices with local interpretation differences.' },

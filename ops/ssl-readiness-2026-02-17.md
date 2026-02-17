@@ -1045,3 +1045,95 @@ Location: http://aitraining.directory/
 - HTTPS remains valid and reachable on apex (`HTTP/2 200`) with Let's Encrypt issuer `R12`.
 - `www` correctly redirects to canonical HTTPS apex route.
 - Deploy freshness is visible via `Last-Modified: 11:25:03 UTC`.
+## Evidence delta — 2026-02-17 11:56 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 164 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Tue, 17 Feb 2026 11:41:58 GMT
+access-control-allow-origin: *
+etag: "69945406-4eb3"
+expires: Tue, 17 Feb 2026 12:06:08 GMT
+cache-control: max-age=600
+
+curl -I https://www.aitraining.directory
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: https://aitraining.directory/
+x-github-request-id: 416A:16D051:129B781:12CFDCD:699453AF
+accept-ranges: bytes
+age: 937
+date: Tue, 17 Feb 2026 11:56:08 GMT
+```
+
+### HTTP behavior (current)
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 20147
+Server: GitHub.com
+Content-Type: text/html; charset=utf-8
+x-origin-cache: HIT
+Last-Modified: Tue, 17 Feb 2026 11:41:58 GMT
+Access-Control-Allow-Origin: *
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: http://aitraining.directory/
+X-GitHub-Request-Id: 82E0:2707CA:12264D2:125A89F:699453AF
+Accept-Ranges: bytes
+```
+
+### Current delta summary
+- ✅ HTTPS remains valid and reachable on apex (HTTP/2 200) with Let's Encrypt issuer R12.
+- ✅ www host redirects to canonical HTTPS apex route.
+- ✅ QA scan remains clean after latest content + UX updates (164 HTML files checked).
+
