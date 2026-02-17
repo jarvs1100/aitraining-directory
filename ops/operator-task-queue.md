@@ -39,3 +39,7 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Create distribution asset pack for the LMS admin assistant vs shared inbox route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [x] Add i18n parity stubs for the new LMS admin support route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Add one traffic-driving high-intent compare route for localization operations: `/compare/ai-translation-management-platforms-vs-spreadsheets-for-training-localization/` with implementation rubric + FAQ schema.
+- [x] Create distribution asset pack for the translation-management vs spreadsheet localization route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new localization route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.

@@ -212,6 +212,22 @@ const comparisonContentBySlug = {
       'Choose the model with better SLA adherence and lower cost per correctly resolved ticket over the pilot window.'
     ]
   },
+  'ai-translation-management-platforms-vs-spreadsheets-for-training-localization': {
+    decisionMatrix: [
+      { criterion: 'Localization release speed after source-content updates', weight: '25%', whatGoodLooksLike: 'Updated training modules can be localized and republished inside agreed SLA without manual firefighting.', leftLens: 'Measure time from source update to approved multilingual package using automated translation memory, terminology locking, and workflow routing.', rightLens: 'Measure time from source update to approved multilingual package using spreadsheet tracking, manual handoffs, and file-by-file status updates.' },
+      { criterion: 'Terminology consistency for compliance and operational vocabulary', weight: '25%', whatGoodLooksLike: 'Critical terms stay consistent across languages and versions with minimal reviewer correction.', leftLens: 'Evaluate glossary enforcement, translation-memory leverage, and automated QA checks for forbidden or outdated terms.', rightLens: 'Evaluate manual term discipline across translators/reviewers and defect rate caused by inconsistent spreadsheet conventions.' },
+      { criterion: 'Reviewer workload and handoff visibility', weight: '20%', whatGoodLooksLike: 'Regional reviewers can focus on high-impact edits with clear ownership and predictable queue flow.', leftLens: 'Score routing clarity, in-context review UX, and notification reliability across language owners.', rightLens: 'Score effort required to chase status, merge comments, and reconcile conflicting edits across spreadsheet tabs.' },
+      { criterion: 'Auditability and rollback confidence', weight: '15%', whatGoodLooksLike: 'Teams can prove what changed, who approved it, and restore prior approved language versions quickly.', leftLens: 'Assess version history, approval logs, and role-based controls for compliance-sensitive training content.', rightLens: 'Assess reconstructability of approval history from spreadsheets, email threads, and file naming discipline.' },
+      { criterion: 'Cost per approved localized learning minute', weight: '15%', whatGoodLooksLike: 'Localization cost decreases as language count and update frequency increase.', leftLens: 'Model platform + integration cost against reduced rework, faster approvals, and lower reviewer hours per release.', rightLens: 'Model lower tooling spend against recurring coordination overhead, defect cleanup, and missed-release risk.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-change training stream (policy or product updates) across at least three languages in both models.',
+      'Use one defect taxonomy: terminology mismatch, stale translation, approval gap, and publish-delay root cause.',
+      'Track reviewer minutes per release and release-slip frequency as primary operating metrics.',
+      'Require explicit ownership map for source updates, translation QA, regional signoff, and rollback authority.',
+      'Choose the model with lower 30-day localization friction per approved module, not the cheapest initial tooling line item.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },

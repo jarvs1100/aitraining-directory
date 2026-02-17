@@ -274,6 +274,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-lms-admin-assistants-vs-shared-inbox-support-for-training-ops/'
   },
   {
+    key: 'translation-management-vs-spreadsheets',
+    locale: 'de',
+    slug: 'ki-translation-management-vs-spreadsheets-fuer-training-lokalisierung',
+    title: 'KI-Translation-Management vs. Spreadsheets für Training-Lokalisierung | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Translation-Management-Plattformen gegen Spreadsheet-Workflows in der Trainingslokalisierung bewerten.',
+    h1: 'KI-Translation-Management vs. Spreadsheets für Training-Lokalisierung',
+    intro: 'Hilft L&D- und Localization-Teams, Release-Geschwindigkeit, Terminologiequalität und QA-Aufwand zwischen beiden Modellen zu vergleichen.',
+    points: ['Vergleich von Release-SLA nach Inhaltsupdates', 'Klarere Kriterien für Terminologie-Konsistenz und Audit-Trails', 'Pilot-Framework für Reviewer-Last und Skalierung über mehrere Sprachen'],
+    enPath: '/compare/ai-translation-management-platforms-vs-spreadsheets-for-training-localization/'
+  },
+  {
+    key: 'translation-management-vs-spreadsheets',
+    locale: 'es',
+    slug: 'plataformas-gestion-traduccion-ia-vs-hojas-calculo-localizacion-formacion',
+    title: 'Plataformas de gestión de traducción con IA vs. hojas de cálculo para localización de formación | AI Training Directory',
+    description: 'Entrada localizada para comparar plataformas de gestión de traducción con IA frente a flujos basados en hojas de cálculo para localización de formación.',
+    h1: 'Plataformas de gestión de traducción con IA vs. hojas de cálculo para localización de formación',
+    intro: 'Ayuda a equipos de L&D y localización a evaluar velocidad de publicación, consistencia terminológica y carga de revisión entre ambos enfoques.',
+    points: ['Comparativa de SLA de localización tras cambios de contenido fuente', 'Criterios operativos para consistencia terminológica y control de calidad', 'Marco de piloto para medir carga de revisores y riesgo de retrasos'],
+    enPath: '/compare/ai-translation-management-platforms-vs-spreadsheets-for-training-localization/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
