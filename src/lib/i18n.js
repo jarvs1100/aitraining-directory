@@ -2069,6 +2069,50 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar detección de defectos, velocidad de validación y trazabilidad defensible en auditorías entre ambos enfoques.',
     points: ['Comparativa de detección temprana de inconsistencias entre completions, versiones y evidencia adjunta', 'Criterios operativos para reducir cuellos de botella de verificación manual antes de auditorías', 'Marco de piloto para sostener audit defense con menos retrabajo en hojas de cálculo'],
     enPath: '/compare/ai-compliance-training-evidence-integrity-checks-vs-manual-spreadsheet-verification-for-audit-defense/'
+  },
+  {
+    key: 'evidence-retention-policy-enforcement-vs-manual-folder-rules',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-retention-policy-enforcement-vs-manuelle-folder-retention-rules',
+    title: 'KI-Compliance-Training-Evidence-Retention-Policy-Enforcement vs. manuelle Folder-Retention-Rules | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-Retention-Policy-Enforcement mit manuellen Folder-Retention-Rules für Compliance-Trainings vergleichen.',
+    h1: 'KI-Evidence-Retention-Policy-Enforcement vs. manuelle Folder-Retention-Rules',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Aufbewahrungskonsistenz, Retrieval-SLA und Governance-Aufwand zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Retention-Konsistenz über mehrere Evidence-Repositories hinweg', 'Messbare Kriterien für schnellere Audit-Retrieval-Zyklen und weniger Ausnahme-Feuerwehr', 'Pilot-Framework für belastbare Retention-Governance ohne manuelle Folder-Drift'],
+    enPath: '/compare/ai-compliance-training-evidence-retention-policy-enforcement-vs-manual-folder-retention-rules/'
+  },
+  {
+    key: 'evidence-retention-policy-enforcement-vs-manual-folder-rules',
+    locale: 'es',
+    slug: 'enforcement-politica-retencion-evidencia-training-compliance-ia-vs-reglas-manuales-carpetas-retencion',
+    title: 'Enforcement de política de retención de evidencia en training compliance con IA vs. reglas manuales de carpetas | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan enforcement de retención de evidencia con IA frente a reglas manuales de carpetas en operaciones de training compliance.',
+    h1: 'Enforcement de retención de evidencia con IA vs. reglas manuales de carpetas',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar consistencia de retención, velocidad de recuperación y esfuerzo de gobernanza bajo presión de auditoría.',
+    points: ['Comparativa de cumplimiento de ventanas de retención en múltiples fuentes de evidencia', 'Criterios operativos para reducir excepciones manuales y acelerar tiempos de respuesta a auditoría', 'Marco de piloto para gobernanza de retención auditable sin deriva de reglas por carpeta'],
+    enPath: '/compare/ai-compliance-training-evidence-retention-policy-enforcement-vs-manual-folder-retention-rules/'
+  },
+  {
+    key: 'retention-exception-workflows-vs-manual-audit-hold-triage',
+    locale: 'de',
+    slug: 'ki-compliance-training-retention-exception-workflows-vs-manuelle-audit-hold-triage',
+    title: 'KI-Compliance-Training-Retention-Exception-Workflows vs. manuelle Audit-Hold-Triage | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Retention-Exception-Workflows gegen manuelle Audit-Hold-Triage in Compliance-Trainingsprogrammen vergleichen.',
+    h1: 'KI-Retention-Exception-Workflows vs. manuelle Audit-Hold-Triage',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Eskalationsgeschwindigkeit, Entscheidungs-Konsistenz und Audit-Traceability zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von SLA-Einhaltung bei Retention-Ausnahmen und Audit-Holds', 'Messbare Kriterien für konsistente Ausnahmeentscheidungen über Teams hinweg', 'Pilot-Framework für belastbare Audit-Defense mit weniger manueller Triage-Reibung'],
+    enPath: '/compare/ai-compliance-training-retention-exception-workflows-vs-manual-audit-hold-triage/'
+  },
+  {
+    key: 'retention-exception-workflows-vs-manual-audit-hold-triage',
+    locale: 'es',
+    slug: 'workflows-excepciones-retencion-training-compliance-ia-vs-triaje-manual-audit-hold',
+    title: 'Workflows de excepciones de retención en training compliance con IA vs. triaje manual de audit hold | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan workflows de excepciones de retención con IA frente a triaje manual de audit hold en operaciones de training compliance.',
+    h1: 'Workflows de excepciones de retención con IA vs. triaje manual de audit hold',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de escalado, consistencia de decisiones y trazabilidad defensible en auditorías.',
+    points: ['Comparativa de cumplimiento de SLA al gestionar excepciones de retención por nivel de riesgo', 'Criterios operativos para reducir reversos de decisiones y retrabajo de triage manual', 'Marco de piloto para sostener gobernanza de excepciones audit-ready con menor carga operativa'],
+    enPath: '/compare/ai-compliance-training-retention-exception-workflows-vs-manual-audit-hold-triage/'
   }
 );
 
