@@ -2,9 +2,8 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
-- [x] Expand high-intent content depth on `/solutions/sop-to-video-training/` (add implementation checklist + pitfalls + internal links)
-- [x] Expand high-intent content depth on `/compare/synthesia-alternatives/` (decision matrix + buying criteria)
-- [x] Improve homepage above-the-fold trust proof block (why trust this directory + update cadence)
-- [x] Localize any remaining English CTA strings on localized hubs (`/pl,/cs,/sk,/hu,/de,/es`)
-- [x] Add distribution micro-playbook section directly on homepage/footer link to `ops/outreach-distribution-checklist.md`
-- [x] Re-check SSL readiness and update `ops/ssl-readiness-2026-02-17.md` with latest status/evidence
+- [x] Improve mobile UX on compare pages by replacing horizontal-only matrix tables with mobile decision cards.
+- [ ] Add internal-link modules to high-intent tool pages (`/tool/synthesia/`, `/tool/loom/`, `/tool/guidde/`) to improve distribution path depth.
+- [ ] Create localized distribution-playbook stubs for `/pl,/cs,/sk,/hu,/de,/es` with links back to canonical checklist.
+- [ ] Add homepage FAQ schema + concise “last reviewed” metadata block for trust and CTR support.
+- [ ] Run SSL readiness re-check after next deploy and capture fresh evidence in `ops/ssl-readiness-2026-02-17.md`.
