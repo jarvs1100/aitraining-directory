@@ -13,6 +13,37 @@ const canonical = `https://aitraining.directory/solutions/${slug}/`;
 const tools = pickTools(slug.length % 8, 6);
 
 const contentBySlug = {
+  'ai-tools-for-training-and-development': {
+    frameworkName: 'Training & Development Tool Selection Sprint',
+    framework: [
+      'Define one priority workflow (onboarding, compliance refresh, or enablement) and baseline current cycle time.',
+      'Shortlist 3 tools by workflow fit, collaboration model, and update speed—not feature count.',
+      'Run a 2-week pilot with one content owner and one reviewer using the same training asset.',
+      'Select the winner only after measuring publish speed, QA rework, and learner readiness signals.'
+    ],
+    example: 'Example: A mid-size L&D team cut draft-to-publish time by testing three tools against one onboarding module and standardizing the winning workflow.',
+    checklist: [
+      'Capture baseline: current production hours per module and average review loops.',
+      'Use identical source material across tested tools to keep pilot comparisons fair.',
+      'Define a simple scoring rubric: speed, output quality, localization readiness, governance fit.',
+      'Require SME signoff before counting pilot outputs as successful.',
+      'Plan integration handoff (LMS, KB, SSO, permissions) before scaling.'
+    ],
+    pitfalls: [
+      'Picking the most feature-rich tool without validating workflow fit.',
+      'Comparing tools with different source assets, making results non-comparable.',
+      'Ignoring governance and approval controls until after procurement.'
+    ],
+    internalLinks: [
+      { label: 'Compare alternatives', href: '/compare/' },
+      { label: 'Onboarding automation route', href: '/solutions/new-hire-onboarding-automation/' },
+      { label: 'Compliance content route', href: '/solutions/compliance-training-content-creation/' }
+    ],
+    faqs: [
+      { q: 'What is the fastest way to shortlist AI training tools?', a: 'Use one workflow-specific pilot and score tools on measurable delivery outcomes, not generic demos.' },
+      { q: 'Which teams should own final selection?', a: 'L&D should co-own selection with compliance/IT stakeholders to prevent rollout friction later.' }
+    ]
+  },
   'sop-to-video-training': {
     frameworkName: 'SOP-to-Video Acceleration Framework',
     framework: ['Select top 10 SOPs with highest error rate and update frequency.', 'Convert each SOP into a 3-part script: context, steps, and common failure points.', 'Generate first-cut videos with AI voice/avatar, then run SME QA using a fixed rubric.', 'Publish to LMS/knowledge base with version tags and 30-day review reminders.'],
