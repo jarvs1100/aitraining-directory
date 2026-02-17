@@ -44,6 +44,37 @@ const contentBySlug = {
       { q: 'Which teams should own final selection?', a: 'L&D should co-own selection with compliance/IT stakeholders to prevent rollout friction later.' }
     ]
   },
+  'ai-ld-tech-evaluation-checklist': {
+    frameworkName: 'L&D Tech Evaluation Checklist Workflow',
+    framework: [
+      'Define the buying scope: one workflow, one owner, one reviewer, one success metric.',
+      'Use a weighted scorecard with four criteria: workflow-fit, governance, localization, implementation difficulty.',
+      'Pilot 2-3 tools on the same source asset and approval path.',
+      'Decide based on reviewer burden and update speed, then document ownership for rollout.'
+    ],
+    example: 'Example: An L&D operations team used one policy-update module to compare three tools and selected the option with lower review rework and clearer governance controls.',
+    checklist: [
+      'Write a pilot brief with success/failure thresholds before vendor demos.',
+      'Require each tool test to include one real update cycle after reviewer feedback.',
+      'Capture reviewer effort in minutes per approved module, not just draft quality.',
+      'Document governance controls: access, approval history, and rollback path.',
+      'Check localization readiness with one non-English validation pass when multilingual delivery matters.'
+    ],
+    pitfalls: [
+      'Changing criteria mid-pilot after seeing stronger vendor demos.',
+      'Allowing each vendor to test a different use case and calling results comparable.',
+      'Treating legal/compliance signoff as a post-procurement task.'
+    ],
+    internalLinks: [
+      { label: 'Editorial methodology and evidence', href: '/editorial-methodology/' },
+      { label: 'Compare routes for side-by-side scoring', href: '/compare/' },
+      { label: 'AI tools for training and development route', href: '/solutions/ai-tools-for-training-and-development/' }
+    ],
+    faqs: [
+      { q: 'What makes this route high-confidence for buyers?', a: 'It uses conservative, pilot-first criteria aligned to workflow-fit, governance, localization, and implementation effort.' },
+      { q: 'How many tools should we pilot?', a: 'Most teams can make a defensible decision by piloting 2-3 options on the same workflow and rubric.' }
+    ]
+  },
   'sop-to-video-training': {
     frameworkName: 'SOP-to-Video Acceleration Framework',
     framework: ['Select top 10 SOPs with highest error rate and update frequency.', 'Convert each SOP into a 3-part script: context, steps, and common failure points.', 'Generate first-cut videos with AI voice/avatar, then run SME QA using a fixed rubric.', 'Publish to LMS/knowledge base with version tags and 30-day review reminders.'],
@@ -197,6 +228,8 @@ const faq = [
 const relatedLinks = [
   { label: 'Browse all solution pages', href: '/solutions/' },
   { label: 'Compare alternatives for your shortlist', href: '/compare/' },
+  { label: 'Editorial methodology and evidence links', href: '/editorial-methodology/' },
+  { label: 'L&D tech evaluation checklist route', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
   { label: 'Explore category-level tool options', href: '/categories/' },
   { label: 'SOP to Video Training', href: '/solutions/sop-to-video-training/' },
   { label: 'Compliance Training Content', href: '/solutions/compliance-training-content-creation/' },
@@ -225,6 +258,21 @@ const jsonLd = {
     <span class="eyebrow">{page.type.replace('-', ' ')} implementation page</span>
     <h1 style="margin-top:0.8rem;">{page.title}</h1>
     <p class="muted">{page.intro} Use this page to align stakeholder goals, pilot the right tools, and operationalize delivery.</p>
+  </section>
+
+  <section class="section card" aria-labelledby="buyer-checklist-heading">
+    <h2 id="buyer-checklist-heading">Buyer checklist before vendor shortlist</h2>
+    <ul>
+      <li>Keep the pilot scope narrow: one workflow and one accountable owner.</li>
+      <li>Score options with four criteria: workflow-fit, governance, localization, implementation difficulty.</li>
+      <li>Use the same source asset and reviewer workflow across all options.</li>
+      <li>Record reviewer effort and update turnaround before final ranking.</li>
+      <li>Use the <a href="/editorial-methodology/">editorial methodology</a> as your scoring standard.</li>
+    </ul>
+    <div class="chips chips-nav">
+      <a class="chip" href="/solutions/ai-ld-tech-evaluation-checklist/">Open L&D tech evaluation checklist route</a>
+      <a class="chip" href="/compare/">Open compare routes</a>
+    </div>
   </section>
 
   <section class="section">

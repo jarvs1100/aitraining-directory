@@ -244,6 +244,38 @@ const comparisonContentBySlug = {
       'Choose the model with lower 30-day audit-response friction per sampled learner record, not just lower reporting license cost.'
     ]
   },
+  'ai-adaptive-recertification-paths-vs-fixed-annual-compliance-refreshers': {
+    decisionMatrix: [
+      { criterion: 'Risk targeting precision across learner populations', weight: '25%', whatGoodLooksLike: 'High-risk knowledge gaps trigger timely recertification while low-risk learners avoid unnecessary retraining.', leftLens: 'Evaluate whether adaptive pathways use assessment signal and behavior data to assign targeted recertification depth by role/risk class.', rightLens: 'Evaluate whether fixed annual refreshers over- or under-serve critical populations when everyone receives the same cadence and content.' },
+      { criterion: 'Time-to-close emerging compliance gaps', weight: '25%', whatGoodLooksLike: 'Program owners can address newly observed control failures before annual cycles.', leftLens: 'Measure cycle time from detected gap to assigned adaptive recertification module with completion tracking.', rightLens: 'Measure cycle time when teams must wait for annual refresher windows or launch exception campaigns manually.' },
+      { criterion: 'Learner burden and completion quality', weight: '20%', whatGoodLooksLike: 'Learners complete relevant recertification with higher retention and lower fatigue.', leftLens: 'Track seat-time reduction, relevance scores, and post-module retention for targeted recertification assignments.', rightLens: 'Track mandatory completion rates and evidence of disengagement when identical annual content is repeated.' },
+      { criterion: 'Governance and audit traceability', weight: '15%', whatGoodLooksLike: 'Auditors can see clear rationale for who was assigned what recertification path and when.', leftLens: 'Assess policy-mapped assignment logic, exception handling, and audit logs showing adaptive decisions plus approvals.', rightLens: 'Assess simplicity of annual assignment evidence and ability to justify why one-size cadence is still risk-appropriate.' },
+      { criterion: 'Cost per risk-reduced recertification outcome', weight: '15%', whatGoodLooksLike: 'Operating cost aligns to measurable risk reduction and fewer repeat incidents.', leftLens: 'Model platform + analytics governance cost against reduced unnecessary training hours and faster remediation outcomes.', rightLens: 'Model lower design complexity against recurring full-population training hours and slower risk-response agility.' }
+    ],
+    buyingCriteria: [
+      'Pilot one compliance domain with recurrent findings (e.g., privacy, safety, or regulated process controls) using both operating models.',
+      'Use one scorecard: gap-detection-to-assignment cycle time, learner seat-time, repeat-incident rate, and audit-response confidence.',
+      'Define policy guardrails for adaptive logic, including minimum cadence floors and mandatory role/risk overrides.',
+      'Require explicit RACI across compliance owner, L&D ops, LMS admin, and internal audit reviewer before scale-up.',
+      'Select the model that delivers lower 30-day remediation friction per confirmed risk gap, not just higher raw completion volume.'
+    ]
+  },
+  'ai-dynamic-policy-updates-vs-static-compliance-manuals-for-frontline-teams': {
+    decisionMatrix: [
+      { criterion: 'Policy update latency at the frontline', weight: '25%', whatGoodLooksLike: 'Critical policy changes reach frontline employees quickly with verified acknowledgment.', leftLens: 'Measure time from approved policy change to role-specific learner-facing update with confirmation tracking.', rightLens: 'Measure time from policy change to manual revision, distribution, and manager confirmation of manual adoption.' },
+      { criterion: 'Execution accuracy in live frontline scenarios', weight: '25%', whatGoodLooksLike: 'Employees apply updated rules correctly during real customer, safety, or compliance moments.', leftLens: 'Evaluate whether dynamic AI-guided updates improve first-time-right decisions after policy changes.', rightLens: 'Evaluate whether static manuals maintain equivalent execution quality without high manager reinforcement load.' },
+      { criterion: 'Governance and controlled change management', weight: '20%', whatGoodLooksLike: 'Every learner-facing update is policy-mapped, approved, and auditable.', leftLens: 'Assess approval workflows, version history, and rollback controls for AI-assisted dynamic updates.', rightLens: 'Assess document version discipline, distribution controls, and proof-of-receipt quality for manual updates.' },
+      { criterion: 'Manager enablement and reinforcement burden', weight: '15%', whatGoodLooksLike: 'Managers spend less time re-explaining changes while maintaining compliance confidence.', leftLens: 'Track manager escalation and clarification minutes after dynamic updates are pushed to teams.', rightLens: 'Track reinforcement time needed when frontline staff rely on static manuals and periodic reminders.' },
+      { criterion: 'Cost per policy change successfully adopted', weight: '15%', whatGoodLooksLike: 'Operating cost decreases while adoption speed and control quality improve.', leftLens: 'Model AI workflow + governance cost against reduced rework, incidents, and manager interruption time.', rightLens: 'Model lower tooling cost against manual update labor, slower adoption, and potential compliance drift.' }
+    ],
+    buyingCriteria: [
+      'Pilot one frontline policy stream with frequent updates (e.g., returns exceptions, safety procedures, or regulated disclosures).',
+      'Use one shared scorecard: update latency, execution-error rate, manager reinforcement minutes, and audit evidence completeness.',
+      'Define hard guardrails for AI-driven updates: approval gates, prohibited auto-publish paths, and rollback ownership.',
+      'Require explicit RACI across compliance owner, frontline ops leader, L&D ops, and regional managers before scaling.',
+      'Choose the model with lower 30-day policy-change friction per frontline team while preserving audit defensibility.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -267,7 +299,7 @@ const defaultComparisonContent = {
     { criterion: 'Workflow fit', weight: '30%', whatGoodLooksLike: 'Publishing and updates stay fast under real team constraints.', synthesiaLens: 'Use this column to evaluate incumbent fit.', alternativesLens: 'Use this column to evaluate differentiation.' },
     { criterion: 'Review + governance', weight: '25%', whatGoodLooksLike: 'Approvals, versioning, and accountability are clear.', synthesiaLens: 'Check control depth.', alternativesLens: 'Check parity or advantage in review rigor.' },
     { criterion: 'Localization readiness', weight: '25%', whatGoodLooksLike: 'Multilingual delivery does not require full rebuilds.', synthesiaLens: 'Test language quality with real terminology.', alternativesLens: 'Test localization + reviewer workflows.' },
-    { criterion: 'Cost to operate', weight: '20%', whatGoodLooksLike: 'Total effort and spend fall as output scales.', synthesiaLens: 'Model full-team cost.', alternativesLens: 'Model end-to-end production stack cost.' }
+    { criterion: 'Implementation difficulty', weight: '20%', whatGoodLooksLike: 'Setup and maintenance burden stay manageable for L&D operations teams.', synthesiaLens: 'Score setup effort, integration load, and reviewer training needs.', alternativesLens: 'Score the same implementation burden on your target operating model.' }
   ],
   buyingCriteria: [
     'Align stakeholders on one weighted scorecard before any demos.',
@@ -297,6 +329,21 @@ const jsonLd = {
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Compare', href: '/compare/' }, { label: page.title, href: `/compare/${slug}/` }]} />
   <h1>{page.title}</h1>
   <p class="muted">{page.intro} Use this route to decide faster with an implementation-led lens instead of a feature checklist.</p>
+
+  <section class="section card" aria-labelledby="compare-template-checklist-heading">
+    <h2 id="compare-template-checklist-heading">Buyer checklist before final comparison scoring</h2>
+    <ul>
+      <li>Lock evaluation criteria before demos: workflow-fit, governance, localization, implementation difficulty.</li>
+      <li>Require the same source asset and review workflow for both sides.</li>
+      <li>Run at least one update cycle after feedback to measure operational reality.</li>
+      <li>Track reviewer burden and publish turnaround as primary decision signals.</li>
+      <li>Use the <a href="/editorial-methodology/">editorial methodology</a> page as your shared rubric.</li>
+    </ul>
+    <div class="chips chips-nav">
+      <a class="chip" href="/solutions/ai-ld-tech-evaluation-checklist/">L&D tech evaluation checklist route</a>
+      <a class="chip" href="/solutions/">Solutions hub</a>
+    </div>
+  </section>
 
   <h2>Practical comparison framework</h2>
   <ol>
@@ -365,6 +412,8 @@ const jsonLd = {
     <div class="chips chips-nav">
       <a class="chip" href="/">Return to homepage</a>
       <a class="chip" href="/compare/">Browse all compare routes</a>
+      <a class="chip" href="/editorial-methodology/">Editorial methodology</a>
+      <a class="chip" href="/solutions/ai-ld-tech-evaluation-checklist/">L&D tech evaluation checklist route</a>
       <a class="chip" href="/solutions/">Browse solution pages</a>
       <a class="chip" href="/solutions/sop-to-video-training/">SOP-to-video implementation route</a>
       <a class="chip" href="/solutions/compliance-training-content-creation/">Compliance content route</a>

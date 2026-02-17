@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const canonical = 'https://aitraining.directory/editorial-methodology/';
+const evidenceUpdatedOn = '2026-02-17';
+
+const evidenceSources = [
+  { label: 'Litmos: AI in L&D Readiness Checklist', href: 'https://www.litmos.com/resources/downloads/ai-in-learning-and-development-checklist' },
+  { label: 'Hone HQ: L&D Tech Evaluation Checklist', href: 'https://honehq.com/resources/ebooks/ld-tech-evaluation-checklist/' },
+  { label: 'Joysuite: AI for Learning and Development', href: 'https://www.joysuite.com/blog/ai-for-learning-development/' },
+  { label: 'Training Industry: AI Skills, Training and Governance', href: 'https://trainingindustry.com/articles/artificial-intelligence/ai-skills-training-and-governance-a-guide-for-ld-professionals/' },
+  { label: 'Docebo: Buyer’s Guide to AI Learning Products', href: 'https://www.docebo.com/research/buyers-guide-to-ai-learning-products/' },
+  { label: 'TechSmith: Using Video To Strengthen SOPs', href: 'https://www.techsmith.com/blog/videos-to-improve-sops/' },
+  { label: 'NAVEX: AI Literacy Training under EU AI Act', href: 'https://www.navex.com/en-us/blog/article/ai-literacy-training-a-compliance-necessity-under-the-eu-ai-act/' },
+  { label: 'ArtificialIntelligenceAct.eu: Article 4', href: 'https://artificialintelligenceact.eu/article/4/' }
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Editorial Methodology for AI Training Directory',
+  description: 'How AI training tools and pages are evaluated for workflow fit, governance, localization, and implementation difficulty.',
+  mainEntityOfPage: canonical,
+  dateModified: evidenceUpdatedOn
+};
+---
+<Base
+  title="Editorial Methodology | AI Training Directory"
+  description="How this directory evaluates AI training tools and pages using workflow-fit, governance, localization, and implementation difficulty criteria."
+  canonical={canonical}
+  jsonLd={jsonLd}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Editorial Methodology', href: '/editorial-methodology/' }]} />
+
+  <section class="hero">
+    <span class="eyebrow">Evidence-backed publishing standard</span>
+    <h1 style="margin-top:.7rem;max-width:22ch;">Editorial methodology for tool and route evaluation</h1>
+    <p class="muted" style="max-width:72ch;">This page explains how we evaluate tools and buying pages before publishing recommendations. We favor conservative claims, practical implementation details, and evidence links over broad product hype.</p>
+  </section>
+
+  <section class="section card" aria-labelledby="criteria-heading">
+    <h2 id="criteria-heading">Core evaluation criteria</h2>
+    <ol>
+      <li><strong>Workflow-fit:</strong> can a real L&amp;D team ship and update content faster on one defined workflow?</li>
+      <li><strong>Governance:</strong> are approval paths, version control, and audit traces clear for compliance-sensitive use?</li>
+      <li><strong>Localization:</strong> can teams support multilingual quality without rebuilding content from scratch?</li>
+      <li><strong>Implementation difficulty:</strong> how much setup, integration, and ongoing maintenance load is required?</li>
+    </ol>
+  </section>
+
+  <section class="section card" aria-labelledby="process-heading">
+    <h2 id="process-heading">Editorial workflow</h2>
+    <ol>
+      <li>Collect high-intent buyer questions from solution and compare routes.</li>
+      <li>Pull evidence from checklist and implementation guidance sources.</li>
+      <li>Translate guidance into buyer checklists and decision matrices.</li>
+      <li>Prefer claims that can be validated in pilot windows (2-4 weeks).</li>
+      <li>Publish only after internal link checks and build verification.</li>
+    </ol>
+  </section>
+
+  <section class="section card" aria-labelledby="scope-heading">
+    <h2 id="scope-heading">Claim boundaries</h2>
+    <ul>
+      <li>No invented ROI percentages or unsupported benchmark claims.</li>
+      <li>No legal interpretation beyond cited public guidance.</li>
+      <li>Recommendations are framed as pilot decisions, not universal rankings.</li>
+      <li>Pages are updated as workflows or governance requirements materially change.</li>
+    </ul>
+  </section>
+
+  <section class="section card" aria-labelledby="evidence-heading">
+    <h2 id="evidence-heading">Evidence references used in Tavily research</h2>
+    <p class="muted" style="margin-top:0;">Evidence snapshot date: <time datetime={evidenceUpdatedOn}>{evidenceUpdatedOn}</time> from <code>ops/tavily-deepresearch-2026-02-17.md</code>.</p>
+    <ul>
+      {evidenceSources.map((source) => (
+        <li><a href={source.href} rel="noopener nofollow" target="_blank">{source.label}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section card" aria-labelledby="utility-links-heading">
+    <h2 id="utility-links-heading">Utility links</h2>
+    <div class="chips chips-nav">
+      <a class="chip" href="/solutions/ai-ld-tech-evaluation-checklist/">AI L&amp;D tech evaluation checklist route</a>
+      <a class="chip" href="/solutions/">Solutions hub</a>
+      <a class="chip" href="/compare/">Compare hub</a>
+      <a class="chip" href="/">Homepage</a>
+    </div>
+  </section>
+</Base>

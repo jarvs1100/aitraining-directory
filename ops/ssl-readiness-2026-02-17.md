@@ -800,3 +800,72 @@ Location: http://aitraining.directory/
 - `qa:https` passed after latest content updates (138 HTML files checked).
 - DNS and served certificate state are unchanged; custom-domain HTTPS still blocked by `CN=*.github.io` hostname mismatch.
 - HTTP origin timestamp advanced to `09:58:56 UTC`, indicating newer deploy availability over HTTP while TLS binding remains pending.
+
+---
+
+## Evidence delta — 2026-02-17 10:26 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 145 HTML files.
+```
+
+### DNS (stable on GitHub Pages)
+```bash
+dig +short aitraining.directory A
+185.199.109.153
+185.199.110.153
+185.199.111.153
+185.199.108.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests (now passing)
+```bash
+curl -sSI https://aitraining.directory
+HTTP/2 200
+
+curl -sSI https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### HTTP behavior (current)
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 10:19:55 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- Major SSL readiness improvement: HTTPS is now valid for apex and `www` (no hostname mismatch errors).
+- Certificate authority changed from Sectigo/GitHub default to Let's Encrypt (`R12`) with active validity window through 2026-05-18.
+- `https://www` correctly redirects to canonical `https://aitraining.directory/`.

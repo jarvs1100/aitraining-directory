@@ -318,6 +318,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/'
   },
   {
+    key: 'adaptive-recertification-vs-fixed-refreshers',
+    locale: 'de',
+    slug: 'ki-adaptive-rezertifizierungspfade-vs-fixe-jaehrliche-compliance-refreshers',
+    title: 'KI-adaptive Rezertifizierungspfade vs. fixe jährliche Compliance-Refresher | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die adaptive KI-gestützte Rezertifizierung gegen starre jährliche Compliance-Refresher bewerten.',
+    h1: 'KI-adaptive Rezertifizierungspfade vs. fixe jährliche Compliance-Refresher',
+    intro: 'Hilft Compliance- und L&D-Teams, risikobasierte Rezertifizierung gegenüber starren Jahreszyklen nach Umsetzungsaufwand und Audit-Defensibility zu vergleichen.',
+    points: ['Vergleich von Risk-Targeting-Präzision und Reaktionsgeschwindigkeit auf neue Lücken', 'Messbare Kriterien für Lernbelastung, Abschlussqualität und Wiederholungsrisiken', 'Pilot-Framework für Governance, RACI und skalierbare Rollout-Entscheidungen'],
+    enPath: '/compare/ai-adaptive-recertification-paths-vs-fixed-annual-compliance-refreshers/'
+  },
+  {
+    key: 'adaptive-recertification-vs-fixed-refreshers',
+    locale: 'es',
+    slug: 'rutas-recertificacion-adaptativa-ia-vs-refreshers-anuales-fijos-compliance',
+    title: 'Rutas de recertificación adaptativa con IA vs. refreshers anuales fijos de compliance | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan recertificación adaptativa con IA frente a refreshers anuales fijos en programas de compliance.',
+    h1: 'Recertificación adaptativa con IA vs. refreshers anuales fijos de compliance',
+    intro: 'Ayuda a equipos de compliance y L&D a decidir entre rutas adaptativas y ciclos anuales fijos según precisión de riesgo, carga del alumno y trazabilidad para auditoría.',
+    points: ['Comparativa de velocidad para cerrar brechas emergentes de cumplimiento', 'Criterios operativos para reducir sobreentrenamiento sin perder control', 'Marco de piloto para asignación basada en riesgo, gobernanza y escalado'],
+    enPath: '/compare/ai-adaptive-recertification-paths-vs-fixed-annual-compliance-refreshers/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',

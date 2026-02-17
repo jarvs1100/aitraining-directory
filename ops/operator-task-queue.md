@@ -47,4 +47,8 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Create distribution asset pack for the audit-evidence comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [x] Add i18n parity stubs for the new audit-evidence route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
-- [ ] Add one high-intent compare route for recertification operations: `/compare/ai-adaptive-recertification-paths-vs-fixed-annual-compliance-refreshers/` with implementation-led rubric + FAQ schema.
+- [x] Add one high-intent compare route for recertification operations: `/compare/ai-adaptive-recertification-paths-vs-fixed-annual-compliance-refreshers/` with implementation-led rubric + FAQ schema.
+- [x] Create distribution asset pack for the recertification comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new recertification route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [ ] Add one high-intent compare route for frontline compliance execution: `/compare/ai-dynamic-policy-updates-vs-static-compliance-manuals-for-frontline-teams/` with implementation-led rubric + FAQ schema.
