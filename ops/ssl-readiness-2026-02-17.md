@@ -4076,3 +4076,35 @@ location: https://aitraining.directory/
 - Deploy freshness confirmed by updated `Last-Modified` response header.
 
 ---
+## Evidence delta — 2026-02-17 23:56 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 311 HTML files.
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -subject -issuer -dates
+subject=CN = www.aitraining.directory
+issuer=C = US, O = Let's Encrypt, CN = R12
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS behavior
+```bash
+curl -I https://aitraining.directory/
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 23:41:43 GMT
+```
+
+### Current delta summary
+- HTTPS remains valid for apex via Let's Encrypt (`R12`).
+- Post-change QA passed with 311 generated HTML files checked.
+- Deploy freshness confirmed (`Last-Modified` advanced to `23:41:43 UTC`).
+
+---

@@ -2366,6 +2366,31 @@ localizedLandingPages.push(
   }
 );
 
+localizedLandingPages.push(
+  {
+    key: 'evidence-access-step-up-auth-vs-manual-overrides',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-step-up-authentifizierung-vs-manuelle-sensitive-request-overrides-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Approval Step-Up-Authentifizierung vs. manuelle Sensitive-Request-Overrides für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Step-Up-Authentifizierung in Evidence-Access-Freigaben gegen manuelle Sensitive-Request-Overrides vergleichen.',
+    h1: 'KI-Step-Up-Authentifizierung vs. manuelle Sensitive-Request-Overrides für Evidence-Access-Freigaben',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Approver-Assurance, Freigabe-SLA und auditfeste Traceability zwischen beiden Genehmigungsmodellen realistisch zu bewerten.',
+    points: ['Vergleich von Identitätssicherheit bei sensiblen Evidence-Access-Freigaben', 'Messbare Kriterien für schnellere Eskalation ohne Kontrollverlust bei High-Risk-Requests', 'Pilot-Framework für auditdefensible Approval-Governance mit weniger manueller Override-Rework-Last'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-step-up-authentication-vs-manual-sensitive-request-overrides-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-step-up-auth-vs-manual-overrides',
+    locale: 'es',
+    slug: 'autenticacion-step-up-aprobaciones-acceso-evidencia-training-compliance-ia-vs-overrides-manuales-solicitudes-sensibles-audit-readiness',
+    title: 'Autenticación step-up en aprobaciones de acceso a evidencia en training compliance con IA vs. overrides manuales de solicitudes sensibles para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan autenticación step-up con IA frente a overrides manuales en aprobaciones de acceso a evidencia sensible.',
+    h1: 'Autenticación step-up con IA vs. overrides manuales en solicitudes sensibles de acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar nivel de assurance del aprobador, velocidad de respuesta y trazabilidad defendible entre ambos enfoques de aprobación.',
+    points: ['Comparativa de validación fuerte de identidad para solicitudes de acceso de alto riesgo', 'Criterios operativos para escalar rápido sin perder consistencia de control', 'Marco de piloto para gobernanza audit-ready con menos retrabajo por overrides manuales'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-step-up-authentication-vs-manual-sensitive-request-overrides-for-audit-readiness/'
+  }
+);
+
 export function getLocalizedFaq(locale) {
   const localized = {
     pl: [
