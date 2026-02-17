@@ -356,7 +356,23 @@ const comparisonContentBySlug = {
       'Choose the model with lower certification friction per audit-ready decision, not the model with the highest automation surface area.'
     ]
   },
-    'synthesia-alternatives': {
+    'ai-training-needs-prioritization-vs-stakeholder-request-backlogs-for-ld-roadmaps': {
+    decisionMatrix: [
+      { criterion: 'Roadmap focus on business-critical capability gaps', weight: '25%', whatGoodLooksLike: 'Quarterly roadmap capacity is concentrated on high-impact capability gaps tied to measurable business outcomes.', leftLens: 'Evaluate whether AI prioritization consistently ranks requests by risk, role impact, and expected behavior-change value.', rightLens: 'Evaluate whether stakeholder-priority backlogs protect roadmap capacity from low-impact or politically urgent requests.' },
+      { criterion: 'Cycle time from intake to approved training intervention', weight: '25%', whatGoodLooksLike: 'Teams can move from request intake to approved solution path quickly without skipping governance.', leftLens: 'Measure decision speed when AI triage clusters duplicate requests and proposes priority tiers with rationale.', rightLens: 'Measure decision speed when manual backlog grooming and stakeholder meetings determine sequencing.' },
+      { criterion: 'Governance transparency and trust across stakeholders', weight: '20%', whatGoodLooksLike: 'Stakeholders understand why requests were accepted, deferred, or rejected and can audit decision history.', leftLens: 'Assess explainability of scoring logic, override policy, and decision logs for challenged prioritization outcomes.', rightLens: 'Assess consistency of manual rationale capture, escalation rules, and fairness across executive and frontline requests.' },
+      { criterion: 'Operational load on L&D planning owners', weight: '15%', whatGoodLooksLike: 'Roadmap planning remains sustainable without monthly reprioritization fire drills.', leftLens: 'Track planner workload for model QA, exception handling, and calibration meetings after AI triage adoption.', rightLens: 'Track planner workload for intake triage, meeting prep, stakeholder negotiation, and backlog hygiene.' },
+      { criterion: 'Cost per shipped high-impact roadmap item', weight: '15%', whatGoodLooksLike: 'Planning overhead declines while a higher share of shipped work maps to validated capability outcomes.', leftLens: 'Model platform + governance cost against reduced planning churn and fewer low-value interventions.', rightLens: 'Model lower tooling spend against coordination overhead, re-prioritization drag, and delayed high-impact launches.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day side-by-side pilot on one crowded intake stream (compliance updates, onboarding asks, or enablement requests).',
+      'Use one scorecard: intake-to-decision cycle time, % roadmap capacity on high-impact items, and reprioritization churn rate.',
+      'Require explicit override and escalation rules before any AI-prioritization rollout.',
+      'Define RACI across L&D ops, business stakeholders, compliance owner, and executive sponsor for roadmap arbitration.',
+      'Choose the model with lower planning friction per shipped high-impact intervention over the pilot window.'
+    ]
+  },
+  'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
       { criterion: 'Editing depth for L&D workflows', weight: '25%', whatGoodLooksLike: 'Instructional designers can refine pacing, visuals, and overlays without recreating scenes.', synthesiaLens: 'Clean workflow for standard formats, but complex edits can require workarounds.', alternativesLens: 'Favor tools with timeline-level control if your team iterates frequently.' },
@@ -555,6 +571,7 @@ const jsonLd = {
     .matrix-card h3 {
       margin-bottom: 0.65rem;
       font-size: 1.12rem;
+      overflow-wrap: anywhere;
     }
 
     .matrix-card p {
@@ -587,6 +604,12 @@ const jsonLd = {
     }
 
     @media (max-width: 760px) {
+      h1 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+        overflow-wrap: anywhere;
+      }
+
       .matrix-table-wrap {
         display: none;
       }

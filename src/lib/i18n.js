@@ -582,7 +582,30 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de compliance y training ops a evaluar fiabilidad de cumplimiento en plazo, claridad de escalado y trazabilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de finalización a tiempo y reducción de backlog vencido', 'Criterios operativos para ownership, SLA y cierre de casos con evidencia', 'Marco de piloto para reducir carga manual de persecución sin perder control de cumplimiento'],
     enPath: '/compare/ai-mandatory-training-escalation-workflows-vs-manager-email-chasing-for-compliance-completion/'
+  },
+  {
+    key: 'roadmap-prioritization-vs-request-backlogs',
+    locale: 'de',
+    slug: 'ki-training-needs-priorisierung-vs-stakeholder-request-backlogs-fuer-ld-roadmaps',
+    title: 'KI-Training-Needs-Priorisierung vs. Stakeholder-Request-Backlogs für L&D-Roadmaps | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Priorisierung von Trainingsbedarfen gegen Stakeholder-Request-Backlogs für L&D-Roadmaps bewerten.',
+    h1: 'KI-Training-Needs-Priorisierung vs. Stakeholder-Request-Backlogs für L&D-Roadmaps',
+    intro: 'Hilft L&D- und Enablement-Teams, Roadmap-Fokus, Intake-Zykluszeit und Governance-Transparenz zwischen beiden Priorisierungsmodellen zu vergleichen.',
+    points: ['Vergleich von Business-Impact-Fokus und Roadmap-Stabilität', 'Messbare Kriterien für Intake-to-Decision-Zeit und Repriorisierungs-Churn', 'Pilot-Framework für Override-Regeln, RACI und skalierbare Planung'],
+    enPath: '/compare/ai-training-needs-prioritization-vs-stakeholder-request-backlogs-for-ld-roadmaps/'
+  },
+  {
+    key: 'roadmap-prioritization-vs-request-backlogs',
+    locale: 'es',
+    slug: 'priorizacion-needs-formacion-ia-vs-backlogs-requests-stakeholders-roadmaps-ld',
+    title: 'Priorización de needs de formación con IA vs. backlogs de requests de stakeholders para roadmaps de L&D | AI Training Directory',
+    description: 'Entrada localizada para comparar priorización de necesidades de formación con IA frente a backlogs de solicitudes de stakeholders en la planificación de roadmaps L&D.',
+    h1: 'Priorización de needs de formación con IA vs. backlogs de requests de stakeholders para roadmaps de L&D',
+    intro: 'Ayuda a equipos de L&D y enablement a evaluar foco del roadmap, velocidad de intake y transparencia de gobernanza entre ambos enfoques.',
+    points: ['Comparativa de foco en gaps críticos y estabilidad del roadmap', 'Criterios operativos para ciclo intake-a-decisión y churn de repriorización', 'Marco de piloto con reglas de override, ownership y escalado'],
+    enPath: '/compare/ai-training-needs-prioritization-vs-stakeholder-request-backlogs-for-ld-roadmaps/'
   }
+
 
 ];
 

@@ -81,3 +81,9 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Create distribution asset pack for the new audit-trail automation comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [x] Add i18n parity stubs for the new route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+
+- [x] Add one traffic-driving high-intent compare route for L&D planning operations: `/compare/ai-training-needs-prioritization-vs-stakeholder-request-backlogs-for-ld-roadmaps/` with implementation-led rubric + FAQ schema.
+- [x] Create distribution asset pack for the new L&D roadmap-prioritization comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new roadmap-prioritization route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [x] Mobile UX polish pass: improve compare-route table/card heading readability for long-slug pages on small screens.
+- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
