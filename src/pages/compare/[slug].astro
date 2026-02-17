@@ -68,6 +68,22 @@ const comparisonContentBySlug = {
       'Select the platform that achieves lower revision burden and faster publish cadence over 30 days.'
     ]
   },
+  'ai-dubbing-vs-subtitles-for-compliance-training': {
+    decisionMatrix: [
+      { criterion: 'Regulatory clarity for critical terms', weight: '25%', whatGoodLooksLike: 'Learners in every region interpret policy-critical wording consistently and pass scenario checks.', leftLens: 'Test dubbing accuracy for legal terminology, acronym pronunciation, and phrasing that could change compliance interpretation.', rightLens: 'Test subtitle wording precision for policy-critical statements and confirm readability against regional language standards.' },
+      { criterion: 'Speed to publish after policy updates', weight: '25%', whatGoodLooksLike: 'Teams can ship approved language updates within SLA when regulations change.', leftLens: 'Measure turnaround from source-script change to QA-approved dubbed module across top languages.', rightLens: 'Measure turnaround from source-script change to approved subtitle package and LMS republish.' },
+      { criterion: 'Learner comprehension in low-audio environments', weight: '20%', whatGoodLooksLike: 'Completion and assessment outcomes stay strong across office, field, and shift-based contexts.', leftLens: 'Evaluate whether dubbed narration improves comprehension for learners with limited reading bandwidth.', rightLens: 'Evaluate whether subtitle-first modules remain understandable where audio use is restricted or muted.' },
+      { criterion: 'QA and governance overhead', weight: '15%', whatGoodLooksLike: 'Localization QA load is predictable with clear reviewer ownership and signoff evidence.', leftLens: 'Score reviewer minutes per locale for pronunciation checks, timing corrections, and re-export cycles.', rightLens: 'Score reviewer minutes per locale for translation checks, subtitle timing alignment, and legal signoff.' },
+      { criterion: 'Cost per compliant localized module', weight: '15%', whatGoodLooksLike: 'Total localization cost falls as module volume increases without quality regression.', leftLens: 'Model dubbing spend across voice generation, QA passes, and rework rates by language.', rightLens: 'Model subtitle spend including translation, QA, and republish effort by language.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-risk compliance lesson in at least two non-English languages before selecting default localization mode.',
+      'Use the same legal/compliance reviewer panel to score both approaches with a shared defect rubric.',
+      'Track post-launch comprehension by language (quiz misses tied to terminology) instead of relying on completion alone.',
+      'Document fallback path: when to escalate from subtitles to dubbing for specific populations or risk classes.',
+      'Choose the mode with lower total defect-correction effort over 30 days, not the fastest first publish.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },

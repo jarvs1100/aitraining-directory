@@ -8,5 +8,5 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Polish mobile chip navigation spacing/tap targets on homepage + compare pages for better thumb usability.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
 - [x] Add internal-link CTA block on `/compare/index` cards to channel readers into highest-intent solution routes.
-- [ ] Create one new high-intent route focused on compliance localization execution (`/compare/ai-dubbing-vs-subtitles-for-compliance-training/`) with rubric + FAQ schema.
+- [x] Create one new high-intent route focused on compliance localization execution (`/compare/ai-dubbing-vs-subtitles-for-compliance-training/`) with rubric + FAQ schema.
 - [ ] Mobile UX polish pass for top-nav localization links on `/pl,/cs,/sk,/hu,/de,/es` landing pages (tap target + spacing parity).
