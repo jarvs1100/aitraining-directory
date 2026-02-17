@@ -10,6 +10,42 @@ if (!page) throw new Error(`Comparison page not found: ${slug}`);
 const canonical = `https://aitraining.directory/compare/${slug}/`;
 const candidates = pickTools((slug.length + 3) % 8, 4);
 
+const comparisonContentBySlug = {
+  'synthesia-alternatives': {
+    decisionMatrix: [
+      { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
+      { criterion: 'Editing depth for L&D workflows', weight: '25%', whatGoodLooksLike: 'Instructional designers can refine pacing, visuals, and overlays without recreating scenes.', synthesiaLens: 'Clean workflow for standard formats, but complex edits can require workarounds.', alternativesLens: 'Favor tools with timeline-level control if your team iterates frequently.' },
+      { criterion: 'Localization and language QA', weight: '20%', whatGoodLooksLike: 'Native-review pass is lightweight and pronunciation issues are fixable in-platform.', synthesiaLens: 'Broad language support; validate voice quality for domain vocabulary.', alternativesLens: 'Check glossary controls, voice cloning governance, and regional tone flexibility.' },
+      { criterion: 'Governance + approvals', weight: '20%', whatGoodLooksLike: 'Version history, reviewer roles, and signoff checkpoints are explicit.', synthesiaLens: 'Evaluate workspace controls against compliance requirements.', alternativesLens: 'Some alternatives win on collaboration history and approval routing depth.' },
+      { criterion: 'Operating cost at scale', weight: '15%', whatGoodLooksLike: 'Cost per published training minute declines as output rises.', synthesiaLens: 'Model cost against seat count + production volume.', alternativesLens: 'Benchmark total monthly spend including editing and localization tools.' }
+    ],
+    buyingCriteria: [
+      'Run one identical pilot workflow across all shortlisted tools (same SOP, same reviewer panel, same deadline).',
+      'Score each tool on revision turnaround time, not just first draft speed.',
+      'Require a multilingual test clip if your org supports non-English learners.',
+      'Validate export/integration path into LMS or knowledge base before procurement signoff.',
+      'Tie final selection to 90-day operating model: owners, approval SLA, and update cadence.'
+    ]
+  }
+};
+
+const defaultComparisonContent = {
+  decisionMatrix: [
+    { criterion: 'Workflow fit', weight: '30%', whatGoodLooksLike: 'Publishing and updates stay fast under real team constraints.', synthesiaLens: 'Use this column to evaluate incumbent fit.', alternativesLens: 'Use this column to evaluate differentiation.' },
+    { criterion: 'Review + governance', weight: '25%', whatGoodLooksLike: 'Approvals, versioning, and accountability are clear.', synthesiaLens: 'Check control depth.', alternativesLens: 'Check parity or advantage in review rigor.' },
+    { criterion: 'Localization readiness', weight: '25%', whatGoodLooksLike: 'Multilingual delivery does not require full rebuilds.', synthesiaLens: 'Test language quality with real terminology.', alternativesLens: 'Test localization + reviewer workflows.' },
+    { criterion: 'Cost to operate', weight: '20%', whatGoodLooksLike: 'Total effort and spend fall as output scales.', synthesiaLens: 'Model full-team cost.', alternativesLens: 'Model end-to-end production stack cost.' }
+  ],
+  buyingCriteria: [
+    'Align stakeholders on one weighted scorecard before any demos.',
+    'Use measurable pilot outcomes (cycle time, QA defects, completion impact).',
+    'Document ownership and approval paths before rollout.',
+    'Reassess fit after first production month with real usage data.'
+  ]
+};
+
+const comparisonContent = { ...defaultComparisonContent, ...(comparisonContentBySlug[slug] || {}) };
+
 const faq = [
   { q: 'What should L&D teams optimize for first?', a: 'Prioritize cycle-time reduction on one high-friction workflow, then expand only after measurable gains in production speed and adoption.' },
   { q: 'How long should a pilot run?', a: 'Two to four weeks is typically enough to validate operational fit, update speed, and stakeholder confidence.' },
@@ -36,6 +72,37 @@ const jsonLd = {
     <li><strong>Localization:</strong> Can you support multilingual or role-specific variants without rework?</li>
     <li><strong>Total operating cost:</strong> Does the tool reduce weekly effort for content owners and managers?</li>
   </ol>
+
+  <h2>Decision matrix</h2>
+  <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr>
+          <th>Criterion</th>
+          <th>Weight</th>
+          <th>What good looks like</th>
+          <th>Synthesia lens</th>
+          <th>Alternative lens</th>
+        </tr>
+      </thead>
+      <tbody>
+        {comparisonContent.decisionMatrix.map((row) => (
+          <tr>
+            <td><strong>{row.criterion}</strong></td>
+            <td>{row.weight}</td>
+            <td>{row.whatGoodLooksLike}</td>
+            <td>{row.synthesiaLens}</td>
+            <td>{row.alternativesLens}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Buying criteria before final selection</h2>
+  <ul>
+    {comparisonContent.buyingCriteria.map((item) => <li>{item}</li>)}
+  </ul>
 
   <h2>Related tools in this directory</h2>
   <div class="grid">

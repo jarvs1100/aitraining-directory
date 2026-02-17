@@ -9,6 +9,18 @@ const {
   alternates = [],
   lang = 'en'
 } = Astro.props;
+
+const uiByLang = {
+  en: { announcement: 'NEW: Curated for L&D teams shipping onboarding, SOP, and enablement programs faster.', home: 'Home', categories: 'Categories', solutions: 'Solutions', compare: 'Compare', partners: 'Founding Partners', submit: 'Submit Tool' },
+  pl: { announcement: 'NOWE: Katalog dla zespołów L&D wdrażających onboarding, SOP i programy enablement szybciej.', home: 'Strona główna', categories: 'Kategorie', solutions: 'Scenariusze', compare: 'Porównania', partners: 'Partnerzy założycielscy', submit: 'Dodaj narzędzie' },
+  cs: { announcement: 'NOVINKA: Katalog pro L&D týmy zrychlující onboarding, SOP a enablement programy.', home: 'Domů', categories: 'Kategorie', solutions: 'Scénáře', compare: 'Srovnání', partners: 'Zakládající partneři', submit: 'Přidat nástroj' },
+  sk: { announcement: 'NOVINKA: Katalóg pre L&D tímy zrýchľujúce onboarding, SOP a enablement programy.', home: 'Domov', categories: 'Kategórie', solutions: 'Scenáre', compare: 'Porovnania', partners: 'Zakladajúci partneri', submit: 'Pridať nástroj' },
+  hu: { announcement: 'ÚJ: Katalógus L&D csapatoknak onboarding, SOP és enablement programok gyorsításához.', home: 'Kezdőlap', categories: 'Kategóriák', solutions: 'Megoldások', compare: 'Összehasonlítás', partners: 'Alapító partnerek', submit: 'Eszköz beküldése' },
+  de: { announcement: 'NEU: Kuratiert für L&D-Teams, die Onboarding-, SOP- und Enablement-Programme schneller umsetzen.', home: 'Startseite', categories: 'Kategorien', solutions: 'Lösungen', compare: 'Vergleiche', partners: 'Founding-Partner', submit: 'Tool einreichen' },
+  es: { announcement: 'NUEVO: Directorio para equipos de L&D que aceleran onboarding, SOP y programas de enablement.', home: 'Inicio', categories: 'Categorías', solutions: 'Soluciones', compare: 'Comparar', partners: 'Socios fundadores', submit: 'Enviar herramienta' }
+};
+
+const ui = uiByLang[lang] || uiByLang.en;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -330,7 +342,7 @@ const {
 
       <div class="announcement" role="status" aria-live="polite">
         <div class="wrap">
-          <p>NEW: Curated for L&D teams shipping onboarding, SOP, and enablement programs faster.</p>
+          <p>{ui.announcement}</p>
         </div>
       </div>
 
@@ -338,12 +350,12 @@ const {
         <div class="wrap nav-row">
           <a href="/" class="brand">AI Training Directory</a>
           <nav class="top-nav" aria-label="Main navigation">
-            <a href="/">Home</a>
-            <a href="/categories/">Categories</a>
-            <a href="/solutions/">Solutions</a>
-            <a href="/compare/">Compare</a>
-            <a href="/advertise/">Founding Partners</a>
-            <a href="/submit/">Submit Tool</a>
+            <a href="/">{ui.home}</a>
+            <a href="/categories/">{ui.categories}</a>
+            <a href="/solutions/">{ui.solutions}</a>
+            <a href="/compare/">{ui.compare}</a>
+            <a href="/advertise/">{ui.partners}</a>
+            <a href="/submit/">{ui.submit}</a>
           </nav>
         </div>
       </header>
