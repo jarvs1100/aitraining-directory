@@ -845,3 +845,44 @@ This week’s new comparison route helps training leaders evaluate AI training-n
 It gives a pilot-ready framework centered on roadmap focus, governance transparency, and intake-to-decision speed — so teams can ship more high-impact interventions with less reprioritization churn.
 
 Read: https://aitraining.directory/compare/ai-training-needs-prioritization-vs-stakeholder-request-backlogs-for-ld-roadmaps/
+
+---
+
+## Focus URL
+- Canonical: https://aitraining.directory/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/
+
+## LinkedIn post draft
+**Headline:** AI governance control tower vs steering committee: which one keeps enterprise L&D moving?
+
+Enterprise training governance breaks when decisions wait for the next committee meeting.
+
+We published a practical comparison for L&D teams evaluating AI governance control towers vs manual steering-committee operations:
+https://aitraining.directory/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/
+
+The rubric focuses on decision latency, policy alignment consistency, audit traceability, operator load, and cost per approved governance decision.
+
+## X/Twitter hook + thread starter
+**Post 1:**
+L&D governance bottlenecks are often a decision-system issue, not a content issue.
+
+AI governance control towers vs steering committees = speed + control tradeoff.
+
+New comparison route:
+https://aitraining.directory/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/
+
+**Post 2:**
+Pilot idea:
+1) One policy-sensitive intake stream
+2) Measure cycle time + backlog age + policy defects
+3) Define override rules up front
+
+Pick the model with lower governance friction per approved decision.
+
+## Newsletter blurb
+**Subject option:** Is your L&D governance model slowing execution?
+
+This week’s new route compares AI training governance control towers with manual steering committees for enterprise L&D teams.
+
+Instead of high-level pros/cons, it gives an implementation-led rubric to evaluate decision latency, governance consistency, traceability, and operating burden before scaling.
+
+Read: https://aitraining.directory/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/

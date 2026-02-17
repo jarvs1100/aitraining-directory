@@ -89,7 +89,7 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
 
 - [x] Add one traffic-driving high-intent compare route for L&D governance operations: `/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/` with implementation-led rubric + FAQ schema.
-- [ ] Create distribution asset pack for the new governance control-tower comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Create distribution asset pack for the new governance control-tower comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [ ] Add i18n parity stubs for the new governance route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [ ] Mobile UX polish pass: improve compare-page decision-matrix table row spacing/scanability on mid-size mobile screens.
 - [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
