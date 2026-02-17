@@ -1869,6 +1869,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de actualización, cobertura de obligaciones y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de tiempo de mapeo tras cambios regulatorios', 'Criterios operativos para cobertura completa, ownership y trazabilidad de decisiones', 'Marco de piloto para reducir retrabajo y riesgo de gaps en mapeos de obligaciones'],
     enPath: '/compare/ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks/'
+  },
+  {
+    key: 'control-library-sync-vs-policy-matrix-updates',
+    locale: 'de',
+    slug: 'ki-compliance-training-control-library-sync-vs-manuelle-policy-matrix-updates',
+    title: 'KI-Compliance-Training-Control-Library-Sync vs. manuelle Policy-Matrix-Updates | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützten Control-Library-Sync gegen manuelle Policy-Matrix-Updates im Compliance-Training vergleichen.',
+    h1: 'KI-Control-Library-Sync vs. manuelle Policy-Matrix-Updates im Compliance-Training',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Update-Latenz, Coverage-Konsistenz und Audit-Defensibility zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Policy-zu-Control-Sync-Geschwindigkeit nach Regeländerungen', 'Messbare Kriterien für vollständige Control-Abdeckung und Owner-Klarheit', 'Pilot-Framework für weniger Mapping-Defekte und schnellere Audit-Response'],
+    enPath: '/compare/ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates/'
+  },
+  {
+    key: 'control-library-sync-vs-policy-matrix-updates',
+    locale: 'es',
+    slug: 'sincronizacion-control-library-training-compliance-ia-vs-actualizaciones-manuales-policy-matrix',
+    title: 'Sincronización de control library en training compliance con IA vs. actualizaciones manuales de policy matrix | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan sincronización de control library con IA frente a actualizaciones manuales de policy matrix en operaciones de compliance training.',
+    h1: 'Sincronización de control library con IA vs. actualizaciones manuales de policy matrix en compliance training',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de actualización, consistencia de cobertura de controles y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de latencia de sync tras cambios de política', 'Criterios operativos para cobertura completa de controles y ownership claro', 'Marco de piloto para reducir defectos de mapeo y mejorar respuesta ante auditoría'],
+    enPath: '/compare/ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates/'
   }
 );
 

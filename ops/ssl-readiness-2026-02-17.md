@@ -2900,3 +2900,60 @@ Location: https://aitraining.directory/
 - HTTPS remains valid on custom domain with Let's Encrypt `R12` certificate.
 - Apex returns `HTTP/2 200`; `www` continues to redirect to HTTPS apex.
 - `Last-Modified` advanced to `18:10:54 UTC` after latest deploy.
+\n---\n\n## Evidence delta — 2026-02-17 18:27 UTC
+\n### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 245 HTML files.
+```
+\n### DNS
+```bash
+dig +short aitraining.directory A
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.109.153
+185.199.108.153
+185.199.110.153
+185.199.111.153
+```
+\n### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+\n### HTTPS validation tests
+```bash
+curl -I https://aitraining.directory | head -n 6
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Tue, 17 Feb 2026 18:12:41 GMT
+access-control-allow-origin: *
+etag: "6994af99-501b"
+
+curl -I https://www.aitraining.directory | head -n 8
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: https://aitraining.directory/
+x-github-request-id: A27A:1EE677:3CA063:3D2BF7:6994B2F7
+accept-ranges: bytes
+age: 0
+date: Tue, 17 Feb 2026 18:27:05 GMT
+```

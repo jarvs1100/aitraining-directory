@@ -684,6 +684,22 @@ const supplementalComparisonContentBySlug = {
       'Assign RACI across compliance lead, L&D ops owner, legal/policy reviewer, and internal audit partner.',
       'Choose the model with lower mapping friction per audit-ready obligation decision, not the model with the largest spreadsheet footprint.'
     ]
+  },
+  'ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates': {
+    decisionMatrix: [
+      { criterion: 'Policy-to-control synchronization latency', weight: '25%', whatGoodLooksLike: 'Approved policy changes propagate to control-library training mappings before enforcement windows close.', leftLens: 'Measure time from policy approval to synced control-library updates with owner accountability and due-date tracking.', rightLens: 'Measure time when analysts manually update policy matrices, reconcile tabs, and chase signoffs by email.' },
+      { criterion: 'Control coverage consistency across business units', weight: '25%', whatGoodLooksLike: 'Teams can prove each in-scope control has current training linkage across roles, regions, and systems.', leftLens: 'Assess gap-detection logic, duplicate mapping controls, and role-jurisdiction completeness checks.', rightLens: 'Assess miss risk when coverage depends on spreadsheet formulas, copy-paste consistency, and manual QA sweeps.' },
+      { criterion: 'Audit defensibility of control-to-training lineage', weight: '20%', whatGoodLooksLike: 'Auditors can trace each control requirement to assigned training, reviewer approvals, and timestamped evidence.', leftLens: 'Evaluate immutable sync history, approval logs, and version lineage across policy, control, and training artifacts.', rightLens: 'Evaluate reconstructability from matrix versions, inbox approvals, and meeting-note handoffs.' },
+      { criterion: 'Operational burden on compliance + training ops', weight: '15%', whatGoodLooksLike: 'Sync operations stay stable during high-change regulatory periods without fire-drill staffing.', leftLens: 'Track upkeep effort for rule tuning, edge-case triage, and monthly governance calibration.', rightLens: 'Track recurring effort for manual matrix maintenance, defect cleanup, and stakeholder reminder loops.' },
+      { criterion: 'Cost per audit-ready control-library update', weight: '15%', whatGoodLooksLike: 'Per-control update cost decreases while update reliability and evidence quality improve.', leftLens: 'Model platform + governance overhead against fewer mapping defects, faster updates, and lower rework.', rightLens: 'Model lower tooling spend against manual labor intensity, delayed remediation, and higher audit-response overhead.' }
+    ],
+    buyingCriteria: [
+      'Pilot one regulation family with at least two policy updates and multi-region control impacts before selecting default operating model.',
+      'Use one scorecard: sync latency, missing-control-link defects, reviewer rework minutes, and escalation count.',
+      'Define hard guardrails for approval gates, override ownership, and evidence retention before scale-up.',
+      'Assign RACI across compliance lead, L&D operations owner, policy reviewer, and internal audit partner.',
+      'Choose the model with lower friction per audit-ready control-library update, not the model with the biggest spreadsheet archive.'
+    ]
   }
 };
 
@@ -729,6 +745,12 @@ const implementationPlaybookBySlug = {
     'Run side-by-side update drills (AI mapping vs spreadsheet crosswalk) for two simulated policy-change events.',
     'Track mapping latency, missed-coverage defects, and reviewer rework effort under the same governance rubric.',
     'Promote only after validating approval lineage, owner accountability, and audit packet reconstruction speed.'
+  ],
+  'ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates': [
+    'Scope one control library and baseline current policy-matrix update defects and cycle time.',
+    'Run side-by-side update drills (AI control-library sync vs matrix updates) for two policy-change events.',
+    'Track sync latency, missing-control-link defects, and reviewer rework under one governance rubric.',
+    'Promote only after validating approval lineage, owner accountability, and audit packet reconstruction speed.'
   ]
 };
 
@@ -756,6 +778,10 @@ const decisionOutcomesBySlug = {
   'ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks': {
     left: ['You need faster obligation-to-training mapping updates with stronger coverage controls and traceable ownership.', 'Audit pressure requires defensible lineage from regulation change to training assignment and evidence artifacts.'],
     right: ['Your regulatory change volume is low and spreadsheet governance is currently disciplined and auditable.', 'You can tolerate slower update cycles while validating future automation requirements.']
+  },
+  'ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates': {
+    left: ['You need faster policy-to-control synchronization with stronger coverage checks and audit-grade traceability.', 'Control-change volume is high enough that manual matrix maintenance creates recurring delay and defect risk.'],
+    right: ['Policy-control updates are infrequent and your matrix governance is currently disciplined and auditable.', 'You can tolerate slower update cycles while validating if automation ROI justifies operating-model change.']
   }
 };
 
@@ -783,6 +809,12 @@ const compareClusterLinksBySlug = {
     { label: 'Compare: AI mandatory-training escalation vs manager email chasing', href: '/compare/ai-mandatory-training-escalation-workflows-vs-manager-email-chasing-for-compliance-completion/' },
     { label: 'Compare: AI evidence SLA orchestration vs manual ticket escalations', href: '/compare/ai-compliance-evidence-sla-orchestration-vs-manual-ticket-escalations-for-training-audits/' },
     { label: 'Solutions: Audit-ready training records', href: '/solutions/ai-compliance-audit-ready-training-records/' }
+  ],
+  'ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates': [
+    { label: 'Solution: Compliance training content creation', href: '/solutions/compliance-training-content-creation/' },
+    { label: 'Solution: Audit-ready training records', href: '/solutions/ai-compliance-audit-ready-training-records/' },
+    { label: 'Compare: AI obligation mapping vs manual crosswalks', href: '/compare/ai-compliance-training-obligation-mapping-vs-manual-regulation-spreadsheet-crosswalks/' },
+    { label: 'Compare: AI proof-of-completion vs LMS reports', href: '/compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/' }
   ],
   'ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness': [
     { label: 'Solution: EU AI Act AI literacy training', href: '/solutions/eu-ai-act-ai-literacy-training/' },
@@ -1353,6 +1385,25 @@ const jsonLd = {
         border: 1px solid #dbe4ef;
         border-radius: 0.58rem;
         background: #f8fafc;
+        line-height: 1.46;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .matrix-card {
+        padding: 0.82rem;
+      }
+
+      .matrix-card h3 {
+        font-size: 0.98rem;
+        line-height: 1.38;
+        letter-spacing: -0.01em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+      }
+
+      .matrix-card p {
+        font-size: 0.9rem;
         line-height: 1.46;
       }
     }
