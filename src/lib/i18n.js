@@ -1803,6 +1803,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar claridad de ownership, fiabilidad de SLA y defensibilidad operativa entre ambos enfoques.',
     points: ['Comparativa de latencia de asignación y calidad de escalado para solicitudes de auditoría', 'Criterios operativos para cumplimiento de SLA, tasa de reapertura y trazabilidad de handoffs', 'Marco de piloto para triage audit-ready con responsables claros y menor retrabajo'],
     enPath: '/compare/ai-audit-evidence-request-triage-vs-manual-shared-inbox-handoffs-for-training-compliance/'
+  },
+  {
+    key: 'compliance-evidence-sla-orchestration-vs-manual-ticket-escalations',
+    locale: 'de',
+    slug: 'ki-compliance-evidence-sla-orchestrierung-vs-manuelle-ticket-eskalationen-fuer-training-audits',
+    title: 'KI-Compliance-Evidence-SLA-Orchestrierung vs. manuelle Ticket-Eskalationen für Training-Audits | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-SLA-Orchestrierung gegen manuelle Ticket-Eskalationen in Training-Audits vergleichen.',
+    h1: 'KI-Evidence-SLA-Orchestrierung vs. manuelle Ticket-Eskalationen für Training-Audits',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, SLA-Treue, Eskalationsqualität und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Response-Latenz und Eigentümerklarheit bei Audit-Evidence-Anfragen', 'Messbare Kriterien für SLA-Hit-Rate, Reopen-Quote und Eskalations-Transparenz', 'Pilot-Framework für belastbare Orchestrierung mit weniger Deadline-Risiko unter Auditdruck'],
+    enPath: '/compare/ai-compliance-evidence-sla-orchestration-vs-manual-ticket-escalations-for-training-audits/'
+  },
+  {
+    key: 'compliance-evidence-sla-orchestration-vs-manual-ticket-escalations',
+    locale: 'es',
+    slug: 'orquestacion-sla-evidencia-compliance-ia-vs-escalaciones-manuales-tickets-auditorias-training',
+    title: 'Orquestación SLA de evidencia compliance con IA vs. escalaciones manuales de tickets para auditorías de training | AI Training Directory',
+    description: 'Entrada localizada para comparar orquestación SLA de evidencia con IA frente a escalaciones manuales de tickets en auditorías de training compliance.',
+    h1: 'Orquestación SLA de evidencia con IA vs. escalaciones manuales de tickets para auditorías de training',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar fiabilidad de SLA, calidad de escalado y defensibilidad operativa entre ambos enfoques.',
+    points: ['Comparativa de latencia de respuesta y claridad de ownership para solicitudes de evidencia de auditoría', 'Criterios operativos para cumplimiento de SLA, tasa de reapertura y trazabilidad de escalaciones', 'Marco de piloto para reducir riesgo de deadlines de auditoría con handoffs más consistentes'],
+    enPath: '/compare/ai-compliance-evidence-sla-orchestration-vs-manual-ticket-escalations-for-training-audits/'
   }
 );
 
