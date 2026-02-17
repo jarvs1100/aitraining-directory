@@ -32,8 +32,12 @@ const copy = {
     intro: 'Zlokalizowane strony dla zespołów L&D i enablement w Polsce. Zacznij od strony z intencją rynkową.',
     browse: 'Przeglądaj wszystkie kategorie',
     solutions: 'Otwórz scenariusze wdrożenia',
+    compare: 'Przejdź do porównań',
+    methodology: 'Zobacz metodologię',
     listTitle: 'Dostępne strony lokalne',
-    checklistTitle: 'Checklist wdrożenia dla rynku lokalnego'
+    checklistTitle: 'Checklist wdrożenia dla rynku lokalnego',
+    trustSignalsTitle: 'Sygnały zaufania dla lokalnych stron',
+    decisionPathsTitle: 'Ścieżki decyzji z tego hubu'
   },
   cs: {
     edition: 'Česká verze',
@@ -41,8 +45,12 @@ const copy = {
     intro: 'Lokalizované stránky pro L&D a enablement týmy v Česku. Začněte stránkou podle tržního záměru.',
     browse: 'Procházet všechny kategorie',
     solutions: 'Otevřít scénáře nasazení',
+    compare: 'Přejít na srovnání',
+    methodology: 'Zobrazit metodiku',
     listTitle: 'Dostupné lokalizované stránky',
-    checklistTitle: 'Implementační checklist pro lokální trh'
+    checklistTitle: 'Implementační checklist pro lokální trh',
+    trustSignalsTitle: 'Signály důvěry pro lokalizované stránky',
+    decisionPathsTitle: 'Rozhodovací cesty z tohoto hubu'
   },
   sk: {
     edition: 'Slovenská verzia',
@@ -50,8 +58,12 @@ const copy = {
     intro: 'Lokalizované stránky pre L&D a enablement tímy na Slovensku. Začni stránkou podľa trhového intentu.',
     browse: 'Prehliadať všetky kategórie',
     solutions: 'Otvoriť scenáre nasadenia',
+    compare: 'Prejsť na porovnania',
+    methodology: 'Zobraziť metodiku',
     listTitle: 'Dostupné lokalizované stránky',
-    checklistTitle: 'Implementačný checklist pre lokálny trh'
+    checklistTitle: 'Implementačný checklist pre lokálny trh',
+    trustSignalsTitle: 'Signály dôvery pre lokalizované stránky',
+    decisionPathsTitle: 'Rozhodovacie cesty z tohto hubu'
   },
   hu: {
     edition: 'Magyar kiadás',
@@ -59,8 +71,12 @@ const copy = {
     intro: 'Lokalizált oldalak magyar L&D és enablement csapatoknak. Kezdj egy piaci szándékhoz illő oldallal.',
     browse: 'Összes kategória böngészése',
     solutions: 'Megoldási útmutatók megnyitása',
+    compare: 'Összehasonlítások megnyitása',
+    methodology: 'Módszertan megtekintése',
     listTitle: 'Elérhető lokalizált oldalak',
-    checklistTitle: 'Lokális bevezetési checklist'
+    checklistTitle: 'Lokális bevezetési checklist',
+    trustSignalsTitle: 'Bizalmi jelzések lokalizált oldalakhoz',
+    decisionPathsTitle: 'Döntési útvonalak ebből a hubból'
   },
   de: {
     edition: 'Deutsche Version',
@@ -68,8 +84,12 @@ const copy = {
     intro: 'Lokalisierte Seiten für L&D- und Enablement-Teams im DACH-Raum. Starten Sie mit einer marktintenten Seite.',
     browse: 'Alle Kategorien ansehen',
     solutions: 'Lösungs-Playbooks öffnen',
+    compare: 'Vergleiche öffnen',
+    methodology: 'Methodik ansehen',
     listTitle: 'Verfügbare lokalisierte Seiten',
-    checklistTitle: 'Implementierungs-Checklist für den lokalen Markt'
+    checklistTitle: 'Implementierungs-Checklist für den lokalen Markt',
+    trustSignalsTitle: 'Trust-Signale für lokalisierte Seiten',
+    decisionPathsTitle: 'Entscheidungspfade aus diesem Hub'
   },
   es: {
     edition: 'Edición en español',
@@ -77,8 +97,12 @@ const copy = {
     intro: 'Páginas localizadas para equipos de L&D y enablement. Empieza con una página alineada con la intención del mercado.',
     browse: 'Ver todas las categorías',
     solutions: 'Abrir guías de implementación',
+    compare: 'Ir a comparativas',
+    methodology: 'Ver metodología',
     listTitle: 'Páginas localizadas disponibles',
-    checklistTitle: 'Checklist de implementación para mercado local'
+    checklistTitle: 'Checklist de implementación para mercado local',
+    trustSignalsTitle: 'Señales de confianza para rutas localizadas',
+    decisionPathsTitle: 'Rutas de decisión desde este hub'
   }
 }[lang] || {
   edition: `${locale.name} edition`,
@@ -86,8 +110,12 @@ const copy = {
   intro: `Localized AI training pages for ${locale.name} market intent.`,
   browse: 'Browse all categories',
   solutions: 'Open solution playbooks',
+  compare: 'Open compare hub',
+  methodology: 'Open methodology',
   listTitle: 'Available localized pages',
-  checklistTitle: 'Localized rollout checklist'
+  checklistTitle: 'Localized rollout checklist',
+  trustSignalsTitle: 'Trust signals for localized routes',
+  decisionPathsTitle: 'Decision paths from this hub'
 };
 
 const jsonLd = {
@@ -108,6 +136,8 @@ const jsonLd = {
     <div class="hero-actions">
       <a class="btn btn-primary" href="/categories/">{copy.browse}</a>
       <a class="btn btn-secondary" href="/solutions/">{copy.solutions}</a>
+      <a class="btn btn-secondary" href="/compare/">{copy.compare}</a>
+      <a class="btn btn-secondary" href="/editorial-methodology/">{copy.methodology}</a>
     </div>
   </section>
 
@@ -127,6 +157,16 @@ const jsonLd = {
     <h2 id="localized-checklist-heading">{copy.checklistTitle}</h2>
     <ul>
       {parityFramework.hubChecklist.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section class="section card" aria-labelledby="localized-trust-signals-heading">
+    <h2 id="localized-trust-signals-heading">{copy.trustSignalsTitle}</h2>
+    <ul>
+      <li>{parityFramework.trustBullets[0]}</li>
+      <li>{parityFramework.trustBullets[1]}</li>
+      <li>{parityFramework.trustBullets[2]}</li>
+      <li>Last reviewed: <time datetime={parityFramework.updatedOn}>{parityFramework.updatedOn}</time> (UTC) with build and route checks.</li>
     </ul>
   </section>
 
@@ -155,5 +195,17 @@ const jsonLd = {
     <ul>
       {parityFramework.dimensions.map((dimension) => <li>{dimension.localizedName}</li>)}
     </ul>
+  </section>
+
+  <section class="section card" aria-labelledby="localized-decision-paths-heading">
+    <h2 id="localized-decision-paths-heading">{copy.decisionPathsTitle}</h2>
+    <div class="chips chips-nav">
+      <a class="chip" href="/solutions/ai-tools-for-training-and-development/">AI tools for training & development</a>
+      <a class="chip" href="/solutions/sop-to-video-training/">SOP to video training</a>
+      <a class="chip" href="/compare/synthesia-alternatives/">Synthesia alternatives</a>
+      <a class="chip" href="/compare/scorm-authoring-vs-lms-native-builders/">SCORM vs LMS-native builders</a>
+      <a class="chip" href="/compare/ai-roleplay-simulators-vs-video-only-onboarding/">Roleplay vs video-only onboarding</a>
+      <a class="chip" href="/editorial-methodology/">Editorial methodology</a>
+    </div>
   </section>
 </Base>

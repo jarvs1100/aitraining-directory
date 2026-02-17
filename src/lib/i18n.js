@@ -917,6 +917,50 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de compliance, policy y L&D operations a evaluar velocidad de actualización, cobertura de controles y defensibilidad para auditoría entre ambos enfoques.',
     points: ['Comparativa del tiempo desde actualización regulatoria hasta plan de cambios de training aprobado', 'Criterios operativos para cobertura completa de controles, audiencias y jurisdicciones impactadas', 'Marco de piloto para routing de propietarios, SLA de cierre y evidencia audit-ready de decisiones'],
     enPath: '/compare/ai-policy-change-impact-mapping-vs-manual-training-gap-analysis-for-regulatory-updates/'
+  },
+  {
+    key: 'training-control-testing-workbenches-vs-manual-sample-checklists',
+    locale: 'de',
+    slug: 'ki-training-control-testing-workbenches-vs-manuelle-sample-checklisten-fuer-audit-vorbereitung',
+    title: 'KI-Training-Control-Testing-Workbenches vs. manuelle Sample-Checklisten für Audit-Vorbereitung | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Control-Testing-Workbenches mit manuellen Sample-Checklisten für Audit-Vorbereitung vergleichen.',
+    h1: 'KI-Training-Control-Testing-Workbenches vs. manuelle Sample-Checklisten für Audit-Vorbereitung',
+    intro: 'Hilft Compliance-, Audit- und L&D-Ops-Teams, Testzyklen, Kontrollabdeckung und Nachweisqualität zwischen Workbench- und Checklisten-Modellen zu bewerten.',
+    points: ['Vergleich der Zykluszeit von Testplanung bis belastbaren Findings mit klarer Ownership', 'Messbare Kriterien für risikogewichtete Sample-Abdeckung über Rollen, Standorte und Policy-Varianten', 'Pilot-Framework für Evidence-Lineage, Remediation-SLA und auditfeste Closure-Validierung'],
+    enPath: '/compare/ai-training-control-testing-workbenches-vs-manual-sample-checklists-for-audit-preparation/'
+  },
+  {
+    key: 'training-control-testing-workbenches-vs-manual-sample-checklists',
+    locale: 'es',
+    slug: 'workbenches-testing-controles-training-ia-vs-checklists-muestras-manuales-preparacion-auditoria',
+    title: 'Workbenches de testing de controles de training con IA vs. checklists de muestras manuales para preparación de auditoría | AI Training Directory',
+    description: 'Entrada localizada para comparar workbenches de testing de controles con IA frente a checklists manuales de muestras para preparación de auditoría.',
+    h1: 'Workbenches de testing de controles de training con IA vs. checklists de muestras manuales para preparación de auditoría',
+    intro: 'Ayuda a equipos de compliance, auditoría y L&D operations a evaluar velocidad de testing, cobertura de controles y calidad de evidencia entre ambos modelos.',
+    points: ['Comparativa del ciclo desde planificación de pruebas hasta findings accionables con ownership claro', 'Criterios operativos para cobertura de muestras por riesgo, rol, sede y variante de política', 'Marco de piloto para trazabilidad de evidencia, SLA de remediación y validación de cierre audit-ready'],
+    enPath: '/compare/ai-training-control-testing-workbenches-vs-manual-sample-checklists-for-audit-preparation/'
+  },
+  {
+    key: 'ai-literacy-platform-vs-general-compliance-courses',
+    locale: 'de',
+    slug: 'ki-literacy-training-plattformen-vs-allgemeine-compliance-kurse-fuer-eu-ai-act-readiness',
+    title: 'KI-Literacy-Training-Plattformen vs. allgemeine Compliance-Kurse für EU AI Act Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die dedizierte KI-Literacy-Plattformen gegen allgemeine Compliance-Kurse für EU-AI-Act-Readiness vergleichen.',
+    h1: 'KI-Literacy-Training-Plattformen vs. allgemeine Compliance-Kurse für EU AI Act Readiness',
+    intro: 'Hilft Compliance-, L&D- und Governance-Teams, rollenbasierte Abdeckung, Update-Geschwindigkeit und Nachweisqualität zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich der Rollenabdeckung für Artikel-4-relevante KI-Kompetenzen', 'Messbare Kriterien für Update-Zyklen, Reviewer-Last und Belegqualität', 'Pilot-Framework für auditable Literacy-Programme ohne unnötige Komplexität'],
+    enPath: '/compare/ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness/'
+  },
+  {
+    key: 'ai-literacy-platform-vs-general-compliance-courses',
+    locale: 'es',
+    slug: 'plataformas-training-ai-literacy-vs-cursos-genericos-compliance-para-readiness-eu-ai-act',
+    title: 'Plataformas de training AI literacy vs cursos generales de compliance para readiness del EU AI Act | AI Training Directory',
+    description: 'Entrada localizada para comparar plataformas específicas de AI literacy frente a cursos generales de compliance para readiness del EU AI Act.',
+    h1: 'Plataformas de AI literacy training vs cursos generales de compliance para readiness del EU AI Act',
+    intro: 'Ayuda a equipos de compliance, L&D y gobernanza a evaluar cobertura por rol, velocidad de actualización y calidad de evidencia entre ambos enfoques.',
+    points: ['Comparativa de cobertura por rol para competencias exigidas por el Artículo 4', 'Criterios operativos para ciclos de actualización y carga de revisión', 'Marco de piloto para programas audit-ready con complejidad controlada'],
+    enPath: '/compare/ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness/'
   }
 
 ];
@@ -1514,6 +1558,50 @@ export function getLocalizedSupportBlocks(key, locale) {
         de: 'Diese lokalisierte Playbook-Seite verweist auf eine zentrale kanonische Operations-Checklist.',
         es: 'Esta versión localizada del playbook enlaza a una única checklist canónica de operaciones.',
         en: 'This localized distribution playbook points to one canonical operations checklist.'
+      }
+    },
+    'ai-literacy-platform-vs-general-compliance-courses': {
+      checklist: {
+        de: [
+          'Definieren Sie Literacy-Profile je Rolle (Nutzer, Reviewer, Führungskraft, Compliance Owner).',
+          'Verknüpfen Sie jeden Lernpfad mit konkreten AI-Use-Cases im Arbeitsalltag statt mit generischen Modulen.',
+          'Testen Sie einen Policy-Update-Zyklus, um Update-Geschwindigkeit und Evidenzqualität zu validieren.',
+          'Dokumentieren Sie Owner-Rollen für Zuweisung, Review, Eskalation und Audit-Paket-Erstellung.'
+        ],
+        es: [
+          'Define perfiles de literacy por rol (usuario, reviewer, manager, owner de compliance).',
+          'Vincula cada ruta formativa a casos reales de uso de IA, no solo a módulos genéricos.',
+          'Prueba un ciclo de actualización de política para validar velocidad y calidad de evidencia.',
+          'Documenta ownership para asignación, revisión, escalado y armado de paquete audit-ready.'
+        ],
+        en: [
+          'Define literacy profiles by role (operator, reviewer, manager, compliance owner).',
+          'Tie each learning path to real AI-use scenarios instead of generic awareness modules.',
+          'Test one policy-update cycle to validate update speed and evidence quality.',
+          'Document ownership for assignment, review, escalation, and audit packet assembly.'
+        ]
+      },
+      internalLinks: {
+        de: [
+          { label: 'EU-AI-Act-Literacy-Implementierungsseite', href: '/solutions/eu-ai-act-ai-literacy-training/' },
+          { label: 'Compliance-Content-Workflow öffnen', href: '/solutions/compliance-training-content-creation/' },
+          { label: 'Kanonische Vergleichsseite öffnen', href: '/compare/ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness/' }
+        ],
+        es: [
+          { label: 'Ruta de implementación EU AI Act literacy', href: '/solutions/eu-ai-act-ai-literacy-training/' },
+          { label: 'Abrir workflow de contenido de compliance', href: '/solutions/compliance-training-content-creation/' },
+          { label: 'Abrir comparativa canónica', href: '/compare/ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness/' }
+        ],
+        en: [
+          { label: 'EU AI Act literacy implementation route', href: '/solutions/eu-ai-act-ai-literacy-training/' },
+          { label: 'Open compliance content workflow', href: '/solutions/compliance-training-content-creation/' },
+          { label: 'Open canonical comparison route', href: '/compare/ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness/' }
+        ]
+      },
+      intentCopy: {
+        de: 'Lokalisierte Discovery-Seite für DACH-Teams mit klarer Weiterleitung zur kanonischen Vergleichsseite und den Umsetzungsrouten.',
+        es: 'Página de discovery localizada para equipos hispanohablantes con ruta clara hacia la comparativa canónica y páginas de implementación.',
+        en: 'Localized discovery page with direct routing to the canonical comparison and implementation routes.'
       }
     },
     default: {

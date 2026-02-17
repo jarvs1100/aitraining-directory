@@ -58,10 +58,68 @@ const internalLinkModules = {
       { href: '/solutions/knowledge-base-to-training/', label: 'Knowledge base to training workflow' },
       { href: '/compare/scorm-authoring-vs-lms-native-builders/', label: 'SCORM vs LMS-native builders comparison' }
     ]
+  },
+  chatgpt: {
+    heading: 'Planning routes before scaling ChatGPT in L&D',
+    links: [
+      { href: '/solutions/ai-tools-for-training-and-development/', label: 'AI tools for training and development route' },
+      { href: '/compare/chatgpt-vs-claude-for-ld-content/', label: 'ChatGPT vs Claude for L&D content' },
+      { href: '/solutions/eu-ai-act-ai-literacy-training/', label: 'EU AI Act literacy implementation route' }
+    ]
+  },
+  claude: {
+    heading: 'Planning routes before scaling Claude in L&D',
+    links: [
+      { href: '/compare/chatgpt-vs-claude-for-ld-content/', label: 'ChatGPT vs Claude for L&D content' },
+      { href: '/solutions/knowledge-base-to-training/', label: 'Knowledge base to training workflow' },
+      { href: '/solutions/ai-tools-for-training-and-development/', label: 'AI tools for training and development route' }
+    ]
+  },
+  camtasia: {
+    heading: 'Video-production routes relevant to Camtasia',
+    links: [
+      { href: '/compare/descript-vs-camtasia-for-training-videos/', label: 'Descript vs Camtasia comparison' },
+      { href: '/compare/scorm-authoring-vs-lms-native-builders/', label: 'SCORM vs LMS-native builders comparison' },
+      { href: '/solutions/sop-to-video-training/', label: 'SOP-to-video implementation route' }
+    ]
+  },
+  'murf-ai': {
+    heading: 'Voice-over planning routes before committing to Murf',
+    links: [
+      { href: '/compare/murf-vs-elevenlabs-for-training-voiceovers/', label: 'Murf vs ElevenLabs comparison' },
+      { href: '/solutions/multilingual-employee-training/', label: 'Multilingual employee training route' },
+      { href: '/solutions/compliance-training-content-creation/', label: 'Compliance training content route' }
+    ]
+  },
+  trainual: {
+    heading: 'Operations routes linked to Trainual-style workflows',
+    links: [
+      { href: '/compare/trainual-vs-knowledge-base-workflows/', label: 'Trainual vs knowledge-base workflows' },
+      { href: '/solutions/sop-to-video-training/', label: 'SOP-to-video implementation route' },
+      { href: '/solutions/new-hire-onboarding-automation/', label: 'Onboarding automation route' }
+    ]
   }
 };
 
 const internalModule = internalLinkModules[tool.slug];
+const categoryWorkflowLinks = {
+  'AI Video Training': [
+    { href: '/solutions/sop-to-video-training/', label: 'SOP-to-video workflow' },
+    { href: '/compare/synthesia-alternatives/', label: 'Synthesia alternatives comparison' },
+    { href: '/compare/scorm-authoring-vs-lms-native-builders/', label: 'SCORM vs LMS-native builders comparison' }
+  ],
+  'AI Chat': [
+    { href: '/solutions/ai-tools-for-training-and-development/', label: 'AI tools for training and development route' },
+    { href: '/compare/chatgpt-vs-claude-for-ld-content/', label: 'ChatGPT vs Claude comparison' },
+    { href: '/compare/ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness/', label: 'AI literacy platform comparison' }
+  ],
+  'AI Voice': [
+    { href: '/compare/murf-vs-elevenlabs-for-training-voiceovers/', label: 'Murf vs ElevenLabs comparison' },
+    { href: '/solutions/multilingual-employee-training/', label: 'Multilingual training route' },
+    { href: '/solutions/compliance-training-content-creation/', label: 'Compliance content route' }
+  ]
+};
+const categoryCluster = categoryWorkflowLinks[tool.category];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -151,6 +209,17 @@ const jsonLd = {
         <h2 id="internal-links-heading">{internalModule.heading}</h2>
         <div class="chips">
           {internalModule.links.map((item) => (
+            <a class="chip" href={item.href}>{item.label}</a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {categoryCluster && (
+      <section class="section card" aria-labelledby="category-cluster-heading">
+        <h2 id="category-cluster-heading">Workflow cluster links for {tool.category}</h2>
+        <div class="chips">
+          {categoryCluster.map((item) => (
             <a class="chip" href={item.href}>{item.label}</a>
           ))}
         </div>

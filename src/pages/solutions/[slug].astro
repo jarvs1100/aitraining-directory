@@ -39,6 +39,25 @@ const contentBySlug = {
       { label: 'Onboarding automation route', href: '/solutions/new-hire-onboarding-automation/' },
       { label: 'Compliance content route', href: '/solutions/compliance-training-content-creation/' }
     ],
+    implementationSteps: [
+      'Week 1: Baseline cycle-time, approval latency, and reviewer-load metrics for one high-friction workflow.',
+      'Week 2: Run controlled production tests across shortlisted tools using the same source and QA rubric.',
+      'Week 3: Validate one update cycle after reviewer feedback plus one localization or compliance-sensitive variant.',
+      'Week 4: Lock ownership model, escalation logic, and procurement readiness memo with evidence logs.'
+    ],
+    decisionMatrix: [
+      { criterion: 'Workflow-fit under real volume', weight: '30%', strongSignal: 'Team can publish and update weekly without extra coordination overhead.' },
+      { criterion: 'Governance and approval reliability', weight: '25%', strongSignal: 'Approvals, change history, and rollback path are explicit and auditable.' },
+      { criterion: 'Localization and compliance readiness', weight: '25%', strongSignal: 'Non-English or policy-sensitive updates can ship with low reviewer rework.' },
+      { criterion: 'Implementation burden', weight: '20%', strongSignal: 'Setup, training, and maintenance can be owned by current L&D operations capacity.' }
+    ],
+    topicClusterLinks: [
+      { label: 'Synthesia alternatives comparison', href: '/compare/synthesia-alternatives/' },
+      { label: 'SCORM vs LMS-native builders', href: '/compare/scorm-authoring-vs-lms-native-builders/' },
+      { label: 'AI roleplay vs video-only onboarding', href: '/compare/ai-roleplay-simulators-vs-video-only-onboarding/' },
+      { label: 'Tool route: ChatGPT', href: '/tool/chatgpt/' },
+      { label: 'Tool route: Synthesia', href: '/tool/synthesia/' }
+    ],
     faqs: [
       { q: 'What is the fastest way to shortlist AI training tools?', a: 'Use one workflow-specific pilot and score tools on measurable delivery outcomes, not generic demos.' },
       { q: 'Which teams should own final selection?', a: 'L&D should co-own selection with compliance/IT stakeholders to prevent rollout friction later.' }
@@ -95,6 +114,25 @@ const contentBySlug = {
       { label: 'Compare AI video tooling options', href: '/compare/synthesia-alternatives/' },
       { label: 'Audit-ready compliance training route', href: '/solutions/compliance-training-content-creation/' },
       { label: 'Multilingual training implementation route', href: '/solutions/multilingual-employee-training/' }
+    ],
+    implementationSteps: [
+      'Inventory high-change SOPs and assign priority tiers by operational risk and update frequency.',
+      'Convert SOPs into script packets (context, critical steps, failure patterns, assessment check).',
+      'Run production pilot with fixed QA ownership: SME reviewer, compliance reviewer, and publishing owner.',
+      'Publish with version tags and evidence links, then run a 30-day performance and defect review.'
+    ],
+    decisionMatrix: [
+      { criterion: 'Publish speed after SOP changes', weight: '30%', strongSignal: 'Updated videos can be approved and republished inside the defined SLA window.' },
+      { criterion: 'Accuracy and field-usable clarity', weight: '30%', strongSignal: 'Learners can execute the process correctly with fewer supervisor corrections.' },
+      { criterion: 'Version control and traceability', weight: '20%', strongSignal: 'Every learning asset maps to current SOP version and approval history.' },
+      { criterion: 'Localization and accessibility readiness', weight: '20%', strongSignal: 'Captions, translations, and terminology checks are reproducible across languages.' }
+    ],
+    topicClusterLinks: [
+      { label: 'Compare route: Synthesia alternatives', href: '/compare/synthesia-alternatives/' },
+      { label: 'Compare route: SCORM vs LMS-native builders', href: '/compare/scorm-authoring-vs-lms-native-builders/' },
+      { label: 'Tool route: Descript', href: '/tool/descript/' },
+      { label: 'Tool route: Camtasia', href: '/tool/camtasia/' },
+      { label: 'Solution route: Compliance content creation', href: '/solutions/compliance-training-content-creation/' }
     ],
     faqs: [
       { q: 'How fast can SOP-to-video production go live?', a: 'Most teams can launch a pilot in 10 business days when script templates and QA ownership are pre-assigned.' },
@@ -213,6 +251,24 @@ const defaultContent = {
     { label: 'Browse all AI training solutions', href: '/solutions/' },
     { label: 'Explore tool categories', href: '/categories/' }
   ],
+  implementationSteps: [
+    'Define pilot scope and success metrics with one accountable owner.',
+    'Run a controlled implementation sprint with fixed review and approval path.',
+    'Document outcomes, defects, and update-latency after one real revision cycle.',
+    'Scale only after governance and ownership are stable in production conditions.'
+  ],
+  decisionMatrix: [
+    { criterion: 'Workflow-fit', weight: '30%', strongSignal: 'Team can run end-to-end workflow with less friction than current state.' },
+    { criterion: 'Governance and QA', weight: '25%', strongSignal: 'Approval controls and quality checks remain reliable at speed.' },
+    { criterion: 'Localization or audience-variant readiness', weight: '25%', strongSignal: 'Content variants can be maintained without full rebuilds.' },
+    { criterion: 'Implementation effort', weight: '20%', strongSignal: 'Ongoing operations fit current team capacity and cadence.' }
+  ],
+  topicClusterLinks: [
+    { label: 'Solutions hub', href: '/solutions/' },
+    { label: 'Compare hub', href: '/compare/' },
+    { label: 'L&D tech evaluation checklist', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+    { label: 'Editorial methodology', href: '/editorial-methodology/' }
+  ],
   faqs: [
     { q: `How should ${page.label.toLowerCase()} teams shortlist AI tools?`, a: 'Start with one workflow bottleneck, run a 2-week pilot, and measure cycle-time reduction before broader rollout.' },
     { q: 'What matters most for L&D buyers?', a: 'Version control, collaboration, integration with existing systems, and ease of updating training assets over time.' }
@@ -303,6 +359,35 @@ const jsonLd = {
     </ul>
   </section>
 
+  <section class="section card" aria-labelledby="solution-implementation-steps-heading">
+    <h2 id="solution-implementation-steps-heading">Implementation steps (first 30 days)</h2>
+    <ol>
+      {content.implementationSteps.map((step) => <li>{step}</li>)}
+    </ol>
+  </section>
+
+  <section class="section card" aria-labelledby="solution-decision-matrix-heading">
+    <h2 id="solution-decision-matrix-heading">Decision matrix for pilot approval</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Criterion</th>
+          <th>Weight</th>
+          <th>Strong signal</th>
+        </tr>
+      </thead>
+      <tbody>
+        {content.decisionMatrix.map((row) => (
+          <tr>
+            <td><strong>{row.criterion}</strong></td>
+            <td>{row.weight}</td>
+            <td>{row.strongSignal}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </section>
+
   <section class="section">
     <h2>Common implementation pitfalls</h2>
     <ul>
@@ -323,6 +408,15 @@ const jsonLd = {
     <h2>Related planning routes</h2>
     <div class="chips">
       {relatedLinks.map((item) => (
+        <a class="chip" href={item.href}>{item.label}</a>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Topic-cluster routes</h2>
+    <div class="chips">
+      {content.topicClusterLinks.map((item) => (
         <a class="chip" href={item.href}>{item.label}</a>
       ))}
     </div>

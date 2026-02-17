@@ -586,6 +586,23 @@ const comparisonContentBySlug = {
     ]
   },
 
+  'ai-training-control-testing-workbenches-vs-manual-sample-checklists-for-audit-preparation': {
+    decisionMatrix: [
+      { criterion: 'Cycle time from control-test planning to actionable findings', weight: '25%', whatGoodLooksLike: 'Teams can move from planned sample scope to validated findings quickly enough to remediate before audit windows tighten.', leftLens: 'Measure how quickly workbench workflows generate risk-weighted test plans, execute control checks, and route findings with owner accountability.', rightLens: 'Measure how quickly manual checklist owners select samples, run spot checks, and consolidate findings across spreadsheets and inbox threads.' },
+      { criterion: 'Depth and consistency of control-coverage sampling', weight: '25%', whatGoodLooksLike: 'Control testing covers high-risk roles, locales, and policy variants without blind spots between review cycles.', leftLens: 'Assess dynamic sampling depth across role-critical controls, multilingual variants, and exception-heavy cohorts with repeatable logic.', rightLens: 'Assess miss-rate when checklist sampling depends on static templates, analyst memory, and limited periodic review capacity.' },
+      { criterion: 'Evidence traceability for failed-control remediation', weight: '20%', whatGoodLooksLike: 'Every failed control has source-linked evidence, ownership, and closure validation that withstands auditor follow-up.', leftLens: 'Evaluate timestamped finding lineage, remediation assignment, closure proof, and override rationale in one audit trail.', rightLens: 'Evaluate reconstructability when failure evidence is split across checklist tabs, screenshot folders, and ad-hoc meeting notes.' },
+      { criterion: 'Governance reliability under audit-pressure spikes', weight: '15%', whatGoodLooksLike: 'Review standards and signoff discipline remain consistent even during high-volume pre-audit periods.', leftLens: 'Test role-based review queues, SLA alerts, and escalation logic for overdue findings or blocked remediation paths.', rightLens: 'Test consistency of manual signoff discipline when reviewers juggle competing priorities and escalating audit requests.' },
+      { criterion: 'Cost per validated control-test decision', weight: '15%', whatGoodLooksLike: 'Cost per defensible control-test decision declines while finding quality and closure speed improve.', leftLens: 'Model platform + governance overhead against fewer retests, reduced rework, and faster closure of high-severity gaps.', rightLens: 'Model lower software spend against recurring analyst labor, delayed finding closure, and higher pre-audit scramble cost.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one audit-critical training domain with at least one multi-locale control set and known exception history.',
+      'Use one scorecard: plan-to-finding cycle time, missed-control rate, remediation closure SLA, and reviewer hours per test cycle.',
+      'Define required evidence artifacts before launch: sample rationale, finding log, owner-routing history, and closure validation proof.',
+      'Assign RACI across compliance owner, L&D operations lead, QA reviewer, and internal audit partner for test execution and signoff.',
+      'Choose the model with lower friction per validated control-test decision, not the model that appears cheaper before remediation labor is counted.'
+    ]
+  },
+
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -619,7 +636,122 @@ const defaultComparisonContent = {
   ]
 };
 
-const comparisonContent = { ...defaultComparisonContent, ...(comparisonContentBySlug[slug] || {}) };
+const supplementalComparisonContentBySlug = {
+  'ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness': {
+    decisionMatrix: [
+      { criterion: 'Article 4 role-context coverage', weight: '25%', whatGoodLooksLike: 'Training depth adapts by user role, AI-system exposure, and operational risk.', leftLens: 'Assess whether platform paths can segment by role and AI usage context with versioned content governance.', rightLens: 'Assess whether generic compliance modules can still provide role-specific depth without manual rebuild overhead.' },
+      { criterion: 'Update velocity for legal and policy changes', weight: '25%', whatGoodLooksLike: 'Program owners can update content and republish evidence-ready modules inside governance SLA windows.', leftLens: 'Measure speed for updating role paths, assessment logic, and evidence fields after policy changes.', rightLens: 'Measure speed for revising static modules and confirming assignment coverage across affected populations.' },
+      { criterion: 'Evidence quality for supervisory review', weight: '20%', whatGoodLooksLike: 'Teams can show assignment logic, completion evidence, and review trails for internal/external audits.', leftLens: 'Evaluate metadata quality, learner-level traceability, and change-log integrity in platform workflows.', rightLens: 'Evaluate reconstructability when evidence is split across LMS reports, spreadsheets, and policy decks.' },
+      { criterion: 'Operational burden on L&D and compliance owners', weight: '15%', whatGoodLooksLike: 'Program remains sustainable without monthly fire drills as requirement scope expands.', leftLens: 'Track upkeep for role taxonomy, evidence-rule governance, and recertification cadence tuning.', rightLens: 'Track recurring effort for manual curriculum updates, assignment QA, and remediation follow-up.' },
+      { criterion: 'Cost per audit-defensible literacy cycle', weight: '15%', whatGoodLooksLike: 'Total cost per compliant cycle falls while evidence confidence improves.', leftLens: 'Model platform + governance overhead against reduced rework and faster review cycles.', rightLens: 'Model lower tooling spend against recurring manual QA effort and evidence-reconstruction burden.' }
+    ],
+    buyingCriteria: [
+      'Pilot with at least two role cohorts that have different AI-system exposure levels before selecting default model.',
+      'Use one scorecard: update-to-publish latency, evidence defect rate, remediation cycle time, and reviewer-hours.',
+      'Define mandatory evidence fields and ownership rules before launch (assignment logic, completions, review signoff, change history).',
+      'Assign RACI across compliance owner, L&D operations, policy reviewer, and audit stakeholder.',
+      'Choose the model with lower governance friction per defensible literacy cycle, not the model with the shortest initial rollout.'
+    ]
+  }
+};
+
+const comparisonContent = {
+  ...defaultComparisonContent,
+  ...(comparisonContentBySlug[slug] || {}),
+  ...(supplementalComparisonContentBySlug[slug] || {})
+};
+
+const implementationPlaybookBySlug = {
+  'synthesia-alternatives': [
+    'Define one high-change video workflow (onboarding, SOP refresh, or compliance update) and baseline current publish cycle.',
+    'Run same-script production test in 3-4 shortlisted tools with one shared reviewer rubric.',
+    'Force one revision pass and one localization pass before scoring finalists.',
+    'Select winner only after validating ownership model, approval SLAs, and integration handoff path.'
+  ],
+  'scorm-authoring-vs-lms-native-builders': [
+    'Pilot one compliance-critical course and one high-change operational course in both build models.',
+    'Measure first-launch speed plus one real update cycle with review feedback.',
+    'Test reporting fidelity and rollback handling for both models in target LMS stack.',
+    'Lock default model based on long-term maintenance burden, not first-course convenience.'
+  ],
+  'ai-roleplay-simulators-vs-video-only-onboarding': [
+    'Select one frontline role with high conversation risk and define ramp-ready behavior rubric.',
+    'Run parallel cohorts: simulator-first vs video-only using same manager scoring model.',
+    'Track day-30 readiness, intervention time, and coaching defect patterns.',
+    'Adopt blended or single-model rollout only after measuring manager-load tradeoffs.'
+  ],
+  'ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness': [
+    'Map AI-system usage tiers and assign literacy outcomes by role (operators, managers, reviewers).',
+    'Run pilot with two cohorts and one policy-update scenario to test update and evidence workflows.',
+    'Validate completion tracking, policy-linkage traceability, and remediation routing before scale.',
+    'Publish standard operating model with owner RACI, cadence, and evidence packet format.'
+  ]
+};
+
+const decisionOutcomesBySlug = {
+  'synthesia-alternatives': {
+    left: ['You already have a stable avatar-video workflow and need predictable, standardized outputs.', 'Your team can accept lighter editing depth in exchange for fast template-driven production.'],
+    right: ['You need deeper timeline control, richer scene editing, or stronger multilingual QA controls.', 'You are optimizing for lower revision burden across multiple production owners.']
+  },
+  'scorm-authoring-vs-lms-native-builders': {
+    left: ['You need portability across LMS environments and richer interactive authoring depth.', 'You can support the extra operational overhead of packaging and version maintenance.'],
+    right: ['You prioritize fast publishing by SMEs inside one LMS with simplified governance.', 'Your update cadence is high and portability requirements are limited.']
+  },
+  'ai-roleplay-simulators-vs-video-only-onboarding': {
+    left: ['You need measurable practice quality and manager coaching signal during first 30 days.', 'Conversation risk is high enough that passive content alone is insufficient.'],
+    right: ['Roles are lower-risk and onboarding can succeed with knowledge transfer plus manager coaching.', 'Operational budget and team capacity favor lightweight content-first rollout.']
+  },
+  'ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness': {
+    left: ['You need role-based literacy pathways, tighter evidence controls, and frequent policy updates.', 'Audit and governance requirements demand stronger assignment and traceability logic.'],
+    right: ['Your literacy requirement is early-stage and can be managed with scoped foundational modules.', 'You can tolerate more manual governance while validating organization-wide adoption first.']
+  }
+};
+
+const compareClusterLinksBySlug = {
+  'synthesia-alternatives': [
+    { label: 'Solution: SOP to video training', href: '/solutions/sop-to-video-training/' },
+    { label: 'Compare: SCORM vs LMS-native builders', href: '/compare/scorm-authoring-vs-lms-native-builders/' },
+    { label: 'Tool: Synthesia', href: '/tool/synthesia/' },
+    { label: 'Tool: Descript', href: '/tool/descript/' }
+  ],
+  'scorm-authoring-vs-lms-native-builders': [
+    { label: 'Solution: AI tools for training & development', href: '/solutions/ai-tools-for-training-and-development/' },
+    { label: 'Solution: SOP to video training', href: '/solutions/sop-to-video-training/' },
+    { label: 'Tool: Camtasia', href: '/tool/camtasia/' },
+    { label: 'Tool: Synthesia', href: '/tool/synthesia/' }
+  ],
+  'ai-roleplay-simulators-vs-video-only-onboarding': [
+    { label: 'Solution: New-hire onboarding automation', href: '/solutions/new-hire-onboarding-automation/' },
+    { label: 'Compare: AI onboarding buddy chatbots vs manager shadowing', href: '/compare/ai-onboarding-buddy-chatbots-vs-manager-shadowing-checklists/' },
+    { label: 'Tool: Character AI', href: '/tool/character-ai/' },
+    { label: 'Tool: Loom', href: '/tool/loom/' }
+  ],
+  'ai-literacy-training-platforms-vs-general-compliance-courses-for-eu-ai-act-readiness': [
+    { label: 'Solution: EU AI Act AI literacy training', href: '/solutions/eu-ai-act-ai-literacy-training/' },
+    { label: 'Solution: Compliance training content creation', href: '/solutions/compliance-training-content-creation/' },
+    { label: 'Compare: AI policy-change impact mapping vs manual gap analysis', href: '/compare/ai-policy-change-impact-mapping-vs-manual-training-gap-analysis-for-regulatory-updates/' },
+    { label: 'Compare: AI proof-of-completion vs LMS completion reports', href: '/compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/' }
+  ]
+};
+
+const implementationPlaybook = implementationPlaybookBySlug[slug] || [
+  'Define one target workflow and baseline current cycle-time, quality load, and review effort.',
+  'Pilot both options with identical source inputs and one shared review rubric.',
+  'Force at least one post-feedback update cycle before final scoring.',
+  'Finalize operating model with owner RACI, governance cadence, and escalation rules.'
+];
+
+const decisionOutcomes = decisionOutcomesBySlug[slug] || {
+  left: ['Use left option when it has stronger workflow-fit and lower review burden in your pilot.'],
+  right: ['Use right option when it shows better governance-fit and maintainability under update pressure.']
+};
+
+const compareClusterLinks = compareClusterLinksBySlug[slug] || [
+  { label: 'Solutions hub', href: '/solutions/' },
+  { label: 'Compare hub', href: '/compare/' },
+  { label: 'L&D tech evaluation checklist', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+  { label: 'Editorial methodology', href: '/editorial-methodology/' }
+];
 
 const faq = [
   { q: 'What should L&D teams optimize for first?', a: 'Prioritize cycle-time reduction on one high-friction workflow, then expand only after measurable gains in production speed and adoption.' },
@@ -708,6 +840,25 @@ const jsonLd = {
     {comparisonContent.buyingCriteria.map((item) => <li>{item}</li>)}
   </ul>
 
+  <section class="section card" aria-labelledby="implementation-playbook-heading">
+    <h2 id="implementation-playbook-heading">Implementation playbook</h2>
+    <ol>
+      {implementationPlaybook.map((step) => <li>{step}</li>)}
+    </ol>
+  </section>
+
+  <section class="section card" aria-labelledby="decision-outcomes-heading">
+    <h2 id="decision-outcomes-heading">Decision outcomes by operating model fit</h2>
+    <h3>Choose {comparisonLabels.left} when:</h3>
+    <ul>
+      {decisionOutcomes.left.map((item) => <li>{item}</li>)}
+    </ul>
+    <h3>Choose {comparisonLabels.right} when:</h3>
+    <ul>
+      {decisionOutcomes.right.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
   <h2>Related tools in this directory</h2>
   <div class="grid">
     {candidates.map((tool) => (
@@ -731,6 +882,15 @@ const jsonLd = {
       <a class="chip" href="/editorial-methodology/">Editorial methodology</a>
       <a class="chip" href="/categories/">Explore categories</a>
       <a class="chip" href="/">Return to homepage</a>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="topic-cluster-links-heading">
+    <h2 id="topic-cluster-links-heading">Topic cluster links</h2>
+    <div class="chips chips-nav">
+      {compareClusterLinks.map((item) => (
+        <a class="chip" href={item.href}>{item.label}</a>
+      ))}
     </div>
   </section>
 
@@ -1033,19 +1193,43 @@ const jsonLd = {
       }
 
       .faq-anchor-list {
-        gap: 0.4rem;
+        gap: 0.34rem;
+        padding-left: 0;
+        list-style: none;
+        counter-reset: faq-anchor;
       }
 
       .faq-anchor-list li {
         margin: 0;
+        counter-increment: faq-anchor;
       }
 
       .faq-anchor-list a {
-        padding: 0.62rem 0.68rem;
-        line-height: 1.34;
-        min-height: 48px;
-        display: flex;
-        align-items: center;
+        padding: 0.56rem 0.64rem;
+        line-height: 1.3;
+        min-height: 46px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: start;
+        gap: 0.5rem;
+        border: 1px solid #dbe4ef;
+        background: #f8fafc;
+      }
+
+      .faq-anchor-list a::before {
+        content: counter(faq-anchor);
+        display: inline-grid;
+        place-items: center;
+        width: 1.22rem;
+        height: 1.22rem;
+        margin-top: 0.08rem;
+        border-radius: 999px;
+        border: 1px solid #a3b7cf;
+        background: #eff6ff;
+        color: #0f172a;
+        font-size: 0.71rem;
+        font-weight: 800;
+        line-height: 1;
       }
 
       .buying-criteria-list {

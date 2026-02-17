@@ -2358,3 +2358,52 @@ location: https://aitraining.directory/
 - HTTPS remains valid for apex and `www` redirect behavior is correct (`www` → apex over HTTPS).
 - TLS certificate remains Let's Encrypt `R12` with active validity window through May 18, 2026.
 - Deploy freshness advanced (`Last-Modified: 15:43:10 UTC`) and static HTTPS QA passed for 212 generated HTML files.
+
+---
+
+## Evidence delta — 2026-02-17 16:11 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 218 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+
+dig +short www.aitraining.directory CNAME
+jarvs1100.github.io.
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS behavior
+```bash
+curl -I https://aitraining.directory/
+HTTP/2 200
+Last-Modified: Tue, 17 Feb 2026 15:58:57 GMT
+
+curl -I https://www.aitraining.directory/
+HTTP/2 301
+Location: https://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid and production-ready on apex (`HTTP/2 200`) and `www` redirect (`HTTP/2 301` to apex).
+- Certificate is active via Let's Encrypt chain (`R12`) with SAN coverage serving the custom domain endpoint.
+- Site freshness confirmed with latest deploy timestamp (`Last-Modified: 15:58:57 UTC`).
