@@ -1891,6 +1891,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de actualización, consistencia de cobertura de controles y trazabilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de latencia de sync tras cambios de política', 'Criterios operativos para cobertura completa de controles y ownership claro', 'Marco de piloto para reducir defectos de mapeo y mejorar respuesta ante auditoría'],
     enPath: '/compare/ai-compliance-training-control-library-sync-vs-manual-policy-matrix-updates/'
+  },
+  {
+    key: 'delegation-controls-vs-approval-forwarding',
+    locale: 'de',
+    slug: 'ki-compliance-training-delegation-controls-vs-manuelles-approval-forwarding-fuer-regulierte-teams',
+    title: 'KI-Compliance-Training-Delegation-Controls vs. manuelles Approval Forwarding für regulierte Teams | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Delegation Controls gegen manuelle Approval-Forwarding-Workflows in regulierten Training-Operations vergleichen.',
+    h1: 'KI-Delegation Controls vs. manuelles Approval Forwarding für regulierte Teams',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Routing-Geschwindigkeit, Entscheidungs-Konsistenz und auditfeste Delegations-Traceability zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Approval-Routing-Latenz unter regulatorischen SLA-Anforderungen', 'Messbare Kriterien für konsistente Entscheidungen, Override-Regeln und Owner-Klarheit', 'Pilot-Framework für auditfeste Delegations-Workflows mit weniger Reopen-Schleifen'],
+    enPath: '/compare/ai-compliance-training-delegation-controls-vs-manual-approval-forwarding-for-regulated-teams/'
+  },
+  {
+    key: 'delegation-controls-vs-approval-forwarding',
+    locale: 'es',
+    slug: 'controles-delegacion-training-compliance-ia-vs-approval-forwarding-manual-equipos-regulados',
+    title: 'Controles de delegación de training compliance con IA vs. approval forwarding manual para equipos regulados | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de delegación con IA frente a flujos manuales de approval forwarding en operaciones de training compliance regulado.',
+    h1: 'Controles de delegación con IA vs. approval forwarding manual para equipos regulados',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de enrutamiento, consistencia de decisiones y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de latencia de routing de aprobaciones bajo SLA regulatorios', 'Criterios operativos para consistencia de decisiones, ownership y gestión de overrides', 'Marco de piloto para reducir reaperturas y mejorar defensibilidad en auditoría'],
+    enPath: '/compare/ai-compliance-training-delegation-controls-vs-manual-approval-forwarding-for-regulated-teams/'
   }
 );
 

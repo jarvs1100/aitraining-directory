@@ -894,9 +894,9 @@ const jsonLd = {
   <h1>{page.title}</h1>
   <p class="muted">{page.intro} Use this route to decide faster with an implementation-led lens instead of a feature checklist.</p>
 
-  <section class="section card" aria-labelledby="compare-template-checklist-heading">
-    <h2 id="compare-template-checklist-heading">Buyer checklist before final comparison scoring</h2>
-    <ul>
+  <section class="section card compare-intent-card" aria-labelledby="compare-template-checklist-heading">
+    <h2 id="compare-template-checklist-heading">What this page helps you decide</h2>
+    <ul class="compare-intent-list">
       <li>Lock evaluation criteria before demos: workflow-fit, governance, localization, implementation difficulty.</li>
       <li>Require the same source asset and review workflow for both sides.</li>
       <li>Run at least one update cycle after feedback to measure operational reality.</li>
@@ -1149,6 +1149,21 @@ const jsonLd = {
       margin-bottom: 0.18rem;
     }
 
+    .compare-intent-card {
+      padding-bottom: 0.95rem;
+    }
+
+    .compare-intent-list {
+      margin: 0.22rem 0 0.75rem;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.46rem;
+    }
+
+    .compare-intent-list li {
+      line-height: 1.5;
+    }
+
     .buying-criteria-list {
       margin: 0.2rem 0 1rem;
       padding-left: 1.1rem;
@@ -1285,12 +1300,59 @@ const jsonLd = {
       }
     }
 
+    @media (max-width: 360px) {
+      .compare-intent-card {
+        padding-left: 0.74rem;
+        padding-right: 0.74rem;
+      }
+
+      .compare-intent-list li {
+        padding: 0.4rem 0.44rem;
+        gap: 0.42rem;
+      }
+    }
+
     @media (max-width: 390px) {
       .section h2 {
         font-size: 1.05rem;
         line-height: 1.34;
         margin-bottom: 0.62rem;
         overflow-wrap: anywhere;
+      }
+
+      .compare-intent-card {
+        padding: 0.86rem 0.82rem 0.9rem;
+      }
+
+      .compare-intent-card h2 {
+        margin-bottom: 0.56rem;
+      }
+
+      .compare-intent-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0.1rem 0 0.68rem;
+        gap: 0.4rem;
+      }
+
+      .compare-intent-list li {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.48rem;
+        align-items: start;
+        padding: 0.44rem 0.48rem;
+        border: 1px solid #dbe5f2;
+        border-radius: 0.56rem;
+        background: #f8fafc;
+        line-height: 1.42;
+      }
+
+      .compare-intent-list li::before {
+        content: '•';
+        color: #166534;
+        font-weight: 700;
+        line-height: 1;
+        margin-top: 0.2rem;
       }
 
       .matrix-card {

@@ -2957,3 +2957,61 @@ accept-ranges: bytes
 age: 0
 date: Tue, 17 Feb 2026 18:27:05 GMT
 ```
+
+## Evidence delta — 2026-02-17 18:43 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 248 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.111.153
+185.199.110.153
+185.199.109.153
+185.199.108.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+Last-Modified: Tue, 17 Feb 2026 18:41:38 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+Location: https://aitraining.directory/
+```
+
+### Current delta summary
+- `qa:https` remains green on generated artifacts (248 HTML files).
+- HTTPS remains valid on custom domain with Let's Encrypt `R12` certificate.
+- Apex returns `HTTP/2 200`; `www` continues redirecting to HTTPS apex.
+- `Last-Modified` advanced to `18:41:38 UTC`, confirming latest deploy visibility.
