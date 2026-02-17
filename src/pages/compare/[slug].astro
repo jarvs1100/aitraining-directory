@@ -553,11 +553,17 @@ const jsonLd = {
 
   <section class="section" aria-labelledby="faq-heading">
     <h2 id="faq-heading">FAQ</h2>
-    {faq.map((item) => (
-      <>
+    <p class="muted faq-intro">Jump to a question:</p>
+    <ul class="faq-anchor-list" aria-label="FAQ quick navigation">
+      {faq.map((item, index) => (
+        <li><a href={`#faq-${index + 1}`}>{item.q}</a></li>
+      ))}
+    </ul>
+    {faq.map((item, index) => (
+      <article class="faq-item" id={`faq-${index + 1}`}>
         <h3>{item.q}</h3>
         <p>{item.a}</p>
-      </>
+      </article>
     ))}
   </section>
 
@@ -643,6 +649,38 @@ const jsonLd = {
       gap: 0.55rem;
     }
 
+    .faq-intro {
+      margin-bottom: 0.45rem;
+    }
+
+    .faq-anchor-list {
+      margin: 0 0 1rem 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 0.45rem;
+    }
+
+    .faq-item {
+      scroll-margin-top: 5rem;
+      padding: 0.78rem 0;
+      border-top: 1px dashed #cbd5e1;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 0.95rem;
+    }
+
+    .faq-item h3 {
+      margin-bottom: 0.5rem;
+      line-height: 1.32;
+    }
+
+    .faq-item p {
+      margin: 0;
+      max-width: none;
+    }
+
     @media (max-width: 860px) and (min-width: 521px) {
       .matrix-mobile {
         gap: 0.9rem;
@@ -683,6 +721,23 @@ const jsonLd = {
 
       .next-step-actions .btn {
         justify-content: flex-start;
+      }
+
+      .faq-anchor-list {
+        gap: 0.55rem;
+      }
+
+      .faq-anchor-list a {
+        display: inline-block;
+        padding: 0.18rem 0;
+      }
+
+      .faq-item {
+        padding: 0.95rem 0;
+      }
+
+      .faq-item h3 {
+        margin-bottom: 0.6rem;
       }
     }
   </style>

@@ -626,8 +626,29 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de L&D y compliance a evaluar velocidad de decisión, consistencia de políticas y trazabilidad audit-ready entre ambos modelos de gobernanza.',
     points: ['Comparativa de latencia de decisión y throughput de aprobaciones en operación real', 'Criterios operativos para alineación de políticas, ownership y rutas de escalado', 'Marco de piloto para roles de gobernanza, cadencia de revisión y escalado sostenible'],
     enPath: '/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/'
+  },
+  {
+    key: 'ld-roi-attribution-dashboards-vs-manual-survey-reporting',
+    locale: 'de',
+    slug: 'ki-training-impact-attribution-dashboards-vs-manuelles-survey-reporting-fuer-ld-roi',
+    title: 'KI-Training-Impact-Attribution-Dashboards vs. manuelles Survey-Reporting für L&D-ROI | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Impact-Attribution-Dashboards gegen manuelles Survey-Reporting für L&D-ROI bewerten.',
+    h1: 'KI-Impact-Attribution-Dashboards vs. manuelles Survey-Reporting für L&D-ROI',
+    intro: 'Hilft L&D-, Analytics- und Finance-Teams, Reporting-Latenz, Attributionsklarheit und Entscheidungsreife zwischen beiden ROI-Betriebsmodellen zu vergleichen.',
+    points: ['Vergleich von Time-to-Insight für Monats- und Quartalsreviews', 'Messbare Kriterien für belastbare Attributionsaussagen inklusive Claim-Grenzen', 'Pilot-Framework für KPI-Lineage, Governance und CFO-fähige Readouts'],
+    enPath: '/compare/ai-training-impact-attribution-dashboards-vs-manual-survey-reporting-for-ld-roi/'
+  },
+  {
+    key: 'ld-roi-attribution-dashboards-vs-manual-survey-reporting',
+    locale: 'es',
+    slug: 'dashboards-atribucion-impacto-training-ia-vs-reporting-manual-encuestas-ld-roi',
+    title: 'Dashboards de atribución de impacto de training con IA vs. reporting manual por encuestas para ROI de L&D | AI Training Directory',
+    description: 'Entrada localizada para comparar dashboards de atribución de impacto con IA frente a reporting manual basado en encuestas para ROI de L&D.',
+    h1: 'Dashboards de atribución de impacto con IA vs. reporting manual por encuestas para ROI de L&D',
+    intro: 'Ayuda a equipos de L&D, analytics y finanzas a evaluar latencia de reporting, claridad de atribución y defensibilidad ejecutiva entre ambos modelos.',
+    points: ['Comparativa de velocidad de reporte para revisiones mensuales y trimestrales', 'Criterios operativos para claims de ROI con límites metodológicos explícitos', 'Marco de piloto para trazabilidad de KPIs, ownership y decisiones presupuestarias con confianza'],
+    enPath: '/compare/ai-training-impact-attribution-dashboards-vs-manual-survey-reporting-for-ld-roi/'
   }
-
 
 ];
 

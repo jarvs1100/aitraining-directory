@@ -1322,3 +1322,70 @@ Location: http://aitraining.directory/
 - HTTPS remains valid on apex with Let's Encrypt R12 certificate chain.
 - `www` over HTTPS redirects to apex HTTPS as expected.
 - Build-level HTTPS QA passed at 173 generated HTML pages.
+
+---
+
+## Evidence delta — 2026-02-17 12:55 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 176 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.108.153
+185.199.109.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTP/HTTPS behavior
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 12:42:57 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+
+curl -I https://aitraining.directory
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 12:42:57 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid on apex and `www` (redirecting to apex over HTTPS) with Let's Encrypt `R12`.
+- Build-level HTTPS QA passed with 176 generated HTML files after the i18n + mobile FAQ updates.
+- Deploy freshness signal remains current (`Last-Modified: 12:42:57 UTC`).
