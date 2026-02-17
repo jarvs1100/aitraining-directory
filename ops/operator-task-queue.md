@@ -42,4 +42,5 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Add one traffic-driving high-intent compare route for localization operations: `/compare/ai-translation-management-platforms-vs-spreadsheets-for-training-localization/` with implementation rubric + FAQ schema.
 - [x] Create distribution asset pack for the translation-management vs spreadsheet localization route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [x] Add i18n parity stubs for the new localization route on `/de` and `/es` localized hubs with canonical compare linkage.
-- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [ ] Add one traffic-driving high-intent compare route for audit evidence operations: `/compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/` with implementation-led rubric + FAQ schema.

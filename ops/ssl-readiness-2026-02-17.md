@@ -672,3 +672,63 @@ Location: http://aitraining.directory/
 - `qa:https` passes for current generated artifacts (134 HTML files).
 - Custom-domain HTTPS remains blocked by certificate mismatch (`CN=*.github.io` still served).
 - HTTP deployment timestamp advanced to `09:41:23 UTC`, confirming newer content is live over HTTP.
+
+---
+
+## Evidence delta — 2026-02-17 09:57 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 137 HTML files.
+```
+
+### DNS (unchanged)
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now (unchanged)
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+subject=CN = *.github.io
+notBefore=Mar  7 00:00:00 2025 GMT
+notAfter=Mar  7 23:59:59 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+subject=CN = *.github.io
+notBefore=Mar  7 00:00:00 2025 GMT
+notAfter=Mar  7 23:59:59 2026 GMT
+```
+
+### HTTP behavior (updated content timestamp)
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 09:42:46 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- Static HTTPS QA remains green after latest publish (`137` HTML files checked).
+- DNS remains correctly pointed to GitHub Pages endpoints.
+- Custom-domain HTTPS remains blocked by hostname mismatch (`subject=CN=*.github.io` for apex and `www`).
+- HTTP Last-Modified advanced to `09:42:46 UTC`, indicating fresh deploy content is served over HTTP.
