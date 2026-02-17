@@ -11,4 +11,6 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Create one new high-intent route focused on compliance localization execution (`/compare/ai-dubbing-vs-subtitles-for-compliance-training/`) with rubric + FAQ schema.
 - [x] Mobile UX polish pass for top-nav localization links on `/pl,/cs,/sk,/hu,/de,/es` landing pages (tap target + spacing parity).
 - [x] Create distribution asset pack for new compliance localization comparison route (LinkedIn post, X thread hook, and newsletter blurb with canonical URL).
-- [ ] Add one traffic-driving high-intent compare route targeting implementation evaluation for SCORM/LMS workflow tooling.
+- [x] Add one traffic-driving high-intent compare route targeting implementation evaluation for SCORM/LMS workflow tooling.
+- [x] Create distribution asset pack for SCORM/LMS comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [ ] Re-run SSL readiness checks after the next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.

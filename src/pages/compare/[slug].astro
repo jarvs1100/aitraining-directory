@@ -84,6 +84,22 @@ const comparisonContentBySlug = {
       'Choose the mode with lower total defect-correction effort over 30 days, not the fastest first publish.'
     ]
   },
+  'scorm-authoring-vs-lms-native-builders': {
+    decisionMatrix: [
+      { criterion: 'Implementation speed for first production course', weight: '25%', whatGoodLooksLike: 'Team ships first approved course with tracking enabled and QA signoff inside planned launch window.', leftLens: 'Score how quickly IDs can author, package, and upload SCORM into your LMS with minimal rework.', rightLens: 'Score how quickly SMEs can build and publish directly in LMS-native builders without custom packaging steps.' },
+      { criterion: 'Update velocity for recurring policy/process changes', weight: '25%', whatGoodLooksLike: 'Minor updates can be shipped weekly without breaking completions or version history.', leftLens: 'Measure cycle time for editing source files, republishing SCORM, and validating completion sync.', rightLens: 'Measure cycle time for in-LMS edits, approvals, and learner-visible rollouts across active cohorts.' },
+      { criterion: 'Data fidelity and reporting depth', weight: '20%', whatGoodLooksLike: 'Learning records are consistent enough for compliance audits and manager coaching decisions.', leftLens: 'Validate SCORM/xAPI event capture, completion logic, and edge-case behavior in your target LMS.', rightLens: 'Validate native event granularity, export quality, and ability to track required assessment evidence.' },
+      { criterion: 'Governance, version control, and handoffs', weight: '15%', whatGoodLooksLike: 'Ownership stays clear across IDs, admins, compliance reviewers, and regional stakeholders.', leftLens: 'Check authoring ownership model, source control discipline, and rollback process for packaged assets.', rightLens: 'Check permissioning granularity, approval routing, and audit logs inside LMS-native content workflows.' },
+      { criterion: 'Total operating cost per maintained course', weight: '15%', whatGoodLooksLike: 'Cost and team effort decline as library size grows and refresh cadence increases.', leftLens: 'Model tool licensing + specialist authoring effort + QA overhead for each update cycle.', rightLens: 'Model LMS seat/feature cost + admin dependency + any limits on advanced interaction design.' }
+    ],
+    buyingCriteria: [
+      'Pilot with one compliance-critical course and one high-change operational course before selecting your default path.',
+      'Use a shared scorecard that includes re-publish effort, completion-data reliability, and reviewer minutes.',
+      'Test at least one rollback scenario (bad publish) to validate recovery speed and audit defensibility.',
+      'Document who owns authoring, QA, LMS admin steps, and post-launch reporting in your target operating model.',
+      'Choose the option that minimizes long-term maintenance burden, not just first-launch speed.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
