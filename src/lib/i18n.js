@@ -186,6 +186,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/'
   },
   {
+    key: 'manager-coaching-copilot-vs-playbook',
+    locale: 'de',
+    slug: 'ki-coaching-copiloten-vs-statische-playbooks-fuer-manager-enablement',
+    title: 'KI-Coaching-Copiloten vs. statische Playbooks für Manager Enablement | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Enablement-Teams, die KI-Coaching-Copiloten gegen klassische Manager-Playbooks bewerten.',
+    h1: 'KI-Coaching-Copiloten vs. statische Playbooks für Manager Enablement',
+    intro: 'Hilft L&D- und Enablement-Teams zu entscheiden, ob statische Leitfäden ausreichen oder ein Copilot für Coaching-Momente im Alltag mehr Wirkung liefert.',
+    points: ['Vergleich von In-the-Moment-Nutzbarkeit und Adoptionsgrad', 'Messbare Kriterien für Coaching-Konsistenz über Manager hinweg', 'Pilot-Framework für Governance, Aufwand und Behavior-Lift'],
+    enPath: '/compare/ai-coaching-copilots-vs-static-playbooks-for-manager-enablement/'
+  },
+  {
+    key: 'manager-coaching-copilot-vs-playbook',
+    locale: 'es',
+    slug: 'copilotos-ia-coaching-vs-playbooks-estaticos-para-enablement-managers',
+    title: 'Copilotos de IA para coaching vs. playbooks estáticos para enablement de managers | AI Training Directory',
+    description: 'Entrada localizada para equipos que evalúan copilotos de coaching con IA frente a playbooks tradicionales para managers.',
+    h1: 'Copilotos de IA para coaching vs. playbooks estáticos para enablement de managers',
+    intro: 'Ayuda a equipos de formación y enablement a decidir cuándo un playbook estático es suficiente y cuándo conviene pasar a copilotos para coaching en contexto real.',
+    points: ['Comparación práctica de uso en tiempo real durante 1:1 y huddles', 'Criterios de consistencia de coaching y señal para equipos de enablement', 'Marco de piloto para gobernanza, carga operativa e impacto conductual'],
+    enPath: '/compare/ai-coaching-copilots-vs-static-playbooks-for-manager-enablement/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
