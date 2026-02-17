@@ -874,6 +874,29 @@ export const localizedLandingPages = [
   }
 
 
+  ,{
+    key: 'compliance-audit-packet-assembly-vs-manual-evidence-binders',
+    locale: 'de',
+    slug: 'ki-compliance-audit-packet-assembly-vs-manuelle-evidence-binder-fuer-training-programme',
+    title: 'KI-Compliance-Audit-Packet-Assembly vs. manuelle Evidence-Binder für Training-Programme | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Audit-Packet-Assembly gegen manuelle Evidence-Binder für Trainingsprogramme vergleichen.',
+    h1: 'KI-Compliance-Audit-Packet-Assembly vs. manuelle Evidence-Binder für Training-Programme',
+    intro: 'Hilft Compliance-, Audit- und L&D-Ops-Teams, Response-Zeit, Nachweis-Traceability und Defensibility zwischen automatisierter Packet-Assembly und manueller Binder-Erstellung zu bewerten.',
+    points: ['Vergleich von Audit-Response-Zykluszeit bei Stichproben-Requests über Standorte hinweg', 'Messbare Kriterien für Chain-of-Custody, Reviewer-Signoff-Konsistenz und Exception-Closure', 'Pilot-Framework für Pflichtfelder, RACI-Zuordnung und follow-up-resistente Evidence-Pakete'],
+    enPath: '/compare/ai-compliance-audit-packet-assembly-vs-manual-evidence-binders-for-training-programs/'
+  },
+  {
+    key: 'compliance-audit-packet-assembly-vs-manual-evidence-binders',
+    locale: 'es',
+    slug: 'ensamblaje-paquetes-auditoria-compliance-ia-vs-binders-evidencia-manuales-programas-formacion',
+    title: 'Ensamblaje de paquetes de auditoría compliance con IA vs. binders manuales de evidencia para programas de formación | AI Training Directory',
+    description: 'Entrada localizada para comparar ensamblaje de paquetes de auditoría con IA frente a binders manuales de evidencia en programas de formación.',
+    h1: 'Ensamblaje de paquetes de auditoría compliance con IA vs. binders manuales de evidencia para programas de formación',
+    intro: 'Ayuda a equipos de compliance, auditoría y L&D operations a evaluar velocidad de respuesta, trazabilidad de evidencia y defensibilidad entre ensamblaje automatizado de paquetes y preparación manual de binders.',
+    points: ['Comparativa del ciclo de respuesta a solicitudes de auditoría con muestras multi-sede', 'Criterios operativos para chain-of-custody, consistencia de signoff y cierre verificable de excepciones', 'Marco de piloto para campos obligatorios, RACI cross-funcional y paquetes listos para auditoría con menos retrabajo'],
+    enPath: '/compare/ai-compliance-audit-packet-assembly-vs-manual-evidence-binders-for-training-programs/'
+  }
+
 
 
 
