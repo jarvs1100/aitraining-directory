@@ -22,6 +22,7 @@ const uiByLang = {
 
 const ui = uiByLang[lang] || uiByLang.en;
 const basePath = lang && lang !== 'en' ? `/${lang}` : '';
+const isLocalizedNav = lang !== 'en';
 const localizedHref = (path) => {
   if (!basePath) return path;
   if (path === '/') return `${basePath}/`;
@@ -285,12 +286,16 @@ const localizedHref = (path) => {
       }
       .top-nav a {
         color: var(--text);
-        padding: 0.45rem 0.55rem;
+        padding: 0.5rem 0.62rem;
         border: 2px solid transparent;
         font-weight: 800;
         font-size: 0.88rem;
         white-space: nowrap;
         text-decoration: none;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
       }
       .top-nav a:hover,
       .top-nav a:focus-visible {
@@ -306,7 +311,7 @@ const localizedHref = (path) => {
         .top-nav {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: .5rem;
+          gap: .55rem;
           width: 100%;
         }
         .top-nav a {
@@ -314,7 +319,11 @@ const localizedHref = (path) => {
           border: 2px solid #166534;
           background: #ecfdf5;
           font-size: 0.95rem;
-          padding: 0.62rem 0.55rem;
+          padding: 0.7rem 0.62rem;
+          line-height: 1.25;
+        }
+        .top-nav.localized-nav {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -366,13 +375,13 @@ const localizedHref = (path) => {
       <header class="site" role="banner">
         <div class="wrap nav-row">
           <a href={localizedHref('/')} class="brand">AI Training Directory</a>
-          <nav class="top-nav" aria-label="Main navigation">
+          <nav class={`top-nav${isLocalizedNav ? ' localized-nav' : ''}`} aria-label="Main navigation">
             <a href={localizedHref('/')}>{ui.home}</a>
-            <a href="/categories/">{ui.categories}</a>
-            <a href="/solutions/">{ui.solutions}</a>
-            <a href="/compare/">{ui.compare}</a>
-            <a href="/advertise/">{ui.partners}</a>
-            <a href="/submit/">{ui.submit}</a>
+            <a href={localizedHref('/categories/')}>{ui.categories}</a>
+            <a href={localizedHref('/solutions/')}>{ui.solutions}</a>
+            <a href={localizedHref('/compare/')}>{ui.compare}</a>
+            <a href={localizedHref('/advertise/')}>{ui.partners}</a>
+            <a href={localizedHref('/submit/')}>{ui.submit}</a>
           </nav>
         </div>
       </header>

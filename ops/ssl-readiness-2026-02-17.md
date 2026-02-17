@@ -137,3 +137,62 @@ Location: http://aitraining.directory/
 - HTTPS hostname validation still fails for custom domain.
 - HTTP site reflects newer deployed content timestamp (`Last-Modified` advanced from 06:41 to 07:07 UTC).
 
+---
+
+## Evidence delta — 2026-02-17 07:24 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 115 HTML files.
+```
+
+### DNS (unchanged)
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now (unchanged)
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+subject=CN = *.github.io
+notBefore=Mar  7 00:00:00 2025 GMT
+notAfter=Mar  7 23:59:59 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+subject=CN = *.github.io
+notBefore=Mar  7 00:00:00 2025 GMT
+notAfter=Mar  7 23:59:59 2026 GMT
+```
+
+### HTTP behavior (updated content timestamp)
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 07:12:05 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- SSL certificate mismatch persists for custom domain (`CN=*.github.io`).
+- HTTPS hostname validation remains blocked pending GitHub Pages cert binding.
+- HTTP origin reflects newer deployment timestamp (`Last-Modified` advanced to 07:12 UTC).
+
