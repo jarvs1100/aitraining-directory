@@ -164,6 +164,22 @@ const comparisonContentBySlug = {
       'Choose the format that delivers stronger 30-day behavior outcomes per unit of manager coaching effort and operational downtime.'
     ]
   },
+  'ai-video-feedback-vs-manual-assessment-for-soft-skills-training': {
+    decisionMatrix: [
+      { criterion: 'Scoring consistency across cohorts and assessors', weight: '25%', whatGoodLooksLike: 'Evaluation outcomes stay comparable across regions, cohorts, and reviewer turnover.', leftLens: 'Measure rubric-consistency across AI-generated scores and coaching tags for repeated soft-skills scenarios.', rightLens: 'Measure inter-rater variability across human assessors using the same scenario and rubric criteria.' },
+      { criterion: 'Feedback turnaround speed', weight: '25%', whatGoodLooksLike: 'Learners receive actionable feedback quickly enough to improve in the next practice cycle.', leftLens: 'Track time from submission to feedback delivery and retry availability in AI-assisted review workflows.', rightLens: 'Track assessor backlog, review SLAs, and average wait time before learners get manual coaching notes.' },
+      { criterion: 'Coaching depth and contextual quality', weight: '20%', whatGoodLooksLike: 'Feedback identifies specific behavior gaps and recommends concrete next-step practice actions.', leftLens: 'Validate whether AI feedback pinpoints tone, structure, objection handling, and phrasing issues with usable guidance.', rightLens: 'Validate whether manual reviewers produce equally specific coaching notes at the same throughput level.' },
+      { criterion: 'Governance, fairness, and auditability', weight: '15%', whatGoodLooksLike: 'Assessment process is defensible, bias-checked, and reviewable by enablement/compliance leaders.', leftLens: 'Check bias-monitoring controls, score override workflow, and traceability for model-driven feedback decisions.', rightLens: 'Check reviewer calibration process, rubric drift controls, and audit trail quality for manual scoring decisions.' },
+      { criterion: 'Cost per proficiency-ready learner', weight: '15%', whatGoodLooksLike: 'Assessment spend declines while pass-quality and manager confidence improve.', leftLens: 'Model platform + QA oversight cost against faster iteration cycles and reduced assessor bottlenecks.', rightLens: 'Model assessor hours + calibration overhead against coaching quality and throughput requirements.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-impact soft-skills workflow (e.g., objection handling, difficult customer conversation, or manager feedback delivery) in both models.',
+      'Use one shared rubric and include calibration checks for at least two cohorts before making a platform decision.',
+      'Track median feedback turnaround time, rubric consistency, and retry improvement rate as primary decision metrics.',
+      'Require a fairness and escalation protocol for contested scores before production rollout.',
+      'Select the model with lower total assessment friction and stronger 30-day proficiency lift per learner.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },

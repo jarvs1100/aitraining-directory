@@ -227,3 +227,49 @@ This week’s new comparison route helps enablement and L&D teams evaluate AI co
 If your team is trying to scale manager coaching quality without adding heavy operational overhead, this gives you a pilot-ready decision structure.
 
 Read: https://aitraining.directory/compare/ai-coaching-copilots-vs-static-playbooks-for-manager-enablement/
+
+---
+
+## Focus URL
+- Canonical: https://aitraining.directory/compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/
+
+## LinkedIn post draft
+**Headline:** AI video feedback vs manual assessment: which model scales soft-skills training without losing coaching quality?
+
+Most teams treat soft-skills assessment as a staffing issue.
+
+The bigger decision is operating model quality:
+- How consistent are scores across cohorts?
+- How fast do learners get actionable feedback?
+- Can you defend fairness and scoring decisions at scale?
+
+We published a practical, implementation-led comparison for L&D and enablement teams:
+https://aitraining.directory/compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/
+
+If you’re planning to scale coaching this quarter, use the pilot checklist to test both models with one shared rubric before rollout.
+
+## X/Twitter hook + thread starter
+**Post 1:**
+AI video feedback vs manual assessor review is not a “human vs AI” debate.
+
+It’s an execution decision: scoring consistency, feedback SLA, governance, and cost per proficiency-ready learner.
+
+New implementation-led comparison:
+https://aitraining.directory/compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/
+
+**Post 2:**
+Quick pilot before standardizing:
+1) One high-impact soft-skills workflow
+2) One shared rubric across both models
+3) Measure turnaround time + scoring consistency + retry improvement
+
+Choose with evidence, not preference.
+
+## Newsletter blurb
+**Subject option:** AI video feedback or manual assessment for soft-skills training? A practical framework
+
+This week’s new comparison route helps L&D teams evaluate AI video-feedback workflows against manual assessor-led evaluation for soft-skills programs.
+
+The rubric focuses on execution outcomes: scoring consistency, turnaround speed, coaching depth, governance/auditability, and cost per proficiency-ready learner.
+
+Read: https://aitraining.directory/compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/

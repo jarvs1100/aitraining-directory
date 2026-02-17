@@ -208,6 +208,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-coaching-copilots-vs-static-playbooks-for-manager-enablement/'
   },
   {
+    key: 'video-feedback-vs-manual-assessment',
+    locale: 'de',
+    slug: 'ki-video-feedback-vs-manuelle-bewertung-soft-skills-training',
+    title: 'KI-Video-Feedback vs. manuelle Bewertung im Soft-Skills-Training | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-basiertes Video-Feedback gegen manuelle Assessor-Bewertung in Soft-Skills-Programmen vergleichen.',
+    h1: 'KI-Video-Feedback vs. manuelle Bewertung im Soft-Skills-Training',
+    intro: 'Hilft L&D- und Enablement-Teams, Bewertungskonsistenz, Feedback-Geschwindigkeit und Governance-Aufwand zwischen beiden Modellen zu vergleichen.',
+    points: ['Vergleich der Bewertungsqualität über Kohorten hinweg', 'Messbare Entscheidungskriterien für Feedback-SLA und Coaching-Wirkung', 'Pilotrahmen für faire, auditierbare Skalierung'],
+    enPath: '/compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/'
+  },
+  {
+    key: 'video-feedback-vs-manual-assessment',
+    locale: 'es',
+    slug: 'feedback-video-ia-vs-evaluacion-manual-en-soft-skills',
+    title: 'Feedback en vídeo con IA vs. evaluación manual en formación de soft skills | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan feedback automático en vídeo con evaluación manual en programas de habilidades blandas.',
+    h1: 'Feedback en vídeo con IA vs. evaluación manual en formación de soft skills',
+    intro: 'Ayuda a equipos de formación y enablement a decidir entre escalabilidad con IA y evaluación manual según calidad de feedback, velocidad y control operativo.',
+    points: ['Comparativa de consistencia de evaluación por cohorte', 'Criterios operativos para SLA de feedback y mejora por reintento', 'Marco de piloto para gobernanza, equidad y trazabilidad'],
+    enPath: '/compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
