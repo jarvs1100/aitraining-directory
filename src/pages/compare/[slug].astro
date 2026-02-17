@@ -196,6 +196,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower total support friction and stronger day-14 readiness outcomes per cohort.'
     ]
   },
+  'ai-lms-admin-assistants-vs-shared-inbox-support-for-training-ops': {
+    decisionMatrix: [
+      { criterion: 'Ticket resolution SLA reliability', weight: '25%', whatGoodLooksLike: 'Most learner/admin support tickets are resolved inside agreed SLA without repeated back-and-forth.', leftLens: 'Measure first-response and full-resolution time for enrollment, completion, and access tickets with AI triage + guided actions.', rightLens: 'Measure the same SLA metrics with shared-inbox ownership and manual handoffs across LMS admins.' },
+      { criterion: 'Accuracy and policy-safe actions', weight: '25%', whatGoodLooksLike: 'Support responses and account actions are correct, auditable, and aligned to governance rules.', leftLens: 'Test whether assistant workflows enforce role permissions, approved macros, and escalation for high-risk requests.', rightLens: 'Test whether inbox workflows maintain equivalent control without introducing inconsistent manual decisions.' },
+      { criterion: 'Operational load on LMS admins', weight: '20%', whatGoodLooksLike: 'Admin workload is predictable even when ticket volume spikes during onboarding or compliance windows.', leftLens: 'Track ticket deflection, auto-classification precision, and queue clean-up effort needed to keep assistant performance high.', rightLens: 'Track recurring queue triage time, duplicate tickets, and rework from inconsistent categorization.' },
+      { criterion: 'Knowledge freshness and change propagation', weight: '15%', whatGoodLooksLike: 'Policy/workflow updates appear in support responses quickly with clear ownership.', leftLens: 'Assess sync speed from SOP updates into assistant playbooks and monitor stale-answer incidents.', rightLens: 'Assess how quickly shared-inbox templates and agent habits update after process changes.' },
+      { criterion: 'Cost per resolved training-support ticket', weight: '15%', whatGoodLooksLike: 'Total support cost falls while resolution quality and SLA performance improve.', leftLens: 'Model assistant platform + QA governance cost against reduced manual handling time.', rightLens: 'Model lower tooling cost against higher staffing/triage effort and slower resolution under peak load.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one high-volume LMS support queue (enrollment, completion disputes, or access resets) with a shared SLA dashboard.',
+      'Score both models using the same defect taxonomy: wrong action, incomplete answer, stale guidance, and escalation miss.',
+      'Require governance signoff on permission boundaries and escalation paths before enabling any assistant-led actions.',
+      'Track admin interruption minutes and queue backlog age as primary operating metrics, not just first-response speed.',
+      'Choose the model with better SLA adherence and lower cost per correctly resolved ticket over the pilot window.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
