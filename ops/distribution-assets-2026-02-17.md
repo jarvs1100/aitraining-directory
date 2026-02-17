@@ -608,3 +608,49 @@ It compares AI audit-trail automation workflows against manual evidence compilat
 If your team still relies on exported reports + spreadsheet reconciliation, this route gives a pilot-first framework to evaluate whether automation is now the safer operating model.
 
 Read: https://aitraining.directory/compare/ai-audit-trail-automation-vs-manual-training-evidence-compilation/
+
+---
+
+## Focus URL
+- Canonical: https://aitraining.directory/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/
+
+## LinkedIn post draft
+**Headline:** AI learning-path recommendations vs manager-assigned curricula: what scales upskilling with less friction?
+
+Most upskilling programs fail at assignment quality, not content quality.
+
+The real operating question:
+- Are people getting the *right* path for their actual gap?
+- How fast can you move from detected gap to capability lift?
+- Can you explain and audit assignment decisions when HR/compliance asks?
+
+We published a practical comparison for L&D and enablement leaders:
+https://aitraining.directory/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/
+
+Use the buying-criteria section to run a 30-day pilot before locking your default assignment model.
+
+## X/Twitter hook + thread starter
+**Post 1:**
+AI learning-path recommendations vs manager-assigned curricula is not a “who owns training” debate.
+
+It’s an operating model decision: targeting precision, time-to-proficiency, governance, and manager load.
+
+New implementation-led comparison:
+https://aitraining.directory/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/
+
+**Post 2:**
+Pilot structure before standardizing:
+1) One high-priority skill cluster
+2) One shared scorecard (assignment accuracy + intervention minutes)
+3) 30-day outcomes review
+
+Choose the model with lower upskilling friction per confirmed proficiency gain.
+
+## Newsletter blurb
+**Subject option:** AI recommendations or manager-assigned curricula? A practical upskilling decision framework
+
+This new comparison route helps L&D teams evaluate AI learning-path recommendations versus manager-assigned curricula using implementation criteria: assignment precision, time-to-proficiency, governance/fairness controls, operating load, and cost per proficiency gain.
+
+If your team is scaling capability-building programs this quarter, this gives you a pilot-ready framework to choose the safer long-term model.
+
+Read: https://aitraining.directory/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/

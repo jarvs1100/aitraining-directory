@@ -292,6 +292,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower 30-day evidence-compilation friction per sampled learner record while preserving audit defensibility.'
     ]
   },
+  'ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling': {
+    decisionMatrix: [
+      { criterion: 'Skill-gap targeting precision', weight: '25%', whatGoodLooksLike: 'Learners are assigned development paths that match current proficiency and role-critical gaps without overtraining.', leftLens: 'Evaluate recommendation quality from assessment and job-signal data, including false-positive and false-negative assignment rates.', rightLens: 'Evaluate how consistently managers assign curricula aligned to documented role-level skill gaps and evidence of need.' },
+      { criterion: 'Time-to-proficiency for priority capabilities', weight: '25%', whatGoodLooksLike: 'Teams can reduce time from skill-gap identification to observable on-the-job performance improvement.', leftLens: 'Measure cycle time from skill signal to assigned AI path and completion-to-performance uplift in target tasks.', rightLens: 'Measure cycle time when manager assignment depends on calibration meetings, manual reviews, and curriculum mapping.' },
+      { criterion: 'Governance, fairness, and assignment transparency', weight: '20%', whatGoodLooksLike: 'Assignment logic is explainable, policy-aligned, and reviewable by L&D, HR, and compliance stakeholders.', leftLens: 'Assess explainability of recommendation logic, override workflows, and audit logs for assignment decisions.', rightLens: 'Assess decision traceability, consistency of manager rationale, and controls that prevent uneven assignment quality.' },
+      { criterion: 'Manager and L&D operating load', weight: '15%', whatGoodLooksLike: 'Upskilling operations scale without recurring manual assignment bottlenecks.', leftLens: 'Track reduction in manual assignment workload and effort required for recommendation QA and exception handling.', rightLens: 'Track recurring manager/admin hours for assigning, reassigning, and monitoring curricula across teams.' },
+      { criterion: 'Cost per proficiency gain in target skill clusters', weight: '15%', whatGoodLooksLike: 'Program spend maps to measurable capability lift across cohorts and business-critical skill areas.', leftLens: 'Model platform + governance cost against faster proficiency gains and lower reassignment/rework effort.', rightLens: 'Model lower tooling spend against ongoing coordination load and slower assignment-response cycles.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day side-by-side pilot on one high-priority skill cluster (e.g., manager coaching, frontline troubleshooting, or compliance decision quality).',
+      'Use one scorecard: assignment accuracy, time-to-first-capability gain, manager intervention minutes, and reassignment rate.',
+      'Require explicit guardrails for fairness, override policy, and auditability before production rollout.',
+      'Define ownership across L&D ops, managers, and HR/compliance for assignment governance and monthly calibration.',
+      'Choose the model with lower total upskilling friction per confirmed proficiency gain, not the one with the most automation features.'
+    ]
+  },
     'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },

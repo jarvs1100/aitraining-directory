@@ -492,7 +492,30 @@ export const localizedLandingPages = [
     intro: 'Resumen localizado de la lógica de evaluación para decisiones de compra consistentes.',
     points: ['Criterios claros de evaluación', 'Claims conservadores sin hype', 'Decisiones basadas en pilotos'],
     enPath: '/editorial-methodology/'
+  },
+  {
+    key: 'learning-path-recommendations-vs-manager-curricula',
+    locale: 'de',
+    slug: 'ki-lernpfad-empfehlungen-vs-manager-zugewiesene-curricula-fuer-upskilling',
+    title: 'KI-Lernpfad-Empfehlungen vs. managerzugewiesene Curricula für Upskilling | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-basierte Lernpfad-Empfehlungen gegen managerzugewiesene Curricula im Upskilling vergleichen.',
+    h1: 'KI-Lernpfad-Empfehlungen vs. managerzugewiesene Curricula für Upskilling',
+    intro: 'Hilft L&D- und Enablement-Teams, Zuweisungsgenauigkeit, Time-to-Proficiency und Governance-Aufwand zwischen beiden Modellen realistisch zu bewerten.',
+    points: ['Vergleich von Skill-Gap-Targeting und Zuweisungspräzision', 'Messbare Kriterien für schnellere Capability-Gewinne', 'Pilot-Framework für Fairness, Override-Regeln und skalierbare Umsetzung'],
+    enPath: '/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/'
+  },
+  {
+    key: 'learning-path-recommendations-vs-manager-curricula',
+    locale: 'es',
+    slug: 'recomendaciones-rutas-aprendizaje-ia-vs-curricula-asignados-manager-upskilling',
+    title: 'Recomendaciones de rutas de aprendizaje con IA vs. currícula asignados por managers para upskilling | AI Training Directory',
+    description: 'Entrada localizada para comparar recomendaciones de rutas de aprendizaje con IA frente a currícula asignados por managers en programas de upskilling.',
+    h1: 'Rutas de aprendizaje con IA vs. currícula asignados por managers para upskilling',
+    intro: 'Ayuda a equipos de L&D y enablement a evaluar precisión de asignación, tiempo a competencia y carga de gobernanza entre ambos enfoques.',
+    points: ['Comparativa de precisión para cerrar brechas de habilidades', 'Criterios operativos para reducir tiempo hasta capacidad demostrable', 'Marco de piloto para reglas de override, equidad y escalado'],
+    enPath: '/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/'
   }
+
 ];
 
 export const i18nParityRubric = [

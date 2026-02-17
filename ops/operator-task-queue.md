@@ -2,6 +2,11 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
+- [x] Add one traffic-driving high-intent compare route for capability-building operations: `/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/` with implementation-led rubric + FAQ schema.
+- [x] Create distribution asset pack for the new learning-path recommendations comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+
 - [x] Improve `/compare/*` decision matrix quality by using page-specific tool labels (instead of Synthesia-only wording) and add a deeper rubric for `/compare/chatgpt-vs-claude-for-ld-content/`.
 - [x] Add localized i18n parity pages for German + Spanish SOP workflows (already live as `/de/sop-zu-schulungsvideos-mit-ki/` and `/es/de-sop-a-video-de-formacion-con-ia/`) with canonical outreach checklist linkage.
 - [x] Build one new high-intent comparison route (`/compare/heygen-vs-synthesia-for-training-videos/`) with implementation-led decision criteria and FAQ schema.
