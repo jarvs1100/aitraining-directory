@@ -17,6 +17,65 @@ if (!locale || lang === 'en') {
 
 const pages = localizedLandingPages.filter((page) => page.locale === lang);
 const canonical = `https://aitraining.directory/${lang}/`;
+
+const copy = {
+  pl: {
+    edition: 'Wersja polska',
+    title: 'Polski: strony o AI szkoleniach',
+    intro: 'Zlokalizowane strony dla zespołów L&D i enablement w Polsce. Zacznij od strony z intencją rynkową.',
+    browse: 'Przeglądaj wszystkie kategorie',
+    solutions: 'Otwórz scenariusze wdrożenia',
+    listTitle: 'Dostępne strony lokalne'
+  },
+  cs: {
+    edition: 'Česká verze',
+    title: 'Čeština: stránky pro AI školení',
+    intro: 'Lokalizované stránky pro L&D a enablement týmy v Česku. Začněte stránkou podle tržního záměru.',
+    browse: 'Procházet všechny kategorie',
+    solutions: 'Otevřít scénáře nasazení',
+    listTitle: 'Dostupné lokalizované stránky'
+  },
+  sk: {
+    edition: 'Slovenská verzia',
+    title: 'Slovenčina: stránky pre AI školenia',
+    intro: 'Lokalizované stránky pre L&D a enablement tímy na Slovensku. Začni stránkou podľa trhového intentu.',
+    browse: 'Prehliadať všetky kategórie',
+    solutions: 'Otvoriť scenáre nasadenia',
+    listTitle: 'Dostupné lokalizované stránky'
+  },
+  hu: {
+    edition: 'Magyar kiadás',
+    title: 'Magyar: AI képzési oldalak',
+    intro: 'Lokalizált oldalak magyar L&D és enablement csapatoknak. Kezdj egy piaci szándékhoz illő oldallal.',
+    browse: 'Összes kategória böngészése',
+    solutions: 'Megoldási útmutatók megnyitása',
+    listTitle: 'Elérhető lokalizált oldalak'
+  },
+  de: {
+    edition: 'Deutsche Version',
+    title: 'Deutsch: KI-Trainingsseiten',
+    intro: 'Lokalisierte Seiten für L&D- und Enablement-Teams im DACH-Raum. Starten Sie mit einer marktintenten Seite.',
+    browse: 'Alle Kategorien ansehen',
+    solutions: 'Lösungs-Playbooks öffnen',
+    listTitle: 'Verfügbare lokalisierte Seiten'
+  },
+  es: {
+    edition: 'Edición en español',
+    title: 'Español: páginas de IA para formación',
+    intro: 'Páginas localizadas para equipos de L&D y enablement. Empieza con una página alineada con la intención del mercado.',
+    browse: 'Ver todas las categorías',
+    solutions: 'Abrir guías de implementación',
+    listTitle: 'Páginas localizadas disponibles'
+  }
+}[lang] || {
+  edition: `${locale.name} edition`,
+  title: `${locale.name}: AI training pages`,
+  intro: `Localized AI training pages for ${locale.name} market intent.`,
+  browse: 'Browse all categories',
+  solutions: 'Open solution playbooks',
+  listTitle: 'Available localized pages'
+};
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
@@ -29,17 +88,17 @@ const jsonLd = {
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: locale.name, href: `/${lang}/` }]} />
 
   <section class="hero" style="margin-bottom:1.25rem;">
-    <span class="eyebrow">{locale.name} edition</span>
-    <h1 style="margin-top:.7rem;">{locale.name}: AI training pages</h1>
-    <p class="muted" style="max-width:70ch;">Localized routes for L&D and enablement teams in {locale.name}. Start with a market-intent page below.</p>
+    <span class="eyebrow">{copy.edition}</span>
+    <h1 style="margin-top:.7rem;">{copy.title}</h1>
+    <p class="muted" style="max-width:70ch;">{copy.intro}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/categories/">Browse all categories</a>
-      <a class="btn btn-secondary" href="/solutions/">Open solution playbooks</a>
+      <a class="btn btn-primary" href="/categories/">{copy.browse}</a>
+      <a class="btn btn-secondary" href="/solutions/">{copy.solutions}</a>
     </div>
   </section>
 
   <section aria-labelledby="localized-pages-heading">
-    <h2 id="localized-pages-heading">Available localized pages</h2>
+    <h2 id="localized-pages-heading">{copy.listTitle}</h2>
     <div class="grid">
       {pages.map((page) => (
         <a class="card" href={`/${page.locale}/${page.slug}/`}>
