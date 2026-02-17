@@ -35,3 +35,191 @@
 - 2026-02-17 10:40 UTC: Completed i18n parity follow-through by shipping localized parity/trust/routing checklist modules across localized hubs and localizing shared layout labels (skip link + navigation aria labels + footer context) in `src/layouts/Base.astro`; rebuilt static site and re-ran HTTPS QA (152 HTML files checked, pass). Changes pushed at commit `11b4f9c`. Next task: queue exhausted — refill `ops/operator-task-queue.md` with next highest-impact traffic-driving content/distribution/mobile/SSL priorities.
 - 2026-02-17 10:55 UTC: Refilled operator queue and executed top items by shipping new high-intent compare route `/compare/ai-audit-trail-automation-vs-manual-training-evidence-compilation/` with implementation-led decision matrix + buying criteria, then created matching distribution asset pack section (LinkedIn/X/newsletter) in `ops/distribution-assets-2026-02-17.md`. Ran `npm run build` and `npm run qa:https` (both passed, 153 HTML files checked). Changes pushed at commit `b72181a`. Next task: add i18n parity stubs for the new route on `/de` and `/es` localized hubs with canonical compare linkage.
 - 2026-02-17 10:57 UTC: Added localized i18n parity stubs for audit-trail route on `/de` and `/es` hubs (`/de/ki-audit-trail-automatisierung-vs-manuelle-kompilierung-von-trainingsevidenz/`, `/es/automatizacion-audit-trail-ia-vs-compilacion-manual-evidencia-formacion/`) with canonical link to `/compare/ai-audit-trail-automation-vs-manual-training-evidence-compilation/`; re-ran SSL readiness checks and appended evidence delta in `ops/ssl-readiness-2026-02-17.md` showing HTTPS now valid with Let's Encrypt (`HTTP/2 200`, no hostname mismatch). Ran `npm run build` and `npm run qa:https` (both passed, 155 HTML files checked). Changes pushed at commit `f91f070`. Next task: queue exhausted — refill `ops/operator-task-queue.md` with next highest-impact traffic-driving content, mobile UX polish, and distribution priorities.
+- 2026-02-17 11:11 UTC: Refilled queue and executed top three unfinished items in one run: added new high-intent compare route "/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/" with implementation-led decision matrix + buying criteria, added matching distribution asset pack section (LinkedIn/X/newsletter) in     , and added i18n parity stubs on localized hubs (, ) linked to canonical route. Ran 
+> aitraining-directory@1.0.0 build
+> rm -rf docs && astro build
+
+11:11:34 [content] Syncing content
+11:11:34 [content] Synced content
+11:11:34 [types] Generated 27ms
+11:11:34 [build] output: "static"
+11:11:34 [build] mode: "static"
+11:11:34 [build] directory: /home/adam/.openclaw/workspace/aitraining-directory/docs/
+11:11:34 [build] Collecting build info...
+11:11:34 [build] ✓ Completed in 46ms.
+11:11:34 [build] Building static entrypoints...
+11:11:35 [vite] ✓ built in 1.30s
+11:11:35 [build] ✓ Completed in 1.33s.
+
+ building client (vite) 
+11:11:35 [vite] transforming...
+11:11:35 [vite] ✓ 13 modules transformed.
+11:11:35 [vite] rendering chunks...
+11:11:35 [vite] computing gzip size...
+11:11:35 [vite] docs/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js  15.36 kB │ gzip: 5.28 kB
+11:11:35 [vite] ✓ built in 60ms
+
+ generating static routes 
+11:11:35 ▶ src/pages/advertise.astro
+11:11:35   └─ /advertise/index.html (+6ms) 
+11:11:35 ▶ src/pages/categories.astro
+11:11:35   └─ /categories/index.html (+2ms) 
+11:11:35 ▶ src/pages/category/[slug].astro
+11:11:35   ├─ /category/ai-chat/index.html (+2ms) 
+11:11:35   ├─ /category/ai-image/index.html (+1ms) 
+11:11:35   ├─ /category/ai-presentations/index.html (+1ms) 
+11:11:35   ├─ /category/ai-productivity/index.html (+1ms) 
+11:11:35   ├─ /category/ai-sales/index.html (+1ms) 
+11:11:35   ├─ /category/ai-search/index.html (+1ms) 
+11:11:35   ├─ /category/ai-video/index.html (+1ms) 
+11:11:35   ├─ /category/ai-video-training/index.html (+1ms) 
+11:11:35   ├─ /category/ai-voice/index.html (+1ms) 
+11:11:35   └─ /category/ai-writing/index.html (+1ms) 
+11:11:35 ▶ src/pages/compare/[slug].astro
+11:11:35   ├─ /compare/synthesia-alternatives/index.html (+2ms) 
+11:11:35   ├─ /compare/descript-vs-camtasia-for-training-videos/index.html (+1ms) 
+11:11:35   ├─ /compare/chatgpt-vs-claude-for-ld-content/index.html (+1ms) 
+11:11:35   ├─ /compare/murf-vs-elevenlabs-for-training-voiceovers/index.html (+1ms) 
+11:11:35   ├─ /compare/otter-vs-fireflies-for-meeting-knowledge/index.html (+1ms) 
+11:11:35   ├─ /compare/gamma-vs-tome-for-training-presentations/index.html (+2ms) 
+11:11:35   ├─ /compare/notion-ai-vs-confluence-for-training-knowledge/index.html (+1ms) 
+11:11:35   ├─ /compare/trainual-vs-knowledge-base-workflows/index.html (+1ms) 
+11:11:35   ├─ /compare/heygen-vs-synthesia-for-training-videos/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-dubbing-vs-subtitles-for-compliance-training/index.html (+1ms) 
+11:11:35   ├─ /compare/scorm-authoring-vs-lms-native-builders/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-roleplay-simulators-vs-video-only-onboarding/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-coaching-copilots-vs-static-playbooks-for-manager-enablement/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-scenario-branching-vs-linear-microlearning-for-frontline-training/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-video-feedback-vs-manual-assessment-for-soft-skills-training/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-onboarding-buddy-chatbots-vs-manager-shadowing-checklists/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-lms-admin-assistants-vs-shared-inbox-support-for-training-ops/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-translation-management-platforms-vs-spreadsheets-for-training-localization/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-training-proof-of-completion-records-vs-lms-completion-reports-for-compliance-audits/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-adaptive-recertification-paths-vs-fixed-annual-compliance-refreshers/index.html (+2ms) 
+11:11:35   ├─ /compare/ai-dynamic-policy-updates-vs-static-compliance-manuals-for-frontline-teams/index.html (+1ms) 
+11:11:35   ├─ /compare/ai-audit-trail-automation-vs-manual-training-evidence-compilation/index.html (+1ms) 
+11:11:35   └─ /compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/index.html (+1ms) 
+11:11:35 ▶ src/pages/compare/index.astro
+11:11:35   └─ /compare/index.html (+1ms) 
+11:11:35 ▶ src/pages/editorial-methodology.astro
+11:11:35   └─ /editorial-methodology/index.html (+1ms) 
+11:11:35 ▶ src/pages/solutions/[slug].astro
+11:11:35   ├─ /solutions/ai-tools-for-training-and-development/index.html (+2ms) 
+11:11:35   ├─ /solutions/ai-ld-tech-evaluation-checklist/index.html (+1ms) 
+11:11:35   ├─ /solutions/sop-to-video-training/index.html (+1ms) 
+11:11:35   ├─ /solutions/new-hire-onboarding-automation/index.html (+1ms) 
+11:11:35   ├─ /solutions/compliance-training-content-creation/index.html (+1ms) 
+11:11:35   ├─ /solutions/sales-enablement-training/index.html (+1ms) 
+11:11:35   ├─ /solutions/customer-support-training/index.html (+1ms) 
+11:11:35   ├─ /solutions/microlearning-video-production/index.html (+1ms) 
+11:11:35   ├─ /solutions/manager-coaching-playbooks/index.html (+1ms) 
+11:11:35   ├─ /solutions/knowledge-base-to-training/index.html (+1ms) 
+11:11:35   ├─ /solutions/product-training-rollouts/index.html (+4ms) 
+11:11:35   ├─ /solutions/call-review-and-coaching/index.html (+1ms) 
+11:11:35   ├─ /solutions/multilingual-employee-training/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-trainer-workflow-automation/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-training-needs-analysis/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-skills-gap-analysis-for-ld/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-course-outline-generator-for-subject-matter-experts/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-policy-change-training-updates/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-onboarding-for-remote-teams/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-training-for-frontline-workers/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-lms-content-migration-and-refresh/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-train-the-trainer-programs/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-performance-support-for-managers/index.html (+1ms) 
+11:11:35   ├─ /solutions/ai-compliance-audit-ready-training-records/index.html (+1ms) 
+11:11:35   ├─ /solutions/eu-ai-act-ai-literacy-training/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-head-of-l-d/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-l-d-manager/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-training-operations-manager/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-enablement-manager/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-hr-business-partner/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-people-operations-lead/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-compliance-manager/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-customer-support-manager/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-sales-enablement-lead/index.html (+1ms) 
+11:11:35   ├─ /solutions/for-instructional-designer/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-healthcare/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-manufacturing/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-retail/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-financial-services/index.html (+2ms) 
+11:11:35   ├─ /solutions/industry-saas/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-logistics/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-hospitality/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-bpo-and-call-centers/index.html (+1ms) 
+11:11:35   ├─ /solutions/industry-professional-services/index.html (+1ms) 
+11:11:35   └─ /solutions/industry-public-sector/index.html (+1ms) 
+11:11:35 ▶ src/pages/solutions/index.astro
+11:11:35   └─ /solutions/index.html (+1ms) 
+11:11:35 ▶ src/pages/submit.astro
+11:11:35   └─ /submit/index.html (+1ms) 
+11:11:35 ▶ src/pages/tool/[slug].astro
+11:11:35   ├─ /tool/lecture-guru/index.html (+1ms) 
+11:11:35   ├─ /tool/chatgpt/index.html (+1ms) 
+11:11:35   ├─ /tool/claude/index.html (+1ms) 
+11:11:35   ├─ /tool/midjourney/index.html (+1ms) 
+11:11:35   ├─ /tool/synthesia/index.html (+1ms) 
+11:11:35   ├─ /tool/notion-ai/index.html (+1ms) 
+11:11:35   ├─ /tool/jasper/index.html (+1ms) 
+11:11:35   ├─ /tool/copy-ai/index.html (+1ms) 
+11:11:35   ├─ /tool/runway/index.html (+1ms) 
+11:11:35   ├─ /tool/elevenlabs/index.html (+1ms) 
+11:11:35   ├─ /tool/perplexity/index.html (+1ms) 
+11:11:35   ├─ /tool/gong/index.html (+1ms) 
+11:11:35   ├─ /tool/otter-ai/index.html (+1ms) 
+11:11:35   ├─ /tool/descript/index.html (+1ms) 
+11:11:35   ├─ /tool/gamma/index.html (+1ms) 
+11:11:35   ├─ /tool/tome/index.html (+1ms) 
+11:11:35   ├─ /tool/murf-ai/index.html (+1ms) 
+11:11:35   ├─ /tool/beautiful-ai/index.html (+1ms) 
+11:11:35   ├─ /tool/fireflies/index.html (+1ms) 
+11:11:35   └─ /tool/character-ai/index.html (+1ms) 
+11:11:35 ▶ src/pages/[lang]/[slug].astro
+11:11:35   ├─ /pl/narzedzia-ai-do-szkolen/index.html (+2ms) 
+11:11:35   ├─ /pl/sop-na-wideo-szkoleniowe/index.html (+1ms) 
+11:11:35   ├─ /cs/ai-nastroje-pro-skoleni-zamestnancu/index.html (+1ms) 
+11:11:35   ├─ /cs/sop-do-skolicich-videi/index.html (+1ms) 
+11:11:35   ├─ /sk/ai-nastroje-na-skolenie-zamestnancov/index.html (+1ms) 
+11:11:35   ├─ /sk/sop-na-skoliace-videa/index.html (+1ms) 
+11:11:35   ├─ /hu/ai-eszkozok-munkavallaloi-kepzeshez/index.html (+1ms) 
+11:11:35   ├─ /hu/sop-bol-kepzesi-video-ai-val/index.html (+1ms) 
+11:11:35   ├─ /de/ki-tools-fuer-mitarbeiterschulung/index.html (+1ms) 
+11:11:35   ├─ /de/sop-zu-schulungsvideos-mit-ki/index.html (+1ms) 
+11:11:35   ├─ /es/herramientas-ia-formacion-empleados/index.html (+1ms) 
+11:11:35   ├─ /es/de-sop-a-video-de-formacion-con-ia/index.html (+1ms) 
+11:11:35   ├─ /de/ki-rollenspiel-simulatoren-vs-video-onboarding/index.html (+1ms) 
+11:11:35   ├─ /es/simuladores-roleplay-ia-vs-onboarding-solo-video/index.html (+1ms) 
+11:11:35   ├─ /de/ki-wissens-chatbots-vs-lms-suche-performance-support/index.html (+1ms) 
+11:11:35   ├─ /es/chatbots-conocimiento-ia-vs-busqueda-lms-performance-support/index.html (+1ms) 
+11:11:35   ├─ /de/ki-coaching-copiloten-vs-statische-playbooks-fuer-manager-enablement/index.html (+1ms) 
+11:11:35   ├─ /es/copilotos-ia-coaching-vs-playbooks-estaticos-para-enablement-managers/index.html (+1ms) 
+11:11:35   ├─ /de/ki-video-feedback-vs-manuelle-bewertung-soft-skills-training/index.html (+1ms) 
+11:11:35   ├─ /es/feedback-video-ia-vs-evaluacion-manual-en-soft-skills/index.html (+5ms) 
+11:11:35   ├─ /de/ki-onboarding-buddy-chatbots-vs-manager-shadowing-checklisten/index.html (+1ms) 
+11:11:35   ├─ /es/chatbots-buddy-onboarding-ia-vs-checklists-shadowing-manager/index.html (+1ms) 
+11:11:35   ├─ /de/ki-lms-admin-assistenten-vs-shared-inbox-support-training-ops/index.html (+1ms) 
+11:11:35   ├─ /es/asistentes-admin-lms-ia-vs-soporte-shared-inbox-training-ops/index.html (+1ms) 
+11:11:35   ├─ /de/ki-translation-management-vs-spreadsheets-fuer-training-lokalisierung/index.html (+1ms) 
+11:11:35   ├─ /es/plataformas-gestion-traduccion-ia-vs-hojas-calculo-localizacion-formacion/index.html (+1ms) 
+11:11:35   ├─ /de/ki-nachweis-proof-of-completion-vs-lms-abschlussberichte-fuer-compliance-audits/index.html (+1ms) 
+11:11:35   ├─ /es/registros-prueba-finalizacion-ia-vs-reportes-finalizacion-lms-auditorias-compliance/index.html (+1ms) 
+11:11:35   ├─ /de/ki-adaptive-rezertifizierungspfade-vs-fixe-jaehrliche-compliance-refreshers/index.html (+1ms) 
+11:11:35   ├─ /es/rutas-recertificacion-adaptativa-ia-vs-refreshers-anuales-fijos-compliance/index.html (+1ms) 
+11:11:35   ├─ /de/ki-audit-trail-automatisierung-vs-manuelle-kompilierung-von-trainingsevidenz/index.html (+1ms) 
+11:11:35   ├─ /es/automatizacion-audit-trail-ia-vs-compilacion-manual-evidencia-formacion/index.html (+1ms) 
+11:11:35   ├─ /pl/playbook-dystrybucji-katalogu-ai/index.html (+1ms) 
+11:11:35   ├─ /cs/distribucni-playbook-ai-katalogu/index.html (+1ms) 
+11:11:35   ├─ /sk/distribucny-playbook-ai-katalogu/index.html (+1ms) 
+11:11:35   ├─ /hu/terjesztesi-playbook-ai-katalogus/index.html (+1ms) 
+11:11:35   ├─ /de/distribution-playbook-ki-verzeichnis/index.html (+1ms) 
+11:11:35   ├─ /es/playbook-distribucion-directorio-ia/index.html (+1ms) 
+11:11:35   ├─ /pl/metodologia-redakcyjna-katalogu-ai/index.html (+1ms) 
+11:11:35   ├─ /cs/redakcni-metodika-ai-katalogu/index.html (+1ms) 
+11:11:35   ├─ /sk/redakcna-metodika-ai-katalogu/index.html (+1ms) 
+11:11:35   ├─ /hu/ai-katalogus-szerkesztoi-modszertan/index.html (+1ms) 
+11:11:35   ├─ /de/redaktionelle-methodik-ki-verzeichnis/index.html (+1ms) 
+11:11:35   ├─ /es/metodologia-editorial-directorio-ia/index.html (+1ms) 
+11:11:35   ├─ /de/ki-lernpfad-empfehlungen-vs-manager-zugewiesene-curricula-fuer-upskilling/index.html (+1ms) 
+11:11:35   └─ /es/recomendaciones-rutas-aprendizaje-ia-vs-curricula-asignados-manager-upskilling/index.html (+1ms)
+- 2026-02-17 11:11 UTC: Refilled queue and executed top three unfinished items in one run: added high-intent compare route `/compare/ai-learning-path-recommendations-vs-manager-assigned-curricula-for-upskilling/` with implementation-led decision matrix + buying criteria, added matching distribution asset pack section in `ops/distribution-assets-2026-02-17.md`, and added i18n parity stubs on localized hubs (`/de/ki-lernpfad-empfehlungen-vs-manager-zugewiesene-curricula-fuer-upskilling/`, `/es/recomendaciones-rutas-aprendizaje-ia-vs-curricula-asignados-manager-upskilling/`) with canonical linkage. Ran `npm run build` and `npm run qa:https` (both passed, 158 HTML files checked). Changes pushed at commit `4b8d4d9`. Next task: re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
