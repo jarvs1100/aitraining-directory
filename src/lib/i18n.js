@@ -1957,6 +1957,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar fiabilidad de cierre, claridad de ownership y trazabilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de cierre en plazo antes de cortes de auditoría', 'Criterios operativos para reducir churn de reasignaciones y ambigüedad de ownership', 'Marco de piloto para reforzar lineage de evidencia y reducir carga de recordatorios manuales'],
     enPath: '/compare/ai-compliance-training-control-owner-attestations-vs-manual-manager-confirmation-emails/'
+  },
+  {
+    key: 'evidence-reconciliation-vs-lms-export-merging',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-reconciliation-vs-manuelles-lms-export-merging-fuer-audit-response',
+    title: 'KI-Compliance-Training-Evidence-Reconciliation vs. manuelles LMS-Export-Merging für Audit Response | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-Reconciliation gegen manuelles LMS-Export-Merging für Audit-Response-Workflows vergleichen.',
+    h1: 'KI-Evidence-Reconciliation vs. manuelles LMS-Export-Merging für Audit Response',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Reconciliation-Genauigkeit, SLA-Reaktionszeit und auditfeste Lineage zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Merge-Fehlerraten bei mehreren LMS-Exports und kurzfristigen Audit-Anfragen', 'Messbare Kriterien für Source-of-Truth-Konsistenz, Owner-Klarheit und weniger Rework-Schleifen', 'Pilot-Framework für belastbare Evidence-Lineage mit schnellerer Audit-Response unter SLA-Druck'],
+    enPath: '/compare/ai-compliance-training-evidence-reconciliation-vs-manual-lms-export-merging-for-audit-response/'
+  },
+  {
+    key: 'evidence-reconciliation-vs-lms-export-merging',
+    locale: 'es',
+    slug: 'reconciliacion-evidencia-training-compliance-ia-vs-merging-manual-exports-lms-audit-response',
+    title: 'Reconciliación de evidencia en training compliance con IA vs. merging manual de exports LMS para audit response | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan reconciliación de evidencia con IA frente a merging manual de exports LMS en flujos de respuesta a auditorías.',
+    h1: 'Reconciliación de evidencia con IA vs. merging manual de exports LMS para audit response',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar precisión de reconciliación, velocidad de respuesta bajo SLA y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de tasa de errores de merge cuando se reconcilian múltiples exports LMS', 'Criterios operativos para consistencia de source-of-truth, ownership claro y menos retrabajo', 'Marco de piloto para reforzar lineage de evidencia y acelerar audit response bajo presión'],
+    enPath: '/compare/ai-compliance-training-evidence-reconciliation-vs-manual-lms-export-merging-for-audit-response/'
   }
 );
 
