@@ -388,6 +388,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower governance friction per approved policy-safe decision over the pilot period.'
     ]
   },
+  'ai-training-impact-attribution-dashboards-vs-manual-survey-reporting-for-ld-roi': {
+    decisionMatrix: [
+      { criterion: 'Attribution clarity from training activity to business outcomes', weight: '25%', whatGoodLooksLike: 'Teams can trace performance movement to specific training interventions with confidence bands and caveats.', leftLens: 'Evaluate whether dashboard models connect learning events to downstream KPI movement with transparent assumptions.', rightLens: 'Evaluate whether manual survey narratives can defensibly isolate training impact from external confounders.' },
+      { criterion: 'Reporting latency for monthly and quarterly reviews', weight: '25%', whatGoodLooksLike: 'L&D leaders can provide current impact signals before budgeting and roadmap decisions are locked.', leftLens: 'Measure time-to-insight when dashboards auto-refresh from LMS, CRM, QA, or operations sources.', rightLens: 'Measure time-to-insight when survey collection, cleaning, and slide preparation are done manually.' },
+      { criterion: 'Evidence defensibility for finance and executive stakeholders', weight: '20%', whatGoodLooksLike: 'ROI claims include methodology boundaries, confidence levels, and audit-ready source references.', leftLens: 'Assess whether dashboard outputs preserve lineage, metric definitions, and assumption history for challenge sessions.', rightLens: 'Assess whether survey-based reports preserve equivalent traceability beyond summary slides and spreadsheets.' },
+      { criterion: 'Operational burden on L&D ops and analytics partners', weight: '15%', whatGoodLooksLike: 'Impact reporting is sustainable without recurring month-end fire drills.', leftLens: 'Track upkeep for data pipelines, metric governance, and dashboard QA ceremonies.', rightLens: 'Track recurring effort for survey design, response chasing, data reconciliation, and deck rebuilding.' },
+      { criterion: 'Cost per decision-ready ROI readout', weight: '15%', whatGoodLooksLike: 'Cost per reliable decision packet declines while stakeholder trust and decision speed improve.', leftLens: 'Model tooling + governance cost against faster planning decisions and lower manual reporting overhead.', rightLens: 'Model lower platform spend against analyst labor, slower cycles, and lower confidence in attribution claims.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-visibility training stream with both reporting models for one full planning cycle (4-6 weeks).',
+      'Use one scorecard: report latency, attribution confidence, executive rework requests, and analyst-hours per readout.',
+      'Require explicit claim guardrails (what counts as correlation vs attribution) before sharing ROI externally.',
+      'Define RACI across L&D ops, analytics, finance partner, and executive sponsor for metric ownership and signoff.',
+      'Choose the model with lower reporting friction per trusted decision, not the one with the most charts.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
@@ -591,13 +607,21 @@ const jsonLd = {
     }
 
     .matrix-card p {
-      margin-bottom: 0.6rem;
+      margin: 0;
       max-width: none;
       font-size: 0.95rem;
+      line-height: 1.5;
     }
 
-    .matrix-card p:last-child {
-      margin-bottom: 0;
+    .matrix-card p + p {
+      margin-top: 0.62rem;
+      padding-top: 0.62rem;
+      border-top: 1px dashed #cbd5e1;
+    }
+
+    .matrix-card p strong {
+      display: inline-block;
+      margin-bottom: 0.18rem;
     }
 
     .next-step-actions {
@@ -617,6 +641,25 @@ const jsonLd = {
 
     .next-steps-chips {
       gap: 0.55rem;
+    }
+
+    @media (max-width: 860px) and (min-width: 521px) {
+      .matrix-mobile {
+        gap: 0.9rem;
+      }
+
+      .matrix-card {
+        padding: 1.05rem;
+      }
+
+      .matrix-card h3 {
+        margin-bottom: 0.72rem;
+      }
+
+      .matrix-card p + p {
+        margin-top: 0.72rem;
+        padding-top: 0.72rem;
+      }
     }
 
     @media (max-width: 760px) {

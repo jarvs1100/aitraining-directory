@@ -604,6 +604,28 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de L&D y enablement a evaluar foco del roadmap, velocidad de intake y transparencia de gobernanza entre ambos enfoques.',
     points: ['Comparativa de foco en gaps críticos y estabilidad del roadmap', 'Criterios operativos para ciclo intake-a-decisión y churn de repriorización', 'Marco de piloto con reglas de override, ownership y escalado'],
     enPath: '/compare/ai-training-needs-prioritization-vs-stakeholder-request-backlogs-for-ld-roadmaps/'
+  },
+  {
+    key: 'governance-control-tower-vs-steering-committee',
+    locale: 'de',
+    slug: 'ki-training-governance-control-towers-vs-manuelle-steering-committees-enterprise-ld',
+    title: 'KI-Training-Governance-Control-Towers vs. manuelle Steering Committees für Enterprise L&D | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Governance-Control-Towers gegen manuelle Steering-Committee-Modelle im Enterprise-L&D-Betrieb vergleichen.',
+    h1: 'KI-Governance-Control-Towers vs. manuelle Steering Committees für Enterprise L&D',
+    intro: 'Hilft L&D- und Compliance-Teams, Entscheidungsdurchlaufzeiten, Policy-Konsistenz und Audit-Traceability zwischen beiden Governance-Modellen zu bewerten.',
+    points: ['Vergleich von Decision-Latency und Freigabe-Durchsatz unter realem Betriebsdruck', 'Messbare Kriterien für Policy-Ausrichtung, Eskalationsklarheit und Nachvollziehbarkeit', 'Pilot-Framework für Governance-Rollen, Cadence und skalierbare Entscheidungssteuerung'],
+    enPath: '/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/'
+  },
+  {
+    key: 'governance-control-tower-vs-steering-committee',
+    locale: 'es',
+    slug: 'torres-control-gobernanza-training-ia-vs-comites-direccion-manuales-enterprise-ld',
+    title: 'Torres de control de gobernanza de training con IA vs. comités de dirección manuales para enterprise L&D | AI Training Directory',
+    description: 'Entrada localizada para comparar torres de control de gobernanza con IA frente a comités manuales de dirección en operaciones enterprise de L&D.',
+    h1: 'Torres de control de gobernanza con IA vs. comités manuales de dirección para enterprise L&D',
+    intro: 'Ayuda a equipos de L&D y compliance a evaluar velocidad de decisión, consistencia de políticas y trazabilidad audit-ready entre ambos modelos de gobernanza.',
+    points: ['Comparativa de latencia de decisión y throughput de aprobaciones en operación real', 'Criterios operativos para alineación de políticas, ownership y rutas de escalado', 'Marco de piloto para roles de gobernanza, cadencia de revisión y escalado sostenible'],
+    enPath: '/compare/ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld/'
   }
 
 
