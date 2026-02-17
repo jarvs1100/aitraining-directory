@@ -2649,3 +2649,50 @@ This week’s new route compares AI evidence-release governance with manual hold
 The rubric is implementation-first: release cycle time, scope control quality, audit traceability, cross-team operating load, and cost per audit-defensible release decision.
 
 Read: https://aitraining.directory/compare/ai-compliance-training-evidence-release-governance-vs-manual-hold-lift-email-approvals/
+
+---
+
+## Focus URL
+- Canonical: https://aitraining.directory/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/
+
+## LinkedIn post draft
+**Headline:** Evidence access recertification: AI workflow or quarterly permission spreadsheet audits?
+
+Legal hold and retention controls can be solid — and still fail when stale evidence access is left in place.
+
+This is where many compliance training programs drift:
+- Over-privileged access persists between quarterly reviews
+- Revocations lag after role changes
+- Audit trails for access decisions are fragmented
+
+We published an implementation-led comparison for compliance/training ops teams:
+https://aitraining.directory/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/
+
+If your team is still relying on quarterly permission spreadsheets, run a 30-day pilot and score detection lag, revocation cycle time, and exception re-open rate before standardizing.
+
+## X/Twitter hook + thread starter
+**Post 1:**
+Most compliance teams don’t fail on policy docs.
+They fail on stale evidence access.
+
+New implementation-led comparison:
+AI access recertification vs manual quarterly permission audits
+https://aitraining.directory/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/
+
+**Post 2:**
+Pilot scorecard:
+1) Entitlement-drift detection lag
+2) Revocation cycle time
+3) Exception reopen rate
+4) Reviewer rework minutes
+
+Pick the model with lower friction per audit-defensible access decision.
+
+## Newsletter blurb
+**Subject option:** Access-control hygiene for training evidence: AI recertification vs quarterly manual audits
+
+This week’s new comparison route helps compliance, legal, and training-operations teams evaluate AI evidence-access recertification against manual quarterly permission audits.
+
+The rubric focuses on implementation outcomes that matter in audits: entitlement-drift detection speed, decision consistency, traceability of access approvals/removals, operating burden, and cost per audit-defensible recertification cycle.
+
+Read: https://aitraining.directory/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/

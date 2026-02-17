@@ -2179,6 +2179,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar velocidad de liberación, control de alcance y trazabilidad defendible entre ambos enfoques.',
     points: ['Comparativa de cycle-time de liberación tras cumplir condiciones de hold', 'Criterios operativos para evitar over-release y mantener control de evidencia in-scope', 'Marco de piloto para decisiones hold-lift audit-ready con ownership claro'],
     enPath: '/compare/ai-compliance-training-evidence-release-governance-vs-manual-hold-lift-email-approvals/'
+  },
+  {
+    key: 'evidence-access-recertification-vs-manual-quarterly-permission-audits',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-recertification-vs-manuelle-quartalsweise-permission-audits',
+    title: 'KI-Compliance-Training-Evidence-Access-Recertification vs. manuelle quartalsweise Permission-Audits | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Access-Recertification gegen manuelle quartalsweise Permission-Audits für Trainingsevidenz vergleichen.',
+    h1: 'KI-Evidence-Access-Recertification vs. manuelle quartalsweise Permission-Audits',
+    intro: 'Hilft Compliance-, Legal- und Training-Ops-Teams, Entitlement-Drift-Erkennung, Entscheidungs-Konsistenz und Audit-Nachvollziehbarkeit zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Drift-Detection-Latenz bei Rollenwechseln und Zugriffsausnahmen', 'Messbare Kriterien für konsistente Access-Entscheidungen, Revocation-Timing und Owner-Transparenz', 'Pilot-Framework für auditfeste Recertification-Zyklen mit weniger Spreadsheet-Rework'],
+    enPath: '/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/'
+  },
+  {
+    key: 'evidence-access-recertification-vs-manual-quarterly-permission-audits',
+    locale: 'es',
+    slug: 'recertificacion-acceso-evidencia-training-compliance-ia-vs-auditorias-manuales-trimestrales-permisos',
+    title: 'Recertificación de acceso a evidencia en training compliance con IA vs. auditorías manuales trimestrales de permisos | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan recertificación de acceso con IA frente a auditorías manuales trimestrales de permisos en evidencia de training compliance.',
+    h1: 'Recertificación de acceso a evidencia con IA vs. auditorías manuales trimestrales de permisos',
+    intro: 'Ayuda a equipos de compliance, legal y training ops a evaluar detección de drift de permisos, consistencia de decisiones y trazabilidad defendible entre ambos enfoques.',
+    points: ['Comparativa de latencia para detectar permisos obsoletos y cerrar revocaciones', 'Criterios operativos para consistencia de decisiones de acceso y ownership claro', 'Marco de piloto para ciclos de recertificación audit-ready con menor retrabajo manual'],
+    enPath: '/compare/ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits/'
   }
 );
 

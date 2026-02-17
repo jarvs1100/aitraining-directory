@@ -687,6 +687,22 @@ const supplementalComparisonContentBySlug = {
       'Choose the model with lower friction per audit-defensible release decision, not the model with the longest email approval thread.'
     ]
   },
+  'ai-compliance-training-evidence-access-recertification-vs-manual-quarterly-permission-audits': {
+    decisionMatrix: [
+      { criterion: 'Entitlement drift detection speed', weight: '25%', whatGoodLooksLike: 'Stale or over-privileged access is identified and remediated before audit windows or data-sharing events.', leftLens: 'Measure time from role/status change to flagged entitlement mismatch with owner-routed remediation.', rightLens: 'Measure detection lag when drift is found only during quarterly manual permission-review cycles.' },
+      { criterion: 'Permission decision consistency across reviewers', weight: '25%', whatGoodLooksLike: 'Equivalent access requests and recertification cases receive consistent outcomes tied to policy rules.', leftLens: 'Assess rule-based recertification prompts, required rationale capture, and exception-handling guardrails.', rightLens: 'Assess variance when manual reviewers interpret evidence-access policy from spreadsheets and email context.' },
+      { criterion: 'Audit traceability of access approvals and removals', weight: '20%', whatGoodLooksLike: 'Auditors can reconstruct who approved, revoked, or retained access and why within minutes.', leftLens: 'Evaluate immutable access-decision logs, timestamped owner actions, and policy-version linkage.', rightLens: 'Evaluate reconstructability from quarterly audit files, inbox threads, and manually updated access trackers.' },
+      { criterion: 'Operational burden on compliance, legal, and training ops', weight: '15%', whatGoodLooksLike: 'Recertification cadence remains stable as user population and evidence repositories grow.', leftLens: 'Track upkeep for rule tuning, false-positive triage, and governance calibration across role changes.', rightLens: 'Track recurring effort for spreadsheet reconciliation, reviewer chase loops, and late exception cleanup.' },
+      { criterion: 'Cost per audit-defensible access recertification cycle', weight: '15%', whatGoodLooksLike: 'Per-cycle cost declines while access-control quality and response readiness improve.', leftLens: 'Model platform + governance overhead against fewer access defects, less rework, and faster review closure.', rightLens: 'Model lower tooling spend against manual review labor, delayed revocations, and remediation fire drills.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-risk evidence repository with at least two role-transition cohorts and known permission churn.',
+      'Use one scorecard: entitlement-drift detection lag, revocation cycle time, exception reopen rate, and reviewer rework minutes.',
+      'Define non-bypassable recertification gates, override ownership, and mandatory decision-rationale fields before scale-up.',
+      'Assign RACI across compliance lead, legal reviewer, training-ops owner, and audit stakeholder.',
+      'Choose the model with lower friction per audit-defensible access decision, not the model with the largest quarterly review spreadsheet.'
+    ]
+  },
   'ai-compliance-training-exemption-governance-vs-manual-email-waivers-for-regulated-workforces': {
     decisionMatrix: [
       { criterion: 'Exemption decision-cycle speed', weight: '25%', whatGoodLooksLike: 'Exemption requests are routed, reviewed, and resolved before compliance completion deadlines slip.', leftLens: 'Measure median time from exemption intake to approved/denied outcome with SLA-aware routing and owner accountability.', rightLens: 'Measure decision latency when exemptions rely on manual inbox triage, follow-ups, and spreadsheet status updates.' },
@@ -1724,7 +1740,10 @@ const jsonLd = {
       }
 
       .faq-anchor-list a {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0.12rem 0;
         line-height: 1.45;
       }
     }
