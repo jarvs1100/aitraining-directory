@@ -2025,6 +2025,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar cobertura de evidencia, claridad de ownership y fiabilidad de respuesta a auditoría entre ambos enfoques.',
     points: ['Comparativa de cobertura de evidencia antes de fechas críticas de auditoría', 'Criterios operativos para ownership claro y cierre más rápido de brechas', 'Marco de piloto para readiness auditable sin deriva en hojas manuales'],
     enPath: '/compare/ai-compliance-training-evidence-completeness-scorecards-vs-manual-audit-readiness-spreadsheets/'
+  },
+  {
+    key: 'evidence-lineage-monitoring-vs-manual-versioned-trackers',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-lineage-monitoring-vs-manuelle-versionierte-audit-tracker',
+    title: 'KI-Compliance-Training-Evidence-Lineage-Monitoring vs. manuelle versionierte Audit-Tracker | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Evidence-Lineage-Monitoring gegen manuelle versionierte Audit-Tracker in Compliance-Training-Programmen vergleichen.',
+    h1: 'KI-Evidence-Lineage-Monitoring vs. manuelle versionierte Audit-Tracker',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Traceability-Klarheit, Ownership-Sicherheit und Audit-Response-Zuverlässigkeit zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Nachvollziehbarkeit über mehrere Evidence-Versionen hinweg unter Audit-Druck', 'Messbare Kriterien für klare Owner-Übergaben und weniger Lineage-Lücken', 'Pilot-Framework für belastbare Evidence-Chains statt manuell gepflegter Tracker-Historien'],
+    enPath: '/compare/ai-compliance-training-evidence-lineage-monitoring-vs-manual-versioned-audit-trackers/'
+  },
+  {
+    key: 'evidence-lineage-monitoring-vs-manual-versioned-trackers',
+    locale: 'es',
+    slug: 'monitorizacion-lineage-evidencia-training-compliance-ia-vs-trackers-auditoria-versionados-manuales',
+    title: 'Monitorización de lineage de evidencia en training compliance con IA vs. trackers de auditoría versionados manuales | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan monitorización de lineage de evidencia con IA frente a trackers de auditoría versionados manuales en operaciones de compliance training.',
+    h1: 'Monitorización de lineage de evidencia con IA vs. trackers de auditoría versionados manuales',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar claridad de trazabilidad, continuidad de ownership y fiabilidad de respuesta en auditorías.',
+    points: ['Comparativa de continuidad de lineage cuando hay múltiples cambios de evidencia y fechas de corte', 'Criterios operativos para reducir huecos de ownership y retrabajo de reconciliación', 'Marco de piloto para sostener cadenas de evidencia auditables sin mantenimiento manual intensivo'],
+    enPath: '/compare/ai-compliance-training-evidence-lineage-monitoring-vs-manual-versioned-audit-trackers/'
   }
 );
 
