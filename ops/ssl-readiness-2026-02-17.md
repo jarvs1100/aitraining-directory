@@ -2456,3 +2456,72 @@ location: https://aitraining.directory/
 - HTTPS remains valid on apex and `www` redirects correctly to apex over HTTPS.
 - TLS certificate chain remains Let's Encrypt `R12` with active validity through May 18, 2026.
 - Deploy freshness advanced (`Last-Modified: 16:13:03 UTC`) and static HTTPS QA passed for 221 generated HTML files.
+
+---
+
+## Evidence delta — 2026-02-17 16:40 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 224 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.109.153
+185.199.110.153
+185.199.111.153
+185.199.108.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.109.153
+185.199.110.153
+185.199.111.153
+185.199.108.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTP/HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+server: GitHub.com
+last-modified: Tue, 17 Feb 2026 16:27:53 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 16:27:53 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid on apex with Let's Encrypt `R12`; no hostname mismatch observed.
+- `www` over HTTPS correctly redirects to apex HTTPS (`301`).
+- Static HTTPS QA remains green with 224 generated HTML files.
+- Deploy freshness confirmed by updated `Last-Modified: 16:27:53 UTC` on apex.

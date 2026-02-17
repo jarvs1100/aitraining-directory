@@ -1715,6 +1715,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de recuperación, trazabilidad de evidencia y control de políticas de retención entre ambos enfoques.',
     points: ['Comparativa de tiempo de respuesta en auditoría y defectos de recuperación', 'Criterios operativos para lineage de evidencia y enforcement de retención', 'Marco de piloto para ownership, carga de revisión y escalado audit-ready'],
     enPath: '/compare/ai-training-evidence-retention-automation-vs-manual-archive-folders-for-compliance-audits/'
+  },
+  {
+    key: 'record-redaction-automation-vs-manual-pii-scrubbing',
+    locale: 'de',
+    slug: 'ki-training-record-redaction-automatisierung-vs-manuelles-pii-scrubbing-fuer-audit-shares',
+    title: 'KI-Training-Record-Redaction-Automatisierung vs. manuelles PII-Scrubbing für Audit-Shares | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Record-Redaction-Automatisierung gegen manuelles PII-Scrubbing für Audit-Shares vergleichen.',
+    h1: 'KI-Record-Redaction-Automatisierung vs. manuelles PII-Scrubbing für Audit-Shares',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Freigabegeschwindigkeit, Redaktionsqualität und Datenschutzkontrolle beim Teilen von Audit-Evidenz zu bewerten.',
+    points: ['Vergleich von Share-SLA und Redaktions-Defektquote unter Audit-Druck', 'Messbare Kriterien für PII-Detection-Coverage und Reviewer-Override-Governance', 'Pilot-Framework für sichere Freigaben mit konsistenter Audit-Traceability'],
+    enPath: '/compare/ai-training-record-redaction-automation-vs-manual-pii-scrubbing-for-audit-shares/'
+  },
+  {
+    key: 'record-redaction-automation-vs-manual-pii-scrubbing',
+    locale: 'es',
+    slug: 'automatizacion-redaccion-registros-training-ia-vs-scrubbing-manual-pii-para-compartidos-auditoria',
+    title: 'Automatización de redacción de registros de training con IA vs. scrubbing manual de PII para compartidos de auditoría | AI Training Directory',
+    description: 'Entrada localizada para comparar automatización de redacción de registros con IA frente a scrubbing manual de PII al compartir evidencia en auditorías.',
+    h1: 'Automatización de redacción de registros con IA vs. scrubbing manual de PII para compartidos de auditoría',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de entrega, calidad de redacción y controles de privacidad al compartir evidencia para auditorías.',
+    points: ['Comparativa de SLA de compartición y tasa de fallos de redacción en ventanas de auditoría', 'Criterios operativos para cobertura de detección de PII y gobernanza de overrides', 'Marco de piloto para escalado seguro con trazabilidad audit-ready'],
+    enPath: '/compare/ai-training-record-redaction-automation-vs-manual-pii-scrubbing-for-audit-shares/'
   }
 );
 
