@@ -2,6 +2,12 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
+- [ ] Add one traffic-driving high-intent compare route for certification renewal ops: `/compare/ai-certification-renewal-alerting-vs-manual-spreadsheet-tracking-for-workforce-compliance/` with implementation-led rubric + FAQ schema.
+- [ ] Create distribution asset pack for the certification-renewal comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [ ] Add i18n parity stubs for the new certification-renewal route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [ ] Mobile UX polish pass: improve compare-index card CTA hierarchy and tap spacing for thumb-first navigation.
+- [ ] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+
 - [x] Add one traffic-driving high-intent compare route for certification ops: `/compare/ai-skills-passporting-vs-manual-competency-matrices-for-workforce-certification/` with implementation-led rubric + FAQ schema.
 - [x] Create distribution asset pack for the certification-ops comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [x] Add i18n parity stubs for the new certification-ops route on `/de` and `/es` localized hubs with canonical compare linkage.
