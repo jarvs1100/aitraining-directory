@@ -760,6 +760,29 @@ export const localizedLandingPages = [
     points: ['Comparativa de velocidad de publicación tras aprobaciones de política', 'Criterios operativos para trazabilidad versión-por-learner y evidencia audit-ready', 'Marco de piloto para reglas de rollback, gates de gobernanza y ownership por release'],
     enPath: '/compare/ai-compliance-training-version-control-vs-manual-course-republishing-for-policy-updates/'
   }
+  ,{
+    key: 'training-capacity-forecasting-vs-manual-headcount-guessing',
+    locale: 'de',
+    slug: 'ki-training-capacity-forecasting-vs-manuelles-headcount-guessing-fuer-ld-operations',
+    title: 'KI-Training-Capacity-Forecasting vs. manuelles Headcount-Guessing für L&D Operations | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Kapazitätsprognosen gegen manuelle Headcount-Schätzungen in L&D Operations vergleichen.',
+    h1: 'KI-Training-Capacity-Forecasting vs. manuelles Headcount-Guessing für L&D Operations',
+    intro: 'Hilft L&D-Operations-, Enablement- und HR-Planungsteams, Forecast-Qualität, Reaktionsgeschwindigkeit und Delivery-Risiko zwischen beiden Planungsmodellen zu bewerten.',
+    points: ['Vergleich von Forecast-Genauigkeit für Lernvolumen, Facilitation-Bedarf und Support-Last', 'Messbare Kriterien für Replan-Cycle-Time, SLA-Stabilität und Stakeholder-Commitment', 'Pilot-Framework für Escalation-Schwellen, Override-Governance und belastbare Capacity-Ownership'],
+    enPath: '/compare/ai-training-capacity-forecasting-vs-manual-headcount-guessing-for-ld-operations/'
+  },
+  {
+    key: 'training-capacity-forecasting-vs-manual-headcount-guessing',
+    locale: 'es',
+    slug: 'forecasting-capacidad-training-ia-vs-headcount-guessing-manual-ld-operations',
+    title: 'Forecasting de capacidad de training con IA vs. headcount guessing manual para operaciones de L&D | AI Training Directory',
+    description: 'Entrada localizada para comparar forecasting de capacidad con IA frente a estimaciones manuales de headcount en operaciones de formación y L&D.',
+    h1: 'Forecasting de capacidad de training con IA vs. headcount guessing manual para operaciones de L&D',
+    intro: 'Ayuda a equipos de L&D operations, enablement y planificación de workforce a evaluar precisión de forecast, velocidad de replanning y riesgo de entrega entre ambos modelos.',
+    points: ['Comparativa de precisión para demanda de learners, carga de facilitación y soporte', 'Criterios operativos para cycle-time de replanning, estabilidad SLA y confianza del negocio', 'Marco de piloto para umbrales de escalado, gobernanza de overrides y ownership de capacidad'],
+    enPath: '/compare/ai-training-capacity-forecasting-vs-manual-headcount-guessing-for-ld-operations/'
+  }
+
 
 ];
 

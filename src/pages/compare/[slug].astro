@@ -468,6 +468,23 @@ const comparisonContentBySlug = {
       'Choose the model with lower remediation friction per compliant closure, not the model that sends the most reminders.'
     ]
   },
+
+  'ai-training-capacity-forecasting-vs-manual-headcount-guessing-for-ld-operations': {
+    decisionMatrix: [
+      { criterion: 'Planning accuracy for upcoming training demand spikes', weight: '25%', whatGoodLooksLike: 'Capacity plans predict enrollment and delivery load accurately enough to avoid recurring SLA breaches.', leftLens: 'Measure forecast error for learner volume, facilitation demand, and support-ticket throughput across 4-8 week windows.', rightLens: 'Measure variance when staffing assumptions rely on ad-hoc manager estimates and static quarterly spreadsheets.' },
+      { criterion: 'Response speed to sudden intake changes', weight: '25%', whatGoodLooksLike: 'Teams can rebalance facilitators, designers, and ops support before launch bottlenecks become visible.', leftLens: 'Assess trigger quality for risk alerts, reallocation workflows, and escalation handoffs during demand shocks.', rightLens: 'Assess lag when re-planning requires manual spreadsheet updates, alignment meetings, and inbox-based coordination.' },
+      { criterion: 'Cross-functional confidence in delivery commitments', weight: '20%', whatGoodLooksLike: 'Business stakeholders trust published timelines because assumptions and risk ranges are explicit.', leftLens: 'Evaluate transparency of forecast assumptions, confidence bands, and owner-level scenario modeling.', rightLens: 'Evaluate how often delivery dates shift due to hidden assumptions and inconsistent manager headcount inputs.' },
+      { criterion: 'Operational burden of weekly planning cycles', weight: '15%', whatGoodLooksLike: 'Capacity review cadence remains lightweight while preserving governance quality and exception handling.', leftLens: 'Track effort for model upkeep, threshold tuning, and forecast QA in weekly ops rituals.', rightLens: 'Track recurring effort for spreadsheet reconciliation, meeting-heavy reforecasting, and manual status syncs.' },
+      { criterion: 'Cost per on-time training launch', weight: '15%', whatGoodLooksLike: 'Cost per launch declines while on-time delivery rate and stakeholder confidence increase.', leftLens: 'Model platform + governance overhead against fewer launch delays, overtime spikes, and reactive contractor spend.', rightLens: 'Model lower tooling cost against delay penalties, replanning labor, and avoidable fire-drill staffing.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one high-variance training portfolio with at least two known demand spikes.',
+      'Use one scorecard: forecast error, replan cycle time, on-time launch rate, and unplanned overtime hours.',
+      'Define explicit escalation thresholds, override authority, and decision-owner handoffs before rollout.',
+      'Assign RACI across L&D ops lead, program managers, HR/workforce planning partner, and business stakeholder sponsors.',
+      'Choose the model with lower planning friction per on-time launch, not the model that looks simpler in a single-quarter snapshot.'
+    ]
+  },
   'ai-compliance-training-version-control-vs-manual-course-republishing-for-policy-updates': {
     decisionMatrix: [
       { criterion: 'Policy-update publish latency', weight: '25%', whatGoodLooksLike: 'Approved policy changes are reflected in learner-facing modules before next operational shift windows.', leftLens: 'Measure time from policy approval to versioned publish with automated dependency checks and release gating.', rightLens: 'Measure time from policy approval to manual republish across authoring files, LMS updates, and notification threads.' },
@@ -913,9 +930,13 @@ const jsonLd = {
         align-items: center;
       }
 
+      .section.card ul {
+        padding-left: 1.02rem;
+      }
+
       .section.card ul li {
-        margin-bottom: 0.38rem;
-        line-height: 1.45;
+        margin-bottom: 0.46rem;
+        line-height: 1.5;
       }
     }
 

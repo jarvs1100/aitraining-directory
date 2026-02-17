@@ -130,3 +130,9 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Add i18n parity stubs for the new compliance version-control route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [x] Mobile UX polish pass: improve compare-page next-step CTA tap comfort on 360px screens.
 - [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+
+- [x] Add one traffic-driving high-intent compare route for L&D resource planning: `/compare/ai-training-capacity-forecasting-vs-manual-headcount-guessing-for-ld-operations/` with implementation-led rubric + FAQ schema.
+- [x] Create distribution asset pack for the training-capacity forecasting comparison route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new capacity-forecasting route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [x] Mobile UX polish pass: improve compare-page buyer-checklist list spacing and readability on 360–390px devices.
+- [x] Re-run SSL readiness checks after next deploy and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
