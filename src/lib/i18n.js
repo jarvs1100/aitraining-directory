@@ -715,6 +715,28 @@ export const localizedLandingPages = [
     intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar velocidad de decisión, consistencia de aprobaciones y trazabilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de cycle-time de excepciones y cierre de escalados bajo presión de deadlines', 'Criterios operativos para consistencia de política, gobernanza de overrides y ownership', 'Marco de piloto para logs de decisión defendibles, cierre de remediaciones y readiness para auditoría'],
     enPath: '/compare/ai-training-exception-routing-vs-manual-waiver-approvals-for-compliance-ops/'
+  },
+  {
+    key: 'training-remediation-workflows-vs-manual-coaching-follow-ups',
+    locale: 'de',
+    slug: 'ki-training-remediation-workflows-vs-manuelle-coaching-follow-ups-fuer-compliance-recovery',
+    title: 'KI-Training-Remediation-Workflows vs. manuelle Coaching-Follow-ups für Compliance Recovery | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Remediation-Workflows gegen manuelle Coaching-Follow-ups für Compliance-Recovery vergleichen.',
+    h1: 'KI-Training-Remediation-Workflows vs. manuelle Coaching-Follow-ups für Compliance Recovery',
+    intro: 'Hilft Compliance-, L&D- und Operations-Teams, Recovery-Cycle-Time, Interventionskonsistenz und Audit-Nachweisqualität zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Remediation-Closure-Speed nach Non-Compliance-Triggern', 'Messbare Kriterien für konsistente Interventionen über Manager, Standorte und Teams', 'Pilot-Framework für evidenzbasierte Recovery-Logs, Override-Regeln und Escalation-Ownership'],
+    enPath: '/compare/ai-training-remediation-workflows-vs-manual-coaching-follow-ups-for-compliance-recovery/'
+  },
+  {
+    key: 'training-remediation-workflows-vs-manual-coaching-follow-ups',
+    locale: 'es',
+    slug: 'workflows-remediacion-training-ia-vs-seguimiento-manual-coaching-compliance-recovery',
+    title: 'Workflows de remediación de training con IA vs. seguimiento manual de coaching para compliance recovery | AI Training Directory',
+    description: 'Entrada localizada para comparar workflows de remediación con IA frente a seguimiento manual de coaching en recuperación de compliance training.',
+    h1: 'Workflows de remediación de training con IA vs. seguimiento manual de coaching para compliance recovery',
+    intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar velocidad de cierre, consistencia de intervención y calidad de evidencia audit-ready entre ambos enfoques.',
+    points: ['Comparativa de cycle-time de cierre de remediaciones tras detección de non-compliance', 'Criterios operativos para consistencia de intervención entre managers, sedes y cohortes', 'Marco de piloto para trazabilidad de recovery, reglas de override y ownership de escalado'],
+    enPath: '/compare/ai-training-remediation-workflows-vs-manual-coaching-follow-ups-for-compliance-recovery/'
   }
 
 ];
