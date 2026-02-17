@@ -135,3 +135,49 @@ This week’s new route compares AI roleplay simulators with traditional video-o
 If your team is trying to improve frontline readiness without burning manager time, this gives you a pilot-ready evaluation structure.
 
 Read: https://aitraining.directory/compare/ai-roleplay-simulators-vs-video-only-onboarding/
+
+---
+
+## Focus URL
+- Canonical: https://aitraining.directory/compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/
+
+## LinkedIn post draft
+**Headline:** AI knowledge chatbots vs LMS search: which model gives faster in-the-flow support?
+
+Most teams frame this as a tooling preference.
+
+For training operations, it’s an execution model choice:
+- How fast can employees get policy-accurate answers during live work?
+- How much manager interruption can you actually deflect?
+- Can you prove answer quality and freshness for compliance-sensitive workflows?
+
+We published an implementation-led comparison for L&D and LMS admins:
+https://aitraining.directory/compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/
+
+Use the buying-criteria checklist to pilot one high-volume workflow before standardizing your performance-support stack.
+
+## X/Twitter hook + thread starter
+**Post 1:**
+AI chatbots vs LMS search is not a UX debate.
+
+It’s a support-deflection + governance decision (answer precision, resolution speed, freshness control).
+
+New implementation-led comparison for training teams:
+https://aitraining.directory/compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/
+
+**Post 2:**
+Quick pilot structure:
+1) Pick one high-volume support workflow
+2) Score wrong/partial/slow/non-defensible answers
+3) Measure escalation rate + manager interruption minutes
+
+Then choose with evidence, not preference.
+
+## Newsletter blurb
+**Subject option:** AI chatbot or LMS search? A practical framework for performance support decisions
+
+This week’s new comparison route helps L&D and LMS admins evaluate AI knowledge chatbots vs LMS search using implementation criteria: answer precision, time-to-answer, governance/freshness, ownership load, and cost per support-deflected incident.
+
+If your team is trying to reduce repeat questions without increasing compliance risk, this gives you a pilot-ready decision framework.
+
+Read: https://aitraining.directory/compare/ai-knowledge-chatbots-vs-lms-search-for-performance-support/

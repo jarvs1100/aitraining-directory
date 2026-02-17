@@ -116,6 +116,22 @@ const comparisonContentBySlug = {
       'Choose the approach with better 30-day ramp outcomes per unit of manager coaching effort.'
     ]
   },
+  'ai-knowledge-chatbots-vs-lms-search-for-performance-support': {
+    decisionMatrix: [
+      { criterion: 'Answer precision for policy-critical queries', weight: '25%', whatGoodLooksLike: 'Employees receive accurate, source-grounded answers with clear confidence and citation trail.', leftLens: 'Validate retrieval quality, hallucination controls, and source citation UX in high-risk policy questions.', rightLens: 'Validate whether indexed LMS objects surface the right policy answer quickly without semantic rewrite support.' },
+      { criterion: 'Time-to-answer during live work', weight: '25%', whatGoodLooksLike: 'Learners can resolve in-the-flow blockers in under two minutes without manager escalation.', leftLens: 'Measure median resolution time for task questions in real frontline scenarios using chatbot workflows.', rightLens: 'Measure median time to locate correct module/page via LMS navigation + search filtering.' },
+      { criterion: 'Governance and content freshness', weight: '20%', whatGoodLooksLike: 'Owners can update content fast with visible version lineage and rollback confidence.', leftLens: 'Assess sync latency from source-of-truth docs to chatbot retrieval corpus and stale-answer safeguards.', rightLens: 'Assess update cadence for LMS objects, metadata hygiene, and search-index refresh reliability.' },
+      { criterion: 'Operational ownership load', weight: '15%', whatGoodLooksLike: 'Run-state maintenance is sustainable for L&D ops without dedicated ML engineering support.', leftLens: 'Score upkeep effort for prompt/routing tuning, content ingestion QA, and monitoring false positives.', rightLens: 'Score upkeep effort for taxonomy maintenance, tagging discipline, and search-analytics cleanup.' },
+      { criterion: 'Cost per support-deflected incident', weight: '15%', whatGoodLooksLike: 'Total support burden drops while quality and compliance outcomes improve.', leftLens: 'Model platform + integration spend against reduced SME interruptions and faster issue resolution.', rightLens: 'Model LMS optimization effort against reduction in repeated help-desk and manager coaching requests.' }
+    ],
+    buyingCriteria: [
+      'Run a side-by-side pilot on one high-volume workflow (e.g., policy exceptions, QA troubleshooting, or onboarding FAQs).',
+      'Use a shared defect rubric: wrong answer, partial answer, slow-to-answer, and non-defensible answer without citation.',
+      'Track escalation rate and manager interruption minutes as primary outcome metrics, not just search-click volume.',
+      'Require an explicit freshness SLA and ownership map for source updates before go-live.',
+      'Select the option with lower total defect-correction and escalation effort over a 30-day production pilot.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
