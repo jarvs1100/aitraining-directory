@@ -2,7 +2,7 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
-- [ ] Add one traffic-driving high-intent compare route for evidence-access governance: `/compare/ai-compliance-training-evidence-access-time-bound-approvals-vs-manual-open-ended-permissions-for-audit-readiness/` with implementation-led rubric + FAQ schema.
+- [x] Add one traffic-driving high-intent compare route for evidence-access governance: `/compare/ai-compliance-training-evidence-access-time-bound-approvals-vs-manual-open-ended-permissions-for-audit-readiness/` with implementation-led rubric + FAQ schema.
 - [ ] Create distribution asset pack for the new time-bound approvals route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [ ] Add i18n parity stubs for the new time-bound approvals route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [ ] Mobile UX polish pass: improve compare-page decision-outcomes list rhythm and CTA stacking on 320–360px screens.
