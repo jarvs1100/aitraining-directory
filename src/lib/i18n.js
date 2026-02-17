@@ -2003,6 +2003,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar precisión de reconciliación, velocidad de respuesta bajo SLA y trazabilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de tasa de errores de merge cuando se reconcilian múltiples exports LMS', 'Criterios operativos para consistencia de source-of-truth, ownership claro y menos retrabajo', 'Marco de piloto para reforzar lineage de evidencia y acelerar audit response bajo presión'],
     enPath: '/compare/ai-compliance-training-evidence-reconciliation-vs-manual-lms-export-merging-for-audit-response/'
+  },
+  {
+    key: 'evidence-completeness-scorecards-vs-manual-spreadsheets',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-completeness-scorecards-vs-manuelle-audit-readiness-spreadsheets',
+    title: 'KI-Compliance-Training-Evidence-Completeness-Scorecards vs. manuelle Audit-Readiness-Spreadsheets | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Evidence-Completeness-Scorecards gegen manuelle Audit-Readiness-Spreadsheets für Compliance-Training vergleichen.',
+    h1: 'KI-Evidence-Completeness-Scorecards vs. manuelle Audit-Readiness-Spreadsheets',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Vollständigkeitssignal, Ownership-Klarheit und Audit-Reaktionssicherheit zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Vollständigkeitsabdeckung vor Audit-Fristen', 'Messbare Kriterien für Owner-Transparenz und schnellere Gap-Schließung', 'Pilot-Framework für defensible Audit-Readiness ohne Spreadsheet-Drift'],
+    enPath: '/compare/ai-compliance-training-evidence-completeness-scorecards-vs-manual-audit-readiness-spreadsheets/'
+  },
+  {
+    key: 'evidence-completeness-scorecards-vs-manual-spreadsheets',
+    locale: 'es',
+    slug: 'scorecards-completitud-evidencia-training-compliance-ia-vs-spreadsheets-manuales-audit-readiness',
+    title: 'Scorecards de completitud de evidencia en training compliance con IA vs. spreadsheets manuales de audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan scorecards de completitud de evidencia con IA frente a spreadsheets manuales para readiness de auditoría en formación compliance.',
+    h1: 'Scorecards de completitud de evidencia con IA vs. spreadsheets manuales de audit readiness',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar cobertura de evidencia, claridad de ownership y fiabilidad de respuesta a auditoría entre ambos enfoques.',
+    points: ['Comparativa de cobertura de evidencia antes de fechas críticas de auditoría', 'Criterios operativos para ownership claro y cierre más rápido de brechas', 'Marco de piloto para readiness auditable sin deriva en hojas manuales'],
+    enPath: '/compare/ai-compliance-training-evidence-completeness-scorecards-vs-manual-audit-readiness-spreadsheets/'
   }
 );
 

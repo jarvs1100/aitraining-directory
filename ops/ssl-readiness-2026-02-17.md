@@ -3238,3 +3238,89 @@ notAfter=May 18 09:20:44 2026 GMT
 ```
 
 Status: HTTPS remains valid on apex + www redirect path with Let's Encrypt cert chain; deployment freshness advanced (`Last-Modified: 19:29:02 UTC`).
+## Evidence delta — 2026-02-17 19:56 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+
+✅ HTTPS readiness QA passed
+Checked 263 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.109.153
+185.199.110.153
+185.199.108.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTP/HTTPS behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Tue, 17 Feb 2026 19:42:09 GMT
+access-control-allow-origin: *
+etag: "6994c491-501b"
+expires: Tue, 17 Feb 2026 20:05:59 GMT
+cache-control: max-age=600
+
+curl -I https://www.aitraining.directory
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: https://aitraining.directory/
+x-github-request-id: 149C:18F6DF:507CB1:512A7E:6994C122
+accept-ranges: bytes
+date: Tue, 17 Feb 2026 19:55:59 GMT
+via: 1.1 varnish
+age: 1709
+x-served-by: cache-par-lfpg1960078-PAR
+
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 20507
+Server: GitHub.com
+Content-Type: text/html; charset=utf-8
+Last-Modified: Tue, 17 Feb 2026 19:42:09 GMT
+Access-Control-Allow-Origin: *
+ETag: "6994c491-501b"
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+Location: http://aitraining.directory/
+X-GitHub-Request-Id: 19AC:53FF5:57C123:5886B7:6994C7CF
+Accept-Ranges: bytes
+```
