@@ -3491,3 +3491,56 @@ Location: https://aitraining.directory/
 ### Status delta
 - HTTPS remains valid and production-ready after latest content/i18n/mobile updates.
 - Apex still serves over `HTTP/2 200`; `www` still redirects to HTTPS apex.
+
+---
+
+## Evidence delta — 2026-02-17 21:26 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 281 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.109.153
+185.199.110.153
+185.199.111.153
+185.199.108.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS / redirect behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+Last-Modified: Tue, 17 Feb 2026 21:25:38 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+Location: https://aitraining.directory/
+```
+
+### Status delta
+- HTTPS remains valid and production-ready with Let's Encrypt `R12`.
+- Apex responds `HTTP/2 200`; `https://www` redirects to HTTPS apex.
+- Deploy freshness advanced (`Last-Modified: 21:25:38 UTC`).
