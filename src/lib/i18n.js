@@ -404,6 +404,72 @@ export const localizedLandingPages = [
     intro: 'Versión práctica para equipos que buscan crecimiento continuo de tráfico hacia contenido de formación.',
     points: ['Canales semanales de distribución', 'Checklist de calidad de publicación', 'Cadencia de reporte de resultados'],
     enPath: '/solutions/'
+  },
+  {
+    key: 'editorial-methodology',
+    locale: 'pl',
+    slug: 'metodologia-redakcyjna-katalogu-ai',
+    title: 'Metodologia redakcyjna katalogu AI | AI Training Directory',
+    description: 'Jak oceniamy narzędzia i strony: workflow-fit, governance, lokalizacja i trudność wdrożenia.',
+    h1: 'Metodologia redakcyjna katalogu AI',
+    intro: 'Lokalny skrót zasad oceny, aby decyzje zakupowe były spójne i oparte na dowodach.',
+    points: ['Jasne kryteria oceny', 'Konserwatywne claimy bez hype’u', 'Decyzje oparte o pilotaże'],
+    enPath: '/editorial-methodology/'
+  },
+  {
+    key: 'editorial-methodology',
+    locale: 'cs',
+    slug: 'redakcni-metodika-ai-katalogu',
+    title: 'Redakční metodika AI katalogu | AI Training Directory',
+    description: 'Jak hodnotíme nástroje a stránky: workflow-fit, governance, lokalizace a náročnost implementace.',
+    h1: 'Redakční metodika AI katalogu',
+    intro: 'Lokalizované shrnutí hodnotících pravidel pro konzistentní a obhajitelná rozhodnutí.',
+    points: ['Jednotná hodnotící kritéria', 'Konzervativní tvrzení bez hype', 'Rozhodování opřené o piloty'],
+    enPath: '/editorial-methodology/'
+  },
+  {
+    key: 'editorial-methodology',
+    locale: 'sk',
+    slug: 'redakcna-metodika-ai-katalogu',
+    title: 'Redakčná metodika AI katalógu | AI Training Directory',
+    description: 'Ako hodnotíme nástroje a stránky: workflow-fit, governance, lokalizácia a náročnosť implementácie.',
+    h1: 'Redakčná metodika AI katalógu',
+    intro: 'Lokálny prehľad hodnotiacich pravidiel pre konzistentné a obhájiteľné rozhodovanie.',
+    points: ['Jednotné hodnotiace kritériá', 'Konzervatívne tvrdenia bez hype', 'Rozhodovanie postavené na pilotoch'],
+    enPath: '/editorial-methodology/'
+  },
+  {
+    key: 'editorial-methodology',
+    locale: 'hu',
+    slug: 'ai-katalogus-szerkesztoi-modszertan',
+    title: 'AI katalógus szerkesztői módszertan | AI Training Directory',
+    description: 'Hogyan értékeljük az eszközöket és oldalakat: workflow-fit, governance, lokalizáció és implementációs nehézség.',
+    h1: 'AI katalógus szerkesztői módszertan',
+    intro: 'Lokalizált összefoglaló a megalapozott és következetes döntésekhez.',
+    points: ['Egységes értékelési kritériumok', 'Visszafogott állítások túlzás nélkül', 'Pilot-alapú döntéshozatal'],
+    enPath: '/editorial-methodology/'
+  },
+  {
+    key: 'editorial-methodology',
+    locale: 'de',
+    slug: 'redaktionelle-methodik-ki-verzeichnis',
+    title: 'Redaktionelle Methodik für KI-Verzeichnis | AI Training Directory',
+    description: 'Wie wir Tools und Seiten bewerten: Workflow-Fit, Governance, Lokalisierung und Implementierungsaufwand.',
+    h1: 'Redaktionelle Methodik für KI-Verzeichnis',
+    intro: 'Lokalisierte Kurzfassung der Bewertungslogik für konsistente Kaufentscheidungen.',
+    points: ['Klare Bewertungskriterien', 'Konservative Aussagen ohne Hype', 'Pilotbasierte Entscheidungsfindung'],
+    enPath: '/editorial-methodology/'
+  },
+  {
+    key: 'editorial-methodology',
+    locale: 'es',
+    slug: 'metodologia-editorial-directorio-ia',
+    title: 'Metodología editorial del directorio de IA | AI Training Directory',
+    description: 'Cómo evaluamos herramientas y páginas: workflow-fit, gobernanza, localización y dificultad de implementación.',
+    h1: 'Metodología editorial del directorio de IA',
+    intro: 'Resumen localizado de la lógica de evaluación para decisiones de compra consistentes.',
+    points: ['Criterios claros de evaluación', 'Claims conservadores sin hype', 'Decisiones basadas en pilotos'],
+    enPath: '/editorial-methodology/'
   }
 ];
 
