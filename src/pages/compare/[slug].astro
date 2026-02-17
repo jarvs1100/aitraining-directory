@@ -372,6 +372,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower planning friction per shipped high-impact intervention over the pilot window.'
     ]
   },
+  'ai-training-governance-control-towers-vs-manual-steering-committees-for-enterprise-ld': {
+    decisionMatrix: [
+      { criterion: 'Decision latency for governance approvals', weight: '25%', whatGoodLooksLike: 'Policy-sensitive training decisions move from intake to approved action quickly without bypassing control gates.', leftLens: 'Measure cycle time when AI control-tower workflows auto-route decisions, surface risk flags, and trigger approver actions.', rightLens: 'Measure cycle time when committee-based governance depends on meeting cadence, agenda slots, and manual follow-up.' },
+      { criterion: 'Policy alignment and control consistency', weight: '25%', whatGoodLooksLike: 'Governance outcomes remain consistent across business units, regions, and training streams.', leftLens: 'Assess rule consistency, exception handling, and policy mapping quality across AI-assisted governance decisions.', rightLens: 'Assess consistency of committee judgments when membership, context, and interpretation vary quarter to quarter.' },
+      { criterion: 'Traceability and audit readiness of governance decisions', weight: '20%', whatGoodLooksLike: 'Teams can show who approved what, why, and under which policy version in one defensible record.', leftLens: 'Evaluate decision logs, override trails, and evidence linkage in control-tower dashboards.', rightLens: 'Evaluate reconstructability of committee decisions across decks, meeting notes, and ad-hoc email chains.' },
+      { criterion: 'Operating load on L&D governance owners', weight: '15%', whatGoodLooksLike: 'Governance operations scale without recurring bottlenecks during high-change periods.', leftLens: 'Track upkeep for rule tuning, exception QA, and monthly governance calibration ceremonies.', rightLens: 'Track recurring burden for meeting prep, stakeholder alignment, and post-committee remediation follow-ups.' },
+      { criterion: 'Cost per approved governance decision', weight: '15%', whatGoodLooksLike: 'Cost declines while decision quality and execution reliability improve as request volume grows.', leftLens: 'Model platform + governance oversight cost against reduced decision backlog and faster policy-safe execution.', rightLens: 'Model lower tooling cost against coordination overhead, delayed approvals, and committee-cycle rework.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one policy-sensitive training intake stream with known governance bottlenecks.',
+      'Use one scorecard: decision cycle time, backlog age, policy-alignment defects, and remediation reopen rate.',
+      'Require explicit override controls and escalation ownership before enabling AI governance automation.',
+      'Define RACI across compliance, L&D ops, business approvers, and executive governance sponsor.',
+      'Choose the model with lower governance friction per approved policy-safe decision over the pilot period.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
