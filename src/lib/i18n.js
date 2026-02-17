@@ -1759,6 +1759,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar trazabilidad de acceso, control de permisos y defensibilidad en auditoría entre ambos enfoques.',
     points: ['Comparativa de trazabilidad de accesos y manejo de excepciones bajo presión de auditoría', 'Criterios operativos para revocación de permisos, throughput de revisores y controles de gobernanza', 'Marco de piloto para compartir evidencia de forma segura con lineage audit-ready'],
     enPath: '/compare/ai-training-access-control-audit-trails-vs-shared-drive-permissions-for-evidence-governance/'
+  },
+  {
+    key: 'evidence-chain-of-custody-vs-manual-export-tracking',
+    locale: 'de',
+    slug: 'ki-training-evidence-chain-of-custody-workflows-vs-manuelles-export-tracking-fuer-audits',
+    title: 'KI-Training-Evidence-Chain-of-Custody-Workflows vs. manuelles Export-Tracking für Audits | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Chain-of-Custody-Workflows gegen manuelles Export-Tracking für Training-Audits vergleichen.',
+    h1: 'KI-Chain-of-Custody-Workflows vs. manuelles Export-Tracking für Training-Audits',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Nachvollziehbarkeit, Reaktionsgeschwindigkeit und Defensibility bei Audit-Evidence zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Evidence-Lineage und Übergabequalität unter Auditdruck', 'Messbare Kriterien für Reaktionszeit, Defektrate und Reviewer-Rework', 'Pilot-Framework für belastbare Chain-of-Custody mit klaren Governance-Rollen'],
+    enPath: '/compare/ai-training-evidence-chain-of-custody-workflows-vs-manual-export-tracking-for-audits/'
+  },
+  {
+    key: 'evidence-chain-of-custody-vs-manual-export-tracking',
+    locale: 'es',
+    slug: 'workflows-chain-of-custody-evidencia-training-ia-vs-seguimiento-manual-exports-auditorias',
+    title: 'Workflows chain-of-custody de evidencia de training con IA vs. seguimiento manual de exports para auditorías | AI Training Directory',
+    description: 'Entrada localizada para comparar workflows de chain-of-custody con IA frente a seguimiento manual de exports en auditorías de formación y compliance.',
+    h1: 'Chain-of-custody de evidencia con IA vs. seguimiento manual de exports para auditorías',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar trazabilidad, velocidad de respuesta y defensibilidad de evidencia entre ambos enfoques.',
+    points: ['Comparativa de lineage de evidencia y continuidad de custodia en auditorías', 'Criterios operativos para tiempo de armado, defectos y escalaciones', 'Marco de piloto para gobernanza de evidencia audit-ready sin hojas de control frágiles'],
+    enPath: '/compare/ai-training-evidence-chain-of-custody-workflows-vs-manual-export-tracking-for-audits/'
   }
 );
 
