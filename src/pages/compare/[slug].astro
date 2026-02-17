@@ -132,6 +132,22 @@ const comparisonContentBySlug = {
       'Select the option with lower total defect-correction and escalation effort over a 30-day production pilot.'
     ]
   },
+  'ai-coaching-copilots-vs-static-playbooks-for-manager-enablement': {
+    decisionMatrix: [
+      { criterion: 'In-the-moment coaching usability', weight: '25%', whatGoodLooksLike: 'Managers can use guidance during live 1:1s and team huddles without breaking conversation flow.', leftLens: 'Measure whether copilot prompts are contextual, concise, and usable in under 15 seconds during real coaching moments.', rightLens: 'Measure whether managers can quickly find the right playbook section under time pressure without searching multiple docs.' },
+      { criterion: 'Consistency of coaching quality across managers', weight: '25%', whatGoodLooksLike: 'Coaching quality variance narrows across regions, tenures, and team sizes.', leftLens: 'Score whether AI nudges reinforce a shared rubric and reduce ad-hoc, manager-specific coaching gaps.', rightLens: 'Score whether static playbooks are actually applied consistently or remain reference material with low adoption.' },
+      { criterion: 'Feedback signal for enablement teams', weight: '20%', whatGoodLooksLike: 'Enablement owners can identify recurring manager skill gaps and update support quickly.', leftLens: 'Evaluate analytics on prompt usage, coaching themes, and escalation patterns to prioritize interventions.', rightLens: 'Evaluate available signal from downloads, page views, and manual manager feedback loops.' },
+      { criterion: 'Governance and update control', weight: '15%', whatGoodLooksLike: 'Policy or messaging changes propagate quickly with clear owner accountability and auditability.', leftLens: 'Assess content controls for approved prompt sets, revision history, and role-based access for sensitive guidance.', rightLens: 'Assess document version discipline, distribution lag, and outdated-copy risk in shared drives or LMS libraries.' },
+      { criterion: 'Cost per manager behavior improvement', weight: '15%', whatGoodLooksLike: 'Coaching outcomes improve with manageable operating overhead as manager population scales.', leftLens: 'Model platform + integration cost against measurable gains in coaching quality and reduced enablement fire drills.', rightLens: 'Model lower software cost against ongoing manual reinforcement effort and slower behavior-change cycles.' }
+    ],
+    buyingCriteria: [
+      'Pilot both approaches with one manager cohort tied to a measurable behavior metric (e.g., 1:1 quality score or call-coaching rubric).',
+      'Use the same enablement rubric to score coaching interactions before and after rollout.',
+      'Track manager prep time, coaching consistency, and escalation volume as primary decision metrics.',
+      'Define ownership for content updates, governance approvals, and monthly quality review before scaling.',
+      'Choose the option that delivers better manager behavior lift per unit of enablement operating effort over 30 days.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },

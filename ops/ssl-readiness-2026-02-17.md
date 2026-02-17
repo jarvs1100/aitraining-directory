@@ -332,3 +332,71 @@ Location: http://aitraining.directory/
 - SSL certificate mismatch persists for custom domain (`CN=*.github.io` still served).
 - HTTPS hostname validation remains blocked for apex + `www`.
 - HTTP origin reflects newer deployment timestamp (`Last-Modified` advanced to 07:56:59 UTC).
+
+---
+
+## Evidence delta — 2026-02-17 08:38 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 121 HTML files.
+```
+
+### DNS (unchanged)
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+```
+
+### TLS certificate served now (unchanged)
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+subject=CN = *.github.io
+notBefore=Mar  7 00:00:00 2025 GMT
+notAfter=Mar  7 23:59:59 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA
+subject=CN = *.github.io
+notBefore=Mar  7 00:00:00 2025 GMT
+notAfter=Mar  7 23:59:59 2026 GMT
+```
+
+### HTTPS validation tests (still failing)
+```bash
+curl -I https://aitraining.directory
+curl: (60) SSL: no alternative certificate subject name matches target host name 'aitraining.directory'
+
+curl -I https://www.aitraining.directory
+curl: (60) SSL: no alternative certificate subject name matches target host name 'www.aitraining.directory'
+```
+
+### HTTP behavior (updated content timestamp)
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 08:27:19 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- `qa:https` still passes on generated artifacts (121 HTML files).
+- Custom-domain HTTPS remains blocked by cert mismatch (`CN=*.github.io` still served).
+- HTTP origin reflects newer deployment timestamp (`Last-Modified` advanced to 08:27:19 UTC).
