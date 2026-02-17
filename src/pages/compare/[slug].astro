@@ -468,6 +468,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower remediation friction per compliant closure, not the model that sends the most reminders.'
     ]
   },
+  'ai-compliance-training-evidence-access-revocation-sla-enforcement-vs-manual-permission-cleanup-for-audit-readiness': {
+    decisionMatrix: [
+      { criterion: 'Revocation cycle time after role or audit-scope changes', weight: '25%', whatGoodLooksLike: 'Evidence access is revoked before stale entitlements create audit or exposure risk.', leftLens: 'Measure time from revocation trigger to enforced removal with SLA timers, escalation states, and closure evidence.', rightLens: 'Measure time when analysts run periodic manual permission cleanups from spreadsheets and inbox reminders.' },
+      { criterion: 'Consistency of entitlement decisions across teams', weight: '25%', whatGoodLooksLike: 'Equivalent access-removal cases produce consistent outcomes mapped to policy and role rules.', leftLens: 'Assess rule-based revocation quality, exception governance, and override logging by policy clause.', rightLens: 'Assess variance in manual cleanup judgments across owners, regions, and audit cycles.' },
+      { criterion: 'Audit traceability of access revocation actions', weight: '20%', whatGoodLooksLike: 'Teams can prove who removed access, why, when, and under which policy version.', leftLens: 'Evaluate immutable revocation logs, approver lineage, and source-linked evidence for each closed action.', rightLens: 'Evaluate reconstructability when revocation proof is split across tickets, email threads, and shared-drive notes.' },
+      { criterion: 'Operational burden during pre-audit windows', weight: '15%', whatGoodLooksLike: 'Revocation operations remain stable without cleanup fire drills before audits.', leftLens: 'Track effort for rule tuning, false-positive review, and governance QA ceremonies.', rightLens: 'Track recurring manual labor for permission exports, reconciliation, and owner chase loops.' },
+      { criterion: 'Cost per audit-defensible revocation closure', weight: '15%', whatGoodLooksLike: 'Cost per closed revocation declines while entitlement drift and access exceptions decrease.', leftLens: 'Model platform + governance overhead against faster closure, lower drift, and reduced pre-audit scramble time.', rightLens: 'Model lower tooling spend against recurring cleanup labor, missed revocations, and escalated audit-response costs.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one evidence domain with frequent role transitions and at least one planned audit sample request.',
+      'Use one scorecard: revocation cycle time, stale-entitlement defect rate, escalation count, and analyst cleanup hours.',
+      'Define mandatory controls for automated revocation triggers, exception handling, and manual override authority before rollout.',
+      'Assign RACI across compliance owner, training ops lead, system admin, and internal audit reviewer for every revocation stage.',
+      'Choose the model with lower revocation friction per audit-defensible closure, not the model that appears cheapest before audit prep.'
+    ]
+  },
 
   'ai-training-capacity-forecasting-vs-manual-headcount-guessing-for-ld-operations': {
     decisionMatrix: [

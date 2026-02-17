@@ -3785,3 +3785,111 @@ HTTP/1.1 200 OK
 - HTTPS remains valid on custom domain with Let's Encrypt (R12).
 - https://www continues redirecting to HTTPS apex.
 - Deploy freshness observed at Last-Modified Tue, 17 Feb 2026 22:12:11 GMT during this check.
+
+---
+
+## Evidence delta — 2026-02-17 22:40 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+
+> aitraining-directory@1.0.0 qa:https
+> node scripts/qa_https.mjs
+
+
+✅ HTTPS readiness QA passed
+Checked 296 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests
+```bash
+curl -I https://aitraining.directory
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0 20507    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Tue, 17 Feb 2026 22:27:14 GMT
+access-control-allow-origin: *
+
+curl -I https://www.aitraining.directory
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0   162    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: https://aitraining.directory/
+x-github-request-id: 774C:1D4FCC:18B6AA:18ECFF:6994E0BE
+```
+
+### HTTP behavior
+```bash
+curl -I http://aitraining.directory
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0 20507    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0 20507    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 20507
+Server: GitHub.com
+Content-Type: text/html; charset=utf-8
+
+curl -I http://www.aitraining.directory
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0   162    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/1.1 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 162
+Server: GitHub.com
+Content-Type: text/html
+```
+
+### Current delta summary
+- HTTPS remains valid for apex and www redirects to apex over HTTPS.
+- DNS remains pointed to GitHub Pages edge IPs.
+- Latest deploy freshness is reflected by the Last-Modified timestamp above.

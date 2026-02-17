@@ -763,6 +763,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-training-remediation-workflows-vs-manual-coaching-follow-ups-for-compliance-recovery/'
   },
   {
+    key: 'evidence-access-revocation-sla-vs-manual-permission-cleanup',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-revocation-sla-enforcement-vs-manuelle-permission-cleanup-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access-Revocation-SLA-Enforcement vs. manuelle Permission-Cleanups für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Revocation-SLA-Enforcement-Workflows gegen manuelle Permission-Cleanups für Audit Readiness vergleichen.',
+    h1: 'KI-Revocation-SLA-Enforcement vs. manuelle Permission-Cleanups für Audit Readiness',
+    intro: 'Hilft Compliance-, L&D- und Operations-Teams, Revocation-Cycle-Time, Entitlement-Konsistenz und auditfeste Access-Governance zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich von Revocation-SLA-Closure-Speed nach Rollenwechseln und Audit-Scoping-Änderungen', 'Messbare Kriterien für Policy-Konsistenz, Override-Governance und nachvollziehbare Entitlement-Entscheidungen', 'Pilot-Framework für stale-permission defect rates, Escalation-Ownership und defensible Revocation-Logs'],
+    enPath: '/compare/ai-compliance-training-evidence-access-revocation-sla-enforcement-vs-manual-permission-cleanup-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-revocation-sla-vs-manual-permission-cleanup',
+    locale: 'es',
+    slug: 'revocacion-acceso-evidencia-training-compliance-ia-vs-limpieza-manual-permisos-audit-readiness',
+    title: 'Revocación de acceso a evidencia de training compliance con IA vs. limpieza manual de permisos para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para comparar enforcement de SLA de revocación de acceso a evidencia con IA frente a limpieza manual de permisos para auditoría.',
+    h1: 'Revocación de acceso a evidencia con IA vs. limpieza manual de permisos para audit readiness',
+    intro: 'Ayuda a equipos de compliance, L&D y operaciones a evaluar velocidad de revocación, consistencia de permisos y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de cycle-time de revocación tras cambios de rol y alcance de auditoría', 'Criterios operativos para consistencia de política, gobernanza de overrides y decisiones de permisos trazables', 'Marco de piloto para tasa de permisos obsoletos, ownership de escalados y logs de revocación defendibles'],
+    enPath: '/compare/ai-compliance-training-evidence-access-revocation-sla-enforcement-vs-manual-permission-cleanup-for-audit-readiness/'
+  },
+  {
     key: 'compliance-version-control-vs-manual-republishing',
     locale: 'de',
     slug: 'ki-compliance-training-version-control-vs-manuelles-kurs-republishing-fuer-policy-updates',
