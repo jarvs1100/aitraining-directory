@@ -534,6 +534,23 @@ const comparisonContentBySlug = {
     ]
   },
 
+  'ai-training-attestation-workflows-vs-manual-signoff-sheets-for-compliance-records': {
+    decisionMatrix: [
+      { criterion: 'Record integrity and completeness at scale', weight: '25%', whatGoodLooksLike: 'Every mandatory training attestation is captured with required metadata and policy-version context without missing fields.', leftLens: 'Measure capture consistency for learner identity, policy version, timestamp, jurisdiction tags, and approver chain under high-volume completion windows.', rightLens: 'Measure defect rate when attestations rely on spreadsheet sign-off tabs, emailed confirmations, and manually merged exports.' },
+      { criterion: 'Exception-routing speed for disputed or missing attestations', weight: '25%', whatGoodLooksLike: 'Exceptions are routed to the right owner quickly with SLA tracking and clear evidence requirements.', leftLens: 'Evaluate automated triage for missing acknowledgements, contradictory responses, and overdue manager validation with escalation rules.', rightLens: 'Evaluate delay introduced by inbox triage, ad-hoc follow-up, and unclear ownership across HR, compliance, and L&D.' },
+      { criterion: 'Audit defensibility of attestation history', weight: '20%', whatGoodLooksLike: 'Auditors can trace who attested to what, when, under which policy release, including overrides and corrections.', leftLens: 'Assess immutable change logs, correction lineage, and role-based approval trails for each attestation event.', rightLens: 'Assess reconstructability when evidence is distributed across PDFs, spreadsheet versions, and detached sign-off emails.' },
+      { criterion: 'Operational burden on compliance and training ops', weight: '15%', whatGoodLooksLike: 'Weekly attestation operations stay predictable without manual reconciliation spikes.', leftLens: 'Track recurring effort for threshold tuning, exception QA, and governance review ceremonies.', rightLens: 'Track recurring labor for sign-off chasing, duplicate cleanup, and month-end record reconciliation.' },
+      { criterion: 'Cost per audit-ready attestation decision', weight: '15%', whatGoodLooksLike: 'Cost per defensible attestation decreases while exception closure reliability improves.', leftLens: 'Model platform + governance overhead against fewer evidence defects, faster closure, and lower audit-prep labor.', rightLens: 'Model lower tooling spend against recurring cleanup work, delayed closure, and elevated audit-response effort.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one policy-critical attestation stream with known exception volume and at least one regional variant.',
+      'Use one scorecard: attestation defect rate, exception-routing cycle time, overdue closure rate, and audit packet prep hours.',
+      'Define required evidence fields, override authority, and escalation ownership before production rollout.',
+      'Assign RACI across compliance owner, L&D operations, HR operations, and internal audit partner.',
+      'Choose the model with lower attestation friction per audit-ready decision, not the model that appears simplest in week one.'
+    ]
+  },
+
 
   'synthesia-alternatives': {
     decisionMatrix: [
@@ -969,10 +986,18 @@ const jsonLd = {
         align-items: center;
       }
 
+      .faq-anchor-list {
+        gap: 0.4rem;
+      }
+
+      .faq-anchor-list li {
+        margin: 0;
+      }
+
       .faq-anchor-list a {
-        padding: 0.56rem 0.62rem;
-        line-height: 1.33;
-        min-height: 46px;
+        padding: 0.62rem 0.68rem;
+        line-height: 1.34;
+        min-height: 48px;
         display: flex;
         align-items: center;
       }

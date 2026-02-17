@@ -850,6 +850,31 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-training-control-effectiveness-scoring-vs-manual-audit-sampling-for-compliance-assurance/'
   }
 
+  ,{
+    key: 'training-attestation-workflows-vs-manual-signoff-sheets',
+    locale: 'de',
+    slug: 'ki-training-attestation-workflows-vs-manuelle-signoff-sheets-fuer-compliance-records',
+    title: 'KI-Training-Attestation-Workflows vs. manuelle Sign-off-Sheets für Compliance Records | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Training-Attestation-Workflows gegen manuelle Sign-off-Sheets für Compliance-Records vergleichen.',
+    h1: 'KI-Training-Attestation-Workflows vs. manuelle Sign-off-Sheets für Compliance Records',
+    intro: 'Hilft Compliance-, HR- und L&D-Ops-Teams, Record-Integrität, Exception-Routing und Audit-Defensibility zwischen beiden Attestation-Modellen zu bewerten.',
+    points: ['Vergleich der Nachweisvollständigkeit pro Learner, Policy-Version und Zeitstempel', 'Messbare Kriterien für Exception-Routing-SLA, Ownership-Klarheit und Closure-Qualität', 'Pilot-Framework für Override-Governance, Evidence-Felder und auditfeste Attestation-Historien'],
+    enPath: '/compare/ai-training-attestation-workflows-vs-manual-signoff-sheets-for-compliance-records/'
+  },
+  {
+    key: 'training-attestation-workflows-vs-manual-signoff-sheets',
+    locale: 'es',
+    slug: 'workflows-attestation-training-ia-vs-hojas-signoff-manuales-compliance-records',
+    title: 'Workflows de attestation de training con IA vs. hojas sign-off manuales para compliance records | AI Training Directory',
+    description: 'Entrada localizada para comparar workflows de attestation con IA frente a hojas sign-off manuales para registros de cumplimiento.',
+    h1: 'Workflows de attestation de training con IA vs. hojas sign-off manuales para compliance records',
+    intro: 'Ayuda a equipos de compliance, HR y L&D operations a evaluar integridad de registros, velocidad de routing de excepciones y defensibilidad para auditoría entre ambos modelos.',
+    points: ['Comparativa de completitud de evidencia por learner, versión de política y timestamp', 'Criterios operativos para SLA de excepciones, ownership claro y cierre verificable', 'Marco de piloto para gobernanza de overrides, campos obligatorios y trazabilidad audit-ready'],
+    enPath: '/compare/ai-training-attestation-workflows-vs-manual-signoff-sheets-for-compliance-records/'
+  }
+
+
+
 
 
 ];

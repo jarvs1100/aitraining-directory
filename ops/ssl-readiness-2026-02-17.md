@@ -2141,3 +2141,70 @@ Date: Tue, 17 Feb 2026 15:10:55 GMT
 - HTTPS remains valid for apex and www redirect path using Let's Encrypt (`CN=www.aitraining.directory`, issuer `R12`).
 - Static HTTPS QA passed after latest content changes (`203` HTML files checked).
 - Deploy freshness confirmed by `Last-Modified: Tue, 17 Feb 2026 14:57:31 GMT` on apex HTTP/HTTPS responses.
+
+---
+
+## Evidence delta — 2026-02-17 15:25 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 206 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.109.153
+185.199.110.153
+185.199.111.153
+185.199.108.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.108.153
+185.199.109.153
+185.199.111.153
+185.199.110.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS + redirect behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+last-modified: Tue, 17 Feb 2026 15:13:00 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Tue, 17 Feb 2026 15:13:01 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid (Let's Encrypt `R12`) and apex serves `HTTP/2 200`.
+- `www` continues to redirect to HTTPS apex as expected.
+- Deploy freshness advanced with `Last-Modified` at `15:13 UTC` after this batch.
