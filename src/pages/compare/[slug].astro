@@ -452,6 +452,22 @@ const comparisonContentBySlug = {
       'Choose the model with lower exception-handling friction per compliant closure, not the model that processes the most tickets.'
     ]
   },
+  'ai-training-remediation-workflows-vs-manual-coaching-follow-ups-for-compliance-recovery': {
+    decisionMatrix: [
+      { criterion: 'Remediation closure speed after non-compliance detection', weight: '25%', whatGoodLooksLike: 'At-risk learners move from non-compliant to compliant status quickly with minimal deadline overrun.', leftLens: 'Measure time from non-compliance trigger to remediation assignment, completion verification, and closure.', rightLens: 'Measure closure time when coaching actions are coordinated manually via manager follow-up emails and tracker notes.' },
+      { criterion: 'Intervention consistency across managers and regions', weight: '25%', whatGoodLooksLike: 'Learners receive consistent remediation pathways aligned to policy severity and role-criticality.', leftLens: 'Assess whether AI workflows standardize remediation templates, sequencing rules, and escalation thresholds across cohorts.', rightLens: 'Assess variance in manual coaching quality, follow-up cadence, and remediation interpretation by manager.' },
+      { criterion: 'Audit evidence quality for recovery actions', weight: '20%', whatGoodLooksLike: 'Teams can prove what remediation was assigned, completed, verified, and approved for each exception case.', leftLens: 'Evaluate whether remediation steps, timestamps, approvers, and outcome evidence are logged in one defensible trail.', rightLens: 'Evaluate reconstructability when remediation proof is split across inbox threads, calendar reminders, and spreadsheets.' },
+      { criterion: 'Operational load on compliance ops and people managers', weight: '15%', whatGoodLooksLike: 'Recovery operations remain stable during peak audit or deadline windows without coordination fire drills.', leftLens: 'Track upkeep for rule tuning, false-positive triage, and remediation-governance reviews.', rightLens: 'Track recurring burden for reminder chasing, status sync meetings, and manual closure verification.' },
+      { criterion: 'Cost per compliant recovery closure', weight: '15%', whatGoodLooksLike: 'Cost per closed remediation case declines while policy adherence and learner recovery outcomes improve.', leftLens: 'Model platform + governance cost against faster closure, reduced manual follow-up hours, and fewer repeat escalations.', rightLens: 'Model lower tooling spend against manager-time drain, delayed recoveries, and re-opened non-compliance cases.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one mandatory-training program with repeated remediation churn and overdue cohorts.',
+      'Use one scorecard: remediation cycle time, repeat non-compliance rate, manager follow-up hours, and evidence completeness.',
+      'Define clear policy guardrails for automated assignment, manual override rights, and escalation ownership.',
+      'Assign RACI across compliance owner, L&D operations, manager approvers, and audit partner before rollout.',
+      'Choose the model with lower remediation friction per compliant closure, not the model that sends the most reminders.'
+    ]
+  },
   'synthesia-alternatives': {
     decisionMatrix: [
       { criterion: 'Speed to first publish', weight: '20%', whatGoodLooksLike: 'Team can publish first approved module in <5 business days.', synthesiaLens: 'Strong for avatar-led scripts; slower when teams need heavy scene-level edits.', alternativesLens: 'Prioritize options with fast template reuse and easy revision loops for SMEs.' },
