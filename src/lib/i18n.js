@@ -340,6 +340,28 @@ export const localizedLandingPages = [
     enPath: '/compare/ai-adaptive-recertification-paths-vs-fixed-annual-compliance-refreshers/'
   },
   {
+    key: 'audit-trail-automation-vs-manual-evidence',
+    locale: 'de',
+    slug: 'ki-audit-trail-automatisierung-vs-manuelle-kompilierung-von-trainingsevidenz',
+    title: 'KI-Audit-Trail-Automatisierung vs. manuelle Kompilierung von Trainingsevidenz | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Audit-Trail-Automatisierung gegen manuelle Evidenzzusammenstellung für Compliance-Audits vergleichen.',
+    h1: 'KI-Audit-Trail-Automatisierung vs. manuelle Kompilierung von Trainingsevidenz',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Nachverfolgbarkeit, Audit-Reaktionszeit und operativen Aufwand zwischen beiden Modellen zu bewerten.',
+    points: ['Vergleich der Audit-Paket-Erstellungszeit unter echtem Deadline-Druck', 'Messbare Kriterien für Evidenzvollständigkeit, Traceability und Defektrate', 'Pilot-Framework für skalierbare, auditfeste Governance-Entscheidungen'],
+    enPath: '/compare/ai-audit-trail-automation-vs-manual-training-evidence-compilation/'
+  },
+  {
+    key: 'audit-trail-automation-vs-manual-evidence',
+    locale: 'es',
+    slug: 'automatizacion-audit-trail-ia-vs-compilacion-manual-evidencia-formacion',
+    title: 'Automatización de audit trail con IA vs. compilación manual de evidencia de formación | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan automatización de audit trail con IA frente a compilación manual de evidencia para auditorías de formación y compliance.',
+    h1: 'Automatización de audit trail con IA vs. compilación manual de evidencia de formación',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar trazabilidad, velocidad de respuesta en auditoría y carga operativa entre ambos modelos.',
+    points: ['Comparativa de tiempo de armado de paquetes de auditoría con presión de plazo real', 'Criterios operativos para completitud de evidencia y reducción de defectos', 'Marco de piloto para decidir con gobernanza y defensibilidad audit-ready'],
+    enPath: '/compare/ai-audit-trail-automation-vs-manual-training-evidence-compilation/'
+  },
+  {
     key: 'distribution-playbook',
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',

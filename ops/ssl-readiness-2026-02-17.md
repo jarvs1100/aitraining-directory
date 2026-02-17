@@ -869,3 +869,49 @@ Location: http://aitraining.directory/
 - Major SSL readiness improvement: HTTPS is now valid for apex and `www` (no hostname mismatch errors).
 - Certificate authority changed from Sectigo/GitHub default to Let's Encrypt (`R12`) with active validity window through 2026-05-18.
 - `https://www` correctly redirects to canonical `https://aitraining.directory/`.
+
+---
+
+## Evidence delta — 2026-02-17 10:56 UTC
+
+### Build-level HTTPS QA (post-deploy)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 155 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+
+dig +short www.aitraining.directory CNAME
+jarvs1100.github.io.
+```
+
+### TLS certificate served now (resolved)
+```bash
+echo | openssl s_client -servername aitraining.directory -connect aitraining.directory:443 2>/dev/null | openssl x509 -noout -subject -issuer -dates
+subject=CN = www.aitraining.directory
+issuer=C = US, O = Let's Encrypt, CN = R12
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests (passing)
+```bash
+curl -I -L --max-redirs 5 https://aitraining.directory
+HTTP/2 200
+server: GitHub.com
+last-modified: Tue, 17 Feb 2026 10:56:27 GMT
+```
+
+### Current delta summary
+- ✅ Custom-domain HTTPS is now valid and serving a Let's Encrypt certificate for `www.aitraining.directory`.
+- ✅ Apex `https://aitraining.directory` now returns `HTTP/2 200` without hostname mismatch errors.
+- ✅ SSL readiness blocker is cleared; retain periodic checks after future deploys.
