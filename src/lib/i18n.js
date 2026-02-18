@@ -2529,6 +2529,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar exposición de evidencia, consistencia de revocación y defensibilidad audit-ready entre ambos modelos.',
     points: ['Comparativa para reducir exposición no controlada durante solicitudes urgentes', 'Criterios operativos de revocación consistente y trazabilidad defendible', 'Marco de piloto para bajar carga manual y retrabajo en auditorías'],
     enPath: '/compare/ai-compliance-training-evidence-view-only-workspaces-vs-manual-temporary-shared-links-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-print-prevention-controls-vs-manual-print-request-approvals',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-print-prevention-controls-vs-manuelle-print-request-approvals-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Print-Prevention-Controls vs. manuelle Print-Request-Approvals für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Print-Prevention-Controls gegen manuelle Print-Request-Approvals in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Print-Prevention-Controls vs. manuelle Print-Request-Approvals für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Print-Leakage-Risiko, Freigabekonsistenz und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit zur Reduktion unkontrollierter Ausdrucke von Evidenzdaten', 'Kriterien für konsistente Freigabewege und nachvollziehbare Entscheidungslineage', 'Pilot-Framework für geringeren manuellen Aufwand bei auditkritischen Print-Anfragen'],
+    enPath: '/compare/ai-compliance-training-evidence-access-print-prevention-controls-vs-manual-print-request-approvals-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-print-prevention-controls-vs-manual-print-request-approvals',
+    locale: 'es',
+    slug: 'controles-prevencion-impresion-acceso-evidencia-training-compliance-ia-vs-aprobaciones-manuales-print-request-audit-readiness',
+    title: 'Controles de prevención de impresión para acceso a evidencia en training compliance con IA vs. aprobaciones manuales de print request para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de prevención de impresión con IA frente a aprobaciones manuales de solicitudes de impresión en acceso a evidencia.',
+    h1: 'Controles de prevención de impresión con IA vs. aprobaciones manuales de print request en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar riesgo de fuga por impresión, consistencia de aprobaciones y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para reducir impresiones no controladas de evidencia sensible', 'Criterios operativos para rutas de aprobación más consistentes y trazables', 'Marco de piloto para bajar carga manual y retrabajo en solicitudes urgentes de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-print-prevention-controls-vs-manual-print-request-approvals-for-audit-readiness/'
   }
 );
 

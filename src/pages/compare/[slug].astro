@@ -1902,6 +1902,23 @@ const jsonLd = {
       }
     }
 
+    /* Print-prevention readability polish for dense compare headers on very small phones */
+    @media (max-width: 360px) {
+      .matrix-scroll-cue {
+        font-size: 0.72rem;
+        letter-spacing: 0.015em;
+        padding-inline: 0.56rem;
+      }
+
+      .matrix-table th:nth-child(4),
+      .matrix-table th:nth-child(5) {
+        min-width: 166px;
+        font-size: 0.74rem;
+        line-height: 1.22;
+        text-wrap: balance;
+      }
+    }
+
     @media (max-width: 520px) {
       .matrix-table-wrap {
         display: block;
