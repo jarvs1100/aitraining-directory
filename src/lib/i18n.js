@@ -2683,6 +2683,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar verificación continua, deriva de excepciones y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para validar contexto de acceso en tiempo real y reducir confianza implícita', 'Criterios operativos para enforcement continuo de zero trust frente a revisiones periódicas de listas blancas', 'Marco de piloto para reducir excepciones y retrabajo durante ventanas críticas de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-zero-trust-policy-enforcement-vs-manual-network-whitelist-reviews-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-context-aware-anomaly-detection-vs-manual-weekly-access-review-meetings',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-context-aware-anomaly-detection-vs-manuelle-woechentliche-access-review-meetings-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Context-Aware-Anomaly-Detection vs. manuelle wöchentliche Access-Review-Meetings für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Context-Aware-Anomaly-Detection gegen manuelle wöchentliche Access-Review-Meetings in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Context-Aware-Anomaly-Detection vs. manuelle wöchentliche Access-Review-Meetings',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Erkennungsgeschwindigkeit, Eskalationsklarheit und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei kontextbasierter Anomalieerkennung statt periodischer Meeting-Reviews', 'Kriterien für schnellere, nachvollziehbare Eskalationen bei risikoreichen Zugriffsmustern', 'Pilot-Framework zur Reduktion von Ausnahme-Drift und zur stabileren Audit-Readiness unter Zeitdruck'],
+    enPath: '/compare/ai-compliance-training-evidence-access-context-aware-anomaly-detection-vs-manual-weekly-access-review-meetings-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-context-aware-anomaly-detection-vs-manual-weekly-access-review-meetings',
+    locale: 'es',
+    slug: 'deteccion-anomalias-context-aware-acceso-evidencia-training-compliance-ia-vs-reuniones-semanales-manuales-access-review-audit-readiness',
+    title: 'Detección de anomalías context-aware en acceso a evidencia de training compliance con IA vs. reuniones manuales semanales de access review para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan detección contextual de anomalías con IA frente a reuniones semanales manuales de revisión de acceso en evidencia.',
+    h1: 'Detección de anomalías context-aware con IA vs. reuniones manuales semanales de access review',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de detección, claridad de escalado y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para identificar patrones de acceso anómalos en contexto frente a revisiones semanales', 'Criterios operativos para escalar anomalías con trazabilidad y menor tiempo de exposición al riesgo', 'Marco de piloto para reducir deriva de excepciones y mejorar preparación de auditoría bajo presión'],
+    enPath: '/compare/ai-compliance-training-evidence-access-context-aware-anomaly-detection-vs-manual-weekly-access-review-meetings-for-audit-readiness/'
   }
 );
 

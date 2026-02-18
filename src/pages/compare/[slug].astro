@@ -1925,6 +1925,27 @@ const jsonLd = {
       }
     }
 
+    /* Context-aware anomaly-detection batch polish: improve implementation-playbook row readability and tap comfort on 320–360px */
+    @media (max-width: 360px) {
+      .section[aria-labelledby="implementation-playbook-heading"] ol {
+        gap: 0.5rem;
+      }
+
+      .section[aria-labelledby="implementation-playbook-heading"] li {
+        min-height: 46px;
+        padding-block: 0.72rem;
+        padding-inline: 0.68rem;
+        line-height: 1.44;
+      }
+
+      .section[aria-labelledby="implementation-playbook-heading"] li::before {
+        width: 1.32rem;
+        height: 1.32rem;
+        margin-top: 0.06rem;
+        box-shadow: 0 0 0 1px #86efac;
+      }
+    }
+
     /* Print-prevention readability polish for dense compare headers on very small phones */
     @media (max-width: 360px) {
       .matrix-scroll-cue {
