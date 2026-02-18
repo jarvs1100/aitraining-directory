@@ -5079,3 +5079,38 @@ Last-Modified: Wed, 18 Feb 2026 03:56:44 GMT
 ### Status
 - HTTPS remains healthy on apex (`HTTP/2 200`) and `www` still canonical-redirects to apex over HTTPS.
 - Certificate coverage remains active via Let's Encrypt (`R12`) and continues to validate this deployment path.
+
+## Evidence delta — 2026-02-18 04:26 UTC
+
+### Build-level HTTPS QA
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 365 HTML files.
+```
+
+### Live HTTPS + redirect checks
+```bash
+curl -I https://aitraining.directory/ | head -n 8
+HTTP/2 200
+last-modified: Wed, 18 Feb 2026 04:13:30 GMT
+
+curl -I https://www.aitraining.directory/ | head -n 8
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### TLS certificate snapshot
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### Status
+- HTTPS remains healthy on apex (`HTTP/2 200`) and `www` still canonical-redirects to apex over HTTPS.
+- TLS certificate chain remains valid with Let's Encrypt `R12` and no hostname mismatch.
+- Deploy freshness advanced (`Last-Modified: Wed, 18 Feb 2026 04:13:30 GMT`).

@@ -904,6 +904,24 @@ const supplementalComparisonContentBySlug = {
       'Choose the model with lower friction per audit-defensible recording incident closure, not the model with the longest monitoring checklist.'
     ]
   },
+
+  'ai-compliance-training-evidence-access-live-session-masking-vs-manual-sensitive-field-blur-checklists-for-audit-readiness': {
+    decisionMatrix: [
+      { criterion: 'Prevention strength for sensitive-field exposure during live evidence sessions', weight: '25%', whatGoodLooksLike: 'Sensitive data elements are masked before they appear to unauthorized viewers or recordings.', leftLens: 'Measure real-time masking reliability across role-based views, dynamic forms, and screen-share pathways under peak usage.', rightLens: 'Measure prevention when teams depend on analyst-run blur checklists and manual pre-session setup discipline.' },
+      { criterion: 'Containment speed after masking-control misses or bypass attempts', weight: '25%', whatGoodLooksLike: 'Incidents are detected, scoped, and contained quickly enough to limit data exposure and audit impact.', leftLens: 'Evaluate time from masking exception to attributed incident package with session context, affected fields, and owner routing.', rightLens: 'Evaluate time when teams investigate from manual blur logs, meeting notes, and ad-hoc reviewer recollection.' },
+      { criterion: 'Operational consistency across teams and regions', weight: '20%', whatGoodLooksLike: 'Equivalent risk scenarios trigger the same protection and escalation behavior regardless of operator.', leftLens: 'Assess policy-linked masking rules, override controls, and escalation SLAs that standardize response quality.', rightLens: 'Assess consistency when checklist interpretation varies by analyst experience, shift pressure, and handoff quality.' },
+      { criterion: 'Audit-defensible lineage from exposure risk to closure', weight: '15%', whatGoodLooksLike: 'Auditors can trace what was exposed, how controls responded, and why closure was approved.', leftLens: 'Validate immutable masking/override logs, control-decision history, and evidence links mapped to policy requirements.', rightLens: 'Validate reconstructability from checklist snapshots, approval emails, and manually assembled incident artifacts.' },
+      { criterion: 'Cost per closed sensitive-field exposure incident', weight: '15%', whatGoodLooksLike: 'Per-incident cost decreases while containment quality and SLA adherence improve.', leftLens: 'Model platform + governance overhead against reduced forensic effort, faster containment, and fewer reopen cycles.', rightLens: 'Model lower tooling spend against recurring checklist labor, delayed detection, and higher remediation rework.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-sensitivity evidence-access workflow for 30 days with both operating models and one shared incident taxonomy.',
+      'Use one scorecard: masking prevention hit rate, containment latency, escalation SLA adherence, and auditor follow-up count.',
+      'Define masking-rule ownership, allowed override conditions, and non-bypassable escalation paths before rollout.',
+      'Assign RACI across access-governance owner, compliance operations lead, training ops analyst, and internal audit reviewer.',
+      'Choose the model with lower friction per audit-defensible sensitive-field incident closure, not the model with the longest manual checklist.'
+    ]
+  },
+
   'ai-compliance-training-evidence-access-behavioral-baseline-drift-detection-vs-manual-biweekly-access-review-workshops-for-audit-readiness': {
     decisionMatrix: [
       { criterion: 'Detection latency for risky evidence-access behavior drift', weight: '25%', whatGoodLooksLike: 'Potentially risky access-pattern drift is detected and triaged before it turns into audit findings.', leftLens: 'Measure median time from baseline deviation to analyst-ready alert with context on user, asset sensitivity, and behavior trajectory.', rightLens: 'Measure time to detect drift when teams rely on biweekly workshop reviews of static access logs and anecdotal signals.' },
@@ -2132,6 +2150,22 @@ const jsonLd = {
         min-height: 44px;
         display: flex;
         align-items: center;
+      }
+    }
+
+    /* Live-session masking batch polish: improve compact-screen CTA separation + thumb rhythm */
+    @media (max-width: 360px) {
+      .decision-outcomes-list {
+        gap: 0.4rem;
+      }
+
+      .decision-outcomes-list li {
+        padding: 0.68rem 0.7rem;
+        border-color: #93c5fd;
+      }
+
+      .next-step-card .cta-link {
+        min-height: 46px;
       }
     }
 

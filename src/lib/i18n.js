@@ -2774,7 +2774,29 @@ localizedLandingPages.push(
     points: ['Comparativa de efectividad para disuadir capturas no autorizadas y atribuir incidentes con trazabilidad', 'Criterios operativos para escalado consistente y contención más rápida de eventos de grabación riesgosa', 'Marco de piloto para reducir carga forense manual sin perder control de gobernanza'],
     enPath: '/compare/ai-compliance-training-evidence-access-session-recording-watermarking-vs-manual-screen-recording-monitoring-for-audit-readiness/'
   },
-);
+  {
+    key: 'evidence-access-live-session-masking-vs-manual-sensitive-field-blur-checklists',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-live-session-masking-vs-manuelle-sensitive-field-blur-checklisten-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Live-Session-Masking vs. manuelle Sensitive-Field-Blur-Checklisten für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestütztes Live-Session-Masking gegen manuelle Sensitive-Field-Blur-Checklisten in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Live-Session-Masking vs. manuelle Sensitive-Field-Blur-Checklisten',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Präventionswirkung, Containment-Geschwindigkeit und auditfeste Incident-Lineage zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei präventiver Maskierung sensibler Felder statt manueller Blur-Vorbereitung', 'Kriterien für konsistente Eskalation und schnellere Containment-Entscheidungen bei Expositionsrisiken', 'Pilot-Framework zur Reduktion manueller Forensik- und Checklistenlast unter Auditdruck'],
+    enPath: '/compare/ai-compliance-training-evidence-access-live-session-masking-vs-manual-sensitive-field-blur-checklists-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-live-session-masking-vs-manual-sensitive-field-blur-checklists',
+    locale: 'es',
+    slug: 'masking-live-session-acceso-evidencia-training-compliance-ia-vs-checklists-manuales-sensitive-field-blur-audit-readiness',
+    title: 'Masking en vivo de sesiones para acceso a evidencia de training compliance con IA vs. checklists manuales de sensitive-field blur para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan masking en vivo con IA frente a checklists manuales de difuminado de campos sensibles en acceso a evidencia.',
+    h1: 'Masking en vivo con IA vs. checklists manuales de sensitive-field blur',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar prevención, velocidad de contención y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para prevenir exposición de campos sensibles antes de compartir evidencia', 'Criterios operativos para escalar de forma consistente y contener incidentes con menor latencia', 'Marco de piloto para reducir carga manual de checklist y retrabajo forense en auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-live-session-masking-vs-manual-sensitive-field-blur-checklists-for-audit-readiness/'
+  }
+)
 
 
 export function getLocalizedFaq(locale) {
