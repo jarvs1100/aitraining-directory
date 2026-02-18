@@ -2463,6 +2463,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar trazabilidad, disciplina de excepciones y defensibilidad audit-ready entre ambos modelos.',
     points: ['Comparativa de completitud de lineage por sesión en contextos de auditoría', 'Criterios operativos para calidad de aprobación y control de excepciones', 'Marco de piloto para reducir retrabajo en paquetes de evidencia'],
     enPath: '/compare/ai-compliance-training-evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-watermarking-enforcement-vs-manual-export-labeling',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-watermarking-enforcement-vs-manuelles-export-labeling-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access-Watermarking-Enforcement vs. manuelles Export-Labeling für Audit-Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Watermarking-Enforcement-Kontrollen gegen manuelles Export-Labeling in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Watermarking-Enforcement vs. manuelles Export-Labeling für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Kennzeichnungsdisziplin, Traceability und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich von Labeling-Konsistenz bei hohem Exportvolumen', 'Kriterien für sauberere Chain-of-Custody und geringere Leakage-Risiken', 'Pilot-Framework für Ausnahmehandling und auditfeste Governance'],
+    enPath: '/compare/ai-compliance-training-evidence-access-watermarking-enforcement-vs-manual-export-labeling-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-watermarking-enforcement-vs-manual-export-labeling',
+    locale: 'es',
+    slug: 'enforcement-watermarking-acceso-evidencia-training-compliance-ia-vs-labeling-manual-exports-audit-readiness',
+    title: 'Enforcement de watermarking para acceso a evidencia en training compliance con IA vs. labeling manual de exports para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de watermarking enforcement con IA frente a labeling manual de exportaciones de evidencia.',
+    h1: 'Watermarking enforcement con IA vs. labeling manual de exports en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar consistencia de control, trazabilidad de exportaciones y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de cobertura de etiquetado en compartidos de evidencia sensibles', 'Criterios operativos para reducir excepciones y reprocesos en auditoría', 'Marco de piloto para ownership, escalado y controles de fuga de datos'],
+    enPath: '/compare/ai-compliance-training-evidence-access-watermarking-enforcement-vs-manual-export-labeling-for-audit-readiness/'
   }
 );
 
