@@ -866,6 +866,22 @@ const supplementalComparisonContentBySlug = {
       'Choose the model with lower friction per audit-defensible attestation closure, not the one with the longest email trail.'
     ]
   },
+  'ai-compliance-training-evidence-access-peer-group-deviation-alerting-vs-manual-monthly-access-pattern-benchmarking-for-audit-readiness': {
+    decisionMatrix: [
+      { criterion: 'Detection speed for abnormal access patterns inside peer cohorts', weight: '25%', whatGoodLooksLike: 'Risky outliers are surfaced fast enough to contain exposure before audit exceptions accumulate.', leftLens: 'Measure median time from cohort deviation emergence to analyst-ready alert with user, role, and asset context.', rightLens: 'Measure time to identify outliers when teams wait for monthly benchmark sessions and static report reviews.' },
+      { criterion: 'Analyst precision and triage efficiency', weight: '25%', whatGoodLooksLike: 'Reviewers can focus on high-signal incidents instead of broad, low-confidence anomaly queues.', leftLens: 'Assess precision controls, peer-group baselining quality, and suppression tuning that reduces false escalations.', rightLens: 'Assess manual benchmarking quality when analysts compare spreadsheets and infer drift without continuous scoring.' },
+      { criterion: 'Escalation consistency for high-risk deviations', weight: '20%', whatGoodLooksLike: 'Similar deviation classes trigger repeatable containment actions with named accountable owners.', leftLens: 'Evaluate policy-linked playbooks, SLA timers, and automated owner routing for deviation severity bands.', rightLens: 'Evaluate consistency of follow-through from monthly review notes, ad-hoc email escalations, and manual ownership handoffs.' },
+      { criterion: 'Audit-defensible lineage from alert to closure', weight: '15%', whatGoodLooksLike: 'Auditors can trace why a deviation was flagged, who acted, and how closure evidence was validated.', leftLens: 'Validate immutable alert history, peer-baseline versioning, and decision logs mapped to control requirements.', rightLens: 'Validate reconstructability from workshop slides, spreadsheet snapshots, and fragmented follow-up messages.' },
+      { criterion: 'Cost per closed deviation incident', weight: '15%', whatGoodLooksLike: 'Per-incident handling cost drops while closure quality and SLA adherence improve.', leftLens: 'Model platform + governance overhead against reduced analyst review load and fewer late-stage remediations.', rightLens: 'Model lower tooling spend against recurring manual benchmarking labor and delayed incident containment.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-sensitivity evidence-access cohort for 30 days with both governance models and one shared incident taxonomy.',
+      'Use one scorecard: deviation-detection latency, precision at triage, containment SLA adherence, and auditor follow-up count.',
+      'Define cohort-baseline ownership, acceptable deviation thresholds, and non-bypassable escalation rules before rollout.',
+      'Assign RACI across access-governance owner, compliance operations lead, training ops analyst, and internal audit reviewer.',
+      'Choose the model with lower friction per audit-defensible deviation closure, not the model with the most monthly reporting cadence.'
+    ]
+  },
   'ai-compliance-training-evidence-access-behavioral-baseline-drift-detection-vs-manual-biweekly-access-review-workshops-for-audit-readiness': {
     decisionMatrix: [
       { criterion: 'Detection latency for risky evidence-access behavior drift', weight: '25%', whatGoodLooksLike: 'Potentially risky access-pattern drift is detected and triaged before it turns into audit findings.', leftLens: 'Measure median time from baseline deviation to analyst-ready alert with context on user, asset sensitivity, and behavior trajectory.', rightLens: 'Measure time to detect drift when teams rely on biweekly workshop reviews of static access logs and anecdotal signals.' },
@@ -944,6 +960,12 @@ const implementationPlaybookBySlug = {
     'Run side-by-side change-approval drills (AI orchestration vs manual signoff chains) across two risk tiers.',
     'Track cycle time, policy-deviation defects, reviewer rework, and escalation misses under one governance rubric.',
     'Promote only after validating approval lineage, override accountability, and audit packet reconstruction speed.'
+  ],
+  'ai-compliance-training-evidence-access-peer-group-deviation-alerting-vs-manual-monthly-access-pattern-benchmarking-for-audit-readiness': [
+    'Scope one high-sensitivity evidence-access cohort and baseline current outlier-detection latency plus analyst review effort.',
+    'Run side-by-side governance for 30 days (AI peer-group deviation alerting vs monthly benchmarking reviews).',
+    'Track detection latency, triage precision, containment SLA adherence, and remediation reopen rate under one rubric.',
+    'Promote only after validating alert lineage, owner accountability, and audit packet reconstruction speed.'
   ],
   'ai-compliance-training-control-owner-attestations-vs-manual-manager-confirmation-emails': [
     'Scope one attestation-heavy compliance program and baseline late-closure volume plus reminder burden.',
@@ -1286,6 +1308,8 @@ const jsonLd = {
     @media (max-width: 520px) {
       .matrix-scroll-cue {
         display: block;
+        font-size: 0.84rem;
+        color: #0f172a;
       }
 
       .matrix-table-wrap {
@@ -1300,7 +1324,19 @@ const jsonLd = {
         position: sticky;
         top: 0;
         z-index: 3;
-        box-shadow: inset 0 -1px 0 #86efac;
+        background: #bbf7d0;
+        box-shadow: inset 0 -2px 0 #15803d;
+      }
+
+      .matrix-table th:first-child,
+      .matrix-table td:first-child {
+        min-width: 185px;
+      }
+
+      .matrix-table td:first-child {
+        font-weight: 600;
+        color: #0f172a;
+        line-height: 1.45;
       }
     }
 
