@@ -5354,3 +5354,19 @@ Result: HTTPS remains healthy on apex + www redirect path after delegation step-
   - `https://www.aitraining.directory` → `HTTP/2 301` redirect to `https://aitraining.directory/`
 
 Result: HTTPS remains healthy on apex + www redirect path after delegation scope-drift route, i18n parity, and mobile UX updates.
+
+## Evidence delta — 2026-02-18 06:11 UTC
+
+- `npm run qa:https` → ✅ passed (`386 HTML files` checked).
+- DNS:
+  - `aitraining.directory` A records resolve to GitHub Pages IP set (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`).
+  - `www.aitraining.directory` resolves via `jarvs1100.github.io` and same GitHub Pages IP set.
+- TLS (`openssl s_client`):
+  - Subject: `CN = www.aitraining.directory`
+  - Issuer: `Let's Encrypt R12`
+  - Validity: `notBefore=Feb 17 09:20:45 2026 GMT`, `notAfter=May 18 09:20:44 2026 GMT`
+- HTTPS behavior:
+  - `https://aitraining.directory` → `HTTP/2 200` (Last-Modified: `Wed, 18 Feb 2026 05:57:29 GMT`)
+  - `https://www.aitraining.directory` → `HTTP/2 301` redirect to `https://aitraining.directory/`
+
+Result: HTTPS remains healthy on apex + www redirect path after delegation policy-version-lock route, i18n parity, and mobile UX updates.
