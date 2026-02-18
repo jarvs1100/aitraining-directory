@@ -502,6 +502,23 @@ const comparisonContentBySlug = {
     ]
   },
 
+  'ai-compliance-training-evidence-access-dual-approval-workflows-vs-manual-single-approver-exceptions-for-audit-readiness': {
+    decisionMatrix: [
+      { criterion: 'Approval-cycle speed for high-risk evidence requests', weight: '25%', whatGoodLooksLike: 'Sensitive evidence requests are approved or denied within SLA without bypassing controls.', leftLens: 'Measure time from intake to dual-approval closure with role-aware routing, SLA timers, and escalation handoffs.', rightLens: 'Measure cycle time when urgent requests are handled via single-approver exceptions and ad-hoc inbox follow-ups.' },
+      { criterion: 'Decision consistency across approvers and regions', weight: '25%', whatGoodLooksLike: 'Equivalent high-risk access requests receive consistent outcomes mapped to policy and risk tier.', leftLens: 'Assess policy-rule enforcement, required rationale capture, and override governance across primary/secondary approvers.', rightLens: 'Assess variance when one approver interprets policy alone under deadline pressure.' },
+      { criterion: 'Audit traceability of approval lineage', weight: '20%', whatGoodLooksLike: 'Teams can prove who approved, why, and under which policy version in minutes.', leftLens: 'Evaluate immutable approval lineage with source-linked context, dual signoff timestamps, and exception evidence.', rightLens: 'Evaluate reconstructability when rationale is split across inbox threads, tickets, and spreadsheet comments.' },
+      { criterion: 'Control resilience during peak audit windows', weight: '15%', whatGoodLooksLike: 'Approval governance remains stable during audit spikes without exception backlogs.', leftLens: 'Track effort for routing-rule tuning, false-escalation triage, and governance QA cadence.', rightLens: 'Track recurring labor for reminder chasing, exception cleanup, and reviewer coordination fire drills.' },
+      { criterion: 'Cost per audit-defensible access approval', weight: '15%', whatGoodLooksLike: 'Cost per approved/denied request declines while control quality and closure confidence improve.', leftLens: 'Model platform + governance overhead against fewer exception defects, faster closure, and lower pre-audit rework.', rightLens: 'Model lower tooling spend against manual coordination labor, inconsistent approvals, and remediation overhead.' }
+    ],
+    buyingCriteria: [
+      'Run a 30-day pilot on one sensitive evidence domain with frequent urgent access requests and at least one upcoming audit sample.',
+      'Use one scorecard: approval cycle time, exception rate, dual-signoff defect rate, and reviewer-hours per request.',
+      'Define non-bypassable controls for second-approver requirements, break-glass paths, and override ownership before rollout.',
+      'Assign RACI across compliance owner, training-ops lead, system admin, and internal audit reviewer for each approval stage.',
+      'Choose the model with lower governance friction per audit-defensible approval, not the model that looks fastest in one-off exceptions.'
+    ]
+  },
+
   'ai-compliance-training-evidence-access-least-privilege-attestation-vs-manual-annual-access-certifications-for-audit-readiness': {
     decisionMatrix: [
       { criterion: 'Privilege-creep detection latency', weight: '25%', whatGoodLooksLike: 'Excess evidence access is detected and corrected before it becomes an audit or data-exposure finding.', leftLens: 'Measure time from role/scope drift signal to least-privilege attestation, owner action, and verified closure.', rightLens: 'Measure detection lag when excess access is only reviewed in annual certification windows and manual exception logs.' },
@@ -1775,10 +1792,13 @@ const jsonLd = {
 
       .matrix-card h3 {
         font-size: 0.98rem;
-        line-height: 1.38;
+        line-height: 1.42;
         letter-spacing: -0.01em;
         overflow-wrap: anywhere;
         text-wrap: pretty;
+        margin-bottom: 0.66rem;
+        padding-bottom: 0.6rem;
+        border-bottom: 1px solid #7f95b0;
       }
 
       .matrix-card p {
@@ -1792,7 +1812,9 @@ const jsonLd = {
       }
 
       .matrix-card p + p {
-        margin-top: 0.56rem;
+        margin-top: 0.62rem;
+        padding-top: 0.62rem;
+        border-top: 1px solid #9aaec7;
       }
 
       .next-step-actions {

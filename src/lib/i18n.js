@@ -2391,6 +2391,31 @@ localizedLandingPages.push(
   }
 );
 
+localizedLandingPages.push(
+  {
+    key: 'evidence-access-dual-approval-vs-manual-single-approver-exceptions',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-dual-approval-workflows-vs-manuelle-single-approver-exceptions-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Dual-Approval-Workflows vs. manuelle Single-Approver-Exceptions für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Dual-Approval-Workflows für Evidence Access gegen manuelle Single-Approver-Exceptions vergleichen.',
+    h1: 'KI-Dual-Approval-Workflows vs. manuelle Single-Approver-Exceptions für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Approval-SLA, Entscheidungs-Konsistenz und auditfeste Nachvollziehbarkeit zwischen beiden Freigabemodellen zu bewerten.',
+    points: ['Vergleich von Approval-Cycle-Time bei sensiblen Evidence-Access-Requests unter Auditdruck', 'Messbare Kriterien für konsistente Policy-Entscheidungen, Override-Governance und Escalation-Ownership', 'Pilot-Framework für duale Signoff-Qualität, Exception-Rate und defensible Approval-Lineage'],
+    enPath: '/compare/ai-compliance-training-evidence-access-dual-approval-workflows-vs-manual-single-approver-exceptions-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-dual-approval-vs-manual-single-approver-exceptions',
+    locale: 'es',
+    slug: 'workflows-dual-approval-acceso-evidencia-training-compliance-ia-vs-excepciones-manuales-single-approver-audit-readiness',
+    title: 'Workflows dual-approval de acceso a evidencia en training compliance con IA vs. excepciones manuales single-approver para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan workflows dual-approval con IA frente a excepciones manuales de single approver en acceso a evidencia.',
+    h1: 'Workflows dual-approval con IA vs. excepciones manuales single-approver en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de aprobación, consistencia de decisiones y trazabilidad defendible entre ambos enfoques.',
+    points: ['Comparativa de cycle-time de aprobación para solicitudes sensibles de acceso a evidencia', 'Criterios operativos para consistencia de política, gobernanza de overrides y ownership de escalados', 'Marco de piloto para calidad de doble signoff, tasa de excepciones y lineage de aprobación audit-ready'],
+    enPath: '/compare/ai-compliance-training-evidence-access-dual-approval-workflows-vs-manual-single-approver-exceptions-for-audit-readiness/'
+  }
+);
+
 export function getLocalizedFaq(locale) {
   const localized = {
     pl: [
