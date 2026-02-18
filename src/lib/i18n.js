@@ -2839,6 +2839,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar conflictos SoD, velocidad de escalado e integridad de aprobación audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para detectar temprano conflictos entre delegados y aprobadores suplentes', 'Criterios operativos para escalar con consistencia en lugar de aplicar overrides ad hoc bajo presión de auditoría', 'Marco de piloto para reducir violaciones SoD sin frenar aprobaciones críticas de acceso a evidencia'],
     enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-conflict-detection-vs-manual-backup-approver-overrides-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-quorum-enforcement-vs-manual-single-backup-signoffs',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-delegation-quorum-enforcement-vs-manuelle-single-backup-signoffs-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Approval-Delegation-Quorum-Enforcement vs. manuelle Single-Backup-Signoffs für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Quorum-Durchsetzung bei Delegationsfreigaben gegen manuelle Single-Backup-Signoffs in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Delegations-Quorum-Enforcement vs. manuelle Single-Backup-Signoffs',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Vier-Augen-Integrität, Freigabe-SLA-Stabilität und auditfeste Approval-Lineage zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei erzwungener Mehrfachfreigabe statt einzelner Backup-Signoffs unter Zeitdruck', 'Kriterien für konsistente Eskalation bei fehlendem Quorum ohne Verzögerung kritischer Audit-Requests', 'Pilot-Framework zur Reduktion von Single-Point-Approval-Risiken bei gleichzeitiger SLA-Stabilität'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-quorum-enforcement-vs-manual-single-backup-signoffs-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-quorum-enforcement-vs-manual-single-backup-signoffs',
+    locale: 'es',
+    slug: 'enforcement-quorum-delegacion-aprobacion-acceso-evidencia-training-compliance-ia-vs-signoffs-manuales-single-backup-audit-readiness',
+    title: 'Enforcement de quorum en delegación de aprobación para acceso a evidencia de training compliance con IA vs. signoffs manuales de single backup para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan enforcement de quorum en delegación con IA frente a signoffs manuales de backup único en acceso a evidencia.',
+    h1: 'Enforcement de quorum con IA vs. signoffs manuales de single backup',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar integridad de doble control, estabilidad SLA e integridad de aprobación audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para exigir aprobaciones múltiples frente a signoffs únicos bajo presión de auditoría', 'Criterios operativos para escalar con consistencia cuando no se cumple quorum sin frenar solicitudes críticas', 'Marco de piloto para reducir riesgo de aprobación en punto único manteniendo velocidad operativa'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-quorum-enforcement-vs-manual-single-backup-signoffs-for-audit-readiness/'
   }
 )
 

@@ -5239,3 +5239,70 @@ Location: http://aitraining.directory/
 - HTTPS remains healthy (`HTTP/2 200` on apex, valid Let's Encrypt chain).
 - `www` continues redirecting to apex over HTTPS as expected.
 - HTTP behavior remains active (`200` apex + `301` www→apex) with current Last-Modified freshness at `04:42:04 UTC`.
+
+---
+
+## Evidence delta — 2026-02-18 05:10 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 374 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS / HTTP behavior
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+Last-Modified: Wed, 18 Feb 2026 04:57:50 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+Location: https://aitraining.directory/
+
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+Last-Modified: Wed, 18 Feb 2026 04:57:50 GMT
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+Location: http://aitraining.directory/
+```
+
+### Current delta summary
+- HTTPS remains valid with Let's Encrypt (`R12`) and apex serves `HTTP/2 200`.
+- `www` continues redirecting to apex over HTTPS.
+- Deploy freshness currently reflects `Last-Modified: 04:57:50 UTC`.
