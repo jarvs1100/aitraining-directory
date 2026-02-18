@@ -2883,6 +2883,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar deriva de aprobación, SLAs de revalidación y continuidad de gobernanza audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para reactivar aprobación cuando cambian umbrales de riesgo, sensibilidad o tiempo', 'Criterios operativos para escalar con consistencia cuando delegaciones siguen activas sin revalidación', 'Marco de piloto para reducir delegaciones obsoletas sin frenar solicitudes críticas de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-reapproval-thresholds-vs-manual-one-time-delegate-approvals-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-step-up-revalidation-vs-manual-manager-discretion-reapprovals',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-delegation-step-up-revalidation-vs-manuelle-manager-discretion-reapprovals-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Approval-Delegation-Step-Up-Revalidation vs. manuelle Manager-Discretion-Reapprovals für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Step-up-Revalidierung bei Delegationsfreigaben gegen manuelle, ermessensbasierte Manager-Reapprovals in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Step-up-Revalidierung vs. manuelle Manager-Discretion-Reapprovals',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Risikostufen-Konsistenz, Eskalationsqualität und auditfeste Freigabe-Kontinuität zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei erzwungener Step-up-Revalidierung statt uneinheitlicher Ermessensentscheidungen', 'Kriterien für konsistente Eskalation bei geänderten Risiko- oder Sensitivitätsprofilen', 'Pilot-Framework zur Reduktion von Reapproval-Drift ohne Verzögerung kritischer Audit-Requests'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-step-up-revalidation-vs-manual-manager-discretion-reapprovals-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-step-up-revalidation-vs-manual-manager-discretion-reapprovals',
+    locale: 'es',
+    slug: 'step-up-revalidacion-delegacion-aprobacion-acceso-evidencia-training-compliance-ia-vs-reaprobaciones-manuales-manager-discretion-audit-readiness',
+    title: 'Step-up revalidación en delegación de aprobación para acceso a evidencia de training compliance con IA vs. reaprobaciones manuales por manager discretion para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan step-up revalidación con IA frente a reaprobaciones manuales basadas en discreción del manager en acceso a evidencia.',
+    h1: 'Step-up revalidación con IA vs. reaprobaciones manuales por manager discretion',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar consistencia por nivel de riesgo, calidad de escalado y continuidad de aprobación audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para imponer revalidación step-up cuando cambian umbrales de riesgo o sensibilidad', 'Criterios operativos para escalar con consistencia y reducir variabilidad por criterio individual', 'Marco de piloto para reducir deriva de reaprobación sin frenar solicitudes críticas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-step-up-revalidation-vs-manual-manager-discretion-reapprovals-for-audit-readiness/'
   }
 )
 
