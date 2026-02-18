@@ -2861,6 +2861,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar integridad de doble control, estabilidad SLA e integridad de aprobación audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para exigir aprobaciones múltiples frente a signoffs únicos bajo presión de auditoría', 'Criterios operativos para escalar con consistencia cuando no se cumple quorum sin frenar solicitudes críticas', 'Marco de piloto para reducir riesgo de aprobación en punto único manteniendo velocidad operativa'],
     enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-quorum-enforcement-vs-manual-single-backup-signoffs-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-reapproval-thresholds-vs-manual-one-time-delegate-approvals',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-delegation-reapproval-thresholds-vs-manuelle-one-time-delegate-approvals-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Approval-Delegation-Reapproval-Thresholds vs. manuelle One-Time-Delegate-Approvals für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Reapproval-Schwellen in Delegationsfreigaben gegen manuelle einmalige Delegate-Genehmigungen in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Reapproval-Thresholds vs. manuelle One-Time-Delegate-Approvals',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Approval-Drift, Revalidierungs-SLAs und auditfeste Governance-Kontinuität zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei automatischer Reapproval-Auslösung bei veränderten Risiko-, Daten- oder Zeit-Schwellen', 'Kriterien für konsistente Eskalation, wenn Delegationsgenehmigungen ohne Revalidierung weiterlaufen', 'Pilot-Framework zur Reduktion stale Delegationsrechte ohne Verzögerung kritischer Audit-Requests'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-reapproval-thresholds-vs-manual-one-time-delegate-approvals-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-reapproval-thresholds-vs-manual-one-time-delegate-approvals',
+    locale: 'es',
+    slug: 'umbrales-reaprobacion-delegacion-aprobacion-acceso-evidencia-training-compliance-ia-vs-aprobaciones-manuales-one-time-delegate-audit-readiness',
+    title: 'Umbrales de reaprobación en delegación de aprobación para acceso a evidencia de training compliance con IA vs. aprobaciones manuales one-time delegate para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan umbrales de reaprobación con IA frente a aprobaciones manuales de delegado único en acceso a evidencia.',
+    h1: 'Umbrales de reaprobación con IA vs. aprobaciones manuales one-time delegate',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar deriva de aprobación, SLAs de revalidación y continuidad de gobernanza audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para reactivar aprobación cuando cambian umbrales de riesgo, sensibilidad o tiempo', 'Criterios operativos para escalar con consistencia cuando delegaciones siguen activas sin revalidación', 'Marco de piloto para reducir delegaciones obsoletas sin frenar solicitudes críticas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-reapproval-thresholds-vs-manual-one-time-delegate-approvals-for-audit-readiness/'
   }
 )
 
