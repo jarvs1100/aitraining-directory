@@ -2817,6 +2817,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar deriva de permisos, velocidad de revocación y trazabilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para caducar delegaciones al cerrar solicitudes de evidencia de auditoría', 'Criterios operativos para cumplir SLAs de revocación y escalar excepciones de permisos vencidos', 'Marco de piloto para reducir accesos delegados persistentes sin frenar respuestas críticas de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-expiry-controls-vs-manual-standing-delegate-access-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-conflict-detection-vs-manual-backup-approver-overrides',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-delegation-conflict-detection-vs-manuelle-backup-approver-overrides-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Approval-Delegation-Conflict-Detection vs. manuelle Backup-Approver-Overrides für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Konflikterkennung bei Delegationsgenehmigungen gegen manuelle Backup-Approver-Overrides in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Delegations-Konflikterkennung vs. manuelle Backup-Approver-Overrides',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, SoD-Konflikte, Eskalationsgeschwindigkeit und auditfeste Genehmigungsintegrität zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei frühzeitiger Erkennung kollidierender Delegations- und Genehmigerrollen', 'Kriterien für konsistente Step-up-Eskalation statt ad-hoc Backup-Overrides unter Auditdruck', 'Pilot-Framework zur Reduktion von SoD-Verletzungen ohne Verzögerung kritischer Evidence-Access-Freigaben'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-conflict-detection-vs-manual-backup-approver-overrides-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-conflict-detection-vs-manual-backup-approver-overrides',
+    locale: 'es',
+    slug: 'deteccion-conflictos-delegacion-aprobacion-acceso-evidencia-training-compliance-ia-vs-overrides-manuales-backup-approver-audit-readiness',
+    title: 'Detección de conflictos de delegación de aprobación en acceso a evidencia de training compliance con IA vs. overrides manuales de backup approver para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan detección de conflictos en delegación con IA frente a overrides manuales de aprobador suplente en acceso a evidencia.',
+    h1: 'Detección de conflictos de delegación con IA vs. overrides manuales de backup approver',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar conflictos SoD, velocidad de escalado e integridad de aprobación audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para detectar temprano conflictos entre delegados y aprobadores suplentes', 'Criterios operativos para escalar con consistencia en lugar de aplicar overrides ad hoc bajo presión de auditoría', 'Marco de piloto para reducir violaciones SoD sin frenar aprobaciones críticas de acceso a evidencia'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-conflict-detection-vs-manual-backup-approver-overrides-for-audit-readiness/'
   }
 )
 
