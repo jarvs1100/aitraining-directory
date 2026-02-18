@@ -4356,3 +4356,72 @@ location: https://aitraining.directory/
 - HTTPS remains valid end-to-end (Let's Encrypt `R12`) for custom-domain traffic.
 - Apex serves `HTTP/2 200`; `https://www` continues to redirect to HTTPS apex.
 - Deploy freshness advanced (`Last-Modified: 00:42:25 UTC`) and build-level HTTPS QA passed for 323 generated HTML pages.
+
+---
+
+## Evidence delta — 2026-02-18 01:10 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 326 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.109.153
+185.199.110.153
+185.199.111.153
+185.199.108.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests
+```bash
+curl -I https://aitraining.directory
+HTTP/2 200
+server: GitHub.com
+last-modified: Wed, 18 Feb 2026 01:10:30 GMT
+
+curl -I https://www.aitraining.directory
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### HTTP behavior
+```bash
+curl -I http://aitraining.directory
+HTTP/1.1 200 OK
+
+curl -I http://www.aitraining.directory
+HTTP/1.1 301 Moved Permanently
+```
+
+### Current delta summary
+- SSL remains healthy with active Let's Encrypt issuance (`R12`) and valid HTTPS responses.
+- Apex returns `HTTP/2 200`; `www` cleanly redirects to canonical apex over HTTPS.
+- Deployment freshness advanced (`Last-Modified: Wed, 18 Feb 2026 01:10:30 GMT`).
