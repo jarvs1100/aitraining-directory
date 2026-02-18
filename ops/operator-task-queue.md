@@ -2,8 +2,8 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
-- [x] Add one traffic-driving high-intent compare route for evidence-access governance: `/compare/ai-compliance-training-evidence-access-browser-isolation-controls-vs-manual-vdi-policy-guidelines-for-audit-readiness/` with implementation-led rubric + FAQ schema.
-- [x] Create distribution asset pack for the new evidence-access-browser-isolation-controls route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
-- [x] Add i18n parity stubs for the new evidence-access-browser-isolation-controls route on `/de` and `/es` localized hubs with canonical compare linkage.
-- [x] Mobile UX polish pass: improve compare-page implementation-playbook checklist scanability and tap rhythm on 320–360px screens.
+- [x] Add one traffic-driving high-intent compare route for evidence-access governance: `/compare/ai-compliance-training-evidence-access-device-posture-enforcement-vs-manual-endpoint-compliance-checklists-for-audit-readiness/` with implementation-led rubric + FAQ schema.
+- [x] Create distribution asset pack for the new evidence-access-device-posture-enforcement route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new evidence-access-device-posture-enforcement route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [x] Mobile UX polish pass: improve compare-page implementation-playbook list-row touch readability and step-badge contrast on 320–360px screens.
 - [x] Re-run SSL readiness checks after latest changes and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.

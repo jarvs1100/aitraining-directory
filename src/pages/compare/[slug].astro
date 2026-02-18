@@ -1909,6 +1909,22 @@ const jsonLd = {
       }
     }
 
+    /* Device-posture batch polish: denser implementation-playbook rows remain thumb-readable on 320-360px */
+    @media (max-width: 360px) {
+      .section[aria-labelledby="implementation-playbook-heading"] li {
+        padding-block: 0.66rem;
+        padding-inline: 0.64rem;
+        line-height: 1.4;
+      }
+
+      .section[aria-labelledby="implementation-playbook-heading"] li::before {
+        width: 1.28rem;
+        height: 1.28rem;
+        font-size: 0.74rem;
+        margin-top: 0.08rem;
+      }
+    }
+
     /* Print-prevention readability polish for dense compare headers on very small phones */
     @media (max-width: 360px) {
       .matrix-scroll-cue {
