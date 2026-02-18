@@ -850,6 +850,11 @@ const supplementalComparisonContentBySlug = {
       'Choose the model with lower friction per audit-ready change approval decision, not the model with the longest signoff chain.'
     ]
   },
+
+  'ai-compliance-training-evidence-access-session-recording-watermarking-vs-manual-screen-recording-monitoring-for-audit-readiness': {
+    left: ['You need faster attribution with persistent watermark evidence and stronger deterrence for high-risk capture behavior.', 'Incident volume or data sensitivity is high enough that manual monitoring creates repeated delay and reconstruction risk.'],
+    right: ['Recording-risk volume is low and your manual monitoring workflow is currently consistent, documented, and auditable.', 'You can tolerate slower attribution while validating whether watermarking automation ROI justifies operating-model change.']
+  },
   'ai-compliance-training-control-owner-attestations-vs-manual-manager-confirmation-emails': {
     decisionMatrix: [
       { criterion: 'Attestation closure reliability before audit cutoffs', weight: '25%', whatGoodLooksLike: 'Required control-owner attestations are completed, approved, and timestamped before audit sample deadlines.', leftLens: 'Measure on-time closure with rule-based routing, deadline nudges, and escalation to named control owners.', rightLens: 'Measure closure reliability when attestations are collected through manual manager email confirmations and follow-up threads.' },
@@ -880,6 +885,23 @@ const supplementalComparisonContentBySlug = {
       'Define cohort-baseline ownership, acceptable deviation thresholds, and non-bypassable escalation rules before rollout.',
       'Assign RACI across access-governance owner, compliance operations lead, training ops analyst, and internal audit reviewer.',
       'Choose the model with lower friction per audit-defensible deviation closure, not the model with the most monthly reporting cadence.'
+    ]
+  },
+
+  'ai-compliance-training-evidence-access-session-recording-watermarking-vs-manual-screen-recording-monitoring-for-audit-readiness': {
+    decisionMatrix: [
+      { criterion: 'Deterrence strength for unauthorized evidence capture', weight: '25%', whatGoodLooksLike: 'Potentially risky capture behavior is discouraged before leakage events materialize.', leftLens: 'Measure deterrence lift from persistent user/session watermarking, capture-attribution confidence, and policy-triggered warnings.', rightLens: 'Measure deterrence when teams depend on periodic manual monitoring and user policy acknowledgments without pervasive watermark context.' },
+      { criterion: 'Detection and attribution speed after suspicious recording activity', weight: '25%', whatGoodLooksLike: 'Reviewers can identify who captured what, when, and from which session in minutes.', leftLens: 'Evaluate time from alert to attributed incident package with watermark evidence, session context, and asset sensitivity metadata.', rightLens: 'Evaluate time when investigators reconstruct incidents from manual screen-recording reviews, ticket notes, and endpoint logs.' },
+      { criterion: 'Escalation consistency and containment follow-through', weight: '20%', whatGoodLooksLike: 'Similar high-risk capture events trigger repeatable containment actions with named owners.', leftLens: 'Assess policy-linked escalation playbooks, SLA timers, and automated owner routing by severity tier.', rightLens: 'Assess consistency when containment depends on analyst interpretation across manual monitoring queues and ad-hoc escalation threads.' },
+      { criterion: 'Audit-defensible lineage from capture event to closure', weight: '15%', whatGoodLooksLike: 'Auditors can trace incident evidence, response actions, and closure rationale without reconstruction gaps.', leftLens: 'Validate immutable watermark/session logs, decision history, and control linkage across incident lifecycle stages.', rightLens: 'Validate reconstructability from monitoring checklists, meeting notes, and fragmented manual evidence artifacts.' },
+      { criterion: 'Cost per closed recording-governance incident', weight: '15%', whatGoodLooksLike: 'Per-incident handling cost declines while closure quality and SLA adherence improve.', leftLens: 'Model platform + governance overhead against reduced forensic effort and fewer unresolved attribution cases.', rightLens: 'Model lower tooling spend against recurring manual review labor, slower attribution, and higher rework under audit pressure.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-sensitivity evidence-access workflow for 30 days with both operating models and one shared incident taxonomy.',
+      'Use one scorecard: deterrence signal, attribution latency, containment SLA adherence, and auditor follow-up count.',
+      'Define watermark policy ownership, acceptable capture thresholds, and non-bypassable escalation rules before rollout.',
+      'Assign RACI across access-governance owner, compliance operations lead, training ops analyst, and internal audit reviewer.',
+      'Choose the model with lower friction per audit-defensible recording incident closure, not the model with the longest monitoring checklist.'
     ]
   },
   'ai-compliance-training-evidence-access-behavioral-baseline-drift-detection-vs-manual-biweekly-access-review-workshops-for-audit-readiness': {
@@ -960,6 +982,13 @@ const implementationPlaybookBySlug = {
     'Run side-by-side change-approval drills (AI orchestration vs manual signoff chains) across two risk tiers.',
     'Track cycle time, policy-deviation defects, reviewer rework, and escalation misses under one governance rubric.',
     'Promote only after validating approval lineage, override accountability, and audit packet reconstruction speed.'
+  ],
+
+  'ai-compliance-training-evidence-access-session-recording-watermarking-vs-manual-screen-recording-monitoring-for-audit-readiness': [
+    'Scope one high-sensitivity evidence-access flow and baseline current recording-incident attribution latency plus reviewer effort.',
+    'Run side-by-side governance for 30 days (AI watermarking-backed session recording vs manual screen-recording monitoring).',
+    'Track deterrence signal, attribution latency, containment SLA adherence, and remediation reopen rate under one rubric.',
+    'Promote only after validating incident lineage, owner accountability, and audit packet reconstruction speed.'
   ],
   'ai-compliance-training-evidence-access-peer-group-deviation-alerting-vs-manual-monthly-access-pattern-benchmarking-for-audit-readiness': [
     'Scope one high-sensitivity evidence-access cohort and baseline current outlier-detection latency plus analyst review effort.',
@@ -2084,6 +2113,25 @@ const jsonLd = {
 
       .decision-outcomes-list li::marker {
         font-size: 0.98em;
+      }
+    }
+
+    /* Session-recording watermarking batch polish: improve heading contrast + tap spacing on compact screens */
+    @media (max-width: 360px) {
+      .decision-outcomes-card {
+        background: linear-gradient(180deg, #ffffff 0%, #eef4ff 100%);
+        border-color: #bfdbfe;
+      }
+
+      #decision-outcomes-heading,
+      .decision-outcomes-subheading {
+        color: #0b2a5f;
+      }
+
+      .decision-outcomes-list li {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
       }
     }
 

@@ -5040,3 +5040,42 @@ accept-ranges: bytes
 age: 778
 date: Wed, 18 Feb 2026 03:55:41 GMT
 ```
+
+## Evidence delta — 2026-02-18 04:12 UTC
+
+### Build-level HTTPS QA
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 362 HTML files.
+```
+
+### Live HTTPS + redirect checks
+```bash
+curl -I https://aitraining.directory/
+HTTP/2 200
+
+curl -I https://www.aitraining.directory/
+HTTP/2 301
+location: https://aitraining.directory/
+```
+
+### TLS certificate snapshot
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### Deploy freshness signal
+```bash
+curl -I https://aitraining.directory/
+Last-Modified: Wed, 18 Feb 2026 03:56:44 GMT
+```
+
+### Status
+- HTTPS remains healthy on apex (`HTTP/2 200`) and `www` still canonical-redirects to apex over HTTPS.
+- Certificate coverage remains active via Let's Encrypt (`R12`) and continues to validate this deployment path.
