@@ -4849,3 +4849,36 @@ location: https://aitraining.directory/
 - HTTPS remains healthy on apex (`HTTP/2 200`) with valid Let's Encrypt chain.
 - `https://www` continues to redirect cleanly to HTTPS apex.
 - Static-site HTTPS QA remains green at 347 generated HTML files.
+## 2026-02-18 03:10 UTC Evidence Delta
+
+```bash
+npm run qa:https
+
+✅ HTTPS readiness QA passed
+Checked 350 HTML files.
+
+curl -I https://aitraining.directory | sed -n '1,6p'
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Wed, 18 Feb 2026 02:57:42 GMT
+access-control-allow-origin: *
+etag: "69952aa6-501b"
+
+curl -I https://www.aitraining.directory | sed -n '1,8p'
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: https://aitraining.directory/
+x-github-request-id: 4A74:653D7:6FFCFB:711D4D:6995269A
+accept-ranges: bytes
+age: 1805
+date: Wed, 18 Feb 2026 03:10:31 GMT
+
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+

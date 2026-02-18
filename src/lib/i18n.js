@@ -2641,6 +2641,28 @@ localizedLandingPages.push(
     enPath: '/compare/ai-compliance-training-evidence-access-network-segmentation-enforcement-vs-manual-vpn-access-exception-lists-for-audit-readiness/'
   },
   {
+    key: 'evidence-access-continuous-risk-scoring-vs-manual-monthly-access-risk-reports',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-continuous-risk-scoring-vs-manuelle-monatliche-access-risk-reports-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Continuous-Risk-Scoring vs. manuelle monatliche Access-Risk-Reports für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Continuous-Risk-Scoring-Kontrollen gegen manuelle monatliche Access-Risk-Reports in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Continuous-Risk-Scoring vs. manuelle monatliche Access-Risk-Reports für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Reaktionsgeschwindigkeit, Ausnahme-Drift und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei Echtzeit-Risikoerkennung statt verzögerter Monatsreports', 'Kriterien für konsistente Eskalation bei erhöhtem Access-Risk statt ad-hoc Nachverfolgung', 'Pilot-Framework für weniger Governance-Drift und schnellere Freigabeentscheidungen unter Auditdruck'],
+    enPath: '/compare/ai-compliance-training-evidence-access-continuous-risk-scoring-vs-manual-monthly-access-risk-reports-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-continuous-risk-scoring-vs-manual-monthly-access-risk-reports',
+    locale: 'es',
+    slug: 'scoring-continuo-riesgo-acceso-evidencia-training-compliance-ia-vs-reportes-manuales-riesgo-acceso-mensuales-audit-readiness',
+    title: 'Scoring continuo de riesgo de acceso a evidencia en training compliance con IA vs. reportes manuales mensuales de riesgo de acceso para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan scoring continuo de riesgo con IA frente a reportes manuales mensuales en acceso a evidencia.',
+    h1: 'Scoring continuo de riesgo con IA vs. reportes manuales mensuales de riesgo de acceso',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de respuesta, deriva de excepciones y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para detectar riesgo de acceso en tiempo real frente a ciclos mensuales', 'Criterios operativos para escalar riesgo elevado con consistencia y menor retrabajo', 'Marco de piloto para reducir deriva de permisos y acelerar decisiones durante ventanas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-continuous-risk-scoring-vs-manual-monthly-access-risk-reports-for-audit-readiness/'
+  },
+  {
     key: 'evidence-access-zero-trust-policy-enforcement-vs-manual-network-whitelist-reviews',
     locale: 'de',
     slug: 'ki-compliance-training-evidence-access-zero-trust-policy-enforcement-vs-manuelle-network-whitelist-reviews-audit-readiness',
