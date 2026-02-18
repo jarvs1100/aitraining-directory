@@ -865,6 +865,22 @@ const supplementalComparisonContentBySlug = {
       'Assign RACI across control owner, compliance lead, training ops, and internal audit reviewer.',
       'Choose the model with lower friction per audit-defensible attestation closure, not the one with the longest email trail.'
     ]
+  },
+  'ai-compliance-training-evidence-access-behavioral-baseline-drift-detection-vs-manual-biweekly-access-review-workshops-for-audit-readiness': {
+    decisionMatrix: [
+      { criterion: 'Detection latency for risky evidence-access behavior drift', weight: '25%', whatGoodLooksLike: 'Potentially risky access-pattern drift is detected and triaged before it turns into audit findings.', leftLens: 'Measure median time from baseline deviation to analyst-ready alert with context on user, asset sensitivity, and behavior trajectory.', rightLens: 'Measure time to detect drift when teams rely on biweekly workshop reviews of static access logs and anecdotal signals.' },
+      { criterion: 'Signal precision and reviewer triage quality', weight: '25%', whatGoodLooksLike: 'Reviewers spend most of their effort on high-value incidents, not false-positive noise.', leftLens: 'Evaluate precision/recall balance, suppression controls, and evidence context quality that supports fast risk decisions.', rightLens: 'Evaluate workshop-driven triage quality when reviewers manually interpret broad reports without continuous anomaly scoring.' },
+      { criterion: 'Containment speed and escalation consistency', weight: '20%', whatGoodLooksLike: 'High-risk drift cases trigger repeatable containment steps with clear owner accountability.', leftLens: 'Assess automated escalation paths to access owners, SLA timers, and policy-linked response playbooks.', rightLens: 'Assess consistency of action plans from workshop notes, follow-up emails, and manually assigned owners.' },
+      { criterion: 'Audit-defensible lineage for drift decisions', weight: '15%', whatGoodLooksLike: 'Auditors can trace why drift was flagged, how it was handled, and what evidence closed the case.', leftLens: 'Validate immutable alert history, baseline-version traceability, and decision logs mapped to policy controls.', rightLens: 'Validate reconstructability from meeting minutes, spreadsheet trackers, and fragmented manual follow-up artifacts.' },
+      { criterion: 'Cost per resolved drift incident', weight: '15%', whatGoodLooksLike: 'Per-incident handling cost declines while control quality and SLA adherence improve.', leftLens: 'Model platform + governance overhead against reduced manual review hours and fewer late-stage escalations.', rightLens: 'Model lower tooling spend against recurring workshop labor, delayed detection, and higher remediation rework.' }
+    ],
+    buyingCriteria: [
+      'Pilot one high-sensitivity evidence domain for 30 days with both approaches and one shared incident taxonomy.',
+      'Use one scorecard: detection latency, precision at triage, containment SLA adherence, and auditor follow-up count.',
+      'Define baseline ownership, acceptable-drift thresholds, and non-bypassable escalation rules before production rollout.',
+      'Assign RACI across access-governance owner, compliance operations lead, training ops analyst, and internal audit reviewer.',
+      'Choose the model with lower friction per audit-defensible drift closure, not the model with the most workshop cadence.'
+    ]
   }
 };
 
