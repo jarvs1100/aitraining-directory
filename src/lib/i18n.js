@@ -2441,6 +2441,31 @@ localizedLandingPages.push(
   }
 );
 
+localizedLandingPages.push(
+  {
+    key: 'evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-session-recording-controls-vs-manuelle-screen-capture-exceptions-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Session-Recording-Controls vs. manuelle Screen-Capture-Exceptions für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Session-Recording-Controls gegen manuelle Screen-Capture-Exceptions bei Evidence-Access vergleichen.',
+    h1: 'KI-Session-Recording-Controls vs. manuelle Screen-Capture-Exceptions für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Nachvollziehbarkeit, Ausnahme-Disziplin und Audit-Defensibility zwischen beiden Zugriffsmodellen zu bewerten.',
+    points: ['Vergleich von vollständiger Session-Lineage unter Auditdruck', 'Messbare Kriterien für Ausnahme-Governance und Freigabequalität', 'Pilot-Framework für weniger Rework bei auditrelevanten Evidence-Zugriffen'],
+    enPath: '/compare/ai-compliance-training-evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions',
+    locale: 'es',
+    slug: 'controles-session-recording-acceso-evidencia-training-compliance-ia-vs-excepciones-manuales-screen-capture-audit-readiness',
+    title: 'Controles de session recording para acceso a evidencia en training compliance con IA vs. excepciones manuales de screen capture para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de session recording con IA frente a excepciones manuales de capturas de pantalla en acceso a evidencia.',
+    h1: 'Controles de session recording con IA vs. excepciones manuales de screen capture en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar trazabilidad, disciplina de excepciones y defensibilidad audit-ready entre ambos modelos.',
+    points: ['Comparativa de completitud de lineage por sesión en contextos de auditoría', 'Criterios operativos para calidad de aprobación y control de excepciones', 'Marco de piloto para reducir retrabajo en paquetes de evidencia'],
+    enPath: '/compare/ai-compliance-training-evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions-for-audit-readiness/'
+  }
+);
+
 
 export function getLocalizedFaq(locale) {
   const localized = {

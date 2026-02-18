@@ -3155,3 +3155,44 @@ This week’s new comparison helps compliance and training-ops teams evaluate AI
 The framework is implementation-led: containment speed, policy consistency, traceability quality, operating burden, and cost per audit-defensible emergency approval.
 
 Read: https://aitraining.directory/compare/ai-compliance-training-evidence-access-emergency-break-glass-controls-vs-manual-urgent-access-overrides-for-audit-readiness/
+
+## Focus URL
+- Canonical: https://aitraining.directory/compare/ai-compliance-training-evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions-for-audit-readiness/
+
+## LinkedIn post draft
+**Headline:** Session-recording controls vs manual screen-capture exceptions: what actually holds up in audit?
+
+When evidence-access reviews get urgent, teams often default to screenshots and one-off capture exceptions.
+
+That usually creates weak traceability and hard-to-defend approval trails.
+
+We published a practical comparison for compliance and training-ops teams:
+https://aitraining.directory/compare/ai-compliance-training-evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions-for-audit-readiness/
+
+Use the rubric to evaluate control consistency, lineage quality, remediation effort, and cost per audit-defensible access session.
+
+## X/Twitter hook + thread starter
+**Post 1:**
+Screenshots feel fast.
+But manual capture exceptions can break evidence lineage.
+
+New comparison:
+AI session-recording controls vs manual screen-capture exceptions for evidence-access audit readiness
+https://aitraining.directory/compare/ai-compliance-training-evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions-for-audit-readiness/
+
+**Post 2:**
+Pilot checklist:
+1) Track percentage of access sessions with complete, reviewable lineage
+2) Measure exception approvals and post-review rework time
+3) Compare audit packet acceptance rate on first submission
+
+Pick the model with lower governance friction per defensible evidence-access session.
+
+## Newsletter blurb
+**Subject option:** Session-recording controls or manual screen-capture exceptions for evidence access?
+
+This week’s new comparison helps compliance and training-ops teams evaluate AI session-recording controls against manual screen-capture exceptions for audit-readiness evidence governance.
+
+The framework is implementation-led: control consistency, traceability quality, escalation reliability, operating burden, and cost per audit-defensible session.
+
+Read: https://aitraining.directory/compare/ai-compliance-training-evidence-access-session-recording-controls-vs-manual-screen-capture-exceptions-for-audit-readiness/
