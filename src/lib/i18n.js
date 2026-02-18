@@ -2485,6 +2485,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar consistencia de control, trazabilidad de exportaciones y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de cobertura de etiquetado en compartidos de evidencia sensibles', 'Criterios operativos para reducir excepciones y reprocesos en auditoría', 'Marco de piloto para ownership, escalado y controles de fuga de datos'],
     enPath: '/compare/ai-compliance-training-evidence-access-watermarking-enforcement-vs-manual-export-labeling-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-download-prevention-controls-vs-manual-export-policy-reminders',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-download-prevention-controls-vs-manuelle-export-policy-erinnerungen-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Download-Prevention-Controls vs. manuelle Export-Policy-Erinnerungen für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Download-Prevention-Controls gegen manuelle Export-Policy-Erinnerungen in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Download-Prevention-Controls vs. manuelle Export-Policy-Erinnerungen für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Leakage-Risikoreduktion, Ausnahme-Governance und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei der Verhinderung riskanter Evidence-Downloads', 'Kriterien für konsistente Ausnahmefreigaben und sauberere Entscheidungslineage', 'Pilot-Framework für geringeren manuellen Aufwand bei auditrelevanten Access-Anfragen'],
+    enPath: '/compare/ai-compliance-training-evidence-access-download-prevention-controls-vs-manual-export-policy-reminders-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-download-prevention-controls-vs-manual-export-policy-reminders',
+    locale: 'es',
+    slug: 'controles-prevencion-descargas-acceso-evidencia-training-compliance-ia-vs-recordatorios-manuales-export-policy-audit-readiness',
+    title: 'Controles de prevención de descargas para acceso a evidencia en training compliance con IA vs. recordatorios manuales de políticas de exportación para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de prevención de descargas con IA frente a recordatorios manuales de políticas de exportación en acceso a evidencia.',
+    h1: 'Controles de prevención de descargas con IA vs. recordatorios manuales de política de exportación en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar reducción de riesgo de fuga, calidad de gobernanza de excepciones y defensibilidad audit-ready entre ambos modelos.',
+    points: ['Comparativa de efectividad para bloquear descargas de evidencia de alto riesgo', 'Criterios operativos para aprobaciones de excepción con trazabilidad defendible', 'Marco de piloto para reducir carga manual y retrabajo en solicitudes de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-download-prevention-controls-vs-manual-export-policy-reminders-for-audit-readiness/'
   }
 );
 
