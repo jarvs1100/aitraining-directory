@@ -2795,6 +2795,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar prevención, velocidad de contención y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para prevenir exposición de campos sensibles antes de compartir evidencia', 'Criterios operativos para escalar de forma consistente y contener incidentes con menor latencia', 'Marco de piloto para reducir carga manual de checklist y retrabajo forense en auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-live-session-masking-vs-manual-sensitive-field-blur-checklists-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-expiry-controls-vs-manual-standing-delegate-access',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-delegation-expiry-controls-vs-manueller-standing-delegate-access-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Approval-Delegation-Expiry-Controls vs. manueller Standing-Delegate-Access für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Delegations-Ablaufkontrollen gegen manuelle dauerhafte Delegate-Zugriffe in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Delegations-Ablaufkontrollen vs. manueller Standing-Delegate-Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Entitlement-Drift, Widerrufstempo und auditfeste Genehmigungs-Traceability zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei automatischem Ablauf von Delegationsrechten nach Abschluss von Audit-Anfragen', 'Kriterien für konsistente Widerrufs-SLAs und saubere Eskalation bei überfälligen Delegate-Rechten', 'Pilot-Framework zur Reduktion dauerhaft privilegierter Zugriffe ohne Verzögerung kritischer Audit-Workflows'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-expiry-controls-vs-manual-standing-delegate-access-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-expiry-controls-vs-manual-standing-delegate-access',
+    locale: 'es',
+    slug: 'controles-expiracion-delegacion-aprobacion-acceso-evidencia-training-compliance-ia-vs-standing-delegate-access-manual-audit-readiness',
+    title: 'Controles de expiración de delegación de aprobación en acceso a evidencia de training compliance con IA vs. standing delegate access manual para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de expiración de delegación con IA frente a accesos delegados permanentes manuales en evidencia.',
+    h1: 'Controles de expiración de delegación con IA vs. standing delegate access manual',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar deriva de permisos, velocidad de revocación y trazabilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para caducar delegaciones al cerrar solicitudes de evidencia de auditoría', 'Criterios operativos para cumplir SLAs de revocación y escalar excepciones de permisos vencidos', 'Marco de piloto para reducir accesos delegados persistentes sin frenar respuestas críticas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-expiry-controls-vs-manual-standing-delegate-access-for-audit-readiness/'
   }
 )
 

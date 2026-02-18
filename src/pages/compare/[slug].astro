@@ -2169,6 +2169,28 @@ const jsonLd = {
       }
     }
 
+    /* Approval-delegation-expiry batch polish: improve matrix-header readability + CTA spacing on 320–360px */
+    @media (max-width: 360px) {
+      .matrix-table th {
+        font-size: 0.74rem;
+        line-height: 1.2;
+        padding: 0.58rem 0.48rem;
+      }
+
+      .matrix-table th:nth-child(1) {
+        min-width: 142px;
+      }
+
+      .next-step-card {
+        gap: 0.54rem;
+      }
+
+      .next-step-card .cta-link {
+        margin-top: 0.12rem;
+        padding-inline: 0.68rem;
+      }
+    }
+
     @media (max-width: 520px) {
       .matrix-table-wrap {
         display: block;
