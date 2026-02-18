@@ -2551,6 +2551,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar riesgo de fuga por impresión, consistencia de aprobaciones y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para reducir impresiones no controladas de evidencia sensible', 'Criterios operativos para rutas de aprobación más consistentes y trazables', 'Marco de piloto para bajar carga manual y retrabajo en solicitudes urgentes de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-print-prevention-controls-vs-manual-print-request-approvals-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-copy-paste-restrictions-vs-manual-user-policy-acknowledgments',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-copy-paste-restrictions-vs-manuelle-user-policy-bestaetigungen-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Copy-Paste-Restrictions vs. manuelle User-Policy-Bestätigungen für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Copy-Paste-Restrictions gegen manuelle User-Policy-Bestätigungen in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Copy-Paste-Restrictions vs. manuelle User-Policy-Bestätigungen für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Leak-Prävention, Kontrollkonsistenz und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit beim Unterbinden unkontrollierter Copy-Paste-Exfiltration', 'Kriterien für konsistente Enforcement-Entscheidungen statt rein deklarativer Richtlinienbestätigung', 'Pilot-Framework für geringeren manuellen Nachsteuerungsaufwand bei auditkritischen Evidence-Requests'],
+    enPath: '/compare/ai-compliance-training-evidence-access-copy-paste-restrictions-vs-manual-user-policy-acknowledgments-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-copy-paste-restrictions-vs-manual-user-policy-acknowledgments',
+    locale: 'es',
+    slug: 'restricciones-copy-paste-acceso-evidencia-training-compliance-ia-vs-acknowledgments-manuales-user-policy-audit-readiness',
+    title: 'Restricciones de copy-paste para acceso a evidencia en training compliance con IA vs. acknowledgments manuales de user policy para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan restricciones de copy-paste con IA frente a acknowledgments manuales de política de usuario en acceso a evidencia.',
+    h1: 'Restricciones de copy-paste con IA vs. acknowledgments manuales de user policy en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar prevención de fugas, consistencia de enforcement y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para bloquear exfiltración por copy-paste en evidencia sensible', 'Criterios operativos para enforcement consistente frente a controles basados solo en aceptación de políticas', 'Marco de piloto para reducir retrabajo y excepciones en solicitudes de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-copy-paste-restrictions-vs-manual-user-policy-acknowledgments-for-audit-readiness/'
   }
 );
 
