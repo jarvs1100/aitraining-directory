@@ -2416,6 +2416,32 @@ localizedLandingPages.push(
   }
 );
 
+localizedLandingPages.push(
+  {
+    key: 'evidence-access-break-glass-controls-vs-manual-urgent-overrides',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-emergency-break-glass-controls-vs-manuelle-urgent-access-overrides-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Emergency-Break-Glass-Controls vs. manuelle Urgent-Access-Overrides für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Break-Glass-Controls für dringende Evidence-Access-Fälle gegen manuelle Urgent-Access-Overrides vergleichen.',
+    h1: 'KI-Break-Glass-Controls vs. manuelle Urgent-Access-Overrides für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Containment-Geschwindigkeit, Override-Disziplin und auditfeste Nachvollziehbarkeit zwischen beiden Notfallmodellen zu bewerten.',
+    points: ['Vergleich von Reaktionszeit bei dringenden Evidence-Access-Anfragen unter Auditdruck', 'Messbare Kriterien für Policy-Konsistenz, Override-Governance und eskalationssichere Ownership', 'Pilot-Framework für Notfallzugriffe mit weniger Ausnahmerisiko und defensible Approval-Lineage'],
+    enPath: '/compare/ai-compliance-training-evidence-access-emergency-break-glass-controls-vs-manual-urgent-access-overrides-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-break-glass-controls-vs-manual-urgent-overrides',
+    locale: 'es',
+    slug: 'controles-emergency-break-glass-acceso-evidencia-training-compliance-ia-vs-overrides-manuales-urgent-access-audit-readiness',
+    title: 'Controles emergency break-glass de acceso a evidencia en training compliance con IA vs. overrides manuales urgent-access para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles break-glass con IA frente a overrides manuales urgent-access en acceso a evidencia.',
+    h1: 'Controles break-glass con IA vs. overrides manuales urgent-access en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar velocidad de contención, consistencia de control y trazabilidad defendible en accesos urgentes a evidencia.',
+    points: ['Comparativa de tiempo de respuesta ante solicitudes urgentes de acceso a evidencia', 'Criterios operativos para consistencia de política, gobernanza de overrides y ownership de escalaciones', 'Marco de piloto para accesos de emergencia audit-ready con menor riesgo de excepciones'],
+    enPath: '/compare/ai-compliance-training-evidence-access-emergency-break-glass-controls-vs-manual-urgent-access-overrides-for-audit-readiness/'
+  }
+);
+
+
 export function getLocalizedFaq(locale) {
   const localized = {
     pl: [

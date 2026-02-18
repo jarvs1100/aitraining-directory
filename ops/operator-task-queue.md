@@ -2,8 +2,8 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
-- [x] Add one traffic-driving high-intent compare route for evidence-access operations: `/compare/ai-compliance-training-evidence-access-dual-approval-workflows-vs-manual-single-approver-exceptions-for-audit-readiness/` with implementation-led rubric + FAQ schema.
-- [x] Create distribution asset pack for the new dual-approval route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
-- [x] Add i18n parity stubs for the new dual-approval route on `/de` and `/es` localized hubs with canonical compare linkage.
-- [x] Mobile UX polish pass: improve decision-matrix mobile card scannability (criterion heading spacing + divider contrast) on 320–360px compare pages.
+- [x] Add one traffic-driving high-intent compare route for evidence-access operations: `/compare/ai-compliance-training-evidence-access-emergency-break-glass-controls-vs-manual-urgent-access-overrides-for-audit-readiness/` with implementation-led rubric + FAQ schema.
+- [x] Create distribution asset pack for the new break-glass controls route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [x] Add i18n parity stubs for the new break-glass controls route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [x] Mobile UX polish pass: improve decision-matrix mobile card micro-label contrast + spacing on 320–360px compare pages.
 - [x] Re-run SSL readiness checks after latest changes and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
