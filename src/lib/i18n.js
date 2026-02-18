@@ -2905,6 +2905,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar consistencia por nivel de riesgo, calidad de escalado y continuidad de aprobación audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para imponer revalidación step-up cuando cambian umbrales de riesgo o sensibilidad', 'Criterios operativos para escalar con consistencia y reducir variabilidad por criterio individual', 'Marco de piloto para reducir deriva de reaprobación sin frenar solicitudes críticas de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-step-up-revalidation-vs-manual-manager-discretion-reapprovals-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-scope-drift-guardrails-vs-manual-role-memory-reapprovals',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-approval-delegation-scope-drift-guardrails-vs-manuelle-role-memory-reapprovals-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Approval-Delegation-Scope-Drift-Guardrails vs. manuelle Role-Memory-Reapprovals für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Scope-Drift-Guardrails in Delegationsfreigaben gegen manuelle, rollenbasierte Erinnerungs-Reapprovals in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Scope-Drift-Guardrails vs. manuelle Role-Memory-Reapprovals',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Entitlement-Containment, Eskalationsdisziplin und auditfeste Freigabe-Kontinuität zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei früher Scope-Drift-Erkennung statt impliziter Rollenannahmen', 'Kriterien für konsistente Eskalation bei schleichender Delegationsausweitung', 'Pilot-Framework zur Reduktion von Entitlement-Drift ohne Verzögerung kritischer Audit-Requests'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-scope-drift-guardrails-vs-manual-role-memory-reapprovals-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-approval-delegation-scope-drift-guardrails-vs-manual-role-memory-reapprovals',
+    locale: 'es',
+    slug: 'guardrails-deriva-alcance-delegacion-aprobacion-acceso-evidencia-training-compliance-ia-vs-reaprobaciones-manuales-role-memory-audit-readiness',
+    title: 'Guardrails de deriva de alcance en delegación de aprobación para acceso a evidencia de training compliance con IA vs. reaprobaciones manuales role-memory para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan guardrails de deriva de alcance con IA frente a reaprobaciones manuales basadas en memoria de rol en acceso a evidencia.',
+    h1: 'Guardrails de deriva de alcance con IA vs. reaprobaciones manuales role-memory',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar contención de permisos, disciplina de escalado y continuidad de aprobación audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para detectar deriva de alcance antes de que se consolide como práctica', 'Criterios operativos para escalar con consistencia cuando cambian límites de delegación', 'Marco de piloto para reducir deriva de permisos sin frenar solicitudes críticas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-approval-delegation-scope-drift-guardrails-vs-manual-role-memory-reapprovals-for-audit-readiness/'
   }
 )
 
