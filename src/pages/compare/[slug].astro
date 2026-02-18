@@ -1968,6 +1968,18 @@ const jsonLd = {
         font-size: 0.72rem;
         letter-spacing: 0.015em;
         padding-inline: 0.56rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.28rem;
+        background: linear-gradient(90deg, #ecfeff 0%, #dbeafe 52%, #ecfeff 100%);
+        border: 1px solid #bfdbfe;
+        box-shadow: 0 0 0 1px #e0e7ff inset;
+      }
+
+      .matrix-scroll-cue::after {
+        content: '→';
+        font-weight: 700;
+        color: #1d4ed8;
       }
 
       .matrix-table th:nth-child(4),
@@ -1976,6 +1988,14 @@ const jsonLd = {
         font-size: 0.74rem;
         line-height: 1.22;
         text-wrap: balance;
+      }
+
+      .matrix-table td:nth-child(1) {
+        min-width: 164px;
+        font-size: 0.9rem;
+        line-height: 1.45;
+        background: linear-gradient(180deg, #eef2ff 0%, #e0e7ff 100%);
+        border-right: 2px solid #93c5fd;
       }
     }
 
@@ -2034,6 +2054,18 @@ const jsonLd = {
     @media (max-width: 520px) {
       .matrix-table-wrap {
         display: block;
+        position: relative;
+      }
+
+      .matrix-table-wrap::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 22px;
+        height: 100%;
+        pointer-events: none;
+        background: linear-gradient(270deg, rgba(248, 250, 252, 0.98) 0%, rgba(248, 250, 252, 0) 100%);
       }
 
       .matrix-mobile {
