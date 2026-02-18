@@ -2639,6 +2639,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar riesgo de movimiento lateral, consistencia de control y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para limitar rutas de red sobredimensionadas hacia evidencia sensible', 'Criterios operativos para enforcement continuo de segmentación frente a listas de excepciones manuales', 'Marco de piloto para reducir excepciones y retrabajo durante ventanas críticas de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-network-segmentation-enforcement-vs-manual-vpn-access-exception-lists-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-zero-trust-policy-enforcement-vs-manual-network-whitelist-reviews',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-zero-trust-policy-enforcement-vs-manuelle-network-whitelist-reviews-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Zero-Trust-Policy-Enforcement vs. manuelle Network-Whitelist-Reviews für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Zero-Trust-Policy-Enforcement-Kontrollen gegen manuelle Network-Whitelist-Reviews in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Zero-Trust-Policy-Enforcement vs. manuelle Network-Whitelist-Reviews für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, kontinuierliche Verifizierung, Ausnahme-Drift und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit bei kontinuierlicher Verifikation statt periodischer Vertrauenserneuerung', 'Kriterien für konsistente Zero-Trust-Enforcement-Entscheidungen statt manuell gepflegter Whitelist-Reviews', 'Pilot-Framework für weniger Governance-Drift und schnellere Freigabeentscheidungen unter Auditdruck'],
+    enPath: '/compare/ai-compliance-training-evidence-access-zero-trust-policy-enforcement-vs-manual-network-whitelist-reviews-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-zero-trust-policy-enforcement-vs-manual-network-whitelist-reviews',
+    locale: 'es',
+    slug: 'enforcement-zero-trust-policy-acceso-evidencia-training-compliance-ia-vs-revisiones-manuales-network-whitelist-audit-readiness',
+    title: 'Enforcement de zero-trust policy para acceso a evidencia en training compliance con IA vs. revisiones manuales de network whitelist para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan enforcement de políticas zero trust con IA frente a revisiones manuales de listas blancas de red en acceso a evidencia.',
+    h1: 'Enforcement de zero-trust policy con IA vs. revisiones manuales de network whitelist en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar verificación continua, deriva de excepciones y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para validar contexto de acceso en tiempo real y reducir confianza implícita', 'Criterios operativos para enforcement continuo de zero trust frente a revisiones periódicas de listas blancas', 'Marco de piloto para reducir excepciones y retrabajo durante ventanas críticas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-zero-trust-policy-enforcement-vs-manual-network-whitelist-reviews-for-audit-readiness/'
   }
 );
 
