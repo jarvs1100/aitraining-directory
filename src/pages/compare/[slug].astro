@@ -2326,5 +2326,39 @@ const jsonLd = {
       }
     }
 
+    /* Delegation reapproval-thresholds batch polish: improve decision-outcomes bullets + FAQ quick-nav readability on 320–360px */
+    @media (max-width: 360px) {
+      .decision-outcomes-card .decision-outcomes-list {
+        margin-top: 0.32rem;
+        padding-left: 1.1rem;
+      }
+
+      .decision-outcomes-card .decision-outcomes-list li {
+        margin-bottom: 0.44rem;
+        line-height: 1.5;
+        padding-left: 0.08rem;
+      }
+
+      .decision-outcomes-card .decision-outcomes-list li:last-child {
+        margin-bottom: 0;
+      }
+
+      .faq-anchor-list {
+        gap: 0.52rem;
+      }
+
+      .faq-anchor-list a {
+        padding: 0.64rem 0.72rem;
+        line-height: 1.34;
+        font-size: 0.9rem;
+      }
+
+      .faq-anchor-list a::before {
+        width: 1.28rem;
+        height: 1.28rem;
+        font-size: 0.72rem;
+      }
+    }
+
   </style>
 </Base>
