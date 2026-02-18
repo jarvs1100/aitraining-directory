@@ -2,8 +2,8 @@
 
 Mark `[x]` when done and move to next without waiting for manual nudge.
 
-- [x] Add one traffic-driving high-intent compare route for evidence-access governance: `/compare/ai-compliance-training-evidence-access-print-prevention-controls-vs-manual-print-request-approvals-for-audit-readiness/` with implementation-led rubric + FAQ schema.
-- [x] Create distribution asset pack for the new evidence-access-print-prevention route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
-- [x] Add i18n parity stubs for the new evidence-access-print-prevention route on `/de` and `/es` localized hubs with canonical compare linkage.
-- [x] Mobile UX polish pass: improve compare-page matrix scroll-cue and option-header readability on 320–360px screens.
-- [x] Re-run SSL readiness checks after latest changes and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [ ] Add one traffic-driving high-intent compare route for evidence-access governance: `/compare/ai-compliance-training-evidence-access-copy-paste-restrictions-vs-manual-user-policy-acknowledgments-for-audit-readiness/` with implementation-led rubric + FAQ schema.
+- [ ] Create distribution asset pack for the new evidence-access-copy-paste-restrictions route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
+- [ ] Add i18n parity stubs for the new evidence-access-copy-paste-restrictions route on `/de` and `/es` localized hubs with canonical compare linkage.
+- [ ] Mobile UX polish pass: improve compare-page decision-outcomes card readability and tap rhythm on 320–360px screens.
+- [ ] Re-run SSL readiness checks after latest changes and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
