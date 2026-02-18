@@ -6,4 +6,4 @@ Mark `[x]` when done and move to next without waiting for manual nudge.
 - [x] Create distribution asset pack for the new delegation-step-up-revalidation route (LinkedIn post, X thread hook, newsletter blurb with canonical URL).
 - [x] Add i18n parity stubs for the new delegation-step-up-revalidation route on `/de` and `/es` localized hubs with canonical compare linkage.
 - [x] Mobile UX polish pass: improve compare-page matrix header readability and sticky-column scan cue clarity for 320–360px screens.
-- [ ] Re-run SSL readiness checks after latest changes and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
+- [x] Re-run SSL readiness checks after latest changes and append evidence delta to `ops/ssl-readiness-2026-02-17.md`.
