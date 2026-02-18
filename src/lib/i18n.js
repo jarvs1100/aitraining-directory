@@ -2573,6 +2573,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar prevención de fugas, consistencia de enforcement y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para bloquear exfiltración por copy-paste en evidencia sensible', 'Criterios operativos para enforcement consistente frente a controles basados solo en aceptación de políticas', 'Marco de piloto para reducir retrabajo y excepciones en solicitudes de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-copy-paste-restrictions-vs-manual-user-policy-acknowledgments-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-browser-isolation-controls-vs-manual-vdi-policy-guidelines',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-browser-isolation-controls-vs-manuelle-vdi-policy-guidelines-fuer-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Browser-Isolation-Controls vs. manuelle VDI-Policy-Guidelines für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Browser-Isolation-Controls gegen manuelle VDI-Policy-Guidelines in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Browser-Isolation-Controls vs. manuelle VDI-Policy-Guidelines für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Exfiltration-Schutz, Kontrollkonsistenz und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit gegen Copy/Download/Print-Exfiltration in auditkritischen Evidence-Reviews', 'Kriterien für konsistente Enforcement-Entscheidungen statt policy-abhängiger Einzelfallinterpretation', 'Pilot-Framework für geringere Governance-Drift unter Deadline-Druck'],
+    enPath: '/compare/ai-compliance-training-evidence-access-browser-isolation-controls-vs-manual-vdi-policy-guidelines-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-browser-isolation-controls-vs-manual-vdi-policy-guidelines',
+    locale: 'es',
+    slug: 'controles-browser-isolation-acceso-evidencia-training-compliance-ia-vs-guias-manuales-politica-vdi-audit-readiness',
+    title: 'Controles de browser isolation para acceso a evidencia en training compliance con IA vs. guías manuales de política VDI para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de browser isolation con IA frente a guías manuales de política VDI en flujos de acceso a evidencia.',
+    h1: 'Controles de browser isolation con IA vs. guías manuales de política VDI en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar prevención de exfiltración, consistencia de control y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de protección frente a exfiltración por copy/download/print en revisiones de evidencia sensible', 'Criterios operativos para enforcement consistente sin depender de interpretación manual de políticas', 'Marco de piloto para reducir excepciones y retrabajo durante ventanas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-browser-isolation-controls-vs-manual-vdi-policy-guidelines-for-audit-readiness/'
   }
 );
 
