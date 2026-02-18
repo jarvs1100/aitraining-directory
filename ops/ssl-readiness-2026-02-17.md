@@ -4425,3 +4425,102 @@ HTTP/1.1 301 Moved Permanently
 - SSL remains healthy with active Let's Encrypt issuance (`R12`) and valid HTTPS responses.
 - Apex returns `HTTP/2 200`; `www` cleanly redirects to canonical apex over HTTPS.
 - Deployment freshness advanced (`Last-Modified: Wed, 18 Feb 2026 01:10:30 GMT`).
+
+---
+
+## Evidence delta — 2026-02-18 01:25 UTC
+
+### Build-level HTTPS QA (post-change)
+```bash
+npm run qa:https
+
+
+✅ HTTPS readiness QA passed
+Checked 329 HTML files.
+```
+
+### DNS
+```bash
+dig +short aitraining.directory A
+185.199.111.153
+185.199.108.153
+185.199.109.153
+185.199.110.153
+
+dig +short www.aitraining.directory A
+jarvs1100.github.io.
+185.199.110.153
+185.199.111.153
+185.199.108.153
+185.199.109.153
+```
+
+### TLS certificate served now
+```bash
+echo | openssl s_client -connect aitraining.directory:443 -servername aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+
+echo | openssl s_client -connect www.aitraining.directory:443 -servername www.aitraining.directory 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+issuer=C = US, O = Let's Encrypt, CN = R12
+subject=CN = www.aitraining.directory
+notBefore=Feb 17 09:20:45 2026 GMT
+notAfter=May 18 09:20:44 2026 GMT
+```
+
+### HTTPS validation tests
+```bash
+curl -I https://aitraining.directory
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0 20507    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+last-modified: Wed, 18 Feb 2026 01:11:51 GMT
+access-control-allow-origin: *
+etag: "699511d7-501b"
+expires: Wed, 18 Feb 2026 01:35:57 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: B5B6:2077F2:5FB4F4:609BC8:69951525
+accept-ranges: bytes
+age: 0
+date: Wed, 18 Feb 2026 01:25:58 GMT
+via: 1.1 varnish
+x-served-by: cache-par-lfpg1960055-PAR
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1771377958.916558,VS0,VE105
+vary: Accept-Encoding
+x-fastly-request-id: 239181ba03eb71d8092b9a0b89b088b79af48a98
+content-length: 20507
+
+
+curl -I https://www.aitraining.directory
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0   162    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+HTTP/2 301 
+server: GitHub.com
+content-type: text/html
+location: https://aitraining.directory/
+x-github-request-id: AFF4:1FE330:60269B:610B1A:69951525
+accept-ranges: bytes
+age: 0
+date: Wed, 18 Feb 2026 01:25:58 GMT
+via: 1.1 varnish
+x-served-by: cache-par-lfpg1960049-PAR
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1771377958.116089,VS0,VE105
+vary: Accept-Encoding
+x-fastly-request-id: 9bda7d55325b7d42346a0f68eecd33788af816df
+content-length: 162
+
+```
+
+### Freshness signal
+- Last-Modified observed on apex: `Wed, 18 Feb 2026 01:11:51 GMT`

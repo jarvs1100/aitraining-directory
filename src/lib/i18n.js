@@ -2507,6 +2507,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar reducción de riesgo de fuga, calidad de gobernanza de excepciones y defensibilidad audit-ready entre ambos modelos.',
     points: ['Comparativa de efectividad para bloquear descargas de evidencia de alto riesgo', 'Criterios operativos para aprobaciones de excepción con trazabilidad defendible', 'Marco de piloto para reducir carga manual y retrabajo en solicitudes de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-download-prevention-controls-vs-manual-export-policy-reminders-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-view-only-workspaces-vs-manual-temporary-shared-links',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-view-only-workspaces-vs-manuelle-temporare-shared-links-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access View-Only-Workspaces vs. manuelle temporäre Shared Links für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte View-Only-Workspace-Kontrollen gegen manuelle temporäre Shared Links in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-View-Only-Workspaces vs. manuelle temporäre Shared Links für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Expositionsrisiko, Link-Governance und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Risikoexposition bei zeitkritischer Evidenzfreigabe', 'Kriterien für konsistente Revocation und nachvollziehbare Zugriffslineage', 'Pilot-Framework für geringeren manuellen Aufwand bei Audit-Requests'],
+    enPath: '/compare/ai-compliance-training-evidence-view-only-workspaces-vs-manual-temporary-shared-links-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-view-only-workspaces-vs-manual-temporary-shared-links',
+    locale: 'es',
+    slug: 'workspaces-solo-lectura-acceso-evidencia-training-compliance-ia-vs-shared-links-temporales-manuales-audit-readiness',
+    title: 'Workspaces de solo lectura para acceso a evidencia en training compliance con IA vs. shared links temporales manuales para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan controles de workspaces de solo lectura con IA frente a shared links temporales manuales en acceso a evidencia.',
+    h1: 'Workspaces de solo lectura con IA vs. shared links temporales manuales en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar exposición de evidencia, consistencia de revocación y defensibilidad audit-ready entre ambos modelos.',
+    points: ['Comparativa para reducir exposición no controlada durante solicitudes urgentes', 'Criterios operativos de revocación consistente y trazabilidad defendible', 'Marco de piloto para bajar carga manual y retrabajo en auditorías'],
+    enPath: '/compare/ai-compliance-training-evidence-view-only-workspaces-vs-manual-temporary-shared-links-for-audit-readiness/'
   }
 );
 
