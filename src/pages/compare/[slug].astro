@@ -1942,6 +1942,23 @@ const jsonLd = {
       }
     }
 
+    /* Network-segmentation batch polish: denser CTA rows stay thumb-readable on 320–360px */
+    @media (max-width: 360px) {
+      .next-step-card {
+        padding: 0.72rem 0.74rem;
+      }
+
+      .next-step-card li {
+        padding: 0.62rem 0.64rem;
+        line-height: 1.36;
+      }
+
+      .next-step-card .cta-link {
+        min-height: 44px;
+        padding-block: 0.66rem;
+      }
+    }
+
     @media (max-width: 520px) {
       .matrix-table-wrap {
         display: block;

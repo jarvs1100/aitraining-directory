@@ -2617,6 +2617,28 @@ localizedLandingPages.push(
     intro: 'Ayuda a equipos de compliance y training ops a evaluar seguridad de acceso, consistencia de control y defensibilidad audit-ready entre ambos enfoques.',
     points: ['Comparativa de efectividad para bloquear acceso desde endpoints no conformes en evidencia sensible', 'Criterios operativos para enforcement continuo frente a revisiones periódicas basadas en checklist', 'Marco de piloto para reducir excepciones manuales y retrabajo durante ventanas de auditoría'],
     enPath: '/compare/ai-compliance-training-evidence-access-device-posture-enforcement-vs-manual-endpoint-compliance-checklists-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-network-segmentation-enforcement-vs-manual-vpn-access-exception-lists',
+    locale: 'de',
+    slug: 'ki-compliance-training-evidence-access-network-segmentation-enforcement-vs-manuelle-vpn-access-exception-lists-audit-readiness',
+    title: 'KI-Compliance-Training-Evidence-Access Network-Segmentation-Enforcement vs. manuelle VPN-Access-Exception-Lists für Audit Readiness | AI Training Directory',
+    description: 'Lokalisierter Einstieg für Teams, die KI-gestützte Network-Segmentation-Enforcement-Kontrollen gegen manuelle VPN-Access-Exception-Lists in Evidence-Access-Workflows vergleichen.',
+    h1: 'KI-Network-Segmentation-Enforcement vs. manuelle VPN-Access-Exception-Lists für Evidence Access',
+    intro: 'Hilft Compliance- und Training-Ops-Teams, Lateralmovement-Risiko, Kontrollkonsistenz und Audit-Defensibility zwischen beiden Betriebsmodellen zu bewerten.',
+    points: ['Vergleich der Wirksamkeit beim Begrenzen überprivilegierter Netzwerkpfade zu sensibler Training-Evidence', 'Kriterien für konsistente Segmentierungsdurchsetzung statt manuell gepflegter Ausnahme-Listen', 'Pilot-Framework für weniger Governance-Drift und schnellere Freigabeentscheidungen unter Auditdruck'],
+    enPath: '/compare/ai-compliance-training-evidence-access-network-segmentation-enforcement-vs-manual-vpn-access-exception-lists-for-audit-readiness/'
+  },
+  {
+    key: 'evidence-access-network-segmentation-enforcement-vs-manual-vpn-access-exception-lists',
+    locale: 'es',
+    slug: 'enforcement-network-segmentation-acceso-evidencia-training-compliance-ia-vs-listas-manuales-excepciones-vpn-audit-readiness',
+    title: 'Enforcement de network segmentation para acceso a evidencia en training compliance con IA vs. listas manuales de excepciones VPN para audit readiness | AI Training Directory',
+    description: 'Entrada localizada para equipos que comparan enforcement de segmentación de red con IA frente a listas manuales de excepciones VPN en acceso a evidencia.',
+    h1: 'Enforcement de network segmentation con IA vs. listas manuales de excepciones VPN en acceso a evidencia',
+    intro: 'Ayuda a equipos de compliance y training ops a evaluar riesgo de movimiento lateral, consistencia de control y defensibilidad audit-ready entre ambos enfoques.',
+    points: ['Comparativa de efectividad para limitar rutas de red sobredimensionadas hacia evidencia sensible', 'Criterios operativos para enforcement continuo de segmentación frente a listas de excepciones manuales', 'Marco de piloto para reducir excepciones y retrabajo durante ventanas críticas de auditoría'],
+    enPath: '/compare/ai-compliance-training-evidence-access-network-segmentation-enforcement-vs-manual-vpn-access-exception-lists-for-audit-readiness/'
   }
 );
 
