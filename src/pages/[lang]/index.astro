@@ -28,47 +28,54 @@ const alternates = getSiteAlternates().map((alt) => {
 const copy = {
   pl: {
     edition: 'Wersja polska',
-    title: 'Polski: strony o AI szkoleniach',
-    intro: 'Zlokalizowane strony dla zespołów L&D i enablement w Polsce. Zacznij od strony z intencją rynkową.',
+    title: 'Polski: strony o AI w szkoleniach',
+    intro: 'Zlokalizowane strony dla zespołów L&D i enablement w Polsce. Zacznij od strony dopasowanej do intencji wyszukiwania i etapu wdrożenia.',
+    metaDescription: 'Polskie wersje stron o AI w szkoleniach i L&D. Praktyczne checklisty, kontekst zaufania/metodologii i przejścia do stron kanonicznych.',
     browse: 'Przeglądaj wszystkie kategorie',
     solutions: 'Otwórz scenariusze wdrożenia',
     compare: 'Przejdź do porównań',
     methodology: 'Zobacz metodologię',
     listTitle: 'Dostępne strony lokalne',
-    checklistTitle: 'Checklist wdrożenia dla rynku lokalnego',
-    trustSignalsTitle: 'Sygnały zaufania dla lokalnych stron',
-    decisionPathsTitle: 'Ścieżki decyzji z tego hubu'
+    checklistTitle: 'Checklista wdrożenia dla rynku lokalnego',
+    trustSignalsTitle: 'Sygnały zaufania dla wersji lokalnej',
+    decisionPathsTitle: 'Ścieżki decyzji z tego hubu',
+    lastReviewedLabel: 'Ostatnia weryfikacja'
   },
   cs: {
     edition: 'Česká verze',
-    title: 'Čeština: stránky pro AI školení',
-    intro: 'Lokalizované stránky pro L&D a enablement týmy v Česku. Začněte stránkou podle tržního záměru.',
+    title: 'Čeština: stránky o AI pro školení',
+    intro: 'Lokalizované stránky pro L&D a enablement týmy v Česku. Začněte stránkou podle vyhledávacího záměru a toho, co potřebujete zavést.',
+    metaDescription: 'České verze stránek o AI pro školení a L&D. Praktické checklisty, kontext důvěry/metodiky a přechody na kanonické stránky.',
     browse: 'Procházet všechny kategorie',
     solutions: 'Otevřít scénáře nasazení',
     compare: 'Přejít na srovnání',
     methodology: 'Zobrazit metodiku',
     listTitle: 'Dostupné lokalizované stránky',
-    checklistTitle: 'Implementační checklist pro lokální trh',
+    checklistTitle: 'Checklist nasazení pro lokální trh',
     trustSignalsTitle: 'Signály důvěry pro lokalizované stránky',
-    decisionPathsTitle: 'Rozhodovací cesty z tohoto hubu'
+    decisionPathsTitle: 'Rozhodovací cesty z tohoto hubu',
+    lastReviewedLabel: 'Naposledy zkontrolováno'
   },
   sk: {
     edition: 'Slovenská verzia',
     title: 'Slovenčina: stránky pre AI školenia',
-    intro: 'Lokalizované stránky pre L&D a enablement tímy na Slovensku. Začni stránkou podľa trhového intentu.',
+    intro: 'Lokalizované stránky pre L&D a enablement tímy na Slovensku. Začni stránkou podľa vyhľadávacieho zámeru a toho, čo potrebuješ zaviesť.',
+    metaDescription: 'Slovenské verzie stránok pre AI školenia a L&D. Praktické checklisty, kontext dôvery/metodiky a prechody na kanonické stránky.',
     browse: 'Prehliadať všetky kategórie',
     solutions: 'Otvoriť scenáre nasadenia',
     compare: 'Prejsť na porovnania',
     methodology: 'Zobraziť metodiku',
     listTitle: 'Dostupné lokalizované stránky',
-    checklistTitle: 'Implementačný checklist pre lokálny trh',
+    checklistTitle: 'Checklist nasadenia pre lokálny trh',
     trustSignalsTitle: 'Signály dôvery pre lokalizované stránky',
-    decisionPathsTitle: 'Rozhodovacie cesty z tohto hubu'
+    decisionPathsTitle: 'Rozhodovacie cesty z tohto hubu',
+    lastReviewedLabel: 'Naposledy overené'
   },
   hu: {
     edition: 'Magyar kiadás',
     title: 'Magyar: AI képzési oldalak',
-    intro: 'Lokalizált oldalak magyar L&D és enablement csapatoknak. Kezdj egy piaci szándékhoz illő oldallal.',
+    intro: 'Lokalizált oldalak magyar L&D és enablement csapatoknak. Kezdj egy olyan oldallal, ami a keresési szándékhoz és a bevezetési fázishoz illeszkedik.',
+    metaDescription: 'Magyar nyelvű AI képzési és L&D oldalak. Gyakorlati checklisták, bizalmi/módszertani kontextus és átvezetés kanonikus oldalakra.',
     browse: 'Összes kategória böngészése',
     solutions: 'Megoldási útmutatók megnyitása',
     compare: 'Összehasonlítások megnyitása',
@@ -76,7 +83,8 @@ const copy = {
     listTitle: 'Elérhető lokalizált oldalak',
     checklistTitle: 'Lokális bevezetési checklist',
     trustSignalsTitle: 'Bizalmi jelzések lokalizált oldalakhoz',
-    decisionPathsTitle: 'Döntési útvonalak ebből a hubból'
+    decisionPathsTitle: 'Döntési útvonalak ebből a hubból',
+    lastReviewedLabel: 'Utoljára ellenőrizve'
   },
   de: {
     edition: 'Deutsche Version',
@@ -108,6 +116,7 @@ const copy = {
   edition: `${locale.name} edition`,
   title: `${locale.name}: AI training pages`,
   intro: `Localized AI training pages for ${locale.name} market intent.`,
+  metaDescription: `Localized AI training and L&D pages for ${locale.name} market intent.`,
   browse: 'Browse all categories',
   solutions: 'Open solution playbooks',
   compare: 'Open compare hub',
@@ -126,7 +135,7 @@ const jsonLd = {
   url: canonical
 };
 ---
-<Base title={`${locale.name} | AI Training Directory`} description={`Localized AI training and L&D pages for ${locale.name} market intent.`} canonical={canonical} jsonLd={jsonLd} lang={lang} alternates={alternates}>
+<Base title={`${locale.name} | AI Training Directory`} description={copy.metaDescription} canonical={canonical} jsonLd={jsonLd} lang={lang} alternates={alternates}>
   <Breadcrumbs items={[{ label: ui.home, href: `/${lang}/` }, { label: locale.name, href: `/${lang}/` }]} />
 
   <section class="hero" style="margin-bottom:1.25rem;">
@@ -166,7 +175,7 @@ const jsonLd = {
       <li>{parityFramework.trustBullets[0]}</li>
       <li>{parityFramework.trustBullets[1]}</li>
       <li>{parityFramework.trustBullets[2]}</li>
-      <li>Last reviewed: <time datetime={parityFramework.updatedOn}>{parityFramework.updatedOn}</time> (UTC) with build and route checks.</li>
+      <li>{copy.lastReviewedLabel || 'Last reviewed'}: <time datetime={parityFramework.updatedOn}>{parityFramework.updatedOn}</time> (UTC) — build and route checks.</li>
     </ul>
   </section>
 
@@ -180,6 +189,9 @@ const jsonLd = {
         <a class="chip" href={item.href}>{item.label}</a>
       ))}
     </div>
+    {Boolean(parityFramework.lectureGuruNote) && (
+      <p class="muted" style="margin-top:.75rem;font-size:14px;">{parityFramework.lectureGuruNote}</p>
+    )}
   </section>
 
   <section class="section card" aria-labelledby="localized-routing-heading">
@@ -200,12 +212,42 @@ const jsonLd = {
   <section class="section card" aria-labelledby="localized-decision-paths-heading">
     <h2 id="localized-decision-paths-heading">{copy.decisionPathsTitle}</h2>
     <div class="chips chips-nav">
-      <a class="chip" href="/solutions/ai-tools-for-training-and-development/">AI tools for training & development</a>
-      <a class="chip" href="/solutions/sop-to-video-training/">SOP to video training</a>
-      <a class="chip" href="/compare/synthesia-alternatives/">Synthesia alternatives</a>
-      <a class="chip" href="/compare/scorm-authoring-vs-lms-native-builders/">SCORM vs LMS-native builders</a>
-      <a class="chip" href="/compare/ai-roleplay-simulators-vs-video-only-onboarding/">Roleplay vs video-only onboarding</a>
-      <a class="chip" href="/editorial-methodology/">Editorial methodology</a>
+      <a class="chip" href="/solutions/ai-tools-for-training-and-development/">{({
+        pl: 'Narzędzia AI dla szkoleń i rozwoju',
+        cs: 'AI nástroje pro školení a rozvoj',
+        sk: 'AI nástroje pre školenia a rozvoj',
+        hu: 'AI eszközök képzéshez és fejlesztéshez'
+      }[lang] || 'AI tools for training & development')}</a>
+      <a class="chip" href="/solutions/sop-to-video-training/">{({
+        pl: 'SOP → wideo szkoleniowe',
+        cs: 'SOP → školicí video',
+        sk: 'SOP → školiace video',
+        hu: 'SOP → képzési videó'
+      }[lang] || 'SOP to video training')}</a>
+      <a class="chip" href="/compare/synthesia-alternatives/">{({
+        pl: 'Alternatywy dla Synthesia',
+        cs: 'Alternativy k Synthesia',
+        sk: 'Alternatívy k Synthesia',
+        hu: 'Synthesia alternatívák'
+      }[lang] || 'Synthesia alternatives')}</a>
+      <a class="chip" href="/compare/scorm-authoring-vs-lms-native-builders/">{({
+        pl: 'SCORM vs kreatory w LMS',
+        cs: 'SCORM vs nástroje v LMS',
+        sk: 'SCORM vs nástroje v LMS',
+        hu: 'SCORM vs LMS beépített szerkesztők'
+      }[lang] || 'SCORM vs LMS-native builders')}</a>
+      <a class="chip" href="/compare/ai-roleplay-simulators-vs-video-only-onboarding/">{({
+        pl: 'Symulatory roleplay AI vs onboarding tylko wideo',
+        cs: 'AI roleplay simulátory vs onboarding jen video',
+        sk: 'AI roleplay simulátory vs onboarding iba video',
+        hu: 'AI roleplay szimulátorok vs csak videós onboarding'
+      }[lang] || 'Roleplay vs video-only onboarding')}</a>
+      <a class="chip" href="/editorial-methodology/">{({
+        pl: 'Metodologia redakcyjna',
+        cs: 'Redakční metodika',
+        sk: 'Redakčná metodika',
+        hu: 'Szerkesztői módszertan'
+      }[lang] || 'Editorial methodology')}</a>
     </div>
   </section>
 </Base>

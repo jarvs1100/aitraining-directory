@@ -51,6 +51,9 @@ const ui = getLocalizedUiStrings(page.locale);
       <a class="chip" href={item.href}>{item.label}</a>
     ))}
   </div>
+  {Boolean(supportBlocks.parityFramework.lectureGuruNote) && (
+    <p class="muted" style="margin-top:.75rem;font-size:14px;">{supportBlocks.parityFramework.lectureGuruNote}</p>
+  )}
 </section>
 
 <section class="section card" aria-labelledby="routing-quality-heading">

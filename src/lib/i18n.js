@@ -14,10 +14,10 @@ export const localizedLandingPages = [
     locale: 'pl',
     slug: 'narzedzia-ai-do-szkolen',
     title: 'Narzędzia AI do szkoleń pracowników | AI Training Directory',
-    description: 'Porównaj narzędzia AI do onboardingu, szkoleń stanowiskowych i operacji L&D.',
+    description: 'Porównaj narzędzia AI do onboardingu, szkoleń stanowiskowych i operacji L&D — pod kątem wdrożenia, governance i aktualizacji treści.',
     h1: 'Narzędzia AI do szkoleń pracowników',
-    intro: 'Ta strona pomaga zespołom L&D w Polsce szybko ocenić narzędzia AI pod kątem wdrożenia i aktualizacji treści.',
-    points: ['Szybsze tworzenie materiałów onboardingowych', 'Lepsza spójność treści szkoleniowych', 'Łatwiejsze aktualizacje SOP i procedur'],
+    intro: 'Punkt startowy dla zespołów L&D w Polsce: jak oceniać narzędzia AI pod kątem pilotażu, utrzymania treści i kontroli jakości.',
+    points: ['Szybsze tworzenie i aktualizacje materiałów onboardingowych', 'Spójniejsza jakość treści szkoleniowych', 'Prostsze wdrażanie zmian w SOP i procedurach'],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -25,10 +25,10 @@ export const localizedLandingPages = [
     locale: 'pl',
     slug: 'sop-na-wideo-szkoleniowe',
     title: 'SOP na wideo szkoleniowe z AI',
-    description: 'Jak zamieniać procedury SOP na krótkie materiały wideo dla L&D, onboardingu i regularnych aktualizacji procesów.',
+    description: 'Jak zamieniać procedury SOP w krótkie materiały wideo dla L&D, onboardingu i regularnych aktualizacji procesów.',
     h1: 'SOP na wideo szkoleniowe',
-    intro: 'Dla zespołów szkoleniowych, które muszą regularnie aktualizować procedury i wdrażać nowe osoby.',
-    points: ['Powtarzalny proces publikacji', 'Lepsze zrozumienie procedur', 'Wsparcie dla zgodności i audytu'],
+    intro: 'Dla zespołów szkoleniowych, które regularnie aktualizują procedury i chcą skrócić czas od zmiany w SOP do wdrożenia w organizacji.',
+    points: ['Powtarzalny proces publikacji i aktualizacji', 'Lepsze zrozumienie procedur w pracy', 'Wsparcie dla zgodności i przygotowania do audytu'],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -36,10 +36,10 @@ export const localizedLandingPages = [
     locale: 'cs',
     slug: 'ai-nastroje-pro-skoleni-zamestnancu',
     title: 'AI nástroje pro školení zaměstnanců | AI Training Directory',
-    description: 'Srovnání AI nástrojů pro onboarding, compliance a firemní L&D procesy.',
+    description: 'Srovnání AI nástrojů pro onboarding, compliance a firemní L&D — s důrazem na nasazení, governance a údržbu obsahu.',
     h1: 'AI nástroje pro školení zaměstnanců',
-    intro: 'Pomáháme L&D týmům v Česku vybrat nástroje podle reálných provozních potřeb.',
-    points: ['Rychlejší tvorba školicího obsahu', 'Jednotné standardy školení', 'Snadné aktualizace interních postupů'],
+    intro: 'Praktický rozcestník pro L&D týmy v Česku: jak nástroje AI posuzovat pro pilot, provoz a průběžné aktualizace.',
+    points: ['Rychlejší tvorba a revize školicího obsahu', 'Konzistentnější kvalita školení napříč týmy', 'Snazší aktualizace interních postupů a SOP'],
     enPath: '/solutions/new-hire-onboarding-automation/'
   },
   {
@@ -47,10 +47,10 @@ export const localizedLandingPages = [
     locale: 'cs',
     slug: 'sop-do-skolicich-videi',
     title: 'SOP do školicích videí pomocí AI',
-    description: 'Převod interních procesů na školicí videa pro onboarding, provozní zaškolení a průběžné aktualizace postupů.',
+    description: 'Převod interních SOP a procesů na školicí videa pro onboarding, provozní zaškolení a průběžné aktualizace.',
     h1: 'SOP do školicích videí',
-    intro: 'Praktický přístup pro týmy, které potřebují škálovat školení bez navyšování kapacit.',
-    points: ['Kratší čas od dokumentu k publikaci', 'Lepší pochopení kroků', 'Nižší chybovost při zaučení'],
+    intro: 'Pro týmy, které chtějí škálovat školení bez zvyšování kapacit a zároveň udržet kontrolu nad kvalitou a schvalováním.',
+    points: ['Kratší čas od změny v dokumentu k publikaci', 'Srozumitelnější postupy krok za krokem', 'Nižší chybovost po zaučení'],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -58,10 +58,10 @@ export const localizedLandingPages = [
     locale: 'sk',
     slug: 'ai-nastroje-na-skolenie-zamestnancov',
     title: 'AI nástroje na školenie zamestnancov | AI Training Directory',
-    description: 'Prehľad AI nástrojov pre onboarding, L&D a interné vzdelávanie s dôrazom na rýchlosť nasadenia a kvalitu obsahu.',
+    description: 'Prehľad AI nástrojov pre onboarding, L&D a interné vzdelávanie — so zameraním na nasadenie, governance a kvalitu obsahu.',
     h1: 'AI nástroje na školenie zamestnancov',
-    intro: 'Pomáhame tímom na Slovensku vyberať nástroje podľa praktickej použiteľnosti.',
-    points: ['Rýchlejšia príprava obsahu', 'Konzistentné školenia naprieč tímami', 'Jednoduchšia aktualizácia pravidiel'],
+    intro: 'Praktický hub pre tímy na Slovensku: čo si všímať pri výbere nástrojov AI pre pilot, prevádzku a pravidelné aktualizácie.',
+    points: ['Rýchlejšia príprava a revízia obsahu', 'Konzistentnejšia kvalita školení naprieč tímami', 'Jednoduchšie aktualizácie SOP a interných pravidiel'],
     enPath: '/solutions/new-hire-onboarding-automation/'
   },
   {
@@ -69,10 +69,10 @@ export const localizedLandingPages = [
     locale: 'sk',
     slug: 'sop-na-skoliace-videa',
     title: 'SOP na školiace videá pomocou AI',
-    description: 'Ako meniť interné SOP na krátke a zrozumiteľné školiace videá pre onboarding, compliance a prevádzkové tímy.',
+    description: 'Ako meniť interné SOP na krátke, zrozumiteľné školiace videá pre onboarding, compliance a prevádzkové tímy.',
     h1: 'SOP na školiace videá',
-    intro: 'Vhodné pre L&D tímy, ktoré riešia nástup nových pracovníkov a pravidelné zmeny procesov.',
-    points: ['Vyššia rýchlosť nasadenia školení', 'Lepšia zapamätateľnosť postupov', 'Podpora compliance požiadaviek'],
+    intro: 'Pre L&D tímy, ktoré riešia nástup nových ľudí a časté zmeny procesov — s dôrazom na kontrolu kvality a schvaľovanie.',
+    points: ['Kratší čas od zmeny v SOP k nasadeniu školenia', 'Jasnejšie postupy v praxi', 'Lepšia pripravenosť na compliance požiadavky'],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -80,10 +80,10 @@ export const localizedLandingPages = [
     locale: 'hu',
     slug: 'ai-eszkozok-munkavallaloi-kepzeshez',
     title: 'AI eszközök munkavállalói képzéshez | AI Training Directory',
-    description: 'AI eszközök összehasonlítása onboardinghoz, belső képzésekhez és L&D működéshez.',
+    description: 'AI eszközök összehasonlítása onboardinghoz, belső képzésekhez és L&D működéshez — bevezetés, governance és tartalomfrissítés fókuszával.',
     h1: 'AI eszközök munkavállalói képzéshez',
-    intro: 'Magyar L&D csapatoknak készült, gyakorlati kiválasztási szempontokkal.',
-    points: ['Gyorsabb tartalom-előállítás', 'Egységesebb képzési minőség', 'Könnyebb frissíthetőség változó folyamatoknál'],
+    intro: 'Gyakorlati kiindulópont magyar L&D csapatoknak: hogyan értékeld az AI eszközöket pilot, működtetés és minőségbiztosítás szempontból.',
+    points: ['Gyorsabb tartalomkészítés és frissítés', 'Egységesebb képzési minőség', 'Könnyebb SOP- és folyamatváltozások kezelése'],
     enPath: '/solutions/new-hire-onboarding-automation/'
   },
   {
@@ -93,8 +93,8 @@ export const localizedLandingPages = [
     title: 'SOP-ból képzési videó AI-val',
     description: 'Belső folyamatok gyors átalakítása oktatási videókká onboardinghoz, betanításhoz és ismétlődő L&D frissítésekhez.',
     h1: 'SOP-ból képzési videó AI-val',
-    intro: 'Ahol gyors onboarding és következetes betanítás szükséges, ez a megközelítés jól működik.',
-    points: ['Rövidebb publikálási ciklus', 'Jobb folyamatmegértés', 'Skálázható oktatási működés'],
+    intro: 'Akkor működik jól, ha gyors onboardingra, következetes betanításra és kontrollált frissítésekre van szükség a SOP változásai után.',
+    points: ['Rövidebb idő a SOP módosítástól a publikálásig', 'Jobb folyamatmegértés a gyakorlatban', 'Skálázható képzési működés'],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -366,10 +366,10 @@ export const localizedLandingPages = [
     locale: 'pl',
     slug: 'playbook-dystrybucji-katalogu-ai',
     title: 'Playbook dystrybucji katalogu AI | AI Training Directory',
-    description: 'Lokalny playbook promocji katalogu AI z odnośnikiem do głównej checklisty outreachowej.',
+    description: 'Lokalny playbook dystrybucji i promocji katalogu AI z odnośnikiem do kanonicznej checklisty outreach.',
     h1: 'Playbook dystrybucji katalogu AI',
-    intro: 'Skrócona wersja dla zespołów, które chcą uruchomić regularny ruch na treściach szkoleniowych.',
-    points: ['Kanały tygodniowej dystrybucji', 'Checklista jakości publikacji', 'Rytm raportowania działań'],
+    intro: 'Skrócona wersja dla zespołów, które chcą zbudować powtarzalny rytm dystrybucji i mierzyć efekty bez „jednorazowych zrywów”.',
+    points: ['Kanały i rytuały tygodniowej dystrybucji', 'Checklista jakości publikacji i linków', 'Prosty rytm raportowania efektów'],
     enPath: '/solutions/'
   },
   {
@@ -379,8 +379,8 @@ export const localizedLandingPages = [
     title: 'Distribuční playbook AI katalogu | AI Training Directory',
     description: 'Lokalizovaný distribuční playbook s odkazem na kanonický outreach checklist.',
     h1: 'Distribuční playbook AI katalogu',
-    intro: 'Praktická verze pro týmy, které chtějí pravidelně zvyšovat návštěvnost tréninkového katalogu.',
-    points: ['Týdenní distribuční kanály', 'Checklist kvality publikace', 'Rytmus reportingu výsledků'],
+    intro: 'Praktická verze pro týmy, které chtějí pravidelně zvyšovat návštěvnost a mít jasnou kadenci vyhodnocování.',
+    points: ['Týdenní distribuční kanály a rytmus', 'Checklist kvality publikace a odkazů', 'Jednoduchý reporting výsledků'],
     enPath: '/solutions/'
   },
   {
@@ -390,8 +390,8 @@ export const localizedLandingPages = [
     title: 'Distribučný playbook AI katalógu | AI Training Directory',
     description: 'Lokalizovaný distribučno-outreach playbook s odkazom na kanonický checklist.',
     h1: 'Distribučný playbook AI katalógu',
-    intro: 'Praktická verzia pre tímy, ktoré chcú konzistentne zvyšovať návštevnosť tréningového katalógu.',
-    points: ['Týždenné distribučné kanály', 'Checklist kvality publikácie', 'Rytmus reportovania výsledkov'],
+    intro: 'Praktická verzia pre tímy, ktoré chcú konzistentne zvyšovať návštevnosť a mať jasný rytmus vyhodnocovania.',
+    points: ['Týždenné distribučné kanály a rytmus', 'Checklist kvality publikácie a odkazov', 'Jednoduché reportovanie výsledkov'],
     enPath: '/solutions/'
   },
   {
@@ -401,8 +401,8 @@ export const localizedLandingPages = [
     title: 'AI katalógus terjesztési playbook | AI Training Directory',
     description: 'Lokalizált terjesztési playbook hivatkozással a kanonikus outreach checklistre.',
     h1: 'AI katalógus terjesztési playbook',
-    intro: 'Gyakorlati változat csapatoknak, akik rendszeres forgalomnövelést akarnak a képzési tartalmakra.',
-    points: ['Heti terjesztési csatornák', 'Publikációs minőségi checklist', 'Riportálási ritmus'],
+    intro: 'Gyakorlati változat csapatoknak, akik következetes terjesztési ritmust és mérhető visszacsatolást szeretnének a képzési tartalmakhoz.',
+    points: ['Heti terjesztési csatornák és ritmus', 'Publikációs minőségi és link-ellenőrző lista', 'Egyszerű riportálási kadencia'],
     enPath: '/solutions/'
   },
   {
@@ -432,10 +432,10 @@ export const localizedLandingPages = [
     locale: 'pl',
     slug: 'metodologia-redakcyjna-katalogu-ai',
     title: 'Metodologia redakcyjna katalogu AI | AI Training Directory',
-    description: 'Jak oceniamy narzędzia i strony: workflow-fit, governance, lokalizacja i trudność wdrożenia.',
+    description: 'Jak oceniamy narzędzia i strony: dopasowanie do pracy, governance, lokalizacja i trudność wdrożenia.',
     h1: 'Metodologia redakcyjna katalogu AI',
-    intro: 'Lokalny skrót zasad oceny, aby decyzje zakupowe były spójne i oparte na dowodach.',
-    points: ['Jasne kryteria oceny', 'Konserwatywne claimy bez hype’u', 'Decyzje oparte o pilotaże'],
+    intro: 'Lokalne podsumowanie zasad oceny, które pomagają podejmować spójne decyzje bez „marketingowych obietnic”.',
+    points: ['Jasne kryteria oceny i zakresy dowodów', 'Zachowawcze sformułowania bez hype’u', 'Decyzje oparte o pilot i mierzalne kryteria'],
     enPath: '/editorial-methodology/'
   },
   {
@@ -443,10 +443,10 @@ export const localizedLandingPages = [
     locale: 'cs',
     slug: 'redakcni-metodika-ai-katalogu',
     title: 'Redakční metodika AI katalogu | AI Training Directory',
-    description: 'Jak hodnotíme nástroje a stránky: workflow-fit, governance, lokalizace a náročnost implementace.',
+    description: 'Jak hodnotíme nástroje a stránky: workflow-fit, governance, lokalizace a implementační náročnost.',
     h1: 'Redakční metodika AI katalogu',
-    intro: 'Lokalizované shrnutí hodnotících pravidel pro konzistentní a obhajitelná rozhodnutí.',
-    points: ['Jednotná hodnotící kritéria', 'Konzervativní tvrzení bez hype', 'Rozhodování opřené o piloty'],
+    intro: 'Lokalizované shrnutí pravidel hodnocení pro konzistentní, obhajitelné a praktické rozhodování.',
+    points: ['Jednotná hodnoticí kritéria a důkazní standard', 'Konzervativní formulace bez hype', 'Rozhodnutí opřená o pilot a měřitelné signály'],
     enPath: '/editorial-methodology/'
   },
   {
@@ -456,8 +456,8 @@ export const localizedLandingPages = [
     title: 'Redakčná metodika AI katalógu | AI Training Directory',
     description: 'Ako hodnotíme nástroje a stránky: workflow-fit, governance, lokalizácia a náročnosť implementácie.',
     h1: 'Redakčná metodika AI katalógu',
-    intro: 'Lokálny prehľad hodnotiacich pravidiel pre konzistentné a obhájiteľné rozhodovanie.',
-    points: ['Jednotné hodnotiace kritériá', 'Konzervatívne tvrdenia bez hype', 'Rozhodovanie postavené na pilotoch'],
+    intro: 'Lokálny prehľad hodnotiacich pravidiel pre konzistentné, obhájiteľné a praktické rozhodovanie.',
+    points: ['Jednotné hodnotiace kritériá a dôkazný štandard', 'Konzervatívne formulácie bez hype', 'Rozhodovanie postavené na pilote a merateľných signáloch'],
     enPath: '/editorial-methodology/'
   },
   {
@@ -467,8 +467,8 @@ export const localizedLandingPages = [
     title: 'AI katalógus szerkesztői módszertan | AI Training Directory',
     description: 'Hogyan értékeljük az eszközöket és oldalakat: workflow-fit, governance, lokalizáció és implementációs nehézség.',
     h1: 'AI katalógus szerkesztői módszertan',
-    intro: 'Lokalizált összefoglaló a megalapozott és következetes döntésekhez.',
-    points: ['Egységes értékelési kritériumok', 'Visszafogott állítások túlzás nélkül', 'Pilot-alapú döntéshozatal'],
+    intro: 'Lokalizált összefoglaló a következetes, védhető és gyakorlatias döntésekhez.',
+    points: ['Egységes értékelési kritériumok és bizonyítási elvek', 'Visszafogott állítások túlzás nélkül', 'Pilot-alapú döntéshozatal mérhető jelekkel'],
     enPath: '/editorial-methodology/'
   },
   {
@@ -1049,6 +1049,7 @@ export function getLocalizedParityFramework(locale) {
     en: {
       heading: 'Cross-language parity framework',
       intro: 'Shared quality gates that keep localized hubs and landings at the same practical depth as English implementation pages.',
+      lectureGuruNote: '',
       dimensionNames: {
         'section-depth': 'Section depth parity',
         'decision-utility': 'Decision utility parity',
@@ -1084,7 +1085,8 @@ export function getLocalizedParityFramework(locale) {
     },
     pl: {
       heading: 'Ramy parytetu między językami',
-      intro: 'Wspólne progi jakości utrzymujące lokalne huby i landingi na tym samym poziomie użyteczności co strony angielskie.',
+      intro: 'Wspólne progi jakości, które utrzymują lokalne huby i strony startowe na tym samym praktycznym poziomie co kanoniczne strony wdrożeniowe po angielsku.',
+      lectureGuruNote: 'Dodatkowy zasób: jeśli pracujesz też z treściami wykładowymi, sprawdź LectureGuru.',
       dimensionNames: {
         'section-depth': 'Parytet głębokości sekcji',
         'decision-utility': 'Parytet użyteczności decyzyjnej',
@@ -1094,22 +1096,22 @@ export function getLocalizedParityFramework(locale) {
       },
       landingTrustHeading: 'Kontekst zaufania i metodologii',
       hubTrustHeading: 'Zasady zaufania dla stron lokalnych',
-      routingHeading: 'Kontrola jakości ścieżek przejścia',
-      checklistExtension: 'Po 2 tygodniach zaplanuj formalny przegląd z właścicielem akceptacji i osobą eskalacyjną.',
+      routingHeading: 'Kontrole jakości nawigacji i ścieżek',
+      checklistExtension: 'Po 2 tygodniach zaplanuj formalny przegląd: jedna osoba od akceptacji i jedna od eskalacji.',
       hubChecklist: [
-        'Zacznij od lokalnej strony najlepiej dopasowanej do bieżącego intentu zakupowego.',
-        'Uruchom jeden workflow pilotowy na 2-4 tygodnie przed rozszerzeniem zakresu.',
-        'Wyznacz właściciela treści, recenzenta i osobę odpowiedzialną za eskalację.',
-        'Zapisz różnicę czasu cyklu i jakości przed decyzją zakupową.'
+        'Zacznij od lokalnej strony najlepiej dopasowanej do bieżącej intencji zakupu.',
+        'Uruchom jeden pilotaż (2–4 tygodnie), zanim rozszerzysz zakres.',
+        'Wyznacz: właściciela treści, recenzenta i osobę od eskalacji.',
+        'Zapisz różnice w czasie cyklu i jakości przed decyzją zakupową.'
       ],
       trustBullets: [
-        'Stosujemy konserwatywne claimy i opisujemy rekomendacje jako decyzje pilotowe.',
-        'Ocena jest spójna z kryteriami: workflow-fit, governance, lokalizacja i trudność wdrożenia.',
-        'Każda lokalna strona przechodzi kontrolę builda i ścieżek linków przed publikacją.'
+        'Sformułowania są celowo zachowawcze — to wskazówki do pilotażu, nie obietnice wyników.',
+        'Ocena trzyma stałe kryteria: workflow-fit, governance, lokalizacja i trudność wdrożenia.',
+        'Każda lokalna strona przechodzi kontrolę builda oraz ścieżek przed publikacją.'
       ],
       routingChecks: [
-        'Strony lokalne łapią intent odkrywania, a wdrożenie kierujemy do kanonicznych stron angielskich.',
-        'Intent porównawczy prowadź do /compare/, a intent wdrożeniowy do /solutions/.',
+        'Strony lokalne obsługują intencję „discovery”, a wdrożenie kierujemy do kanonicznych stron angielskich.',
+        'Intencję porównawczą kieruj do /compare/, a wdrożeniową do /solutions/.',
         'Dla sekcji bez lokalizacji używaj linków bez prefiksu językowego.'
       ],
       methodologyLinks: [
@@ -1120,7 +1122,8 @@ export function getLocalizedParityFramework(locale) {
     },
     cs: {
       heading: 'Rámec parity mezi jazyky',
-      intro: 'Sdílené kvalitativní brány, které drží lokalizované huby i landing stránky na stejné praktické úrovni jako anglické implementační stránky.',
+      intro: 'Sdílené kvalitativní brány, které drží lokalizované huby i landingové stránky na stejné praktické úrovni jako kanonické implementační stránky v angličtině.',
+      lectureGuruNote: 'Doplňkový zdroj: pokud řešíte i obsah ve stylu přednášek, mrkněte na LectureGuru.',
       dimensionNames: {
         'section-depth': 'Parita hloubky sekcí',
         'decision-utility': 'Parita rozhodovací užitečnosti',
@@ -1131,21 +1134,21 @@ export function getLocalizedParityFramework(locale) {
       landingTrustHeading: 'Kontext důvěry a metodiky',
       hubTrustHeading: 'Pravidla důvěry pro lokalizované stránky',
       routingHeading: 'Kontroly kvality navigace',
-      checklistExtension: 'Po 2 týdnech proveďte formální review s vlastníkem schválení i eskalační odpovědností.',
+      checklistExtension: 'Po 2 týdnech udělejte formální review: jeden owner schválení a jeden owner eskalace.',
       hubChecklist: [
         'Začněte lokalizovanou stránkou, která odpovídá aktuálnímu nákupnímu záměru.',
-        'Spusťte jeden pilotní workflow na 2-4 týdny, než rozšíříte rozsah.',
-        'Určete vlastníka obsahu, review odpovědnost i eskalační roli.',
+        'Spusťte jeden pilot (2–4 týdny), než rozšíříte rozsah.',
+        'Určete vlastníka obsahu, recenzenta a eskalační roli.',
         'Před nákupním rozhodnutím změřte změnu cyklu i kvality.'
       ],
       trustBullets: [
-        'Tvrzení jsou záměrně konzervativní a formulovaná jako pilotní rozhodnutí.',
+        'Tvrzení jsou záměrně konzervativní — berte je jako rámec pro pilot, ne jako slib výsledků.',
         'Hodnocení drží stejná kritéria: workflow-fit, governance, lokalizace a implementační náročnost.',
-        'Každá lokalizovaná stránka prochází build verifikací a kontrolou tras.'
+        'Každá lokalizovaná stránka prochází kontrolou buildu a tras před publikací.'
       ],
       routingChecks: [
-        'Lokalizované stránky zachytí discovery intent, implementace směřuje na kanonické anglické stránky.',
-        'Srovnávací intent veďte na /compare/ a implementační intent na /solutions/.',
+        'Lokalizované stránky pokrývají „discovery“ záměr, implementace vede na kanonické anglické stránky.',
+        'Srovnávací záměr veďte na /compare/ a implementační záměr na /solutions/.',
         'U nelokalizovaných sekcí používejte odkazy bez jazykového prefixu.'
       ],
       methodologyLinks: [
@@ -1156,7 +1159,8 @@ export function getLocalizedParityFramework(locale) {
     },
     sk: {
       heading: 'Rámec parity medzi jazykmi',
-      intro: 'Spoločné kvalitatívne brány, ktoré držia lokalizované huby a landingy na rovnakej praktickej úrovni ako anglické implementačné stránky.',
+      intro: 'Spoločné kvalitatívne brány, ktoré držia lokalizované huby a landing stránky na rovnakej praktickej úrovni ako kanonické implementačné stránky v angličtine.',
+      lectureGuruNote: 'Doplnkový zdroj: ak riešite aj obsah v štýle prednášok, pozrite si LectureGuru.',
       dimensionNames: {
         'section-depth': 'Parita hĺbky sekcií',
         'decision-utility': 'Parita rozhodovacej použiteľnosti',
@@ -1167,21 +1171,21 @@ export function getLocalizedParityFramework(locale) {
       landingTrustHeading: 'Kontext dôvery a metodiky',
       hubTrustHeading: 'Pravidlá dôvery pre lokalizované stránky',
       routingHeading: 'Kontroly kvality navigácie',
-      checklistExtension: 'Po 2 týždňoch urobte formálne review s vlastníkom schválenia aj eskalačným vlastníkom.',
+      checklistExtension: 'Po 2 týždňoch urobte formálne review: jeden vlastník schválenia a jeden vlastník eskalácie.',
       hubChecklist: [
-        'Začni lokalizovanou stránkou, ktorá zodpovedá aktuálnemu nákupnému intentu.',
-        'Spusť jeden pilotný workflow na 2-4 týždne pred rozšírením rozsahu.',
-        'Priraď vlastníka obsahu, review vlastníka aj eskalačnú rolu.',
+        'Začni lokalizovanou stránkou, ktorá zodpovedá aktuálnemu nákupnému zámeru.',
+        'Spusť jeden pilot (2–4 týždne), predtým než rozšíriš rozsah.',
+        'Priraď vlastníka obsahu, recenzenta a eskalačnú rolu.',
         'Pred nákupným rozhodnutím zmeraj zmenu cyklu a kvality.'
       ],
       trustBullets: [
-        'Tvrdenia sú zámerne konzervatívne a formulované ako pilotné rozhodnutia.',
+        'Tvrdenia sú zámerne konzervatívne — sú to pravidlá pre pilot, nie sľuby výsledkov.',
         'Hodnotenie zostáva pri rovnakých kritériách: workflow-fit, governance, lokalizácia a náročnosť implementácie.',
-        'Každá lokalizovaná stránka prechádza build overením a kontrolou trás.'
+        'Každá lokalizovaná stránka prechádza kontrolou buildu a trás pred publikáciou.'
       ],
       routingChecks: [
-        'Lokalizované stránky zachytávajú discovery intent, implementácia smeruje na kanonické anglické stránky.',
-        'Porovnávací intent smerujte na /compare/ a implementačný intent na /solutions/.',
+        'Lokalizované stránky pokrývajú „discovery“ zámer, implementácia smeruje na kanonické anglické stránky.',
+        'Porovnávací zámer smerujte na /compare/ a implementačný zámer na /solutions/.',
         'Pri nelokalizovaných sekciách používajte odkazy bez jazykového prefixu.'
       ],
       methodologyLinks: [
@@ -1192,7 +1196,8 @@ export function getLocalizedParityFramework(locale) {
     },
     hu: {
       heading: 'Nyelvek közötti paritási keretrendszer',
-      intro: 'Közös minőségi kapuk, amelyek a lokalizált hubokat és landing oldalakat az angol implementációs oldalakkal azonos gyakorlati szinten tartják.',
+      intro: 'Közös minőségi kapuk, amelyek a lokalizált hubokat és landing oldalakat a kanonikus angol megvalósítási oldalakkal azonos gyakorlati szinten tartják.',
+      lectureGuruNote: 'Kiegészítő forrás: ha előadásjellegű tartalommal is foglalkozol, nézd meg a LectureGuru-t.',
       dimensionNames: {
         'section-depth': 'Szekciómélység-paritás',
         'decision-utility': 'Döntési használhatóság paritása',
@@ -1203,21 +1208,21 @@ export function getLocalizedParityFramework(locale) {
       landingTrustHeading: 'Bizalmi és módszertani kontextus',
       hubTrustHeading: 'Bizalmi korlátok a lokalizált oldalakhoz',
       routingHeading: 'Navigációs minőségellenőrzések',
-      checklistExtension: 'A 2. hét után legyen formális review egy jóváhagyó és egy eszkalációs felelős kijelölésével.',
+      checklistExtension: 'A 2. hét után legyen formális review: egy jóváhagyó felelős és egy eszkalációs felelős.',
       hubChecklist: [
         'Kezdj egy olyan lokalizált oldallal, ami a legfontosabb beszerzési szándékot fedi.',
-        'Futtass egy pilot workflow-t 2-4 hétig, mielőtt bővíted a scope-ot.',
+        'Futtass egy pilotot 2–4 hétig, mielőtt bővíted a scope-ot.',
         'Nevezz ki tartalomgazdát, review felelőst és eszkalációs felelőst.',
         'Beszerzési döntés előtt mérd a ciklusidő- és minőségváltozást.'
       ],
       trustBullets: [
-        'Az állítások tudatosan konzervatívak, és pilot döntésként vannak keretezve.',
+        'Az állítások tudatosan konzervatívak — pilot döntést támogató keretet adnak, nem garantált kimeneteket.',
         'Az értékelés ugyanazokra a szempontokra épül: workflow-fit, governance, lokalizáció, implementációs nehézség.',
-        'Minden lokalizált oldal build- és útvonalellenőrzéssel megy ki.'
+        'Minden lokalizált oldal build- és útvonalellenőrzéssel megy ki publikálás előtt.'
       ],
       routingChecks: [
-        'A lokalizált oldalak discovery intentet fednek le, az implementáció a kanonikus angol oldalakra megy.',
-        'Összehasonlítási intentet /compare/ alá, bevezetési intentet /solutions/ alá irányíts.',
+        'A lokalizált oldalak „discovery” szándékot fednek le, az implementáció a kanonikus angol oldalakra megy.',
+        'Összehasonlítási szándékot /compare/ alá, bevezetési szándékot /solutions/ alá irányíts.',
         'Nem lokalizált szekcióknál nyelvi előtag nélküli linket használj.'
       ],
       methodologyLinks: [
@@ -1305,6 +1310,7 @@ export function getLocalizedParityFramework(locale) {
   return {
     updatedOn: '2026-02-17',
     ...localized,
+    lectureGuruNote: localized.lectureGuruNote || '',
     dimensions: i18nParityRubric.map((dimension) => ({
       ...dimension,
       localizedName: localized.dimensionNames[dimension.id] || dimension.name
@@ -1378,8 +1384,8 @@ export function getLocalizedUiStrings(locale) {
       faqHeading: 'Najczęstsze pytania',
       editionTag: 'Wersja polska',
       openEnglishPageCta: 'Otwórz angielską stronę wdrożeniową',
-      waitlistCta: 'Dołącz do listy partnerów założycielskich',
-      checklistHeading: 'Checklista wejścia na rynek',
+      waitlistCta: 'Dołącz do listy oczekujących partnerów-założycieli',
+      checklistHeading: 'Checklista wdrożenia na rynku',
       nextPagesHeading: 'Kolejne strony do odwiedzenia',
       otherLanguagesHeading: 'Inne wersje językowe',
       pointSupportCopy: 'Skupione na praktycznym wdrożeniu dla zespołów L&D, enablement i operacji.'
@@ -1389,8 +1395,8 @@ export function getLocalizedUiStrings(locale) {
       faqHeading: 'Často kladené dotazy',
       editionTag: 'Česká verze',
       openEnglishPageCta: 'Otevřít anglickou implementační stránku',
-      waitlistCta: 'Připojit se na čekací listinu partnerů',
-      checklistHeading: 'Kontrolní seznam pro vstup na trh',
+      waitlistCta: 'Připojit se na čekací listinu zakládajících partnerů',
+      checklistHeading: 'Checklist nasazení pro trh',
       nextPagesHeading: 'Další stránky k návštěvě',
       otherLanguagesHeading: 'Další jazykové verze',
       pointSupportCopy: 'Zaměřeno na praktické nasazení pro týmy L&D, enablement a provoz.'
@@ -1400,20 +1406,20 @@ export function getLocalizedUiStrings(locale) {
       faqHeading: 'Časté otázky',
       editionTag: 'Slovenská verzia',
       openEnglishPageCta: 'Otvoriť anglickú implementačnú stránku',
-      waitlistCta: 'Pridať sa do čakacej listiny partnerov',
-      checklistHeading: 'Kontrolný zoznam pre vstup na trh',
+      waitlistCta: 'Pridať sa na čakaciu listinu zakladajúcich partnerov',
+      checklistHeading: 'Checklist nasadenia pre trh',
       nextPagesHeading: 'Ďalšie stránky na návštevu',
       otherLanguagesHeading: 'Ďalšie jazykové verzie',
-      pointSupportCopy: 'Zamerané na praktické nasadenie pre tímy L&D, enablement a operácií.'
+      pointSupportCopy: 'Zamerané na praktické nasadenie pre tímy L&D, enablement a prevádzku.'
     },
     hu: {
       home: 'Főoldal',
       faqHeading: 'Gyakori kérdések',
       editionTag: 'Magyar kiadás',
       openEnglishPageCta: 'Angol megvalósítási oldal megnyitása',
-      waitlistCta: 'Csatlakozás az alapító partner várólistához',
+      waitlistCta: 'Csatlakozás az alapító partnerek várólistájához',
       checklistHeading: 'Piaci bevezetési ellenőrzőlista',
-      nextPagesHeading: 'Következő meglátogatandó oldalak',
+      nextPagesHeading: 'Következő oldalak',
       otherLanguagesHeading: 'További nyelvi kiadások',
       pointSupportCopy: 'A gyakorlati bevezetésre fókuszál L&D-, enablement- és operációs csapatoknál.'
     },
@@ -1453,28 +1459,28 @@ export function getLocalizedSupportBlocks(key, locale) {
     'ai-training-tools': {
       checklist: {
         pl: [
-          'Zmapuj 3 najczęściej powtarzające się procesy szkoleniowe (onboarding, aktualizacje SOP dla ról, odświeżenia compliance).',
-          'Ustal jedno źródło prawdy dla SOP, playbooków i historii zmian.',
-          'Uruchom pilotaż na jednym zespole i mierz czas publikacji oraz jakość ukończenia.',
-          'Ustal governance: osoby akceptujące, rytm aktualizacji i właścicieli każdego strumienia szkoleniowego.'
+          'Zidentyfikuj 3 powtarzalne procesy szkoleniowe (onboarding, aktualizacje SOP dla ról, odświeżenia compliance).',
+          'Ustal jedno źródło prawdy dla SOP, playbooków i historii zmian (kto, kiedy, co zmienił).',
+          'Przeprowadź pilotaż w jednym zespole i mierz: czas do publikacji, jakość ukończenia i liczbę poprawek.',
+          'Ustal governance: właścicieli treści, recenzentów, kryteria akceptacji i rytm aktualizacji.'
         ],
         cs: [
-          'Zmapujte 3 nejčastěji opakované školicí workflowy (onboarding, aktualizace SOP pro role, refresh compliance).',
-          'Určete jednotný zdroj pravdy pro SOP dokumenty, playbooky a changelogy.',
-          'Spusťte pilot v jednom týmu a sledujte čas do publikace i kvalitu dokončení.',
-          'Nastavte governance: schvalovatele, kadenci aktualizací a vlastníky jednotlivých školicích proudů.'
+          'Popište 3 opakované školicí procesy (onboarding, aktualizace SOP podle rolí, compliance refresh).',
+          'Určete jednu „source of truth“ pro SOP, playbooky a historii změn (kdo, kdy, co).',
+          'Spusťte pilot v jednom týmu a měřte: čas do publikace, kvalitu dokončení a míru reworku.',
+          'Nastavte governance: vlastníky obsahu, recenzenty, schvalovací kritéria a kadenci aktualizací.'
         ],
         sk: [
-          'Zmapujte 3 najčastejšie opakované školiace workflowy (onboarding, aktualizácie SOP podľa rolí, refresh compliance).',
-          'Definujte jeden zdroj pravdy pre SOP dokumenty, playbooky a záznamy zmien.',
-          'Spustite pilot v jednom tíme a sledujte čas publikácie aj kvalitu dokončenia.',
-          'Nastavte governance: schvaľovateľov, frekvenciu aktualizácií a vlastníkov každého školiaceho prúdu.'
+          'Popíšte 3 opakované školiace procesy (onboarding, aktualizácie SOP podľa rolí, compliance refresh).',
+          'Definujte jeden „source of truth“ pre SOP, playbooky a históriu zmien (kto, kedy, čo).',
+          'Spustite pilot v jednom tíme a merajte: čas do publikácie, kvalitu dokončenia a mieru prepracovaní.',
+          'Nastavte governance: vlastníkov obsahu, recenzentov, kritériá schválenia a frekvenciu aktualizácií.'
         ],
         hu: [
-          'Térképezd fel a 3 leggyakrabban ismétlődő képzési workflow-t (onboarding, szerepkörhöz kötött SOP-frissítések, compliance frissítések).',
-          'Határozz meg egyetlen hiteles forrást a SOP-dokumentumokhoz, playbookokhoz és változásnaplókhoz.',
-          'Indíts pilotot egy csapattal, és mérd a publikálásig eltelt időt, valamint a teljesítés minőségét.',
-          'Állítsd be a governance-et: jóváhagyók, frissítési ütemezés és felelősségi körök képzési streamenként.'
+          'Írd le a 3 leggyakrabban ismétlődő képzési folyamatot (onboarding, szerepkörhöz kötött SOP-frissítések, compliance refresh).',
+          'Jelölj ki egyetlen hiteles forrást a SOP-okhoz, playbookokhoz és a változásnaplóhoz (ki, mikor, mit).',
+          'Indíts pilotot egy csapattal, és mérd: publikálási idő, teljesítési minőség, rework arány.',
+          'Állítsd be a governance-et: tartalomgazdák, recenzensek, jóváhagyási kritériumok és frissítési kadencia.'
         ],
         de: [
           'Erfassen Sie die 3 häufigsten wiederkehrenden Trainings-Workflows (Onboarding, rollenspezifische SOP-Updates, Compliance-Refreshes).',
@@ -1496,19 +1502,19 @@ export function getLocalizedSupportBlocks(key, locale) {
         ]
       },
       internalLinks: {
-        pl: ['Przeglądaj rozwiązania AI dla szkoleń', 'Porównaj narzędzia obok siebie', 'Poznaj kategorie szkoleniowe'],
-        cs: ['Procházet AI řešení pro školení', 'Porovnat nástroje vedle sebe', 'Prozkoumat školicí kategorie'],
-        sk: ['Prejsť AI riešenia pre školenia', 'Porovnať nástroje vedľa seba', 'Preskúmať kategórie školení'],
-        hu: ['AI képzési megoldások böngészése', 'Eszközök összehasonlítása egymás mellett', 'Képzési kategóriák felfedezése'],
+        pl: ['Przeglądaj scenariusze wdrożenia', 'Porównaj narzędzia obok siebie', 'Poznaj kategorie szkoleniowe'],
+        cs: ['Procházet scénáře nasazení', 'Porovnat nástroje vedle sebe', 'Prozkoumat školicí kategorie'],
+        sk: ['Prehliadať scenáre nasadenia', 'Porovnať nástroje vedľa seba', 'Preskúmať kategórie školení'],
+        hu: ['Megoldási útmutatók böngészése', 'Eszközök összehasonlítása egymás mellett', 'Képzési kategóriák felfedezése'],
         de: ['KI-Trainingslösungen durchsuchen', 'Tools im Direktvergleich ansehen', 'Trainingskategorien ansehen'],
         es: ['Explorar soluciones de IA para formación', 'Comparar herramientas lado a lado', 'Explorar categorías de formación'],
         en: ['Browse AI training solutions', 'Compare tools side-by-side', 'Explore training categories']
       },
       intentCopy: {
-        pl: 'Ta wersja została dostosowana do polskiego intentu wyszukiwania i kieruje do angielskich stron wdrożeniowych.',
-        cs: 'Tato verze je přizpůsobena českému vyhledávacímu záměru a vede na anglické implementační stránky.',
-        sk: 'Táto verzia je prispôsobená slovenskému vyhľadávaciemu intentu a vedie na anglické implementačné stránky.',
-        hu: 'Ez a verzió a magyar keresési szándékhoz igazodik, és angol megvalósítási oldalakra irányít.',
+        pl: 'Ta wersja jest dopasowana do polskiej intencji wyszukiwania i prowadzi do kanonicznych stron wdrożeniowych po angielsku.',
+        cs: 'Tato verze je přizpůsobena českému vyhledávacímu záměru a odkazuje na kanonické implementační stránky v angličtině.',
+        sk: 'Táto verzia je prispôsobená slovenskému vyhľadávaciemu zámeru a odkazuje na kanonické implementačné stránky v angličtine.',
+        hu: 'Ez a verzió a magyar keresési szándékhoz igazodik, és a kanonikus angol megvalósítási oldalakra mutat.',
         de: 'Diese Version ist auf deutschsprachige Suchintention ausgerichtet und verweist auf englische Umsetzungsseiten.',
         es: 'Esta versión está adaptada a la intención de búsqueda local y dirige a páginas de implementación en inglés.',
         en: `This ${localeName} page is designed for market-relevant discovery and routes readers to implementation-ready English solution pages.`
@@ -1517,28 +1523,28 @@ export function getLocalizedSupportBlocks(key, locale) {
     'distribution-playbook': {
       checklist: {
         pl: [
-          'Zacznij od kanału o najszybszym sprzężeniu zwrotnym (newsletter, LinkedIn, społeczność branżowa).',
-          'Publikuj 1 konkretny insight tygodniowo i zawsze linkuj do checklisty kanonicznej.',
-          'Mierz kliknięcia, wejścia na strony rozwiązaniowe i zapisy z ruchu dystrybucyjnego.',
-          'Raz w tygodniu aktualizuj backlog tematów na podstawie najlepiej konwertujących wejść.'
+          'Wybierz 1 temat/stronę na tydzień i określ grupę odbiorców (L&D, enablement, HR Ops).',
+          'Przygotuj 2–3 warianty przekazu: problem → kryteria decyzji → kolejny krok (link).',
+          'Dystrybuuj w 3 kanałach i przypisz właścicieli publikacji.',
+          'Co tydzień oceń 3 metryki (wejścia, kliknięcia, przejścia) i zaktualizuj listę tematów.'
         ],
         cs: [
-          'Začněte kanálem s nejrychlejší zpětnou vazbou (newsletter, LinkedIn, oborová komunita).',
-          'Publikujte 1 konkrétní insight týdně a vždy odkazujte na kanonický checklist.',
-          'Měřte prokliky, návštěvy solution stránek a konverze z distribučního provozu.',
-          'Jednou týdně aktualizujte tematický backlog podle nejlépe konvertujících vstupů.'
+          'Vyberte 1 téma/stránku na týden a definujte publikum (L&D, enablement, HR ops).',
+          'Připravte 2–3 varianty sdělení: problém → kritéria rozhodnutí → další krok (odkaz).',
+          'Distribuujte do 3 kanálů a určete vlastníky publikace.',
+          'Týdně vyhodnoťte 3 metriky (návštěvy, prokliky, přechody) a upravte backlog témat.'
         ],
         sk: [
-          'Začnite kanálom s najrýchlejšou spätnou väzbou (newsletter, LinkedIn, odborná komunita).',
-          'Publikujte 1 konkrétny insight týždenne a vždy odkazujte na kanonický checklist.',
-          'Merajte prekliky, návštevy solution stránok a konverzie z distribučnej návštevnosti.',
-          'Raz týždenne aktualizujte backlog tém podľa najlepšie konvertujúcich vstupov.'
+          'Vyberte 1 tému/stránku na týždeň a definujte publikum (L&D, enablement, HR ops).',
+          'Pripravte 2–3 varianty správy: problém → kritériá rozhodnutia → ďalší krok (odkaz).',
+          'Distribuujte do 3 kanálov a určte vlastníkov publikácie.',
+          'Týždenne vyhodnoťte 3 metriky (návštevy, kliky, prechody) a upravte backlog tém.'
         ],
         hu: [
-          'Kezdd a leggyorsabb visszacsatolású csatornával (hírlevél, LinkedIn, szakmai közösség).',
-          'Hetente 1 konkrét insightot publikálj, és mindig hivatkozz a kanonikus checklistre.',
-          'Mérd az átkattintásokat, a solution oldalak látogatását és a terjesztési forgalom konverzióit.',
-          'Hetente frissítsd a témabacklogot a legjobban konvertáló belépési pontok alapján.'
+          'Válassz 1 témát/oldalt hetente, és definiáld a célcsoportot (L&D, enablement, HR ops).',
+          'Készíts 2–3 üzenetvariánst: probléma → döntési kritériumok → következő lépés (link).',
+          'Tervezd meg a terjesztést 3 csatornára, és jelölj ki publikálási felelősöket.',
+          'Hetente értékeld 3 metrikát (látogatás, kattintás, továbblépés), és frissítsd a témalistát.'
         ],
         de: [
           'Starten Sie mit einem Kanal mit schnellem Feedback (Newsletter, LinkedIn, Fach-Community).',
@@ -1597,13 +1603,69 @@ export function getLocalizedSupportBlocks(key, locale) {
         ]
       },
       intentCopy: {
-        pl: 'Lokalna wersja playbooka dystrybucji prowadzi do jednej kanonicznej checklisty operacyjnej.',
-        cs: 'Lokalizovaná verze distribučního playbooku odkazuje na jednu kanonickou provozní checklistu.',
-        sk: 'Lokalizovaná verzia distribučného playbooku smeruje na jeden kanonický operačný checklist.',
-        hu: 'A lokalizált terjesztési playbook egyetlen kanonikus operatív checklistre mutat.',
+        pl: 'Lokalna wersja playbooka dystrybucji z odnośnikiem do jednej kanonicznej checklisty operacyjnej.',
+        cs: 'Lokalizovaná verze distribučního playbooku s odkazem na jednu kanonickou provozní checklistu.',
+        sk: 'Lokalizovaná verzia distribučného playbooku s odkazom na jeden kanonický operačný checklist.',
+        hu: 'A lokalizált terjesztési playbook egyetlen kanonikus operatív checklistre hivatkozik.',
         de: 'Diese lokalisierte Playbook-Seite verweist auf eine zentrale kanonische Operations-Checklist.',
         es: 'Esta versión localizada del playbook enlaza a una única checklist canónica de operaciones.',
         en: 'This localized distribution playbook points to one canonical operations checklist.'
+      }
+    },
+    'editorial-methodology': {
+      checklist: {
+        pl: [
+          'Zdefiniuj przypadek użycia i „definition of done” dla pilota (owner, czas, metryka, dowód).',
+          'Zapisz kryteria oceny: workflow-fit, governance, lokalizacja i koszt/trudność wdrożenia.',
+          'Oceń opcje na tym samym scenariuszu i danych wejściowych, aby porównanie było uczciwe.',
+          'Udokumentuj granice twierdzeń: co wymaga pilota i jak to zweryfikować.'
+        ],
+        cs: [
+          'Definujte use case a „definition of done“ pro pilot (owner, čas, metrika, důkaz).',
+          'Zapište hodnoticí kritéria: workflow-fit, governance, lokalizace a implementační náročnost.',
+          'Porovnávejte na stejném scénáři a vstupních datech, aby byl výsledek férový.',
+          'Zdokumentujte hranice tvrzení: co vyžaduje pilot a jak to ověřit.'
+        ],
+        sk: [
+          'Definujte use case a „definition of done“ pre pilot (owner, čas, metrika, dôkaz).',
+          'Zapíšte hodnotiace kritériá: workflow-fit, governance, lokalizácia a náročnosť implementácie.',
+          'Porovnávajte na rovnakom scenári a vstupných dátach, aby bol výsledok férový.',
+          'Zdokumentujte hranice tvrdení: čo vyžaduje pilot a ako to overiť.'
+        ],
+        hu: [
+          'Definiáld a use case-t és a „definition of done”-t a pilothöz (owner, idő, metrika, bizonyíték).',
+          'Írd le az értékelési kritériumokat: workflow-fit, governance, lokalizáció, implementációs nehézség.',
+          'Ugyanazon forgatókönyvön és inputokon hasonlíts, hogy az eredmény összevethető legyen.',
+          'Dokumentáld az állítások határait: mi igényel pilotot, és hogyan igazolható.'
+        ]
+      },
+      internalLinks: {
+        pl: [
+          { label: 'Otwórz checklistę oceny L&D', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+          { label: 'Przejdź do hubu porównań', href: '/compare/' },
+          { label: 'Dodaj odpowiednie narzędzie', href: '/submit/' }
+        ],
+        cs: [
+          { label: 'Otevřít checklist pro L&D evaluaci', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+          { label: 'Přejít na hub srovnání', href: '/compare/' },
+          { label: 'Přidat relevantní nástroj', href: '/submit/' }
+        ],
+        sk: [
+          { label: 'Otvoriť checklist pre L&D evaluáciu', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+          { label: 'Prejsť na hub porovnaní', href: '/compare/' },
+          { label: 'Pridať relevantný nástroj', href: '/submit/' }
+        ],
+        hu: [
+          { label: 'L&D technológiai checklist megnyitása', href: '/solutions/ai-ld-tech-evaluation-checklist/' },
+          { label: 'Összehasonlítási hub megnyitása', href: '/compare/' },
+          { label: 'Releváns eszköz beküldése', href: '/submit/' }
+        ]
+      },
+      intentCopy: {
+        pl: 'Lokalizowane podsumowanie metodologii; pełne standardy i aktualizacje znajdują się na stronie kanonicznej po angielsku.',
+        cs: 'Lokalizované shrnutí metodiky; plné standardy a aktualizace jsou na kanonické stránce v angličtině.',
+        sk: 'Lokalizované zhrnutie metodiky; plné štandardy a aktualizácie sú na kanonickej stránke v angličtine.',
+        hu: 'A módszertan lokalizált összefoglalója; a teljes standard és frissítések a kanonikus angol oldalon vannak.'
       }
     },
     'ai-literacy-platform-vs-general-compliance-courses': {
@@ -1705,10 +1767,10 @@ export function getLocalizedSupportBlocks(key, locale) {
         en: ['SOP-to-video implementation pages', 'New-hire onboarding automation', 'Submit a relevant tool']
       },
       intentCopy: {
-        pl: 'Treść lokalna dla polskiego intentu wyszukiwania, z jednolitą ścieżką wdrożeniową do głównych stron rozwiązań.',
-        cs: 'Lokalizováno pro český vyhledávací záměr při zachování jednotné implementační cesty na hlavní stránky řešení.',
-        sk: 'Lokalizované pre slovenský vyhľadávací intent pri zachovaní jednotnej implementačnej cesty na hlavné stránky riešení.',
-        hu: 'A tartalom magyar keresési szándékra lokalizált, miközben a megvalósítási útvonal egységes marad.',
+        pl: 'Treść dopasowana do polskiej intencji wyszukiwania, z konsekwentną ścieżką wdrożeniową do stron kanonicznych.',
+        cs: 'Lokalizováno pro český vyhledávací záměr a zároveň se zachováním jednotné implementační cesty na kanonické stránky.',
+        sk: 'Lokalizované pre slovenský vyhľadávací zámer pri zachovaní jednotnej implementačnej cesty na kanonické stránky.',
+        hu: 'A tartalom magyar keresési szándékra lokalizált, miközben a megvalósítási útvonal következetesen a kanonikus oldalakra vezet.',
         de: 'Für lokale Suchintention lokalisiert, bei gleichzeitig konsistenten Umsetzungswegen zu den Kernlösungsseiten.',
         es: 'Localizado para intención de búsqueda local, manteniendo rutas de implementación consistentes hacia páginas clave.',
         en: `Localized in ${localeName} for search intent, while keeping implementation pathways consistent with core solution pages.`
@@ -1717,8 +1779,8 @@ export function getLocalizedSupportBlocks(key, locale) {
   };
 
   const block = content[key] || content.default;
-  const checklist = block.checklist[locale] || block.checklist.en;
-  const linkLabels = block.internalLinks[locale] || block.internalLinks.en;
+  const checklist = block.checklist[locale] || block.checklist.en || content.default.checklist[locale] || content.default.checklist.en;
+  const linkLabels = block.internalLinks[locale] || block.internalLinks.en || content.default.internalLinks[locale] || content.default.internalLinks.en;
   const internalLinks = typeof linkLabels[0] === 'object'
     ? linkLabels
     : [
@@ -1731,7 +1793,7 @@ export function getLocalizedSupportBlocks(key, locale) {
     labels,
     checklist: [...checklist, parityFramework.checklistExtension],
     internalLinks,
-    intentCopy: block.intentCopy[locale] || block.intentCopy.en,
+    intentCopy: block.intentCopy[locale] || block.intentCopy.en || content.default.intentCopy[locale] || content.default.intentCopy.en,
     trustBullets: parityFramework.trustBullets,
     routingChecks: parityFramework.routingChecks,
     methodologyLinks: parityFramework.methodologyLinks,
@@ -2956,20 +3018,20 @@ localizedLandingPages.push(
 export function getLocalizedFaq(locale) {
   const localized = {
     pl: [
-      { q: 'Czy ta strona jest lokalizowana pod realny intent?', a: 'Tak. Treść jest dopasowana do rynku i workflow zespołów L&D, a nie masowo tłumaczona bez kontekstu.' },
-      { q: 'Dla kogo jest ta strona?', a: 'Dla zespołów Learning & Development, enablement oraz osób odpowiedzialnych za operacje szkoleniowe.' }
+      { q: 'Czy ta strona jest dopasowana do realnej intencji wyszukiwania?', a: 'Tak. Treść jest przygotowana pod lokalny kontekst i potrzeby zespołów L&D — to nie jest „hurtowe” tłumaczenie bez weryfikacji.' },
+      { q: 'Dla kogo jest ta strona?', a: 'Dla zespołów Learning & Development, enablement oraz osób odpowiedzialnych za operacje szkoleniowe i wdrożenia.' }
     ],
     cs: [
-      { q: 'Je stránka lokalizovaná podle reálného vyhledávacího záměru?', a: 'Ano. Obsah je upravený pro lokální kontext a potřeby L&D týmů, ne jako hromadný strojový překlad.' },
-      { q: 'Pro koho je tato stránka určena?', a: 'Pro L&D týmy, enablement leadery a manažery školících operací.' }
+      { q: 'Je stránka lokalizovaná podle reálného vyhledávacího záměru?', a: 'Ano. Obsah je upravený pro lokální kontext a potřeby L&D týmů — nejde o hromadný překlad bez kontroly.' },
+      { q: 'Pro koho je tato stránka určena?', a: 'Pro L&D týmy, enablement leadery a lidi odpovědné za training operations a nasazení.' }
     ],
     sk: [
-      { q: 'Je stránka lokalizovaná podľa reálneho intentu?', a: 'Áno. Obsah je prispôsobený lokálnemu kontextu a potrebám L&D tímov.' },
-      { q: 'Pre koho je táto stránka určená?', a: 'Pre tímy Learning & Development, enablement a manažérov školení.' }
+      { q: 'Je stránka lokalizovaná podľa reálneho vyhľadávacieho zámeru?', a: 'Áno. Obsah je prispôsobený lokálnemu kontextu a potrebám L&D tímov — nie je to masový preklad bez kontroly.' },
+      { q: 'Pre koho je táto stránka určená?', a: 'Pre tímy Learning & Development, enablement a ľudí zodpovedných za training operations a nasadenie.' }
     ],
     hu: [
-      { q: 'Ez az oldal valós keresési szándékra van lokalizálva?', a: 'Igen. A tartalom a helyi L&D működéshez igazodik, nem tömeges, kontextus nélküli fordítás.' },
-      { q: 'Kinek szól ez az oldal?', a: 'L&D csapatoknak, enablement vezetőknek és képzési operációs menedzsereknek.' }
+      { q: 'Ez az oldal valós keresési szándékra van lokalizálva?', a: 'Igen. A tartalom a helyi L&D működéshez igazodik — nem tömeges, kontextus nélküli fordítás.' },
+      { q: 'Kinek szól ez az oldal?', a: 'L&D csapatoknak, enablement vezetőknek, valamint a training operations és bevezetés felelőseinek.' }
     ],
     de: [
       { q: 'Ist diese Seite nach tatsächlicher Suchintention lokalisiert?', a: 'Ja. Die Inhalte sind auf den DACH-Kontext und L&D-Workflows ausgerichtet.' },
