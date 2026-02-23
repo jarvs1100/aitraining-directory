@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "https://www.aitraining.directory/*"
+  to = "https://aitraining.directory/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.aitraining.directory/*"
+  to = "https://aitraining.directory/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://aitraining.directory/*"
+  to = "https://aitraining.directory/:splat"
+  status = 301
+  force = true

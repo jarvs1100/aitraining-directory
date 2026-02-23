@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.aitraining.directory"
+        }
+      ],
+      "destination": "https://aitraining.directory/$1",
+      "permanent": true
+    }
+  ]
+}
