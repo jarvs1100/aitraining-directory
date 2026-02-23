@@ -5,6 +5,7 @@ const { page, alternates = [], siblingPages = [] } = Astro.props;
 const currentLocaleName = localeMeta[page.locale]?.name || page.locale.toUpperCase();
 const supportBlocks = getLocalizedSupportBlocks(page.key, page.locale);
 const ui = getLocalizedUiStrings(page.locale);
+const longformSections = Array.isArray(page.sections) ? page.sections : [];
 ---
 <Breadcrumbs items={[{ label: ui.home, href: `/${page.locale}/` }, { label: currentLocaleName, href: `/${page.locale}/` }, { label: page.h1, href: `/${page.locale}/${page.slug}/` }]} />
 <section class="hero">
@@ -24,6 +25,26 @@ const ui = getLocalizedUiStrings(page.locale);
     <a class="btn btn-secondary" href="/advertise/">{supportBlocks.labels.waitlistCta}</a>
   </div>
 </section>
+
+{Boolean(longformSections.length) && (
+  <>
+    {longformSections.map((section) => (
+      <section class="section card" aria-labelledby={`${section.id}-heading`}>
+        <h2 id={`${section.id}-heading`}>{section.heading}</h2>
+        {Array.isArray(section.body) ? section.body.map((paragraph) => (
+          <p class="muted">{paragraph}</p>
+        )) : Boolean(section.body) && (
+          <p class="muted">{section.body}</p>
+        )}
+        {Array.isArray(section.bullets) && Boolean(section.bullets.length) && (
+          <ul>
+            {section.bullets.map((item) => <li>{item}</li>)}
+          </ul>
+        )}
+      </section>
+    ))}
+  </>
+)}
 
 <section class="section" aria-labelledby="checklist-heading">
   <h2 id="checklist-heading">{supportBlocks.labels.checklistHeading}</h2>

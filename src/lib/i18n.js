@@ -18,6 +18,55 @@ export const localizedLandingPages = [
     h1: 'Narzędzia AI do szkoleń pracowników',
     intro: 'Punkt startowy dla zespołów L&D w Polsce: jak oceniać narzędzia AI pod kątem pilotażu, utrzymania treści i kontroli jakości.',
     points: ['Szybsze tworzenie i aktualizacje materiałów onboardingowych', 'Spójniejsza jakość treści szkoleniowych', 'Prostsze wdrażanie zmian w SOP i procedurach'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kiedy warto użyć (a kiedy nie)',
+        body: [
+          'AI w L&D najczęściej ma sens wtedy, gdy wąskim gardłem nie jest “pomysł na szkolenie”, tylko tempo aktualizacji treści, powtarzalność pytań od pracowników i zbyt duże obciążenie SME lub administratorów LMS.',
+          'W pilocie ważniejsze jest sprawdzenie operacyjnego dopasowania (workflow, akceptacje, wersjonowanie) niż “demo jakości” na idealnie przygotowanym przykładzie.'
+        ],
+        bullets: [
+          'Użyj, gdy: masz 1–2 obszary o wysokiej zmienności (SOP, onboarding, compliance) i możesz wskazać właściciela treści.',
+          'Użyj, gdy: potrafisz zdefiniować “źródła prawdy” (SOP, wiki, polityki) oraz prostą ścieżkę akceptacji przed publikacją.',
+          'Nie używaj, gdy: nie ma procesu aktualizacji SOP lub nie da się wskazać, kto zatwierdza zmiany (ryzyko chaosu i sprzecznych wersji).',
+          'Nie używaj, gdy: treści zawierają dane wrażliwe, a nie masz polityk dostępu, logowania działań i zasad retencji.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktyczne KPI (bez marketingu)',
+        bullets: [
+          'Czas od zmiany w SOP do opublikowania aktualizacji szkolenia (w dniach lub godzinach).',
+          'Łączny czas pracy recenzenta na moduł (minuty edycji / liczba iteracji).',
+          'Odsetek pytań od pracowników rozwiązanych “self-serve” vs. eskalowanych do człowieka.',
+          'Wskaźniki skuteczności po szkoleniu: błędy operacyjne, rework, liczba zgłoszeń po wdrożeniu.',
+          'Time-to-proficiency: jak szybko nowa osoba wykonuje kluczowe zadania bez wsparcia.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Ryzyka i ślepe punkty',
+        bullets: [
+          'Aktualność: narzędzie może generować poprawnie brzmiące, ale nieaktualne instrukcje, jeśli źródła nie są wersjonowane.',
+          'Governance: brak jednoznacznych ról (autor, reviewer, właściciel procesu) kończy się “nikt nie odpowiada”.',
+          'Prywatność i bezpieczeństwo: wklejanie fragmentów SOP lub danych klienta do niewłaściwego miejsca.',
+          'Jakość lokalizacji: tłumaczenia bez glosariusza i terminologii firmowej zwiększają obciążenie QA.',
+          'Metryki pozorne: łatwo mierzyć liczbę wygenerowanych treści, trudniej mierzyć ich przydatność w pracy.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklista pilota (2–4 tygodnie)',
+        bullets: [
+          'Wybierz 1 rolę i 1 proces, w którym zmiany są częste i łatwo ocenić poprawność (np. 1 SOP).',
+          'Ustal rubrykę oceny (dokładność, zgodność z SOP, czas review, możliwość odtworzenia zmian).',
+          'Zdefiniuj RACI i punkt “stop/go” (kto zatwierdza, co blokuje publikację, kiedy kończysz pilot).',
+          'Uruchom na małej kohorcie i zbieraj feedback w kontekście zadań (nie tylko ankieta “podobało się”).',
+          'Podsumuj wyniki jako decyzję operacyjną: skaluj, iteruj lub zatrzymaj — z listą braków do domknięcia.'
+        ]
+      }
+    ],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -29,6 +78,55 @@ export const localizedLandingPages = [
     h1: 'SOP na wideo szkoleniowe',
     intro: 'Dla zespołów szkoleniowych, które regularnie aktualizują procedury i chcą skrócić czas od zmiany w SOP do wdrożenia w organizacji.',
     points: ['Powtarzalny proces publikacji i aktualizacji', 'Lepsze zrozumienie procedur w pracy', 'Wsparcie dla zgodności i przygotowania do audytu'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kiedy SOP→wideo działa najlepiej (a kiedy nie)',
+        body: [
+          'SOP-y wideo sprawdzają się, gdy praca jest “krok po kroku” i istnieje ryzyko, że w tekście ktoś pominie detal. Dobrze działają też przy częstych zmianach: wideo jest najtrudniejsze do aktualizacji, więc automatyzacja procesu aktualizacji ma realną wartość.',
+          'Jeśli SOP jest niejednoznaczny lub zależny od kontekstu, najpierw uporządkuj opis procesu. Wideo nie powinno maskować luk w procedurze.'
+        ],
+        bullets: [
+          'Użyj, gdy: procedura ma jasne kroki, definicje wejścia/wyjścia i da się ją zweryfikować na przykładach.',
+          'Użyj, gdy: onboarding jest rozproszony, a jakość wdrożenia różni się między managerami lub lokalizacjami.',
+          'Nie używaj, gdy: SOP zmienia się ad hoc bez komunikacji i nie ma wersjonowania (wideo szybko stanie się “złe źródło prawdy”).',
+          'Nie używaj, gdy: proces wymaga wielu wyjątków i decyzji eksperckich — wtedy lepsze są scenariusze, coaching i checklisty w pracy.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktyczne KPI do wideo z SOP',
+        bullets: [
+          'Czas od zmiany w SOP do opublikowania poprawki w wideo (SLA aktualizacji).',
+          'Defekty QA na minutę wideo (złe kroki, pominięcia, niezgodność z aktualną wersją SOP).',
+          'Obciążenie SME: liczba iteracji i minuty review na moduł.',
+          'Wynik “task success”: czy po szkoleniu ludzie wykonują zadanie poprawnie bez wsparcia.',
+          'Spadek liczby pytań “jak to zrobić?” w kanałach wsparcia po wdrożeniu.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Ryzyka i ślepe punkty',
+        bullets: [
+          'Dryf procesu: SOP na papierze i rzeczywista praktyka mogą się różnić — ustal, co jest obowiązujące i kto to zatwierdza.',
+          'Dostępność: napisy, czytelność, tempo i alternatywa tekstowa są ważne (wideo nie może być jedyną formą wiedzy).',
+          'Terminologia firmowa: bez glosariusza łatwo o niespójne nazewnictwo ekranów, pól i ról.',
+          'Wrażliwe informacje: screeny i dane przykładowe muszą być “czyste” i zgodne z zasadami bezpieczeństwa.',
+          'Utrzymanie: jeśli nie ma “właściciela SOP”, nie będzie też właściciela wideo.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklista pilota',
+        bullets: [
+          'Wybierz 1 SOP o wysokiej częstotliwości zmian i realnym wpływie na jakość pracy.',
+          'Ustal format: długość modułów, styl narracji, standard nazw i minimalny zestaw artefaktów (np. napisy).',
+          'Zdefiniuj etap akceptacji: kto sprawdza merytorykę, kto compliance/bezpieczeństwo, kto publikuje.',
+          'Opublikuj do małej grupy i testuj na zadaniach (praca w systemie, checklisty, krótkie quizy).',
+          'Zamknij pilot raportem: SLA aktualizacji, defekty QA, obciążenie review i wnioski do skalowania.'
+        ]
+      }
+    ],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -40,6 +138,55 @@ export const localizedLandingPages = [
     h1: 'AI nástroje pro školení zaměstnanců',
     intro: 'Praktický rozcestník pro L&D týmy v Česku: jak nástroje AI posuzovat pro pilot, provoz a průběžné aktualizace.',
     points: ['Rychlejší tvorba a revize školicího obsahu', 'Konzistentnější kvalita školení napříč týmy', 'Snazší aktualizace interních postupů a SOP'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kdy to použít (a kdy ne)',
+        body: [
+          'AI v L&D dává největší smysl tam, kde je problém v provozu: časté změny postupů, příliš mnoho opakujících se dotazů od lidí v terénu, nebo dlouhé schvalovací cykly, které brzdí aktualizace.',
+          'V pilotu testujte reálné workflow (zdroje pravdy, schválení, verze), ne jen “hezkou ukázku” na jedné ideální lekci.'
+        ],
+        bullets: [
+          'Použijte, když: máte 1–2 oblasti s vysokou frekvencí změn (SOP, onboarding, compliance) a jasného vlastníka obsahu.',
+          'Použijte, když: umíte vymezit zdrojové dokumenty a proces, kdo a kdy může publikovat.',
+          'Nepoužívejte, když: neexistuje verzování a odpovědnost za SOP (riskujete protichůdné instrukce).',
+          'Nepoužívejte, když: pracujete s citlivými daty a nemáte nastavené přístupy, logování a pravidla retence.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pro pilot',
+        bullets: [
+          'Čas od změny v SOP k publikaci aktualizace školení (SLA aktualizací).',
+          'Review zátěž SME: minuty úprav na modul a počet iterací do schválení.',
+          'Podíl “self-serve” vyřešených dotazů vs. eskalací na člověka.',
+          'Signály po nasazení: chybovost v provozu, rework, počet incidentů souvisejících s postupy.',
+          'Time-to-proficiency u nováčků: jak rychle zvládnou klíčové úkoly bez podpory.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Rizika a slepá místa',
+        bullets: [
+          'Aktuálnost: “správně znějící” odpověď může být mimo, pokud zdroje nejsou udržované a verzované.',
+          'Governance: bez rolí (autor, reviewer, vlastník procesu) se z kvality stane osobní spor.',
+          'Bezpečnost: kopírování interních pasáží na špatné místo nebo sdílení dat mimo pravidla.',
+          'Lokalizace: bez glosáře a terminologie roste náročnost QA a vznikají různé varianty pojmů.',
+          'Měření: počet generovaných výstupů není metrika hodnoty — sledujte dopad na práci.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklist pilota (2–4 týdny)',
+        bullets: [
+          'Vyberte 1 roli a 1 proces s jasným “správně/špatně” (např. jeden SOP).',
+          'Sepsat rubriku hodnocení: přesnost vs. SOP, čas review, dohledatelnost změn.',
+          'Nastavit RACI a jasné stop/go kritérium pro škálování.',
+          'Spustit na malé kohortě a sbírat zpětnou vazbu v kontextu konkrétních úkolů.',
+          'Uzavřít pilot rozhodnutím: škálovat / iterovat / zastavit + seznam blokérů.'
+        ]
+      }
+    ],
     enPath: '/solutions/new-hire-onboarding-automation/'
   },
   {
@@ -51,6 +198,55 @@ export const localizedLandingPages = [
     h1: 'SOP do školicích videí',
     intro: 'Pro týmy, které chtějí škálovat školení bez zvyšování kapacit a zároveň udržet kontrolu nad kvalitou a schvalováním.',
     points: ['Kratší čas od změny v dokumentu k publikaci', 'Srozumitelnější postupy krok za krokem', 'Nižší chybovost po zaučení'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kdy SOP→video funguje (a kdy ne)',
+        body: [
+          'Video ze SOP je silné tam, kde je potřeba přesná sekvence kroků a kde se v textu často přehlédne detail. Největší přínos má při častých změnách, protože nejdražší část bývá údržba — tedy rychlé a bezpečné aktualizace.',
+          'Pokud je SOP nejasné nebo plné výjimek, nejdřív opravte samotný proces a definice. Video nemá zakrývat nejednoznačnost.'
+        ],
+        bullets: [
+          'Použijte, když: SOP má jasné vstupy/výstupy, kroky a dá se ověřit na příkladech.',
+          'Použijte, když: onboarding je rozptýlený a potřebujete konzistentní výklad napříč týmy.',
+          'Nepoužívejte, když: SOP nemá vlastníka a změny se dějí “mimo proces” bez verzí.',
+          'Nepoužívejte, když: práce vyžaduje expertní rozhodování a kontext — vhodnější jsou scénáře, koučink a checklisty v práci.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pro SOP videa',
+        bullets: [
+          'SLA aktualizace: čas od změny SOP do publikace nové verze videa.',
+          'QA defekty na minutu videa (chybný krok, vynechání, neaktuální obrazovka).',
+          'Review zátěž SME: počet iterací a minuty editace na modul.',
+          'Task success po školení: správné provedení úkolu bez zásahu kolegy/mentora.',
+          'Změna objemu dotazů “jak to udělat” po nasazení.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Rizika a slepá místa',
+        bullets: [
+          'Drift mezi SOP a praxí: sjednoťte, co je závazné a kdo může měnit “oficiální postup”.',
+          'Přístupnost: titulky, tempo a alternativní textová forma jsou klíčové (video nesmí být jediný zdroj).',
+          'Terminologie: bez glosáře vznikají různé názvy pro stejné kroky/obrazovky.',
+          'Citlivé informace: dbejte na “čisté” ukázkové účty a pravidla práce se screeny.',
+          'Údržba: bez procesu vlastníka SOP se údržba videí rychle rozpadne.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklist pilota',
+        bullets: [
+          'Vyberte 1 SOP s reálným dopadem a častými změnami.',
+          'Definujte standard: délku modulů, styl, naming, minimální výstupy (např. titulky).',
+          'Nastavte schvalování (merytika, compliance/bezpečnost, publikace) a verzování.',
+          'Otestujte na malé skupině na konkrétních úlohách, ne jen dotazníkem.',
+          'Uzavřete pilot metrikami: SLA, QA defekty, review zátěž a doporučení pro škálování.'
+        ]
+      }
+    ],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -62,6 +258,55 @@ export const localizedLandingPages = [
     h1: 'AI nástroje na školenie zamestnancov',
     intro: 'Praktický hub pre tímy na Slovensku: čo si všímať pri výbere nástrojov AI pre pilot, prevádzku a pravidelné aktualizácie.',
     points: ['Rýchlejšia príprava a revízia obsahu', 'Konzistentnejšia kvalita školení naprieč tímami', 'Jednoduchšie aktualizácie SOP a interných pravidiel'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kedy to použiť (a kedy radšej nie)',
+        body: [
+          'AI v L&D často funguje ako “operatívny zosilňovač”: pomáha udržať tempo aktualizácií, znížiť počet opakujúcich sa otázok a spriehľadniť, kto čo schválil. Najviac sa prejaví v oblastiach, kde sa obsah často mení a kde je dôležitá konzistentnosť.',
+          'V pilote skúšajte celé workflow (zdroje pravdy, schvaľovanie, verzie), nie len kvalitu jedného ideálneho výstupu.'
+        ],
+        bullets: [
+          'Použite, keď: máte 1–2 oblasti s častými zmenami (SOP, onboarding, compliance) a viete určiť vlastníka obsahu.',
+          'Použite, keď: viete zadefinovať “zdrojové dokumenty” a jasné pravidlá publikovania.',
+          'Nepoužite, keď: neexistuje verzovanie SOP a zodpovednosť za zmeny (riziko rozporov).',
+          'Nepoužite, keď: pracujete s citlivými údajmi bez prístupových pravidiel, logovania a retencie.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pre rozhodnutie po pilote',
+        bullets: [
+          'Čas od zmeny v SOP po publikáciu aktualizovaného školenia (SLA aktualizácií).',
+          'Review záťaž SME: minúty úprav na modul a počet iterácií do schválenia.',
+          'Podiel otázok vyriešených samoobslužne vs. eskalovaných na človeka.',
+          'Prevádzkové signály: chybovosť, rework, incidenty súvisiace s postupmi po nasadení.',
+          'Time-to-proficiency: ako rýchlo noví ľudia zvládnu kľúčové úlohy bez podpory.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Riziká a slepé miesta',
+        bullets: [
+          'Aktuálnosť: “správne znejúce” odpovede môžu byť mimo, ak zdroje nie sú udržiavané a verzované.',
+          'Governance: bez rolí (autor, reviewer, vlastník procesu) sa z kvality stane spor a pilot sa zasekne.',
+          'Bezpečnosť: nesprávne zdieľanie interných pasáží alebo práce s dátami mimo pravidiel.',
+          'Lokalizácia: bez glosára vzniká nekonzistentná terminológia a rastie QA záťaž.',
+          'Metriky: počet vygenerovaných výstupov nehovorí o dopade — sledujte kvalitu a využitie v práci.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklist pilota (2–4 týždne)',
+        bullets: [
+          'Vyberte 1 rolu a 1 proces s jasným “správne/nesprávne” (napr. jeden SOP).',
+          'Definujte hodnotiacu rubriku: presnosť vs. SOP, čas review, dohľadateľnosť zmien.',
+          'Nastavte RACI a stop/go kritérium (kedy škálujete, kedy pilot ukončíte).',
+          'Spustite na malej kohorte a zbierajte feedback v kontexte úloh, nie len v ankete.',
+          'Uzavrite pilot rozhodnutím: škálovať / iterovať / zastaviť + zoznam blokérov.'
+        ]
+      }
+    ],
     enPath: '/solutions/new-hire-onboarding-automation/'
   },
   {
@@ -73,6 +318,55 @@ export const localizedLandingPages = [
     h1: 'SOP na školiace videá',
     intro: 'Pre L&D tímy, ktoré riešia nástup nových ľudí a časté zmeny procesov — s dôrazom na kontrolu kvality a schvaľovanie.',
     points: ['Kratší čas od zmeny v SOP k nasadeniu školenia', 'Jasnejšie postupy v praxi', 'Lepšia pripravenosť na compliance požiadavky'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kedy SOP→video funguje (a kedy nie)',
+        body: [
+          'SOP vo videu je najsilnejší formát vtedy, keď je dôležitá presná postupnosť krokov a keď sa ľudia v praxi opierajú o vizuálne “čo kliknúť a v akom poradí”. Najväčšiu hodnotu má pri častých zmenách, pretože údržba videí býva najdrahšia časť.',
+          'Ak je SOP nejednoznačný, plný výnimiek alebo “žije v hlavách”, najprv upracte proces a definície. Video nemá zakrývať nejasnosti.'
+        ],
+        bullets: [
+          'Použite, keď: postup má jasné vstupy/výstupy a dá sa overiť na konkrétnych scenároch.',
+          'Použite, keď: onboarding je rozptýlený a chcete rovnaký štandard vysvetlenia naprieč tímami.',
+          'Nepoužite, keď: zmeny v SOP sa dejú bez verzovania a bez vlastníka (video rýchlo zostarne).',
+          'Nepoužite, keď: ide o komplexné rozhodovanie a kontext — vhodnejšie sú scenáre, koučing a checklisty v práci.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pre SOP videá',
+        bullets: [
+          'SLA aktualizácie: čas od zmeny SOP po publikáciu novej verzie videa.',
+          'QA defekty na minútu videa (zlý krok, vynechanie, neaktuálny screenshot).',
+          'Review záťaž SME: počet iterácií a minúty úprav na modul.',
+          'Task success po školení: či ľudia vykonajú úlohu správne bez podpory.',
+          'Zmena objemu otázok “ako to spraviť” po nasadení.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Riziká a slepé miesta',
+        bullets: [
+          'Drift medzi SOP a praxou: dohodnite, čo je záväzná verzia a kto môže meniť “pravdu”.',
+          'Prístupnosť: titulky, čitateľnosť a alternatívna textová forma sú dôležité (video nie je jediné médium).',
+          'Terminológia: bez glosára vznikajú rozdielne názvy pre rovnaké kroky a obrazovky.',
+          'Citlivé informácie: dbajte na “čisté” demo účty a pravidlá práce so screenmi.',
+          'Údržba: bez vlastníka SOP sa údržba videí rýchlo rozpadne.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklist pilota',
+        bullets: [
+          'Vyberte 1 SOP s reálnym dopadom a vysokou frekvenciou zmien.',
+          'Dohodnite štandard: dĺžka modulov, štýl, názvoslovie, minimálne výstupy (napr. titulky).',
+          'Nastavte schvaľovanie (odborné, compliance/bezpečnosť, publikácia) a verzovanie.',
+          'Otestujte na malej skupine na konkrétnych úlohách, nie len dotazníkom.',
+          'Uzavrite pilot metrikami: SLA, QA defekty, review záťaž a odporúčanie pre škálovanie.'
+        ]
+      }
+    ],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -84,6 +378,55 @@ export const localizedLandingPages = [
     h1: 'AI eszközök munkavállalói képzéshez',
     intro: 'Gyakorlati kiindulópont magyar L&D csapatoknak: hogyan értékeld az AI eszközöket pilot, működtetés és minőségbiztosítás szempontból.',
     points: ['Gyorsabb tartalomkészítés és frissítés', 'Egységesebb képzési minőség', 'Könnyebb SOP- és folyamatváltozások kezelése'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Mikor érdemes használni (és mikor nem)',
+        body: [
+          'Az L&D-ben az AI gyakran nem “csodafegyver”, hanem operációs gyorsító: segíthet tartalmat frissíteni, kérdéseket kezelni, és egyértelműbbé tenni, mi ment át jóváhagyáson. A pilotban a teljes működési láncot érdemes tesztelni (források, review, verziók), nem csak a látványos demót.',
+          'A cél az, hogy a tartalomgyártás és az üzemeltetés kiszámíthatóbb legyen — különösen ott, ahol a SOP-ok és belső szabályok gyakran változnak.'
+        ],
+        bullets: [
+          'Használd, ha: van 1–2 terület magas változási gyakorisággal (SOP, onboarding, compliance), és kijelölhető tartalomtulajdonos.',
+          'Használd, ha: meg tudod nevezni a “single source of truth” dokumentumokat, és van minimális jóváhagyási folyamat publikálás előtt.',
+          'Ne használd, ha: nincs verziózás és felelősség a SOP-okért (ellentmondó instrukciók és bizalomvesztés kockázata).',
+          'Ne használd, ha: érzékeny adatokat kezelsz, de nincs hozzáférés-kezelés, naplózás és retenciós szabály.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Gyakorlati KPI-k (pilot döntéshez)',
+        bullets: [
+          'Átfutási idő a SOP változásától a képzés frissítéséig (SLA frissítésekre).',
+          'SME/reviewer terhelés: perc szerkesztés modulonként + iterációk száma jóváhagyásig.',
+          'Önkiszolgáló megoldási arány: hány kérdés oldódik meg emberi eskaláció nélkül.',
+          'Működési jelek: hibaarány, rework, folyamat-incidensek a bevezetés után.',
+          'Time-to-proficiency: mennyi idő alatt lesz egy új belépő önálló a kritikus feladatokban.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Kockázatok és vakfoltok',
+        bullets: [
+          'Aktualitás: jól hangzó, de elavult válaszok, ha a források nem karbantartottak és nem verziózottak.',
+          'Governance: szerepek nélkül (szerző, reviewer, folyamattulajdonos) a minőség vita tárgya lesz, nem folyamat.',
+          'Biztonság: belső SOP-részletek vagy példák rossz helyre kerülhetnek, ha nincs kontroll.',
+          'Lokalizáció: glosszárium nélkül szétcsúszik a terminológia, nő a QA munka.',
+          'Hamis metrikák: a “generált tartalom darabszáma” nem egyenlő hasznossággal — a munkára gyakorolt hatást mérd.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini pilot checklist (2–4 hét)',
+        bullets: [
+          'Válassz 1 szerepet és 1 folyamatot, ahol könnyű ellenőrizni a helyességet (pl. egy SOP).',
+          'Definiálj értékelő rubrikát: SOP-egyezés, review idő, változások visszakövethetősége.',
+          'Állítsd be a RACI-t és a stop/go pontot (ki hagy jóvá, mi blokkolja a publikálást).',
+          'Indítsd kicsi kohorton, és feladat-közeli visszajelzést gyűjts (nem csak “tetszett/nem tetszett”).',
+          'Zárd le működési döntéssel: skálázás / iteráció / leállítás + nyitott kockázatok listája.'
+        ]
+      }
+    ],
     enPath: '/solutions/new-hire-onboarding-automation/'
   },
   {
@@ -95,6 +438,55 @@ export const localizedLandingPages = [
     h1: 'SOP-ból képzési videó AI-val',
     intro: 'Akkor működik jól, ha gyors onboardingra, következetes betanításra és kontrollált frissítésekre van szükség a SOP változásai után.',
     points: ['Rövidebb idő a SOP módosítástól a publikálásig', 'Jobb folyamatmegértés a gyakorlatban', 'Skálázható képzési működés'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Mikor működik a SOP→videó (és mikor nem)',
+        body: [
+          'A SOP-ból készült videó akkor a leghasznosabb, ha a munka tényleg lépésről lépésre halad, és fontos a vizuális “hogyan kattints / mit nézz”. Gyakori változásoknál különösen értékes, mert a videó frissítése jellemzően a legköltségesebb rész.',
+          'Ha a SOP homályos, sok kivételt tartalmaz, vagy nincs egységesített gyakorlat, először a folyamatot és a definíciókat érdemes tisztázni.'
+        ],
+        bullets: [
+          'Használd, ha: a SOP-nak van egyértelmű bemenete/kimenete és ellenőrizhető a helyes végrehajtás.',
+          'Használd, ha: széttagolt onboarding mellett is egységes betanítást szeretnél.',
+          'Ne használd, ha: nincs SOP-tulajdonos és verziózás (a videó gyorsan elavul).',
+          'Ne használd, ha: a munka erősen kontextusfüggő és szakértői döntést igényel — ott jobb a szcenárió, coaching és munkaközbeni checklist.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Gyakorlati KPI-k SOP videókhoz',
+        bullets: [
+          'Frissítési SLA: SOP változás → videó új verzió publikálása.',
+          'QA hibák percenként (rossz lépés, kihagyás, nem aktuális képernyő).',
+          'SME review terhelés: iterációk száma + perc szerkesztés modulonként.',
+          'Feladat-siker (task success): képes-e a tanuló önállóan végrehajtani a kulcsfeladatot.',
+          '“Hogyan csináljam?” kérdések mennyisége a bevezetés előtt/után.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Kockázatok és vakfoltok',
+        bullets: [
+          'Folyamat-drift: a dokumentált SOP és a valós gyakorlat eltérhet — tisztázd, melyik a kötelező.',
+          'Hozzáférhetőség: feliratok, tempó, olvashatóság és alternatív szöveges forma (a videó ne legyen az egyetlen forrás).',
+          'Terminológia: glosszárium nélkül szétcsúszhat a mezők, képernyők és szerepek elnevezése.',
+          'Érzékeny információ: képernyőképek és példák legyenek “tiszta” demo adatokkal.',
+          'Karbantartás: SOP-tulajdonos nélkül a videók életciklusa gyorsan kezelhetetlenné válik.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini pilot checklist',
+        bullets: [
+          'Válassz 1 SOP-ot, ami gyakran változik és mérhetően hat a munkaminőségre.',
+          'Rögzítsd a standardot: modulhossz, narráció, névkonvenciók, minimum követelmények (pl. felirat).',
+          'Állítsd be a jóváhagyást (szakmai, compliance/biztonság, publikálás) és a verziózást.',
+          'Teszteld kis csoporton konkrét feladatokon (rendszerhasználat, checklist, rövid ellenőrzés).',
+          'Zárd le metrikákkal: SLA, QA hibák, review terhelés és skálázási javaslat.'
+        ]
+      }
+    ],
     enPath: '/solutions/sop-to-video-training/'
   },
   {
@@ -370,6 +762,55 @@ export const localizedLandingPages = [
     h1: 'Playbook dystrybucji katalogu AI',
     intro: 'Skrócona wersja dla zespołów, które chcą zbudować powtarzalny rytm dystrybucji i mierzyć efekty bez „jednorazowych zrywów”.',
     points: ['Kanały i rytuały tygodniowej dystrybucji', 'Checklista jakości publikacji i linków', 'Prosty rytm raportowania efektów'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kiedy warto użyć (a kiedy nie)',
+        body: [
+          'Playbook dystrybucji przydaje się wtedy, gdy publikacja treści “dzieje się”, ale efekty są losowe: raz jest ruch, raz nie; raz link działa, raz ktoś zapomniał o podstawach. Celem nie jest mnożenie postów, tylko spójny proces, który można mierzyć i poprawiać.',
+          'Jeśli dopiero wybierasz tematykę, pozycjonowanie lub nie masz minimalnej jakości stron docelowych, zacznij od fundamentów — dystrybucja nie naprawi słabego produktu/treści.'
+        ],
+        bullets: [
+          'Użyj, gdy: masz 2–3 kanały, które “już działają” i chcesz je ustabilizować kadencją oraz checklistą jakości.',
+          'Użyj, gdy: chcesz oddzielić testy (np. tytuł, hook, format) od losowości publikacji.',
+          'Nie używaj, gdy: brakuje ownera i czasu na regularne pomiary (bez tego playbook stanie się dokumentem w szufladzie).',
+          'Nie używaj, gdy: jedynym celem jest “więcej linków” — bez dbałości o reputację i dopasowanie odbiorcy rośnie ryzyko spamowe.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktyczne KPI do dystrybucji',
+        bullets: [
+          'Ruch referencyjny z kluczowych kanałów oraz udział nowych użytkowników.',
+          'CTR / kliknięcia na publikację (tam, gdzie da się to mierzyć) oraz jakość wejść (czas, scroll, bounce).',
+          'Konwersje “następnego kroku”: przejścia do porównania, kategorie, wysłanie narzędzia, zapis na listę.',
+          'Częstotliwość publikacji vs. “koszt operacyjny” (ile czasu zajmuje przygotowanie + QA).',
+          'Liczba zgłoszeń/odpowiedzi z outreach, ale mierzona razem z jakością (trafność, relacje, reputacja).'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Ryzyka i ślepe punkty',
+        bullets: [
+          'Mylenie aktywności z efektem: stała kadencja bez iteracji na podstawie danych to “szum”.',
+          'Niespójność linków i opisów: drobne błędy obniżają wiarygodność i utrudniają tracking.',
+          'Ryzyko spamowe: zbyt agresywny outreach lub masowe listy publikacji mogą zaszkodzić marce.',
+          'Brak atrybucji: bez UTM/konwencji tagów nie wiesz, co działa i gdzie tracić czas.',
+          '“Kanałowy lock-in”: optymalizacja pod jeden kanał kosztem stabilnych źródeł ruchu.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklista pilota (2 tygodnie)',
+        bullets: [
+          'Wybierz 2 kanały (np. newsletter + społeczność) i 1 format publikacji na start.',
+          'Ustal konwencję linków i tracking (UTM, nazwy kampanii, lista stron docelowych).',
+          'Zrób checklistę QA przed publikacją (linki, tytuł, meta, spójność wezwania do działania).',
+          'Publikuj w stałej kadencji i zbieraj wyniki w jednym prostym dashboardzie.',
+          'Po 2 tygodniach zrób retro: co działa, co nie, jakie eksperymenty uruchamiasz w kolejnym cyklu.'
+        ]
+      }
+    ],
     enPath: '/solutions/'
   },
   {
@@ -381,6 +822,55 @@ export const localizedLandingPages = [
     h1: 'Distribuční playbook AI katalogu',
     intro: 'Praktická verze pro týmy, které chtějí pravidelně zvyšovat návštěvnost a mít jasnou kadenci vyhodnocování.',
     points: ['Týdenní distribuční kanály a rytmus', 'Checklist kvality publikace a odkazů', 'Jednoduchý reporting výsledků'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kdy to použít (a kdy ne)',
+        body: [
+          'Distribuční playbook pomáhá, když publikujete obsah, ale výsledek je nahodilý: jednou to “vyjde”, jindy ne, a nikdo přesně neví proč. Cíl není produkovat víc příspěvků, ale mít opakovatelný proces, který se dá měřit a zlepšovat.',
+          'Pokud ještě nemáte jasnou cílovou stránku, positioning nebo minimální kvalitu nabídky, začněte nejdřív u základů — distribuce sama o sobě to nezachrání.'
+        ],
+        bullets: [
+          'Použijte, když: máte 2–3 kanály, které už přinášejí nějaký traffic, a chcete je stabilizovat kadencí a checklistem.',
+          'Použijte, když: chcete oddělit experimenty (hook, titulek, formát) od chaosu v publikaci.',
+          'Nepoužívejte, když: nemáte ownera a čas na pravidelné měření (jinak z toho bude “doc v šuplíku”).',
+          'Nepoužívejte, když: cílem je jen “víc odkazů” bez ohledu na relevanci a reputaci — roste riziko spamového dojmu.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pro distribuci',
+        bullets: [
+          'Referral traffic z klíčových kanálů + podíl nových uživatelů.',
+          'CTR/kliknutí na publikace (kde je to možné) a kvalita návštěv (čas, scroll, bounce).',
+          'Konverze “dalšího kroku”: přechody na porovnání, kategorie, odeslání toolu, registrace.',
+          'Frekvence publikace vs. operativní náklad (čas přípravy + QA).',
+          'Odezva z outreach: počet odpovědí, ale hlavně relevance a dlouhodobá kvalita vztahů.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Rizika a slepá místa',
+        bullets: [
+          'Záměna aktivity za efekt: kadence bez iterace podle dat je jen šum.',
+          'Nekonzistence odkazů: drobné chyby snižují důvěryhodnost a rozbijí tracking.',
+          'Spam risk: příliš agresivní outreach může poškodit značku i deliverabilitu.',
+          'Chybějící atribuce: bez UTM/konvencí nevíte, co funguje a kde ztrácíte čas.',
+          'Závislost na jednom kanálu: optimalizace na jediný zdroj trafficu zvyšuje křehkost.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini pilot checklist (2 týdny)',
+        bullets: [
+          'Vyberte 2 kanály (např. newsletter + komunita) a 1 formát publikace.',
+          'Nastavte tracking (UTM, názvy kampaní, seznam cílových stránek).',
+          'Zaveďte QA checklist před publikací (odkazy, titulek, meta, CTA).',
+          'Publikujte v jasné kadenci a sbírejte výsledky do jednoduchého přehledu.',
+          'Po 2 týdnech udělejte retro a definujte další experimenty na další cyklus.'
+        ]
+      }
+    ],
     enPath: '/solutions/'
   },
   {
@@ -392,6 +882,55 @@ export const localizedLandingPages = [
     h1: 'Distribučný playbook AI katalógu',
     intro: 'Praktická verzia pre tímy, ktoré chcú konzistentne zvyšovať návštevnosť a mať jasný rytmus vyhodnocovania.',
     points: ['Týždenné distribučné kanály a rytmus', 'Checklist kvality publikácie a odkazov', 'Jednoduché reportovanie výsledkov'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kedy to použiť (a kedy nie)',
+        body: [
+          'Distribučný playbook dáva zmysel, keď publikujete, ale výsledky sú náhodné: raz je návštevnosť, raz nie, a chýba rytmus aj spätná väzba. Cieľ nie je “viac postov”, ale opakovateľný proces, ktorý sa dá merať a zlepšovať.',
+          'Ak ešte nemáte jasnú ponuku, positioning alebo minimálnu kvalitu cieľových stránok, najprv opravte základy — distribúcia to sama nespasí.'
+        ],
+        bullets: [
+          'Použite, keď: máte 2–3 kanály, ktoré už prinášajú traffic, a chcete ich stabilizovať kadenciou a checklistom.',
+          'Použite, keď: chcete systematicky testovať hooky, titulky a formáty bez chaosu v publikovaní.',
+          'Nepoužite, keď: nemáte ownera a čas na pravidelné meranie (inak playbook skončí v šuplíku).',
+          'Nepoužite, keď: cieľ je len “viac odkazov” bez ohľadu na relevanciu a reputáciu — rastie spamové riziko.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pre distribúciu',
+        bullets: [
+          'Referral traffic z kľúčových kanálov + podiel nových používateľov.',
+          'CTR/kliknutia na publikácie (kde sa to dá) a kvalita návštev (čas, scroll, bounce).',
+          'Konverzie ďalšieho kroku: prechody na porovnania, kategórie, odoslanie toolu, registrácie.',
+          'Frekvencia publikácie vs. operatívny náklad (čas prípravy + QA).',
+          'Outreach odozva: odpovede a ich kvalita (relevancia, dlhodobé vzťahy), nie len počet.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Riziká a slepé miesta',
+        bullets: [
+          'Zamieňanie aktivity za efekt: kadencia bez iterácie podľa dát je len šum.',
+          'Nekonzistentné odkazy: drobné chyby znižujú dôveryhodnosť a zničia tracking.',
+          'Spam risk: príliš agresívny outreach môže poškodiť značku.',
+          'Bez atribúcie: bez UTM/konvencií neviete, čo funguje a kde strácate čas.',
+          'Závislosť na jednom kanáli: optimalizácia iba na jeden zdroj zvyšuje krehkosť.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini pilot checklist (2 týždne)',
+        bullets: [
+          'Vyberte 2 kanály (napr. newsletter + komunita) a 1 formát publikácie.',
+          'Nastavte tracking (UTM, názvy kampaní, zoznam cieľových stránok).',
+          'Zaveďte QA checklist pred publikáciou (odkazy, titulok, meta, CTA).',
+          'Publikujte v jasnej kadencii a zbierajte výsledky do jednoduchého prehľadu.',
+          'Po 2 týždňoch spravte retro a definujte experimenty na ďalší cyklus.'
+        ]
+      }
+    ],
     enPath: '/solutions/'
   },
   {
@@ -403,6 +942,55 @@ export const localizedLandingPages = [
     h1: 'AI katalógus terjesztési playbook',
     intro: 'Gyakorlati változat csapatoknak, akik következetes terjesztési ritmust és mérhető visszacsatolást szeretnének a képzési tartalmakhoz.',
     points: ['Heti terjesztési csatornák és ritmus', 'Publikációs minőségi és link-ellenőrző lista', 'Egyszerű riportálási kadencia'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Mikor érdemes használni (és mikor nem)',
+        body: [
+          'A terjesztési playbook akkor hasznos, ha a publikálás ad hoc módon történik, ezért az eredmények is kiszámíthatatlanok. A cél nem a “több poszt”, hanem egy ismételhető ritmus és minőségi ellenőrzés, amit mérni és finomítani lehet.',
+          'Ha még nincs rendben a céloldal, a pozicionálás vagy az alap tartalmi minőség, érdemes előbb ezeket stabilizálni — a terjesztés nem pótolja az alapokat.'
+        ],
+        bullets: [
+          'Használd, ha: van 2–3 csatornád, ami már hoz némi forgalmat, és ezt szeretnéd stabilizálni kadenciával és checklisttel.',
+          'Használd, ha: szeretnél kísérleteket futtatni (hook, cím, formátum) úgy, hogy közben a publikálás nem esik szét.',
+          'Ne használd, ha: nincs owner és nincs idő rendszeres mérésre (különben “fiók dokumentum” lesz).',
+          'Ne használd, ha: a cél pusztán “több link” relevancia és reputáció nélkül — nő a spam és brand kockázat.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Gyakorlati KPI-k terjesztéshez',
+        bullets: [
+          'Referral forgalom a fő csatornákból + új felhasználók aránya.',
+          'Kattintási arány / kattintások (ahol mérhető) és a belépések minősége (idő, scroll, bounce).',
+          '“Következő lépés” konverziók: összehasonlítás, kategóriák, eszköz beküldése, feliratkozás.',
+          'Publikálási gyakoriság vs. operációs költség (előkészítés + QA idő).',
+          'Outreach visszajelzés: válaszok mennyisége és minősége (relevancia, kapcsolatok), nem csak darabszám.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Kockázatok és vakfoltok',
+        bullets: [
+          'Az aktivitás összekeverése az eredménnyel: ritmus adat-iteráció nélkül = zaj.',
+          'Inkonzisztens linkek és leírások: apró hibák rontják a bizalmat és szétszedik a trackelést.',
+          'Spam kockázat: túl agresszív outreach ronthatja a márkát és a csatornák fogadókészségét.',
+          'Atribúció hiánya: UTM/konvenciók nélkül nem tudod, mi működik.',
+          'Egycsatornás függőség: túloptimalizálás egyetlen forrásra növeli a sérülékenységet.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini pilot checklist (2 hét)',
+        bullets: [
+          'Válassz 2 csatornát (pl. hírlevél + közösség) és 1 publikációs formátumot.',
+          'Állítsd be a trackinget (UTM, kampánynév-konvenció, céloldal lista).',
+          'Vezess be publikáció előtti QA checklistet (linkek, cím, meta, CTA).',
+          'Publikálj fix kadenciában, és gyűjtsd a számokat egy egyszerű riportban.',
+          '2 hét után tarts retrospektívet: mi működött, mi nem, és milyen kísérletek jönnek a következő ciklusban.'
+        ]
+      }
+    ],
     enPath: '/solutions/'
   },
   {
@@ -436,6 +1024,55 @@ export const localizedLandingPages = [
     h1: 'Metodologia redakcyjna katalogu AI',
     intro: 'Lokalne podsumowanie zasad oceny, które pomagają podejmować spójne decyzje bez „marketingowych obietnic”.',
     points: ['Jasne kryteria oceny i zakresy dowodów', 'Zachowawcze sformułowania bez hype’u', 'Decyzje oparte o pilot i mierzalne kryteria'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kiedy warto z niej korzystać (a kiedy nie)',
+        body: [
+          'Metodologia jest użyteczna, gdy chcesz ujednolicić ocenę narzędzi i stron między różnymi osobami: żeby “dobra rekomendacja” znaczyła to samo niezależnie od autora. Dobrze działa też jako wspólny język między L&D, operacjami, bezpieczeństwem i właścicielami procesów.',
+          'Nie zastępuje pełnego audytu bezpieczeństwa, prawnego ani testów produkcyjnych. Ma pomagać w selekcji, porównaniu i w projektowaniu pilota.'
+        ],
+        bullets: [
+          'Użyj, gdy: potrzebujesz spójnego sposobu oceniania dopasowania do pracy i kosztu utrzymania treści.',
+          'Użyj, gdy: chcesz ograniczyć “hype” i wymagać dowodów (np. testu na realnym SOP).',
+          'Nie używaj, gdy: pytanie brzmi “czy to spełnia nasze wymagania bezpieczeństwa?” — tu potrzebne są osobne kontrole i polityki.',
+          'Nie używaj, gdy: brakuje kontekstu procesu i odbiorcy; metodologia zakłada, że wiesz, jaki problem próbujesz rozwiązać.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktyczne KPI dla jakości oceny',
+        bullets: [
+          'Czas od szkicu do publikacji wraz z liczbą iteracji po review.',
+          'Liczba korekt po publikacji (erraty) i ich kategorie (fakty, dopasowanie workflow, terminologia).',
+          'Spójność ocen: czy różni reviewerzy dochodzą do podobnych wniosków na tym samym materiale testowym.',
+          'Odsetek stron z jasno zdefiniowanym “kiedy użyć / kiedy nie” oraz checklistą pilota.',
+          'Sygnały z pilota: ile decyzji “go/no-go” wynika z mierzalnych kryteriów, a nie z opinii.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Ryzyka i ślepe punkty',
+        bullets: [
+          'Nadmierna wiara w rubrykę: narzędzia zmieniają się, więc kryteria trzeba okresowo aktualizować.',
+          'Bias: łatwo faworyzować to, co “ładnie wygląda w demo”, zamiast tego, co działa w pracy i w governance.',
+          'Przeoczenie kosztu utrzymania: ocena “pierwszego wdrożenia” to za mało — liczy się aktualizacja i ownership.',
+          'Słabe testy: jeśli scenariusz pilota nie jest realistyczny, metodologia da fałszywe poczucie pewności.',
+          'Brak rozróżnienia użytkowników: potrzeby L&D, managera i pracownika frontline różnią się.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklista wdrożenia metodologii w zespole',
+        bullets: [
+          'Wybierz 5–10 stron/narzędzi i oceń je wspólnie na tej samej rubryce.',
+          'Zapisz definicje “dobrze wygląda” dla kryteriów, które najczęściej budzą spory.',
+          'Ustal minimalny standard dowodu (np. test na 1 SOP + 1 scenariusz pracy).',
+          'Wprowadź prosty proces poprawek po publikacji (errata, właściciel, termin).',
+          'Po jednym cyklu zrób retro i doprecyzuj kryteria, które były niejednoznaczne.'
+        ]
+      }
+    ],
     enPath: '/editorial-methodology/'
   },
   {
@@ -447,6 +1084,55 @@ export const localizedLandingPages = [
     h1: 'Redakční metodika AI katalogu',
     intro: 'Lokalizované shrnutí pravidel hodnocení pro konzistentní, obhajitelné a praktické rozhodování.',
     points: ['Jednotná hodnoticí kritéria a důkazní standard', 'Konzervativní formulace bez hype', 'Rozhodnutí opřená o pilot a měřitelné signály'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kdy metodiku použít (a kdy ne)',
+        body: [
+          'Metodika je užitečná, když potřebujete sjednotit hodnocení napříč autory a reviewery: aby “doporučení” znamenalo stejnou věc bez ohledu na to, kdo stránku připravil. Slouží jako společný jazyk pro L&D, training ops, bezpečnost i vlastníky procesů.',
+          'Nenahrazuje bezpečnostní ani právní audit a není to záruka produkční vhodnosti. Má pomoci s výběrem, porovnáním a návrhem pilotu.'
+        ],
+        bullets: [
+          'Použijte, když: chcete konzistentně posuzovat workflow-fit a náklady na údržbu obsahu.',
+          'Použijte, když: chcete omezit “hype” a vyžadovat důkazy (např. test na reálném SOP).',
+          'Nepoužívejte, když: řešíte detailní požadavky bezpečnosti/IT — to vyžaduje separátní kontrolní rámec.',
+          'Nepoužívejte, když: nemáte jasný problém a cílové uživatele; metodika předpokládá kontext použití.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pro kvalitu hodnocení',
+        bullets: [
+          'Čas od draftu k publikaci + počet iterací po review.',
+          'Počet oprav po publikaci (errata) a jejich typy (fakta, workflow, terminologie).',
+          'Konzistence posudků: zda různí revieweři dojdou na stejném materiálu k podobným závěrům.',
+          'Podíl stránek s jasným “kdy použít / kdy ne” a s pilot checklistem.',
+          'Pilot signály: kolik rozhodnutí go/no-go vychází z měřitelných kritérií, ne z dojmů.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Rizika a slepá místa',
+        bullets: [
+          'Přehnaná víra v rubriku: nástroje se mění, kritéria je potřeba průběžně aktualizovat.',
+          'Bias na “hezké demo”: snadno se přehlédne provozní náročnost a governance.',
+          'Podcenění údržby: důležitá není jen implementace, ale i aktualizace a ownership.',
+          'Nerealistický pilot: slabý testovací scénář vytvoří falešnou jistotu.',
+          'Jedna velikost pro všechny: potřeby L&D, manažerů a frontline pracovníků se liší.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklist zavedení metodiky v týmu',
+        bullets: [
+          'Vyberte 5–10 stránek/nástrojů a ohodnoťte je společně podle stejné rubriky.',
+          'Sepište definici “co je dobré” u kritérií, kde nejčastěji vznikají spory.',
+          'Nastavte minimální důkazní standard (např. 1 SOP test + 1 pracovní scénář).',
+          'Zaveďte jednoduchý proces oprav po publikaci (errata, vlastník, termín).',
+          'Po jednom cyklu udělejte retro a upřesněte kritéria, která byla nejasná.'
+        ]
+      }
+    ],
     enPath: '/editorial-methodology/'
   },
   {
@@ -458,6 +1144,55 @@ export const localizedLandingPages = [
     h1: 'Redakčná metodika AI katalógu',
     intro: 'Lokálny prehľad hodnotiacich pravidiel pre konzistentné, obhájiteľné a praktické rozhodovanie.',
     points: ['Jednotné hodnotiace kritériá a dôkazný štandard', 'Konzervatívne formulácie bez hype', 'Rozhodovanie postavené na pilote a merateľných signáloch'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Kedy metodiku použiť (a kedy nie)',
+        body: [
+          'Metodika je užitočná, keď chcete zjednotiť hodnotenie medzi autormi a reviewermi: aby “odporúčanie” znamenalo to isté bez ohľadu na to, kto stránku pripravil. Pomáha aj ako spoločný jazyk medzi L&D, training ops, bezpečnosťou a vlastníkmi procesov.',
+          'Nenahrádza bezpečnostný ani právny audit a nie je to garancia produkčnej vhodnosti. Má pomôcť s výberom, porovnaním a návrhom pilota.'
+        ],
+        bullets: [
+          'Použite, keď: chcete konzistentne posudzovať workflow-fit a náklady na údržbu obsahu.',
+          'Použite, keď: chcete obmedziť hype a vyžadovať dôkazy (napr. test na reálnom SOP).',
+          'Nepoužite, keď: riešite detailné bezpečnostné/IT požiadavky — tu treba samostatný kontrolný rámec.',
+          'Nepoužite, keď: nemáte jasný problém a cieľových používateľov; metodika predpokladá kontext.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Praktické KPI pre kvalitu hodnotenia',
+        bullets: [
+          'Čas od draftu po publikáciu + počet iterácií po review.',
+          'Počet opráv po publikácii (errata) a ich typy (fakty, workflow, terminológia).',
+          'Konzistentnosť posudkov: či rôzni revieweri dospejú k podobným záverom na rovnakom materiáli.',
+          'Podiel stránok s jasným “kedy použiť / kedy nie” a s pilot checklistom.',
+          'Pilot signály: koľko go/no-go rozhodnutí vychádza z merateľných kritérií, nie z dojmu.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Riziká a slepé miesta',
+        bullets: [
+          'Prílišná viera v rubriku: nástroje sa menia, kritériá treba priebežne aktualizovať.',
+          'Bias na “pekné demo”: ľahko sa prehliadne prevádzková náročnosť a governance.',
+          'Podcenenie údržby: nejde len o implementáciu, ale aj o aktualizácie a ownership.',
+          'Nerealistický pilot: slabý testovací scenár vytvorí falošnú istotu.',
+          'Jedna veľkosť pre všetkých: potreby L&D, manažérov a frontline ľudí sú odlišné.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklist zavedenia metodiky v tíme',
+        bullets: [
+          'Vyberte 5–10 stránok/nástrojov a ohodnoťte ich spoločne podľa rovnakej rubriky.',
+          'Dohodnite definíciu “čo je dobré” pre kritériá, kde vznikajú najčastejšie spory.',
+          'Nastavte minimálny dôkazný štandard (napr. 1 SOP test + 1 pracovný scenár).',
+          'Zaveďte jednoduchý proces opráv po publikácii (errata, vlastník, termín).',
+          'Po jednom cykle spravte retro a spresnite nejasné kritériá.'
+        ]
+      }
+    ],
     enPath: '/editorial-methodology/'
   },
   {
@@ -469,6 +1204,55 @@ export const localizedLandingPages = [
     h1: 'AI katalógus szerkesztői módszertan',
     intro: 'Lokalizált összefoglaló a következetes, védhető és gyakorlatias döntésekhez.',
     points: ['Egységes értékelési kritériumok és bizonyítási elvek', 'Visszafogott állítások túlzás nélkül', 'Pilot-alapú döntéshozatal mérhető jelekkel'],
+    sections: [
+      {
+        id: 'use-cases',
+        heading: 'Mikor használd a módszertant (és mikor ne)',
+        body: [
+          'A módszertan akkor hasznos, ha több szerző/reviewer dolgozik együtt, és szeretnéd, hogy az értékelés konzisztens legyen: ugyanaz a “jó ajánlás” ugyanazt jelentse. Közös nyelvet ad L&D, training ops, biztonság és folyamattulajdonosok között is.',
+          'Nem helyettesít IT/biztonsági vagy jogi auditot, és nem ígér “biztos sikert”. Arra való, hogy összehasonlíthatóan gondolkodj, és jól tervezhető pilotot rakj össze.'
+        ],
+        bullets: [
+          'Használd, ha: egységesen szeretnéd mérlegelni a workflow-fit-et és a tartalom fenntartási költségét.',
+          'Használd, ha: csökkenteni akarod a hype-ot, és minimum bizonyítékot kérsz (pl. valós SOP teszt).',
+          'Ne használd, ha: a kérdés biztonság/IT megfelelés — ehhez külön kontrollok és policy-k kellenek.',
+          'Ne használd, ha: nincs tiszta kontextus, milyen felhasználónak, milyen folyamatban értékelsz.'
+        ]
+      },
+      {
+        id: 'kpis',
+        heading: 'Gyakorlati KPI-k az értékelés minőségéhez',
+        bullets: [
+          'Átfutási idő drafttól publikálásig + iterációk száma review után.',
+          'Publikálás utáni javítások (errata) száma és típusa (tény, workflow, terminológia).',
+          'Konzisztencia jel: ugyanarra a tesztanyagra a reviewerek hasonló következtetésre jutnak-e.',
+          'Oldalak aránya, ahol egyértelmű “mikor használd / mikor ne” és pilot checklist szerepel.',
+          'Pilot jelzések: hány go/no-go döntés támaszkodik mérhető kritériumokra, nem benyomásra.'
+        ]
+      },
+      {
+        id: 'risks',
+        heading: 'Kockázatok és vakfoltok',
+        bullets: [
+          'Túlzott rubrika-függés: az eszközök változnak, a kritériumokat időnként frissíteni kell.',
+          '“Szép demo” bias: könnyű alábecsülni az üzemeltetést és governance terhet.',
+          'Fenntartás kihagyása: nem csak a bevezetés számít, hanem a frissítés és ownership is.',
+          'Gyenge pilot-szcenárió: irreális teszt esetén hamis magabiztosságot ad.',
+          'Felhasználói különbségek: L&D, menedzser és frontline igényei eltérők.'
+        ]
+      },
+      {
+        id: 'pilot',
+        heading: 'Mini checklist a módszertan bevezetéséhez',
+        bullets: [
+          'Válassz 5–10 oldalt/eszközt, és értékeljétek együtt ugyanazzal a rubrikával.',
+          'Írjátok le, mit jelent a “jó” a vitás kritériumoknál (konkrét példákkal).',
+          'Állítsatok be minimum bizonyíték-szintet (pl. 1 SOP teszt + 1 munkaszituáció).',
+          'Legyen egyszerű javítási folyamat publikálás után (errata, owner, határidő).',
+          'Egy ciklus után tartsatok retro-t, és pontosítsátok azokat a pontokat, amelyek félreérthetők voltak.'
+        ]
+      }
+    ],
     enPath: '/editorial-methodology/'
   },
   {
